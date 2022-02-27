@@ -1,0 +1,156 @@
+/*------------------------------------------------------------
+text
+------------------------------------------------------------*/
+
+.c-text {
+    &1 {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        color: $color-gray4;
+
+        @include sp {
+            line-height: 2.4rem;
+        }
+
+        &--center {
+            text-align: center;
+        }
+
+        &--white {
+            color: #fff;
+        }
+
+        a {
+            color: #e83820;
+
+            @include hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &2 {
+        padding-left: 20px;
+        font-size: 1.1rem;
+        line-height: 2rem;
+        color: $color-gray7;
+        font-weight: normal;
+
+        @include sp {
+            padding-left: 11px;
+            font-size: 1.3rem;
+            line-height: 1.6rem;
+        }
+
+        &--comment {
+            padding-left: 1em;
+            text-indent: -1em;
+        }
+
+        a {
+            color: #e83820;
+
+            @include hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &3 {
+        font-size: 1.8rem;
+        line-height: 3.4rem;
+        color: $color-gray4;
+
+        @include sp {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
+
+        &--center {
+            text-align: center;
+        }
+
+        &--white {
+            color: #fff;
+        }
+
+        a {
+            color: #e83820;
+
+            @include hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &4 {
+        @include sp {
+            margin: 0 -5px 0;
+        }
+
+        &__tit {
+            font-size: 3rem;
+            line-height: 40px;
+            padding: 0 0 0 65px;
+            position: relative;
+
+            @include sp {
+                font-size: 2rem;
+                line-height: 25px;
+                padding: 0 0 0 38px;
+            }
+
+            &::before {
+                content: 'Q.';
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 4rem;
+                color: #E83820;
+                @include poppins;
+                letter-spacing: 6px;
+
+                @include sp {
+                    font-size: 2.5rem;
+                    letter-spacing: 4px;
+                    top: 2px;
+                }
+            }
+        }
+
+        &__txt {
+            border: 1px solid #DADADA;
+            margin: 36px 0 0;
+            padding: 42px 50px 36px 103px;
+            font-size: 1.6rem;
+            line-height: 28px;
+            position: relative;
+
+            @include sp {
+                font-size: 1.5rem;
+                line-height: 23px;
+                padding: 20px 15px 20px 62px;
+                margin: 27px 0 0;
+            }
+
+            &::before {
+                content: 'A.';
+                position: absolute;
+                top: 46px;
+                left: 50px;
+                font-size: 3rem;
+                @include poppins;
+                letter-spacing: 6px;
+                font-weight: bold;
+
+                @include sp {
+                    font-size: 2.5rem;
+                    letter-spacing: 4px;
+                    top: 22px;
+                    font-weight: 600;
+                    left: 24px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,228 @@
+/*------------------------------------------------------------
+box
+------------------------------------------------------------*/
+
+// .c-boximg .
+.c-boximg {
+    $root: '.c-boximg';
+
+    max-width: 152px;
+    text-align: center;
+
+    @include sp {
+        max-width: 150px;
+    }
+
+    // .c-boximg__text .
+    &__text {
+        margin-top: 16px;
+        font-size: 1.3rem;
+        line-height: 2rem;
+        font-weight: 500;
+        display: block;
+
+        @include sp {
+            margin-top: 13px;
+            line-height: 1.6rem;
+            font-size: 1.3rem;
+        }
+    }
+
+    &--style1 {
+        @include nonelink;
+        display: inline-block;
+        max-width: 193px;
+        padding: 20px 20px 11px 19px;
+        border: 1px solid $color-border;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+
+        @include hover {
+            .c-boximg__text {
+                text-decoration: none;
+            }
+        }
+
+        @include sp {
+            max-width: 150px;
+            padding: 10px 9px 15px 10px;
+        }
+
+        #{$root}__text {
+            color: $color-red2;
+            text-decoration: underline;
+
+            @include sp {
+                margin-top: 8px;
+                line-height: 1.6rem;
+            }
+        }
+    }
+}
+
+// .c-box5 .
+.c-box5 {
+    &__inner {
+        @include flex;
+    }
+
+    &__text {
+        padding-right: 40px;
+        flex: 1;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        font-weight: normal;
+
+        @include sp {
+            padding-right: 11px;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            flex: 0 100%;
+        }
+    }
+
+    .c-boximg {
+        margin-top: 1px;
+
+        @include sp {
+            margin-top: 26px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &--style1 {
+            @include sp {
+                padding-bottom: 14px;
+            }
+
+            .c-boximg__text {
+                @include sp {
+                    margin-top: 7px;
+                    line-height: 1.6rem;
+                }
+            }
+        }
+    }
+}
+
+// .c-box6 .
+.c-box6 {
+    max-width: 400px;
+    padding: 38px 40px;
+    background-color: #F6F6F6;
+    border: 1px solid #DADADA;
+    text-align: center;
+    display: inline-block;
+
+    &__text1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    &__text2 {
+        font-size: 1.3rem;
+        text-align: left;
+        line-height: 2rem;
+    }
+
+    &__img {
+        margin: 25px 0 20px;
+    }
+
+    &__link {
+        color: $color-red2;
+    }
+}
+
+.c-boxlist {
+
+    // .c-boxlist5 .
+    &5 {
+        margin-bottom: 34px;
+        padding: 35px 38px 25px 39px;
+        background-color: #f6f6f6;
+        border: 1px solid $color-border;
+        display: block;
+
+        @include sp {
+            padding: 14px 12px 8px 19px;
+        }
+
+        a {
+            @include nonelink;
+            color: $color-red2;
+            text-decoration: underline;
+
+            @include hover {
+                text-decoration: none;
+            }
+        }
+
+        &__item {
+            margin-bottom: 10px;
+            padding-left: 18px;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            font-weight: normal;
+            position: relative;
+            @include noto-sans;
+
+            @include sp {
+                margin-bottom: 7px;
+                padding-left: 11px;
+            }
+
+            &:before {
+                @include pseudo(8px, 8px, 8px, 0);
+                background-color: $color-red2;
+                border-radius: 50%;
+
+                @include sp {
+                    top: 11px;
+                    width: 6px;
+                    height: 6px;
+                }
+            }
+        }
+    }
+}
+
+#lightbox {
+    height: 100vh;
+    position: fixed;
+    top: 0 !important;
+    padding-top: 40px;
+    
+    @include sp {
+        padding-top: 20px;
+    }
+}
+
+#lightboxOverlay {
+    height: 100vh;
+    position: fixed;
+    top: 0 !important;
+}
+
+// .c-boxerror .
+.c-boxerror {
+    padding: 40px 40px;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    font-weight: 700;
+    @include noto-sans;
+    background-color: #FEEFED;
+    color: $color-red2;
+    border: 1px solid $color-red2;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+
+    @include sp {
+        padding: 25px 30px 27px;
+        line-height: 2.2rem;
+    }
+}

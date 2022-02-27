@@ -1,0 +1,1 @@
+<a href="{{$btnpdf_link ?? '/'}}" class="c-btnpdf" target="_blank">{{$btnpdf_text}}</a>

@@ -1,0 +1,104 @@
+@charset 'utf-8';
+
+@import "../0_base/vars";
+@import "../0_base/mixin";
+
+/*------------------------------------------------------------
+p-contact_paint
+------------------------------------------------------------*/
+.p-contact_paint {
+    padding-bottom: 80px;
+    @include sp{
+        padding-bottom: 20px;
+    }
+    .c-mainimg3 {
+        padding: 60px 0 80px;
+        @include sp{
+            padding: 45px 0;
+        }
+        &__content {
+            width: 100%;
+        }
+        &__title {
+            font-size: 4.6rem;
+            @include sp{
+                font-size: 3rem;
+            }
+        }
+    }
+
+    // .p-contact_paint1
+    &1 {
+        padding: 75px 0 85px;
+        @include sp{
+            padding: 45px 0 75px;
+        }
+        .c-title2 {
+            margin-bottom: 35px;
+            @include sp{
+                margin-bottom: 15px;
+            }
+        }
+
+        .c-title3 {
+            margin-bottom: 20px;
+            @include sp{
+                margin-bottom: 15px;
+            }
+        }
+
+        .c-box5 {
+            &__text {
+                @include sp{
+                    padding-right: 0;
+                }
+                p {
+                    margin-bottom: 30px;
+                    @include sp{
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    // .p-contact_paint2
+    &2 {
+        .c-box4 {
+            padding: 75px 20px 80px;
+            background: url(/images/common/bg_paint.jpg) no-repeat center /cover;
+            @include sp{
+                padding: 58px 20px 40px;
+                background: url(/images/common/bg_paint_sp.jpg) no-repeat center /cover;
+            }
+        }
+
+        .c-title2 {
+            font-size: 4.6rem;
+            font-weight: 700;
+            @include sp{
+                padding: 0 0 15px;
+                font-size: 3.2rem;
+                white-space: nowrap;
+            }
+        }
+
+        .c-btn2 {
+            padding: 22px 130px 21px;
+            @include sp{
+                padding: 19px 18px 20px;
+            }
+        }
+    }
+
+    // .p-contact_paint3
+    &3 {
+        padding-top: 95px;
+        @include sp{
+            padding-top: 45px;
+        }
+        .c-title2--small {
+            margin-bottom: 30px;
+        }
+    }
+}

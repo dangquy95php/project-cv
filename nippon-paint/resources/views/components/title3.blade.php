@@ -1,0 +1,1 @@
+<h2 class="c-title3 {{$title3_class ?? ''}}"><span>{{$title3_text}}</span></h2>

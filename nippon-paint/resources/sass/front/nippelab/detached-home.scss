@@ -1,0 +1,631 @@
+@charset 'utf-8';
+
+@import "../0_base/vars";
+@import "../0_base/mixin";
+
+/*------------------------------------------------------------
+/nippelab/detached-home
+------------------------------------------------------------*/
+.p-detached-home {
+    &__index {
+        padding-bottom: 0;
+
+        .c-mainimg4 {
+            background-image: url(/images/nippelab/datached-home/mainimg4_bg1.jpg);
+
+            &__content {
+                background-color: rgba(0, 104, 183, 0.7);
+
+                @include pc {
+                    width: 660px;
+                }
+            }
+        }
+    }
+
+    &__left {
+        width: calc(100% - 320px);
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    &__detail {
+        padding: 60px 0 120px;
+        background: $color-gray11;
+        @include sp {
+            padding: 30px 0 50px;
+        }
+
+        // p-detached-home__detail__content .
+        &__content {
+            h2 {
+                margin: 91px 0 40px;
+                padding: 19px 10px 22px 35px;
+                display: block;
+                font-size: 2.8rem;
+                line-height: 3.6rem;
+                font-weight: 700;
+                color: #fff;
+                background-color: #0068b7;
+                position: relative;
+                @include sp {
+                    margin: 70px 0 20px;
+                    padding: 11px 13px 13px 24px;
+                    font-size: 2rem;
+                    line-height: 1.2em;
+                }
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    width: 10px;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: #164b81;
+                    @include sp {
+                        width: 6px;
+                    }
+                }
+            }
+
+            h3 {
+                margin: 77px 0 17px;
+                padding-left: 25px;
+                display: block;
+                font-size: 2.4rem;
+                line-height: 3.2rem;
+                font-weight: 700;
+                color: #444;
+                position: relative;
+                @include sp {
+                    margin: 50px 0 18px;
+                    padding-left: 20px;
+                    font-size: 1.9rem;
+                    line-height: 1.2em;
+                }
+                &:before {
+                    position: absolute;
+                    content: "";
+                    width: 5px;
+                    height: 80%;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    background-color: #0068b7;
+                    @include sp {
+                        height: 89%;
+                    }
+                }
+            }
+
+            h4 {
+                padding-left: 25px;
+                margin-bottom: 19px;
+                font-size: 2rem;
+                line-height: 2.6rem;
+                font-weight: 700;
+                color: #0068b7;
+                position: relative;
+                display: inline-block;
+                @include sp {
+                    text-align: left;
+                    font-size: 1.7rem;
+                    line-height: 1.2em;
+                    margin-bottom: 16px;
+                }
+                &:before {
+                    position: absolute;
+                    content: "";
+                    width: 4%;
+                    height: 3px;
+                    top: 50%;
+                    left: 0;
+                    background-color: #0068b7;
+
+                    @include sp {
+                        width: 15px;
+                        height: 4px;
+                        top: 6px;
+                    }
+                }
+            }
+
+            figure {
+                @include sp {
+                    padding: 0 10px;
+                }
+                strong {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 14px;
+                    letter-spacing: 2px;
+                    font-size: 1.8rem;
+
+                    @include sp {
+                        letter-spacing: 0;
+                        margin-top: 10px;
+                        font-size: 1.6rem;
+                        line-height: 2.4rem;
+                    }
+                }
+                &+p{
+                    margin-top: 48px;
+                    margin-bottom: 47px;
+                    @include sp {
+                        margin-top: 18px;
+                        margin-bottom: 35px;
+                    }
+                }
+                &+h3 {
+                    @include sp {
+                        margin-top: 55px;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+            p {
+                margin-bottom: 52px;
+                font-size: 1.8rem;
+                line-height: 3.4rem;
+                color: #444;
+                @include sp {
+                    margin-bottom: 20px;
+                    padding: 0 10px;
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                }
+
+                &+figure {
+                    @include sp {
+                        margin-top: 27px;
+                    }
+                }
+                &+h2 {
+                    @include sp {
+                        margin-top: 47px;
+                    }
+                }
+
+                &+.c-box1 {
+                    margin-top: -20px;
+
+                    @include sp {
+                        margin-top: 0;
+                    }
+                }
+
+                a {
+                    font-size: inherit;
+                    line-height: inherit;
+
+                    &.pdf {
+                        @include sp {
+                            background-position: right;
+                            background-size: 15px;
+                        }
+                    }
+                }
+
+                & + .c-title6 {
+                    margin-top: 80px;
+                    @include sp {
+                        margin-top: 55px;
+                    }
+                }
+
+                & + img {
+                    margin-top: 55px;
+                    @include sp {
+                        margin-top: 50px;
+                    }
+                }
+
+                & + .c-table {
+                    margin-top: 55px;
+                    @include sp {
+                        margin-top: 25px;
+                    }
+                }
+
+                & + dl {
+                    margin-top: -7px;
+                    @include sp {
+                        margin-top: 0;
+                    }
+                }
+
+                &+ul {
+                    margin-top: -26px;
+
+                    @include sp {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: #0068b7;
+                text-decoration: underline;
+                font-size: 1.8rem;
+                line-height: 3.4rem;
+                position: relative;
+                &:hover {
+                    text-decoration: none;
+                }
+
+                &[target="_blank"] {
+                    padding-right: 23px;
+                    padding: 0 20px 0 0;
+                    background: url(/images/common/icon_share-blue.svg)
+                        no-repeat center right;
+                    background-size: 14px 13px;
+                    @include sp {
+                        padding-right: 15px;
+                        background-repeat: 10px;
+                    }
+                }
+
+                &[href$="pdf"] {
+                    padding-right: 23px;
+                    background: url(/images/common/icon_pdf-blue.svg) no-repeat
+                        right 8px/20px 20px;
+                    display: inline-block;
+                    @include sp {
+                        background-position: right 0 center 5px;
+                        background-size: 15px;
+                    }
+                }
+            }
+
+            img {
+                & + p {
+                    margin-top: 13px;
+                    font-size: 1.8rem;
+                    line-height: 3.2rem;
+                    font-weight: 700;
+                    color: #444;
+                    text-align: center;
+                    @include sp {
+                        margin-top: 10px;
+                        font-size: 1.6rem;
+                        line-height: 2.4rem;
+                    }
+                }
+            }
+
+            ul,
+            ol {
+                margin-bottom: 30px;
+                @include sp {
+                    margin-bottom: 35px;
+                    padding: 0 10px;
+                }
+
+                a {
+                    font-size: inherit;
+                    line-height: inherit;
+                }
+            }
+
+            ul {
+                li {
+                    position: relative;
+                    padding: 0 0 0 22px;
+                    font-size: 1.8rem;
+                    line-height: 1.6;
+                    font-weight: 500;
+                    color: #444;
+                    @include sp {
+                        font-size: 1.6rem;
+                        line-height: 1.4;
+                    }
+                    &:before {
+                        background: #0068b7;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 12px;
+                        left: 0;
+                        content: "";
+                        @include sp {
+                            width: 6px;
+                            height: 6px;
+                            top: 10px;
+                            left: 5px;
+                        }
+                    }
+                    &:not(:last-child) {
+                        margin: 0 0 13.5px;
+                        @include sp {
+                            margin: 0 0 12.5px;
+                        }
+                    }
+                }
+                &+ol {
+                    margin-bottom: 0;
+
+                    @include sp {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            ol {
+                counter-reset: li;
+                li {
+                    display: flex;
+                    font-size: 1.8rem;
+                    line-height: 1.6;
+                    color: #444;
+                    font-weight: 500;
+                    width: calc(100% - 33px);
+                    @include sp {
+                        position: relative;
+                        font-size: 1.6rem;
+                        line-height: 1.4;
+                        width: 100%;
+                        display: block;
+                        padding-left: 20px;
+                    }
+                    &:before {
+                        text-align: right;
+                        display: block;
+                        counter-increment: li;
+                        content: counter(li) ".";
+                        font-size: 1.8rem;
+                        line-height: 1.8;
+                        color: #0068b7;
+                        font-weight: 500;
+                        font-family: "Poppins", sans-serif;
+                        min-width: 13px;
+                        margin: 0 15px 0 0;
+                        @include sp {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            margin-right: 10px;
+                            line-height: 1.4;
+                        }
+                    }
+
+                    &:not(:last-child) {
+                        margin: 0 0 11.5px;
+                        @include sp {
+                            margin: 0 0 11px;
+                        }
+                    }
+                }
+                &+h3 {
+                    margin-top: 27px;
+
+                    @include sp {
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            dl {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-bottom: 17px;
+                @include sp {
+                    padding: 0 10px;
+                    margin-bottom: 10px;
+                }
+                &:last-child {
+                    margin-bottom: 2px;
+
+                    @include sp {
+                        margin-top: 0;
+                    }
+                }
+                dt {
+                    width: 150px;
+                    font-size: 1.8rem;
+                    line-height: 2.8rem;
+                    color: #444;
+                    font-weight: 500;
+                    font-family: "Noto Sans JP", sans-serif;
+                    @include sp {
+                        width: 100%;
+                        font-size: 1.6rem;
+                        line-height: 1.5;
+                    }
+                }
+
+                dd {
+                    width: calc(100% - 190px);
+                    font-size: 1.8rem;
+                    line-height: 2.8rem;
+                    color: #444;
+                    font-family: "Noto Sans JP", sans-serif;
+                    @include sp {
+                        width: 100%;
+                        font-size: 1.6rem;
+                        line-height: 1.5;
+                        margin: 5px 0 0;
+                    }
+                }
+                &+h2 {
+                    margin-top: 95px;
+
+                    @include sp {
+                        margin-top: 40px;
+                    }
+                }
+            }
+
+            .c-box1 {
+                margin-bottom: 20px;
+                & + .c-box1 {
+                    border-top: 2px solid $color-border;
+                    @include sp {
+                        border-width: 1px;
+                    }
+                }
+
+                &+h2 {
+                    margin-top: 100px;
+
+                    @include sp {
+                        margin-top: 50px;
+                    }
+                }
+
+                p {
+                    margin-bottom: 12px;
+                    @include sp {
+                        margin-bottom: 30px;
+                        padding: 0;
+                    }
+
+                    &:last-child {
+                        @include min-w(767px) {
+                            margin-bottom: -5px;
+                        }
+                    }
+                }
+
+                ul,
+                ol {
+                    margin-bottom: 0;
+                    @include sp {
+                        padding: 0;
+                    }
+                }
+            }
+
+            .c-table {
+                margin-bottom: 60px;
+                @include sp {
+                    margin-bottom: 30px;
+                }
+
+                &+p{
+                    margin-top: -12px;
+                    margin-bottom: -4px;
+                    
+                    @include sp {
+                        margin-bottom: 0;
+                        margin-top: 0;
+                    }
+                }
+                a {
+                    font-size: inherit;
+                    line-height: inherit;
+                    &[target="_blank"]:after {
+                        display: inline-block;
+                        transform: none;
+                        top: auto;
+                        bottom: 7px;
+                        @include sp {
+                            bottom: 5px;
+                        }
+                    }
+                }
+            }
+
+            blockquote {
+                background-color: #f6f6f6;
+                padding: 31px 40px 34px 39px;
+                @include sp {
+                    padding: 17px 25px 24px 25px;
+                }
+                p {
+                    margin-bottom: 0;
+                    font-size: 1.6rem;
+                    line-height: 2.8rem;
+                    @include sp {
+                        line-height: 2.4rem;
+                        padding: 0 0;
+                    }
+                    &:first-child {
+                        margin-bottom: 6px;
+                        font-size: 1.8rem;
+                        line-height: 3.2rem;
+                        font-weight: 700;
+                        @include sp {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__btn {
+            text-align: center;
+            @include sp {
+                margin-bottom: 50px;
+            }
+
+            .c-btn3:last-child {
+                margin-left: 30px;
+                @include sp {
+                    margin-left: 15px;
+                }
+            }
+        }
+
+        article {
+            margin-bottom: 40px;
+            padding: 72px 80px 80px;
+            width: 100%;
+            background: #fff;
+            border-radius: 10px;
+            @include sp {
+                margin-bottom: 20px;
+                padding: 45px 20px 50px;
+                border-radius: 5px;
+            }
+
+            .c-title5 {
+                margin-bottom: 33px;
+                @include sp {
+                    margin-bottom: 25px;
+                }
+                &__text {
+                    
+                    @include sp {
+                        padding-bottom: 32px;
+                        font-weight: 900;
+                    }
+                    &:before {
+                        top: 6px;
+
+                        @include sp {
+                            top: auto;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .c-title6 {
+                margin-bottom: 27px;
+                @include sp {
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .c-side2 {
+            margin-bottom: 30px;
+            @include sp {
+                margin-bottom: 20px;
+            }
+        }
+
+        .c-anchor {
+            margin-top: 30px;
+            top: 10px;
+        }
+    }
+}

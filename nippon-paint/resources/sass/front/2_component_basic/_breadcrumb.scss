@@ -1,0 +1,105 @@
+/*------------------------------------------------------------
+breadcrumb
+------------------------------------------------------------*/
+main + .c-breadcrumb {
+    padding: 12px 0 20px;
+    border-top: 1px solid #e6e6e6;
+
+    @include sp {
+        padding: 9px 0 10px;
+    }
+}
+.c-breadcrumb {
+    padding: 13px 0 20px;
+    background-color: #fff;
+
+    @include sp {
+        // display: none;
+        padding: 9px 0 11px;
+        white-space: nowrap;
+        overflow-x: scroll;
+    }
+
+    // .c-breadcrumb a .
+    a {
+        @include nonelink;
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+        color: $color-red2;
+        text-decoration: underline;
+
+        &:hover,
+        &:focus {
+            color: $color-red2;
+            text-decoration: underline;
+            opacity: 1;
+        }
+
+        @include hover {
+            text-decoration: none;
+        }
+
+        @include sp {
+            font-size: 1rem;
+        }
+    }
+
+    // .c-breadcrumb span .
+    span {
+        font-size: 1.1rem;
+        line-height: 1;
+        color: $color-gray7;
+    }
+
+    ul {
+        @include sp {
+            overflow: scroll;
+        }
+    }
+
+    // .c-breadcrumb li .
+    li {
+        display: inline-block;
+        line-height: 1.8rem;
+        cursor: text;
+
+        // .c-breadcrumb li:not(:first-child):before .
+        &:not(:first-child) {
+            &:before {
+                margin: 0 16px 0 14px;
+                @include pseudo(10px, 10px, 1px, 0);
+                position: relative;
+                display: inline-block;
+                background: url(/images/common/icon_bread.svg) no-repeat center / 5px 9px;
+
+                @include sp {
+                    margin: 0 6px 0 7px;
+                    top: 0;
+                    width: 8px;
+                    height: 8px;
+                    background: url(/images/common/icon_bread.svg) no-repeat center / 8px 8px;
+                }
+            }
+        }
+
+        &:last-child {
+            &:before {
+                margin-right: 17px;
+                margin-left: 16px;
+
+                @include sp {
+                    margin-right: 6px;
+                    margin-left: 7px;
+                }
+            }
+        }
+    }
+
+    &__style1 {
+        @include sp {
+            border-bottom: 1px solid #e6e6e6;
+        }
+    }
+}
+/*
+------------------------------------------------------------*/

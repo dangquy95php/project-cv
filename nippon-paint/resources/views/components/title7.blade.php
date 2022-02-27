@@ -1,0 +1,1 @@
+<h2 class="c-title7"><span class="c-title7__text">{{$title7_text}}</span></h2>

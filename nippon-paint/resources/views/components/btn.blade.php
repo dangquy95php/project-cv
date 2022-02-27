@@ -1,0 +1,1 @@
+<a href="{{$btn_href ?? '/'}}" class="{{$class}}">{{$text}}</a>

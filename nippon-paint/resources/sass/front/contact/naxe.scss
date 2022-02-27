@@ -1,0 +1,124 @@
+@charset 'utf-8';
+
+@import "../0_base/vars";
+@import "../0_base/mixin";
+
+/*------------------------------------------------------------
+p-contact_naxe
+------------------------------------------------------------*/
+.p-contact_naxe {
+    &-index {
+        padding-bottom: 30px;
+        @include sp{
+            padding-bottom: 35px;
+        }
+        &1 {
+            padding: 58px 0;
+            @include sp{
+                padding: 35px 0 0;
+            }
+            .c-nav4 {
+                margin-top: 75px;
+                @include sp{
+                    margin-top: 60px;
+                }
+            }
+
+            .c-form3 {
+                margin-top: 40px;
+                @include sp{
+                    margin-top: 30px;
+                }
+            }
+
+            .c-boxlist5 {
+                margin-top: 40px;
+                @include sp{
+                    margin-bottom: 15px;
+                }
+            }
+
+            .c-form3 + .c-boxlist5 {
+                margin-top: 80px;
+                @include sp{
+                    margin: 40px 0 15px;
+                }
+            }
+        }
+    }
+
+    &-confirm {
+        padding-bottom: 90px;
+        @include sp{
+            padding-bottom: 35px;
+        }
+        &1 {
+            padding: 58px 0;
+            @include sp{
+                padding: 35px 0 0;
+            }
+            .c-nav4 {
+                margin-top: 90px;
+                @include sp{
+                    margin-top: 50px;
+                }
+            }
+
+            .c-table {
+                margin-top: 40px;
+            }
+
+            .c-boxlist5 {
+                margin-top: 40px;
+                @include sp{
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    &-complete {
+        padding-bottom: 60px;
+        @include sp{
+            padding-bottom: 15px;
+        }
+        &1 {
+            padding: 58px 0;
+            @include sp{
+                padding: 35px 0;
+            }
+            .c-nav4 {
+                margin-top: 90px;
+                @include sp{
+                    margin-top: 50px;
+                }
+            }
+
+            .c-title2--small {
+                margin: 75px 0 30px;
+                @include sp{
+                    margin: 38px 0 15px;
+                }
+            }
+
+            .c-form3__btn {
+                margin-top: 60px;
+                padding: 0;
+                @include sp{
+                    margin-top: 25px;
+                }
+
+                & + .c-form3__btn {
+                    margin-top: 35px;
+                    @include sp{
+                        margin-top: 15px;
+                    }
+                }
+            }
+
+            .c-btn2__style3 {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

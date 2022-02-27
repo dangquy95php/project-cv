@@ -1,0 +1,101 @@
+@charset 'utf-8';
+
+@import '../0_base/vars';
+@import '../0_base/mixin';
+
+/*------------------------------------------------------------
+privacypolicy
+------------------------------------------------------------*/
+.p-privacy {
+    .c-title2 {
+        &:not(.c-title2__style3) {
+            margin: 58px 0 74px;
+            @include sp {
+                margin: 36px 0 34px;
+            }
+        }
+    }
+
+    &__box {
+        &:not(:last-of-type) {
+            margin: 0 0 45px;
+            @include sp {
+                margin: 0 0 32px;
+            }
+        }
+        .c-title2 {
+            margin: 0 0 14px;
+            @include sp {
+                margin: 0 0 15px;
+            }
+        }
+
+        .c-list12 {
+            margin: 26px 0 0;
+            @include sp {
+                margin: 20px 0 0;
+            }
+
+            &__item {
+                padding: 0 0 0 18px;
+                @include sp {
+                    padding: 0 0 0 11px;
+                }
+
+                &:not(:last-child) {
+                    margin: 0 0 6px;
+                    @include sp {
+                        margin: 0 0 7px;
+                    }
+                }
+
+                &:before {
+                    @include sp {
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        .c-list15 {
+            margin: 29px 0 0;
+            @include sp {
+                margin: 20px 0 0;
+            }
+
+            &__item {
+                &:not(:last-child) {
+                    margin: 0 0 10px;
+                }
+                &::before {
+                    font-size: 1.6rem;
+                    line-height: 1.5;
+                    color: #444;
+                    font-weight: 600;
+                    min-width: 10px;
+                    margin: 0 4px 0 0;
+                    @include sp {
+                        margin: 0 6px 0 0;
+                    }
+                }
+            }
+
+            &__txt {
+                font-size: 1.6rem;
+                line-height: 1.5;
+                font-weight: normal;
+            }
+        }
+    }
+    &__note {
+        text-align: right;
+        font-size: 1.6rem;
+        line-height: 1.75;
+        color: #444444;
+        margin: 49px 0 0;
+        @include sp {
+            line-height: 1.5;
+            margin: 25px 0 15px;
+        }
+    }
+}

@@ -1,0 +1,120 @@
+@charset 'utf-8';
+
+@import '../0_base/vars';
+@import '../0_base/mixin';
+
+/*------------------------------------------------------------
+about/network
+------------------------------------------------------------*/
+.p-aboutNetwork {
+    padding-bottom: 121px;
+
+    @include sp {
+        padding-bottom: 50px;
+    }
+
+    &1 {
+        padding-top: 58px;
+
+        @include sp {
+            padding-top: 38px;
+        }
+
+        .c-map {
+            &__item {
+                .c-btn2 {
+                    &:after {
+                        @include pseudo(12px, 12px, 6px, auto);
+                        background: url(/images/common/icon_share-red.svg) no-repeat center/12px 12px;
+                        right: 6px;
+                    }
+
+                    @include hover {
+                        &:after {
+                            background: url(/images/common/icon_share-white.svg) no-repeat center/12px 12px;
+                        }
+                    }
+                }
+            }
+            &--col2 {
+                margin-top: 96px;
+                margin-bottom: 111px;
+
+                @include sp {
+                    margin-top: 58px;
+                    margin-bottom: 40px;
+                }
+
+                .c-title2 {
+                    &--small {
+                        @include sp {
+                            margin-bottom: 13px;
+                        }
+                    }
+
+                    &__style3 {
+                        &:after {
+                            @include sp {
+                                width: 30px;
+                            }
+                        }
+                    }
+                }
+
+                .c-map {
+                    &__item {
+                        &:nth-child(2) {
+                            .c-title2__style3 {
+                                @include sp {
+                                    margin-bottom: 11px;
+                                }
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            .c-title2__style3 {
+                                @include sp {
+                                    margin-bottom: 11px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .c-title2 {
+
+            &__style2 {
+                margin-bottom: 88px;
+    
+                @include sp {
+                    margin-bottom: 42px;
+                    padding-left: 5px;
+                }
+            }
+
+            &--small {
+                margin-bottom: 34px;
+                padding-bottom: 29px;
+                background-size: 43px 8.5px;
+                background-position-x: 1px;
+
+                @include sp {
+                    margin-bottom: 12px;
+                    padding-bottom: 18px;
+                    background-size: 21px 6px;
+                    background-position-x: center;
+                }
+            }
+        }
+
+        .c-list10 {
+            margin-top: 143px;
+
+            @include sp {
+                margin-top: 106px;
+            }
+        }
+    }
+}

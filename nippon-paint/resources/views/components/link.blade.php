@@ -1,0 +1,1 @@
+<a href="{{$link_href ?? '/'}}" class="c-link {{$link_class ?? ''}}">{{$link_text ?? ''}}</a>

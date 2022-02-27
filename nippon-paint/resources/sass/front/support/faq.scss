@@ -1,0 +1,467 @@
+@charset 'utf-8';
+
+@import '../0_base/vars';
+@import '../0_base/mixin';
+
+/*------------------------------------------------------------
+/support/faq
+------------------------------------------------------------*/
+.p-sfaq {
+    padding-bottom: 0;
+
+    .c-mainimg {
+        background-image: url(/images/support/faq/faq.jpg);
+        padding: 115px 0 112px;
+
+        @include sp {
+            background-image: url(/images/support/faq/faq_sp.jpg);
+            padding: 45px 0 40px;
+        }
+
+        &__text {
+            margin-top: 0;
+        }
+
+    }
+
+    &1 {
+        padding: 60px 0 0;
+
+        @include sp {
+            padding: 0;
+        }
+
+        &__block {
+            margin: 20px 0 114px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            @include sp {
+                margin: 19px 5px 47px;
+                display: block;
+            }
+
+            .c-box2 {
+                width: calc(50% - 10px);
+
+                @include sp {
+                    width: 100%;
+                    margin: 0 0 15px;
+                }
+            }
+        }
+
+        &__title2 {
+            margin: 94px 0 37px;
+
+            @include sp {
+                margin: 46px 0 20px;
+            }
+        }
+    }
+
+    &link {
+        background: #F8F8F8;
+        margin: 120px 0 0;
+        padding: 42px 0 55px;
+
+        @include sp {
+            margin: 50px 0 0;
+            padding: 36px 0 50px;
+        }
+
+        .c-list13 {
+            margin: 30px 0 0;
+
+            @include sp {
+                margin: 25px 0 0;
+            }
+        }
+    }
+
+    &catbox {
+        &__txt {
+            margin: 0 0 29px;
+
+            @include sp {
+                margin: 0 0 16px;
+            }
+        }
+
+        .c-title2__style3 {
+            margin: 0 0 32px;
+
+            @include sp {
+                margin: 0 0 20px;
+            }
+        }
+
+        .c-list6 {
+            margin: 0 0 51px;
+
+            @include sp {
+                margin: 0 0 38px;
+            }
+
+            &__box--fwidth {
+                padding-bottom: 20px;
+
+                @include sp {
+                    padding-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/support/faq/search
+/support/faq/search/notfound/
+------------------------------------------------------------*/
+.p-sfaqsearch {
+    padding-bottom: 50px;
+
+    @include sp {
+        padding-bottom: 12px;
+    }
+
+    &1 {
+        padding: 58px 0 0;
+
+        @include sp {
+            padding: 37px 0 0;
+        }
+
+        .c-title2__style2 {
+            @include sp {
+                margin: 0 7px 41px;
+                width: auto;
+
+            }
+
+            span {
+                margin: 0 0 0 10px;
+
+                @include sp {
+                    margin: 10px 0 0 -3px;
+                }
+            }
+        }
+
+        .c-list7 {
+            margin: 62px 0 114px;
+
+            @include sp {
+                margin: 28px 0 44px;
+            }
+        }
+
+        .c-title6__style2 {
+            margin: 73px 0 41px;
+
+            @include sp {
+                margin: 35px 5px 21px;
+            }
+        }
+
+        .c-text1 {
+            margin: 0 0 0;
+
+            @include sp {
+                margin: 0 5px 0;
+            }
+        }
+
+        .c-list12 {
+            margin: 38px 0 0;
+
+            @include sp {
+                margin: 21px 0 0;
+            }
+        }
+
+        .c-btn2 {
+            width: 364px;
+            margin: 53px 0 70px;
+
+            @include sp {
+                width: auto;
+                display: block;
+                margin: 24px 5px 38px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/support/faq/detail
+------------------------------------------------------------*/
+.p-sfaqdt {
+    padding-bottom: 50px;
+
+    @include sp {
+        padding-bottom: 12px;
+    }
+
+    // p-sfaqdt__content .
+    &__content {
+        
+        > div {
+            border: 1px solid #DADADA;
+            margin: 36px 0 0;
+            padding: 42px 50px 36px 103px;
+            font-size: 1.6rem;
+            line-height: 28px;
+            position: relative;
+
+            @include sp {
+                font-size: 1.5rem;
+                line-height: 23px;
+                padding: 20px 15px 20px 62px;
+                margin: 27px 0 0;
+            }
+
+            &:before {
+                content: 'A.';
+                position: absolute;
+                top: 46px;
+                left: 50px;
+                font-size: 3rem;
+                font-family: 'Poppins', sans-serif;
+                letter-spacing: 6px;
+                font-weight: bold;
+
+                @include sp {
+                    font-size: 2.5rem;
+                    letter-spacing: 4px;
+                    top: 22px;
+                    font-weight: 600;
+                    left: 24px;
+                }
+            }
+
+            & + h2 {
+                margin-top: 40px;
+
+                @include sp {
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        h1 {
+            margin-bottom: 90px;
+            padding-bottom: 0;
+            text-align: left;
+            font-size: 4.4rem;
+            line-height: 6rem;
+            color: #E83820;
+            font-weight: 900;
+            background: none;
+            width: 100%;
+            position: relative;
+
+            @include sp {
+                margin: 0 0 37px;
+                width: auto;
+                font-size: 3rem;
+            }
+
+            span {
+                margin: 0 0 0 10px;
+                font-size: 2rem;
+                line-height: 1;
+                font-weight: 700;
+                color: #E83820;
+
+                @include sp {
+                    margin: 10px 0 0 -3px;
+                    font-size: 1.4rem;
+                    line-height: 1.2em;
+                    display: block;
+                }
+            }
+        }
+
+        h2 {
+            font-size: 3rem;
+            line-height: 40px;
+            padding: 0 0 0 65px;
+            position: relative;
+
+            @include sp {
+                font-size: 2rem;
+                padding: 0 0 0 38px;
+            }
+
+            &:before {
+                content: 'Q.';
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 4rem;
+                color: #E83820;
+                font-family: 'Poppins', sans-serif;
+                letter-spacing: 6px;
+
+                @include sp {
+                    font-size: 2.5rem;
+                    letter-spacing: 4px;
+                    top: 2px;
+                }
+            }
+        }
+    }
+
+    &1 {
+        padding: 58px 0 0;
+
+        @include sp {
+            padding: 37px 0 0;
+        }
+
+        .c-title2__style2 {
+            @include sp {
+                margin: 0 0px 37px;
+                width: auto;
+
+            }
+
+            span {
+                margin: 0 0 0 10px;
+
+                @include sp {
+                    margin: 10px 0 0 -3px;
+                }
+            }
+        }
+
+        .c-form1 {
+            margin: 100px 0 112px;
+
+            @include sp {
+                width: calc(100% + 40px);
+                margin: 49px 0 47px -20px;
+            }
+        }
+
+        .p-sfaqcatbox {
+            @include sp {
+                margin: 0 -5px;
+            }
+        }
+    }
+
+    // .p-sfaqdt2 .
+    &2 {
+        > .l-cont2 {
+            // .p-sfaqdt2 > .l-cont2 .c-list6__box .
+            .c-list6__box {
+                @include sp {
+                    padding: 0 0;
+                }
+
+                & + .c-title2__style3 {
+                    margin-top: 50px;
+
+                    @include sp {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/support/faq/cat
+------------------------------------------------------------*/
+.p-sfaqcat {
+    padding-bottom: 50px;
+
+    @include sp {
+        padding-bottom: 12px;
+    }
+
+    &1 {
+        padding: 58px 0 0;
+
+        @include sp {
+            padding: 37px 0 0;
+        }
+
+        .c-title2__style2 {
+            margin: 0 0 0;
+
+            @include sp {
+                margin: 0 5px;
+                width: auto;
+
+            }
+
+            span {
+                margin: 0 0 0 10px;
+
+                @include sp {
+                    margin: 10px 0 0;
+                }
+            }
+        }
+
+        &__txt {
+            font-size: 1.4rem;
+            line-height: 24px;
+            margin: 29px 0 93px;
+
+            @include sp {
+                font-size: 1.3rem;
+                line-height: 22px;
+                margin: 11px 5px 39px;
+            }
+        }
+
+        .c-list7 {
+            margin: 62px 0 114px;
+
+            @include sp {
+                margin: 28px 0 44px;
+            }
+        }
+
+        .c-title6__style2 {
+            margin: 73px 0 41px;
+
+            @include sp {
+                margin: 35px 5px 21px;
+            }
+        }
+
+        .c-text1 {
+            margin: 0 0 0;
+
+            @include sp {
+                margin: 0 5px 0;
+            }
+        }
+
+        .c-list12 {
+            margin: 38px 0 0;
+
+            @include sp {
+                margin: 21px 0 0;
+            }
+        }
+
+        .c-btn2 {
+            width: 364px;
+            margin: 53px 0 70px;
+
+            @include sp {
+                width: auto;
+                display: block;
+                margin: 24px 5px 38px;
+            }
+        }
+    }
+}

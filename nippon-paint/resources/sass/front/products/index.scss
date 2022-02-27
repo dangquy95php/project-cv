@@ -1,0 +1,1836 @@
+@charset 'utf-8';
+
+@import "../0_base/vars";
+@import "../0_base/mixin";
+
+/*------------------------------------------------------------
+p-products
+------------------------------------------------------------*/
+.p-products {
+    padding-bottom: 50px;
+
+    .c-mainimg {
+        background-image: url(/images/products/index/mainimg.jpg);
+
+        @include sp {
+            background-image: url(/images/products/index/mainimg_sp.jpg);
+        }
+    }
+
+    // .p-products1 .
+    &1 {
+        margin-top: 60px;
+        margin-bottom: 100px;
+
+        @include sp {
+            margin-top: 0;
+            margin-bottom: 50px;
+        }
+    }
+
+    // .p-products2 .
+    &2 {
+        margin-bottom: 100px;
+
+        @include sp {
+            margin-bottom: 55px;
+        }
+    }
+
+    // .p-products3 .
+    &3 {
+        margin-bottom: 40px;
+        padding-top: 90px;
+        padding-bottom: 100px;
+        background-color: #F0F2F3;
+        text-align: center;
+
+        @include sp {
+            padding-top: 40px;
+            padding-bottom: 50px;
+        }
+
+        .c-list11 {
+            margin-bottom: 60px;
+
+            @include sp {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    // .p-products4 .
+    &4 {
+        .c-title3 {
+            margin-bottom: 30px;
+
+            @include sp {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+p-building
+------------------------------------------------------------*/
+.p-building {
+
+    @include sp {
+        padding-bottom: 0;
+    }
+
+    // .p-building .c-text1 .
+    .c-text1 {
+        @include sp {
+            padding-left: 5px;
+            padding-right: 6px;
+        }
+
+        // .p-building .c-text1:first-child .
+        &:first-child {
+            @include sp {
+                padding-right: 5px;
+            }
+        }
+    }
+
+    // .p-building .aside-content .
+    .l-aside {
+        padding-top: 78px;
+
+        @include sp {
+            padding-top: 35px;
+        }
+    }
+
+    // .p-building .c-side .
+    .c-side {
+        padding-top: 2px;
+
+        @include sp {
+            padding-top: 0;
+        }
+    }
+
+    // .p-building1 .
+    &1 {
+
+        .c-title2 {
+            @include sp {
+                margin-bottom: 30px;
+            }
+        }
+
+        // .p-building1__text .
+        &__text {
+            margin-bottom: 69px;
+
+            @include sp {
+                margin-bottom: 41px;
+            }
+        }
+
+        // .p-building1__list .
+        &__list {
+            @include flex;
+        }
+
+        // .p-building1__item .
+        &__item {
+            width: 20%;
+            padding: 0 20px;
+
+            @include sp {
+                margin-bottom: 18px;
+                padding: 0 10.5px;
+                width: 33.33%;
+            }
+
+
+            // .p-building1__item__text .
+            &__text {
+                text-align: center;
+            }
+
+            // .p-building1__item a .
+            a {
+                display: block;
+                @include nonelink;
+                text-decoration: underline;
+                color: $color-red2;
+                line-height: 2rem;
+                font-size: 1.3rem;
+
+                &:hover,
+                &:focus {
+                    opacity: 1;
+                    color: $color-red2;
+                    text-decoration: underline;
+                }
+
+                // .p-building1__item a .p-building1__item__text .
+                .p-building1__item__text {
+                    margin-top: 11px;
+
+                    @include sp {
+                        margin-top: 9px;
+                    }
+                }
+
+                @include sp {
+                    line-height: 1.6rem;
+                }
+            }
+
+            // .p-building1__item__inner .
+            &__inner {
+                font-size: 1.4rem;
+                line-height: 3.6rem;
+                font-weight: 500;
+
+                // .p-building1__item__inner .p-building1__item__text .
+                .p-building1__item__text {
+                    margin-top: 3px;
+                    color: $color-gray6;
+
+                    @include sp {
+                        margin-top: 10px;
+                        font-size: 1.3rem;
+                        line-height: 1.6rem;
+                    }
+                }
+            }
+
+
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    // .p-building2 .
+    &2 {
+        padding-top: 92px;
+
+        @include sp {
+            padding-top: 37px;
+        }
+
+        .p-building1__list {
+            margin-bottom: 33px;
+
+            @include sp {
+                margin-bottom: 3px;
+            }
+        }
+
+        .c-title2--small {
+            @include sp {
+                margin-bottom: 30px;
+            }
+        }
+
+        .c-text2 {
+            @include sp {
+                margin-top: 2px;
+            }
+
+            span {
+                @include sp {
+                    display: inline-block;
+                    padding-left: 12px;
+                }
+            }
+        }
+    }
+
+    // .p-building3 .
+    &3 {
+        padding-top: 71px;
+
+        @include sp {
+            padding-top: 44px;
+        }
+
+        // .p-building3 .c-text2 .
+        .c-text2 {
+            margin-top: 5px;
+
+            @include sp {
+                line-height: 2.2rem;
+                margin-top: -6px;
+            }
+
+            span {
+                position: relative;
+                display: inline-block;
+
+                &:before {
+                    content: "※";
+                    display: inline-block;
+
+                    @include sp {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+
+                @include sp {
+                    padding-left: 13px;
+                    line-height: 1.6rem;
+                    margin-top: 3px;
+                }
+            }
+        }
+
+        .c-list8 {
+            & + .c-text2 {
+                @include sp {
+                    margin-top: -1px;
+                    padding-right: 12px;
+                }
+            }
+        }
+
+        // .p-building3 .c-title2 .
+        .c-title2 {
+            margin-bottom: 62px;
+
+            @include sp {
+                margin-bottom: 30px;
+            }
+        }
+
+        // .p-building3__list .
+        &__list {
+            margin-bottom: 5px;
+            @include flex;
+        }
+
+        // .p-building3__item .
+        &__item {
+            margin-bottom: 40px;
+            padding: 0 20px;
+            width: 33.3333%;
+            @include flex;
+
+            @include sp {
+                margin-bottom: 21px;
+                width: 50%;
+                padding: 0 11px;
+            }
+
+            // .p-building3__item__img .
+            &__img {
+                width: 90px;
+
+                @include sp {
+                    width: 50px;
+                }
+            }
+
+            // .p-building3__item__text .
+            &__text {
+                width: calc(100% - 90px);
+                box-sizing: border-box;
+                padding-left: 20px;
+                padding-top: 1px;
+
+                @include sp {
+                    padding-top: 0;
+                    padding-left: 8px;
+                    width: calc(100% - 50px);
+                }
+
+                // .p-building3__item__text1 .
+                &1 {
+                    margin-bottom: 6px;
+                    font-size: 1.4rem;
+                    line-height: 2rem;
+                    font-weight: 500;
+
+                    @include sp {
+                        margin-bottom: 1px;
+                        font-size: 1.3rem;
+                        line-height: 1.6rem;
+                    }
+                }
+
+                // .p-building3__item__text2 .
+                &2 {
+                    font-size: 1.2rem;
+                    line-height: 1.8rem;
+
+
+                    @include sp {
+                        font-size: 1.1rem;
+                        line-height: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+
+    // .p-building4 .
+    &4 {
+        padding-top: 71px;
+
+        @include sp {
+            padding-top: 41px;
+        }
+
+        .c-text1 {
+            color: $color-gray6;
+        }
+
+        // .p-building4 .c-title2 .
+        .c-title2 {
+            margin-bottom: 32px;
+
+            @include sp {
+                margin-bottom: 13px;
+            }
+        }
+
+        .c-box1 {
+            margin-bottom: 51px;
+
+            @include sp {
+                margin-bottom: 25px;
+            }
+
+            // .p-building4 .c-box1 + .c-text1 .
+            & + .c-text1 {
+                margin-bottom: 54px;
+
+                @include sp {
+                    margin-bottom: 27px;
+                }
+            }
+        }
+
+        // .p-building4__text .
+        &__text {
+            margin-bottom: 44px;
+
+            @include sp {
+                margin-bottom: 26px;
+            }
+        }
+
+        // .p-building4__grbox .
+        &__grbox {
+            margin-top: 60px;
+
+            @include sp {
+                margin-top: 30px;
+            }
+
+            .p-building4__box {
+                margin-bottom: 0;
+
+                & + .p-building4__box {
+                    border-top: none;
+                }
+            }
+
+            .c-box1 {
+                margin-bottom: 0;
+            }
+        }
+
+        // .p-building4__box .
+        &__box {
+            margin-bottom: 51px;
+            padding: 31px 40px 34px 40px;
+            box-sizing: border-box;
+            border: 2px solid $color-border;
+
+            @include sp {
+                margin-bottom: 25px;
+                border-width: 1px;
+                padding: 29px 29px 26px 29px;
+            }
+
+            // .p-building4__box + .p-building4__text .
+            & + .p-building4__text {
+                margin-bottom: 54px;
+
+                @include sp {
+                    margin-bottom: 26px;
+                }
+            }
+
+            // .p-building4__box__text .
+            &__text {
+                color: $color-gray6;
+
+                @include sp {
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                }
+            }
+
+            // .p-building4__box__img .
+            &__img {
+                margin-bottom: 6px;
+
+                @include sp {
+                    margin-bottom: 3px;
+                }
+            }
+
+            // .p-building4__box__title .
+            &__title {
+
+                // .p-building4__box__title1 .
+                &1 {
+                    margin-bottom: 13px;
+                    color: $color-red2;
+                    font-size: 2rem;
+                    line-height: 3.6rem;
+                    font-weight: 700;
+
+                    @include sp {
+                        margin-bottom: 18px;
+                        font-size: 1.8rem;
+                        line-height: 2rem;
+                    }
+
+                    // .p-building4__box__title1 span .
+                    span {
+                        margin-right: 5px;
+                        display: inline-block;
+                        @include poppins;
+                        font-size: 2.2rem;
+
+                        @include sp {
+                            font-size: 2.1rem;
+                            line-height: 2rem;
+                        }
+                    }
+                }
+
+                // .p-building4__box__title2 .
+                &2 {
+                    margin-top: 24px;
+                    margin-bottom: 6px;
+                    font-size: 1.8rem;
+                    line-height: 3.6rem;
+                    font-weight: 700;
+                    color: $color-gray4;
+
+                    @include sp {
+                        font-size: 1.6rem;
+                        line-height: 1.8rem;
+                        margin-top: 24px;
+                        margin-bottom: 11px;
+                    }
+
+                    & + .p-building4__box__text {
+                        margin-bottom: 25px;
+                        font-size: 1.5rem;
+                        line-height: 2.4rem;
+
+                        @include sp {
+                            margin-bottom: 15px;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    // .p-building5 .
+    &5 {
+        padding-top: 95px;
+
+        @include sp {
+            padding-top: 46px;
+        }
+
+        // .p-building5 .c-title2 .
+        .c-title2 {
+            margin-bottom: 40px;
+
+            @include sp {
+                margin-bottom: 20px;
+            }
+
+            // .p-building5 .c-title2__style3 .
+            &__style3 {
+                margin-bottom: 30px;
+
+                @include sp {
+                    margin-bottom: 20px;
+                }
+
+                & + .c-table.c-table--large {
+                    @include sp {
+                        margin-top: -5px;
+                    }
+
+                    tbody {
+                        tr {
+                            &:nth-child(2) {
+                                th,
+                                td {
+                                    @include sp {
+                                        padding-top: 10px;
+                                        padding-bottom: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // .p-building5 .c-table .
+        .c-table {
+            margin-bottom: 16px;
+
+            @include sp {
+                margin-bottom: 11px;
+            }
+
+            &__style2 {
+                @include sp {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+
+                tr {
+                    &:nth-child(2) {
+                        th,
+                        td {
+                            @include sp {
+                                padding-top: 12px;
+                                padding-bottom: 11px;
+                            }
+                        }
+
+                        td {
+                            @include sp {
+                                padding-left: 9px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        td {
+                            @include sp {
+                                padding-left: 9px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        th,
+                        td {
+                            @include sp {
+                                padding-top: 9px;
+                                padding-bottom: 10px;
+                            }
+                        }
+
+                        td {
+                            @include sp {
+                                padding-left: 9px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(5) {
+                        td {
+                            @include sp {
+                                padding-left: 9px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(6) {
+                        th,
+                        td {
+                            @include sp {
+                                padding-top: 9px;
+                                padding-bottom: 10px;
+                            }
+                        }
+
+                        td {
+                            @include sp {
+                                padding-left: 13px;
+                                padding-right: 19px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(7) {
+                        th,
+                        td {
+                            @include sp {
+                                padding-top: 11px;
+                                padding-bottom: 10px;
+                            }
+                        }
+
+                        td {
+                            @include sp {
+                                padding-left: 13px;
+                                padding-right: 19px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(8) {
+                        th,
+                        td {
+                            @include sp {
+                                padding-top: 11px;
+                                padding-bottom: 10px;
+                            }
+                        }
+
+                        td {
+                            @include sp {
+                                padding-left: 13px;
+                                padding-right: 19px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__style1 {
+                tr {
+                    &:nth-child(2) {
+                        td {
+                            @include sp {
+                                padding-top: 12px;
+                                padding-bottom: 13px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        td {
+                            @include sp {
+                                padding-top: 12px;
+                                padding-bottom: 13px;
+                            }
+                        }
+                    }
+                }
+
+                &.c-table--large {
+                    thead {
+                        tr {
+                            th {
+                                @include sp {
+                                    padding-top: 9px;
+                                    padding-bottom: 14px;
+                                }
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            &:nth-child(1) {
+                                th,
+                                td {
+                                    @include sp {
+                                        padding-top: 12px;
+                                        padding-bottom: 12px !important;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                th,
+                                td {
+                                    @include sp {
+                                        padding-top: 10px;
+                                        padding-bottom: 12px !important;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(4) {
+                                th,
+                                td {
+                                    @include sp {
+                                        padding-top: 12px;
+                                        padding-bottom: 12px !important;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(5) {
+                                th,
+                                td {
+                                    @include sp {
+                                        padding-top: 12px;
+                                        padding-bottom: 12px !important;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(6) {
+                                th,
+                                td {
+                                    @include sp {
+                                        padding-top: 12px;
+                                        padding-bottom: 12px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // .p-building5 .c-table + .c-title2__style3 .
+            & + .c-title2__style3 {
+                margin-top: 71px;
+
+                @include sp {
+                    margin-top: 80px;
+                }
+            }
+
+            // .p-building5 .c-table__signal .
+            &__signal {
+                margin-bottom: 57px;
+
+                @include sp {
+                    margin-bottom: 39px;
+                }
+
+                // .p-building5 .c-table__signal + .c-title2__style3 .
+                & + .c-title2__style3 {
+                    margin-top: 71px;
+                    margin-bottom: 30px;
+
+                    @include sp {
+                        margin-top: -2px;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+
+            // .p-building5 .c-table + .c-text2 .
+            & + .c-text2 {
+                margin-top: 24px;
+                margin-bottom: 67px;
+                padding-left: 0;
+
+                @include sp {
+                    margin-top: 14px;
+                    margin-bottom: 37px;
+                }
+
+                span {
+                    @include sp {
+                        display: inline-block;
+                        padding-left: 17px;
+                    }
+                }
+            }
+        }
+
+        .c-text2 {
+            &.is-last {
+                @include sp {
+                    margin-top: 1px;
+                    font-size: 1rem;
+                    line-height: 1.4rem;
+                }
+
+                span {
+                    @include sp {
+                        padding-left: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    // .p-building6 .
+    &6 {
+        padding-top: 1px;
+
+        @include sp {
+            padding-top: 8px;
+        }
+
+        // .p-building6 .c-title2 .
+        .c-title2 {
+            margin-bottom: 40px;
+
+            @include sp {
+                margin-bottom: 19px;
+            }
+        }
+
+        .c-table {
+
+            // .p-building6 .c-table td .
+            td {
+                padding: 15px 27px 17px;
+
+                @include sp {
+                    padding: 13px 14px 10px;
+                }
+
+                span {
+                    @include sp {
+                        font-size: 1.4rem;
+                        line-height: 2.1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    // .p-building7 .
+    &7 {
+        padding-top: 49px;
+
+        @include sp {
+            padding-top: 21px;
+        }
+
+        .c-list9 {
+            @include sp {
+                margin-bottom: 23px;
+            }
+        }
+
+        // .p-building7__text .
+        &__text {
+            margin-top: 2px;
+
+            @include sp {
+                margin-top: 0;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                padding-left: 5px;
+                padding-right: 6px;
+            }
+
+            & + .c-title2__style3 {
+                margin-top: 71px;
+                @include sp{
+                    margin-top: 39px;
+                }
+            }
+        }
+
+        // .p-building7 .c-title2--small .
+        .c-title2--small {
+            margin-bottom: 30px;
+
+            @include sp {
+                margin-bottom: 17px;
+            }
+        }
+
+        // .p-building7 .c-title2__style3 .
+        .c-title2__style3 {
+            margin-bottom: 23px;
+
+            @include sp {
+                margin-bottom: 11px;
+                padding-left: 19px;
+            }
+        }
+
+        // .p-building7__list .
+        &__list {
+            margin-bottom: 2px;
+            @include flex;
+
+            & + .p-building7__text {
+                @include sp {
+                    margin-top: 23px;
+                }
+            }
+        }
+
+        // .p-building7__subtitle .
+        &__subtitle {
+            margin-top: 42px;
+            margin-bottom: 41px;
+            color: $color-red2;
+            font-size: 1.6rem;
+            line-height: 3.6rem;
+            font-weight: 700;
+
+            @include sp {
+                margin-top: 32px;
+                margin-bottom: 26px;
+                font-size: 1.8rem;
+                line-height: 2rem;
+                text-align: center;
+            }
+        }
+
+        // .p-building7__item .
+        &__item {
+            margin-bottom: 38px;
+            padding: 0 20px;
+            width: calc(100% / 6);
+
+            @include sp {
+                margin-bottom: 19px;
+                width: 33.3333%;
+                padding: 0 11px;
+            }
+
+            // .p-building7__item__text .
+            &__text {
+                margin-top: 11px;
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 2rem;
+                text-align: center;
+
+                @include sp {
+                    margin-top: 10px;
+                    font-size: 1.3rem;
+                    line-height: 1.6rem;
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    // .p-building8 .
+    &8 {
+        padding-top: 69px;
+
+        @include sp {
+            padding-top: 83px;
+        }
+
+        // .p-building8 .c-title2--small .
+        .c-title2--small {
+            margin-bottom: 40px;
+
+            @include sp {
+                margin-bottom: 19px;
+            }
+        }
+
+        .c-list6__box {
+            @include sp {
+                margin-top: 0;
+            }
+        }
+
+        // .p-building8 .c-boxtext .
+        .c-boxtext {
+            margin-top: 81px;
+
+            @include sp {
+                margin-top: 30px;
+                width: calc(100% - 10px);
+            }
+        }
+
+        // p-building8__list .
+        &__list {
+            margin: 0 -7.5px 80px;
+            @include flex(flex-start, row, stretch);
+
+            @include sp {
+                margin: 0 0;
+            }
+        }
+
+        // .p-building8__item .
+        &__item {
+            padding: 0 7.5px;
+            width: 33.3333%;
+
+            @include sp {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 0 5px;
+            }
+
+            // .p-building8__item a .
+            a {
+                padding: 24px 20px 24px 29px;
+                height: 100%;
+                @include nonelink;
+                color: $color-gray4;
+                font-size: 1.4rem;
+                line-height: 2.4rem;
+                box-sizing: border-box;
+                @include flex(flex-start, row, center);
+                background: url(/images/common/icon_dbarrow-right.svg) no-repeat calc(100% - 30px) center / 13px 13.51px;
+                border: 1px solid $color-border;
+                font-weight: 500;
+
+                @include sp {
+                    padding: 18px 20px 20px 19px;
+                    font-size: 1.3rem;
+                    line-height: 1.2rem;
+                    background: url(/images/common/icon_dbarrow-right.svg) no-repeat calc(100% - 20px) center / 10.5px 10.5px;
+                }
+
+                @include hover {
+                    opacity: 1;
+                    color: $color-red2;
+                    border-color: $color-red2
+                }
+            }
+        }
+
+        // .p-building8__box .
+        &__box {
+            padding: 28px 40px 36px 40px;
+            box-sizing: border-box;
+            border: 1px solid $color-border;
+            background-color: #F6F6F6;
+
+            @include sp {
+                padding: 28px 35px 25px 30px;
+                width: calc(100% - 10px);
+                margin: 20px auto 0;
+            }
+        }
+
+        // .p-building8__text .
+        &__text {
+
+            // .p-building8__text1 .
+            &1 {
+                margin-bottom: 5px;
+                font-size: 1.6rem;
+                line-height: 3.6rem;
+                color: $color-gray4;
+                font-weight: 700;
+
+                @include sp {
+                    margin-bottom: 15px;
+                    font-size: 1.6rem;
+                    line-height: 1.8rem;
+                }
+            }
+
+            // .p-building8__text2 .
+            &2 {
+                font-size: 1.3rem;
+                line-height: 2rem;
+                color: $color-gray4;
+
+                @include sp {
+                    font-size: 1.4rem;
+                    line-height: 2.1rem;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+p-automotive
+------------------------------------------------------------*/
+.p-automotive {
+    .c-mainimg {
+        background-image: url(/images/products/automotive/mainimg.jpg);
+    }
+    // .p-automotive1
+    &1 {
+        padding: 60px 0 100px;
+        @include sp {
+            padding: 0 0 50px;
+        }
+        .c-form2 {
+            margin-top: 50px;
+            @include sp {
+                margin: 40px -15px 0;
+            }
+        }
+
+        .c-form1 {
+            &__form {
+                @include pad {
+                    padding-left: 0;
+                }
+            }
+
+            &__select {
+                width: 217px;
+                padding-left: 17px;
+
+                @include max-w(1600px) {
+                    width: 13.5625vw;
+                    padding-left: 1.0625vw;
+                }
+
+                @include pad {
+                    width: 200px;
+                }
+
+                @include sp {
+                    width: 100%;
+                    padding-left: 0;
+                }
+
+                select {
+                    padding-left: 15px;
+
+                    @include max-w(1600px) {
+                        padding-left: .9375vw;
+                    }
+
+                    @include pad {
+                        padding-left: .9375vw;
+                    }
+
+                    @include sp {
+                        padding-left: 12px;
+                    }
+                }
+            }
+
+            &__input {
+                padding-left: 24px;
+                width: calc(100% - 317px);
+
+                @include max-w(1600px) {
+                    padding-left: 1.5vw;
+                    width: calc(100% - 19.8125vw);
+                }
+
+                @include pad {
+                    padding-left: 20px;
+                    width: calc(100% - 287px);
+                }
+
+                @include sp {
+                    padding-left: 14px;
+                    width: calc(100% - 45px);
+                }
+            }
+        }
+    }
+    // .p-automotive2
+    &2 {
+        padding: 80px 0;
+        background: #f0f2f3;
+        @include sp {
+            padding: 40px 0;
+        }
+    }
+    // .p-automotive3
+    &3 {
+        padding-top: 100px;
+        @include sp {
+            padding: 50px 0 20px;
+        }
+        .c-cvimg1{
+            margin-top: 40px;
+            @include sp {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+.p-initial, .p-cat
+------------------------------------------------------------*/
+.p-initial,
+.p-cat {
+    // .p-initial1 .p-cat1
+    &1 {
+        padding: 60px 0 80px;
+        @include sp {
+            padding: 40px 0;
+        }
+    }
+    // .p-initial2 .p-cat2
+    &2 {
+        .c-nav2 {
+            margin-top: 40px;
+            @include sp {
+                margin-top: 20px;
+            }
+        }
+    }
+    // .p-initial3 .p-cat3
+    &3 {
+        padding-top: 100px;
+        @include sp {
+            padding-top: 0;
+        }
+        .c-boxlist4 {
+            margin-top: 40px;
+            @include sp {
+                margin-top: 15px;
+            }
+        }
+        .c-cvimg1 {
+            margin-top: 40px;
+            @include sp {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+.p-cat
+------------------------------------------------------------*/
+.p-cat {
+    // .p-cat1
+    &1 {
+        .c-form2 {
+            margin-top: 50px;
+            @include sp {
+                margin: 20px -15px 0;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+.p-detail
+------------------------------------------------------------*/
+.p-detail {
+    .c-mainimg {
+        padding: 75px 0 72px;
+        background-image: url(/images/products/automotive/mainimg2.jpg);
+        @include sp {
+            padding: 52px 0 36px;
+        }
+        &__title__jap {
+            font-size: 4.6rem;
+            font-weight: bold;
+            @include sp {
+                font-size: 3rem;
+            }
+        }
+    }
+    // .p-detail1
+    &1 {
+        padding-top: 80px;
+        @include sp {
+            padding-top: 35px;
+        }
+        .c-title2 {
+            margin: 60px 0 30px;
+            @include sp {
+                margin: 70px 0 15px;
+            }
+        }
+        section {
+            margin-bottom: 90px;
+            @include sp {
+                margin-bottom: 35px;
+            }
+            &:last-child {
+                @include sp {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        article > p + p {
+            margin-top: 30px;
+        }
+        h2 + h3 {
+            margin-top: 0 !important;
+            @include sp {
+                margin-top: -5px !important;
+            }
+        }
+        h3 {
+            margin: 50px 0 20px;
+            padding-bottom: 11px;
+            color: #444;
+            width: 100%;
+            font-size: 2rem;
+            line-height: 1.8;
+            font-weight: 700;
+            position: relative;
+            text-align: left;
+            background: none;
+            @include sp {
+                margin: 30px 0 15px !important;
+                padding-bottom: 7px;
+                text-align: center;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                width: 30px;
+                height: 1px;
+                top: auto;
+                left: 0;
+                background-color: #E83820;
+                bottom: 0;
+                transform: none;
+                @include sp {
+                    right: 0;
+                    margin: auto;
+                }
+            }
+        }
+        p {
+            @include sp {
+                font-size: 1.6rem;
+            }
+        }
+        figure {
+            @include sp {
+                padding: 30px;
+                margin-top: 35px;
+                border: 2px solid #D8D8D8;
+            }
+            figcaption {
+                font-size: 1.8rem;
+                font-weight: bold;
+                margin-top: 50px;
+                @include sp {
+                    margin-top: 0;
+                    font-size: 1.6rem;
+                }
+            }
+            p {
+                margin-top: 5px;
+                @include sp {
+                    margin-top: 10px;
+                }
+            }
+            img {
+                margin-top: 20px;
+                @include sp {
+                    margin-top: 40px;
+                    width: 100%;
+                }
+            }
+        }
+        .c-table {
+            margin-top: 40px;
+            @include sp {
+                margin: 20px 0 10px;
+            }
+        }
+        .c-text2 {
+            &--comment {
+                margin-top: 0;
+                font-size: 1rem;
+            }
+        }
+    }
+    // .p-detail2
+    &2 {
+        margin-top: 100px;
+        @include sp {
+            margin-top: 50px;
+        }
+        .c-boxlist4 {
+            margin-top: 40px;
+            @include sp {
+                margin-top: 15px;
+            }
+        }
+        .c-cvimg1 {
+            margin-top: 40px;
+            @include sp {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+.p-catalog
+------------------------------------------------------------*/
+.p-catalog {
+    .c-mainimg {
+        padding: 75px 0 72px;
+        background-image: url(/images/products/automotive/mainimg2.jpg);
+        @include sp {
+            padding: 52px 0 36px;
+        }
+        &__title__jap {
+            font-size: 4.6rem;
+            font-weight: bold;
+            @include sp {
+                font-size: 3rem;
+            }
+        }
+    }
+    // .p-catalog1
+    &1 {
+        .c-title2 {
+            margin: 70px 0 40px;
+            @include sp {
+                margin: 30px 0 20px;
+            }
+        }
+        .c-box3 {
+            margin-top: 60px;
+            @include sp {
+                margin-top: 30px;
+            }
+            &__text1 {
+                font-size: 1.6rem;
+            }
+            .c-text2 {
+                font-size: 1.3rem;
+                color: #444;
+                & + .c-text2 {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    // .p-catalog2
+    &2 {
+        margin-top: 100px;
+        @include sp {
+            margin-top: 50px;
+        }
+        .c-boxlist4 {
+            margin-top: 40px;
+            @include sp {
+                margin-top: 15px;
+            }
+        }
+        .c-cvimg1 {
+            margin-top: 40px;
+            @include sp {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+.p-nax-training .
+------------------------------------------------------------*/
+.p-nax-training {
+    @include sp {
+        padding-bottom: 50px;
+    }
+
+    // .p-nax-training .c-mainimg .
+    .c-mainimg {
+        padding: 76px 0 81px;
+        background-image: url(/images/products/automotive/mainimg3.jpg);
+        @include sp {
+            padding: 48px 0 33px;
+            background-image: url(/images/products/automotive/nax_mainimg_sp.jpg);
+        }
+
+        // .p-nax-training .c-mainimg__title__jap .
+        &__title__jap {
+            // margin-bottom: 19px;
+            @include noto-sans;
+
+            @include sp {
+                // margin-bottom: 19px;
+                font-size: 3rem;
+                margin-bottom: 2px;
+            }
+        }
+    }
+    // .p-nax-training1
+    &1 {
+        padding-top: 80px;
+
+        @include sp {
+            padding-top: 40px;
+        }
+
+        .c-list12__item:not(:last-child) {
+            @include sp {
+                margin-bottom: 9px;
+            }
+        }
+
+        .c-side {
+            @include sp {
+                margin-top: 55px;
+            }
+        }
+
+        // .p-nax-training1 .c-text2 .
+        .c-text2 {
+            margin-top: 20px;
+            padding-left: 0;
+
+            @include sp {
+                padding: 0 5px;
+                font-size: 1rem;
+                line-height: 1.4rem;
+                margin-top: 12px;
+            }
+
+            & + .c-text2 {
+                margin-top: 0;
+            }
+
+            & + .c-list6__box--fwidth {
+                @include sp {
+                    margin-top: 28px;
+                }
+            }
+        }
+
+        .c-btnpdf-wrapper {
+            @include sp {
+                padding: 0 5px;
+            }
+        }
+
+        // .p-nax-training1 .c-list9 .
+        .c-list9 {
+            margin-top: 68px;
+            margin-bottom: 30px;
+
+            @include sp {
+                margin-top: 31px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                @include sp {
+                    margin-bottom: 13px;
+                }
+            }
+
+            // .p-nax-training1 .c-list9__style4 .
+            &__style4 {
+                @include sp {
+                    padding: 0 5px;
+                }
+
+                // .p-nax-training1 .c-list9__style4 .c-list9__item:not(:last-child) .
+                .c-list9__item:not(:last-child) {
+                    @include sp {
+                        margin-bottom: 26px;
+                    }
+                }
+            }
+        }
+
+        // .p-nax-training1 .c-title2 .
+        .c-title2 {
+            margin: 94px 0 40px;
+
+            @include sp {
+                margin: 50px 0 20px;
+                padding-bottom: 15px;
+            }
+
+            // .p-nax-training1 .c-title2:nth-of-type(2) .
+            &:nth-of-type(2){
+                margin: 99px 0 33px;
+
+                @include sp {
+                    margin: 47px 0 14px;
+                }
+            }
+
+            // .p-nax-training1 .c-title2:nth-of-type(3) .
+            &:nth-of-type(3){
+                margin: 95px 0 33px;
+
+                @include sp {
+                    margin: 46px 0 15px;
+                }
+            }
+
+            // .p-nax-training1 .c-title2:nth-of-type(4) .
+            &:nth-of-type(4){
+                margin: 90px 0 33px;
+
+                @include sp {
+                    margin: 44px 0 15px;
+                }
+            }
+
+            // .p-nax-training1 .c-title2:nth-of-type(5) .
+            &:nth-of-type(5){
+                margin: 89px 0 33px;
+
+                @include sp {
+                    margin: 44px 0 15px;
+                }
+            }
+        }
+
+        .c-table {
+            @include sp {
+                margin-bottom: 10px;
+            }
+
+            th {
+                max-width: unset;
+                justify-content: flex-start;
+                text-align: left;
+                flex: 0 1 320px;
+            }
+            
+            td {
+                display: flex;
+                align-items: center;
+                flex: 0 1 320px;
+            }
+
+            &4 {
+                @include sp {
+                    padding: 0 5px;
+                }
+            }
+        }
+
+        // .p-nax-training1 .c-boxerror .
+        .c-boxerror {
+            margin-bottom: 52px;
+
+            @include sp {
+                margin: 0 auto 34px;
+                width: calc(100% - 10px);
+            }
+        }
+
+        // .p-nax-training1 .c-list6__box--fwidth .
+        .c-list6__box--fwidth {
+            margin-top: 33px;
+
+            @include sp {
+                margin-top: 25px;
+            }
+        }
+
+        .c-text1 {
+            @include sp {
+                padding: 0 5px;
+            }
+
+            // .p-nax-training1 .c-text1 + .c-text1 .
+            & + .c-text1 {
+                margin-top: 28px;
+
+                @include sp {
+                    margin-top: 14px;
+                }
+            }
+        }
+    }
+
+    // .p-nax-training2
+    &2 {
+        margin-top: 100px;
+
+        @include sp {
+            margin-top: 0;
+        }
+
+        .c-boxlist4 {
+            margin-top: 40px;
+            @include sp {
+                margin-top: 15px;
+            }
+
+            &__item {
+                @include sp {
+                    padding-bottom: 30px;
+                }
+            }
+
+            // .p-nax-training2 .c-boxlist4 .c-title2--small .
+            .c-title2--small {
+                @include noto-sans;
+                margin-bottom: 32px;
+
+                @include sp {
+                    margin-top: 22px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .c-text2 {
+                @include sp {
+                    margin-top: 12px;
+                    font-size: 1rem;
+                    line-height: 1.4rem;
+                }
+
+                & + .c-btn2 {
+                    @include sp {
+                        margin-top: 28px;
+                        padding: 20px 20px 20px;
+                    }
+                }
+            }
+
+            .c-text1 {
+                @include sp {
+                    padding-bottom: 0;
+                }
+            }
+
+            .c-btn2 {
+                @include sp {
+                    margin-top: 25px;
+                    padding: 20px 20px 19px;
+                }
+            }
+        }
+
+        // .p-nax-training2 .c-cvimg1 .
+        .c-cvimg1 {
+            margin-top: 40px;
+            padding-bottom: 60px;
+            background-image: url(/images/products/automotive/nax_img6.jpg);
+            
+            @include sp {
+                margin-top: 18px;
+                padding-bottom: 40px;
+                background-image: url(/images/products/automotive/nax_img6_sp.jpg);
+            }
+
+            .c-title2 {
+                @include noto-sans;
+                margin-bottom: 33px;
+
+                @include sp {
+                    font-size: 3.2rem;
+                    font-weight: 900;
+                    margin-bottom: 14px;
+                    padding-bottom: 16px;
+                }
+            }
+
+            // .p-nax-training2 .c-cvimg1 .c-btn2 .
+            .c-btn2 {
+                margin-top: 33px;
+
+                @include sp {
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+}

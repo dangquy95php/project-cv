@@ -1,0 +1,168 @@
+@charset 'utf-8';
+
+@import '../0_base/vars';
+@import '../0_base/mixin';
+
+/*------------------------------------------------------------
+/support/
+------------------------------------------------------------*/
+.p-support {
+    padding-bottom: 0;
+
+    .c-mainimg {
+        background-image: url(/images/support/support.jpg);
+        padding: 78px 0 82px;
+
+        @include sp {
+            background-image: url(/images/support/support_sp.jpg);
+            padding: 54px 0 25px;
+        }
+
+        &__title {
+            &__jap {
+                font-size: 4.6rem;
+                margin-bottom: 16px;
+
+                @include sp {
+                    font-size: 3rem;
+                    margin-bottom: 8px;
+                }
+            }
+
+            &__eng {
+                @include sp {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    &1 {
+        padding: 74px 0 0;
+
+        @include sp {
+            padding: 47px 0 0;
+        }
+
+        &__title {
+            margin-bottom: 30px;
+
+            @include sp {
+                margin-bottom: 14px;
+            }
+        }
+
+        &__txt {
+            font-size: 1.6rem;
+            line-height: 28px;
+            margin: 0 0 0;
+            text-align: center;
+
+            @include sp {
+                text-align: left;
+                line-height: 24px;
+                margin: 0 5px 0;
+            }
+        }
+
+        &__block {
+            margin: 54px 0 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            @include sp {
+                margin: 24px 5px 29px;
+                display: block;
+            }
+
+            .c-box2 {
+                width: calc(50% - 10px);
+
+                @include sp {
+                    width: 100%;
+                    margin: 0 0 15px;
+                }
+            }
+
+            &+.u-center .c-btn2 {
+                width: 429px;
+
+                @include sp {
+                    width: calc(100% - 10px);
+                }
+            }
+        }
+
+        .c-box4 {
+            background: #464E56;
+            margin: 100px 0 0;
+            padding: 74px 20px 79px;
+
+            @include sp {
+                margin: 50px 0 0;
+                padding: 57px 20px 38px;
+            }
+
+            .c-title2 {
+                font-size: 4.6rem;
+                margin: 0 0 34px;
+
+                @include sp {
+                    font-size: 3.2rem;
+                    margin: 0 0 18px;
+                }
+            }
+
+            &__txt {
+                span {
+                    display: block;
+                    font-size: 2rem;
+                    line-height: 28px;
+                    margin: 0 0 20px;
+                    font-weight: bold;
+
+                    @include sp {
+                        font-size: 1.7rem;
+                        line-height: 18px;
+                        margin: 0 0 14px;
+                    }
+                }
+
+                @include sp {
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+
+            .c-btn2 {
+                width: 446px;
+
+                @include sp {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &2 {
+        background: #F8F8F8;
+        margin: 120px 0 0;
+        padding: 42px 0 55px;
+
+        @include sp {
+            margin: 50px 0 0;
+            padding: 36px 0 50px;
+        }
+
+        .c-list13 {
+            margin: 30px 0 0;
+
+            @include sp {
+                margin: 25px 0 0;
+            }
+        }
+    }
+}

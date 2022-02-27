@@ -1,0 +1,120 @@
+@charset 'utf-8';
+
+@import '../0_base/vars';
+@import '../0_base/mixin';
+
+/*------------------------------------------------------------
+about/company
+------------------------------------------------------------*/
+.p-aboutCompany {
+
+    @include sp {
+        padding-bottom: 50px;
+    }
+
+    &1 {
+        padding-top: 58px;
+
+        @include sp {
+            padding-top: 38px;
+        }
+
+        .c-title2__style2 {
+            @include sp {
+                padding-left: 5px;
+            }
+        }
+
+        .c-list10 {
+            margin-top: 120px;
+
+            @include sp {
+                margin-top: 40px;
+            }
+        }
+
+        .c-table {
+            &__style2 {
+                @include sp {
+                    padding: 0 5px;
+                }
+
+                th {
+                    @include sp {
+                        text-align: left;
+                        padding-top: 9px;
+                        padding-bottom: 9px;
+                    }
+
+                    @include sp {
+                        line-height: 2rem;
+                    }
+                }
+
+                td {
+                    @include sp {
+                        line-height: 2rem;
+                    }
+
+                    &:last-child {
+                        @include sp {
+                            padding-right: 11px;
+                            padding-top: 11px;
+                            padding-bottom: 11px;
+                        }
+                    }
+                }
+
+                tr {
+                    th {
+                        &:first-child {
+                            @include sp {
+                                padding-bottom: 11px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        th,
+                        td {
+                            @include sp {
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        th,
+                        td {
+                            @include sp {
+                                padding-top: 11px;
+                                padding-bottom: 12px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(7) {
+                        th,
+                        td {
+                            @include sp {
+                                padding-top: 12px;
+                                padding-bottom: 4px;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        th,
+                        td {
+                            @include sp {
+                                padding-top: 12px;
+                                padding-bottom: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

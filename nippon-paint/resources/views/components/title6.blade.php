@@ -1,0 +1,1 @@
+<h4 class="c-title6 {{$title6_class ?? ''}}"><span class="c-title6__text">{{$title6_text}}</span></h4>

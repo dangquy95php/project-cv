@@ -1,0 +1,278 @@
+@charset 'utf-8';
+
+@import "../0_base/vars";
+@import "../0_base/mixin";
+
+/*------------------------------------------------------------
+p-term
+------------------------------------------------------------*/
+
+.p-term,
+.p-term-search,
+.p-term-initial,
+.p-term-tag,
+.p-term-notfound,
+.p-term-detail {
+    padding-bottom: 0;
+    &1 {
+        padding-top: 60px;
+        @include sp{
+            padding-top: 0;
+        }
+    }
+
+    &2 {
+        padding: 55px 0 100px;
+        @include sp{
+            padding: 45px 0 50px;
+        }
+        .c-boxlist1 {
+            margin-bottom: 20px;
+        }
+    }
+
+    &3 {
+        padding: 90px 0 120px;
+        background-color: $color-gray11;
+        @include sp{
+            padding: 42px 0 50px;
+        }
+    }
+}
+
+.p-term {
+    &-search,
+    &-initial,
+    &-tag,
+    &-notfound {
+        &1 {
+            padding-top: 90px;
+            @include sp{
+                padding-top: 35px;
+            }
+        }
+    }
+
+    &-notfound {
+        &1 {
+            .c-title6 {
+                margin-bottom: 40px;
+                @include sp{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        &2 {
+            padding: 75px 0 100px;
+            text-align: center;
+            @include sp{
+                padding: 45px 0 50px;
+            }
+            .c-block1 {
+                margin-bottom: 40px;
+                text-align: left;
+                @include sp{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    &-detail {
+        padding-bottom: 60px;
+
+        @include sp{
+            padding-bottom: 0;
+        }
+
+        // .p-term-detail1 .
+        &1 {
+            @include sp{
+                padding: 35px 0 0;
+            }
+
+            h1 {
+                margin-bottom: 45px;
+                padding: 19px 0 22px 30px;
+                font-size: 2.8rem;
+                line-height: 3.6rem;
+                border-left: 6px solid #E83820;
+                box-sizing: border-box;
+                background-color: #f6f6f6;
+                width: 100%;
+                color: #444;
+                font-weight: 700;
+
+                @include sp {
+                    margin-bottom: 15px;
+                    padding: 12px 0 12px 18px;
+                    font-size: 2rem;
+                    line-height: 1.2em;
+                    border-left-width: 4px;
+                }
+
+                span {
+                    margin-top: 10px;
+                    display: block;
+                    color: #888;
+                    font-size: 1.7rem;
+                    font-weight: 400;
+
+                    @include sp {
+                        margin-top: 0;
+                        color: #444;
+                        font-size: 1.4rem;
+                        line-height: 1.2em;
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            // .p-term-detail1 p .
+            p {
+                padding: 0 40px;
+                margin-bottom: 20px;
+                font-size: 1.8rem;
+                line-height: 3.4rem;
+                color: #444;
+
+                @include sp{
+                    margin-bottom: 15px;
+                    padding: 0 10px;
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                }
+
+                a {
+                    font-size: inherit;
+                    line-height: inherit;
+                    color: #e83820;
+                    text-decoration: underline;
+                    display: inline-block;
+                    position: relative;
+
+                    @include hover {
+                        opacity: 1;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            h2 {
+                margin-bottom: 90px;
+                padding-bottom: 0;
+                text-align: left;
+                font-size: 4.4rem;
+                line-height: 6rem;
+                color: #E83820;
+                font-weight: 900;
+                background: none;
+                width: 100%;
+                position: relative;
+
+                @include sp {
+                    margin-bottom: 36px;
+                    font-size: 3rem;
+                }
+            }
+
+            ul {
+                margin-top: 100px;
+                border-top: 1px solid #d8d8d8;
+                border-bottom: 1px solid #d8d8d8;
+                padding: 27px 100px 14px 40px;
+                display: flex;
+                flex-wrap: wrap;
+                flex: 1;
+                padding: 37px 100px 33px 50px;
+                background: #fff;
+
+                @include sp {
+                    margin-top: 55px;
+                    padding: 18px 13px 8px;
+                    flex: auto;
+                    width: 100%;
+                }
+
+                li {
+                    margin: 0 28px 16px 0;
+
+                    @include sp {
+                        margin-bottom: 10px;
+                        margin-right: 2%;
+                    }
+
+                    a {
+                        color: #E83820;
+                        display: block;
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        line-height: 1.5;
+                        font-weight: 500;
+                        position: relative;
+                        padding: 0 0 0 29px;
+
+                        @include sp {
+                            padding: 0 0 0 17px;
+                            line-height: 1.2;
+                        }
+
+                        &:before {
+                            content: '';
+                            width: 19px;
+                            height: 19px;
+                            background: url(/images/common/icon-tag--red.svg) no-repeat center / cover;
+                            background-size: cover;
+                            position: absolute;
+                            top: 3px;
+                            left: 0;
+
+                            @include sp {
+                                width: 14px;
+                                height: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // p-term-detail2 .
+        &2 {
+            padding: 100px 0;
+
+            @include sp{
+                padding: 50px 0;
+            }
+
+            .c-initials {
+                &__title {
+                    @include max-w(870px) {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &1,
+    &-search1,
+    &-notfound2 {
+        .c-form {
+            &1 {
+                &__input {
+                    padding-left: 34px;
+
+                    @include max-w(1600px) {
+                        padding-left: 2.125vw;
+                    }
+
+                    @include sp {
+                        padding-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

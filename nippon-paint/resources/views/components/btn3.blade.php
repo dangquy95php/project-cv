@@ -1,0 +1,1 @@
+<a href="/" class="c-btn3 {{$btn3_class ?? ''}}">{{$btn3_text}}</a>

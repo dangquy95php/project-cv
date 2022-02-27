@@ -1,0 +1,106 @@
+/*------------------------------------------------------------
+slide
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-slide1 {
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.c-slide {}
+
+/*
+------------------------------------------------------------*/
+
+.c-slide2 {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include sp {
+        margin: 0 5px;
+    }
+
+    &__title {
+        font-size: 2rem;
+        margin: 0 0 13px;
+
+        @include sp {
+            text-align: center;
+            font-size: 2.1rem;
+            margin: 0 0 11px;
+
+        }
+
+        span {
+            color: #E83820;
+            font-size: 1.4rem;
+            display: inline-block;
+            margin: 0 0 0 7px;
+
+            @include sp {
+                display: block;
+                font-size: 1.3rem;
+                margin: 8px 0 0 0;
+
+            }
+        }
+    }
+
+    &__box {
+        width: calc(50% - 30px);
+        overflow: hidden;
+        margin: 0 0 70px;
+        @include sp {
+            width: 100%;
+            margin: 0 0 43px;
+        }
+        p {
+            img {
+               width: 100%;
+            }
+        }
+    }
+
+    &__img {
+        .slick-track {
+            display: flex;
+        }
+
+    }
+
+    &__thumb {
+        margin: 19px 0 0;
+
+        @include sp {
+            margin: 10px 0 0;
+        }
+
+        p {
+            cursor: pointer;
+            width: calc(20% - 4px) !important;
+            margin-bottom: 5px;
+            float: left;
+            &:not(:nth-child(5n+1)) {
+                margin-left: 5px;
+            }
+            &.slick-current {
+                opacity: 0.5;
+                cursor: initial;
+            }
+        }
+
+        .slick-track {
+            transform: none !important;
+            width: 100% !important;
+            @include clear;
+        }
+    }
+}

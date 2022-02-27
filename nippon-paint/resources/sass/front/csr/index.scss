@@ -1,0 +1,188 @@
+@charset 'utf-8';
+
+@import '../0_base/vars';
+@import '../0_base/mixin';
+
+/*------------------------------------------------------------
+/csr/
+------------------------------------------------------------*/
+.p-csr {
+    .c-mainimg {
+        background-image: url(/images/csr/main.jpg);
+        padding: 117px 0 134px;
+
+        @include sp {
+            background-image: url(/images/csr/main_sp.jpg);
+            padding: 41px 0 40px;
+        }
+
+        &__title {
+            &__jap {
+                font-size: 4.6rem;
+                margin-bottom: 16px;
+
+                @include sp {
+                    font-size: 3.5rem;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        &__text {
+            margin: 4px;
+
+            @include sp {
+                margin: 0;
+            }
+        }
+    }
+
+    &1 {
+        .c-title2--center {
+            font-weight: 900;
+            margin: 109px 0 31px;
+
+            @include sp {
+                margin: 53px 0 12px;
+            }
+
+            &:first-child {
+                margin: 93px 0 31px;
+
+                @include sp {
+                    margin: 44px 0 5px;
+                }
+            }
+        }
+
+
+
+    }
+
+    .c-text1 {
+        @include sp {
+            text-align: left;
+            margin: 0 5px 0;
+        }
+    }
+
+    &__box {
+        margin: 70px 0 79px;
+        @include clear;
+
+        @include sp {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            margin: 36px 0 40px;
+        }
+
+        img {
+            float: right;
+            margin: 4px 0 0 70px;
+            width: 400px;
+
+            @include sp {
+                float: none;
+                width: calc(100% - 10px);
+                margin: 24px 5px 0;
+            }
+        }
+
+        &1 {
+            overflow: hidden;
+
+            p {
+                @include sp {
+                    font-size: 1.6rem;
+                    line-height: 24px;
+                    margin: 0 5px 0;
+                }
+            }
+        }
+
+        .c-title2__style3 {
+            margin: 0 0 35px;
+
+            @include sp {
+                margin: 0 0 9px;
+            }
+        }
+    }
+
+    .c-list4 {
+        &__list {
+            width: 100%;
+
+            @include sp {
+                width: auto;
+                margin: 0 -15px;
+            }
+        }
+
+        &__item {
+            a {
+                padding: 40px 40px 40px 40px;
+
+                @include sp {
+                    padding: 20px;
+                }
+            }
+
+            &__img {
+                width: 100px;
+
+                @include sp {
+                    width: 70px;
+                }
+            }
+
+            &__detail {
+                width: calc(100% - 100px);
+                padding: 3px 0 0 40px;
+
+                @include sp {
+                    width: calc(100% - 70px);
+                    padding: 0 0 0 21px;
+                }
+
+                .c-list4__date:first-child {
+                    padding-left: 0;
+                }
+            }
+
+            &__inner {
+                width: 100%;
+            }
+        }
+
+        &__text {
+            margin-top: 9px;
+
+            @include sp {
+                font-size: 1.5rem;
+                line-height: 23px;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .c-btn2 {
+        margin: 40px auto 0;
+        display: block;
+        width: 300px;
+        padding: 23px 0 20px;
+
+        @include sp {
+            margin: 30px 5px 0;
+            width: auto;
+        }
+    }
+
+    .c-list10 {
+        margin: 121px 0 0;
+
+        @include sp {
+            margin: 50px 0 0;
+        }
+    }
+}

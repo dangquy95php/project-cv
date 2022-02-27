@@ -1,0 +1,53 @@
+@charset 'utf-8';
+
+@import '../0_base/vars';
+@import '../0_base/mixin';
+
+/*------------------------------------------------------------
+about
+------------------------------------------------------------*/
+.p-about {
+    .c-mainimg {
+        padding-top: 115px;
+        padding-bottom: 115px;
+        background: url('/images/about/index/mv.jpg') no-repeat center/cover;
+        @include sp {
+            padding-top: 41px;
+            padding-bottom: 40px;
+            background: url('/images/about/index/mv_sp.jpg') no-repeat center/cover;
+        }
+
+        &__title {
+            &__jap {
+                margin-bottom: 26px;
+                @include sp {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &__text {
+            margin-top: 0;
+        }
+    }
+
+    &__wrap {
+        padding: 73px 0 0;
+        @include sp {
+            padding: 31px 0 0;
+        }
+
+        .c-text1 {
+            @include sp {
+                padding: 0 5px;
+            }
+        }
+
+        .c-list10 {
+            margin: 74px 0 0;
+            @include sp {
+                margin: 35px 0 20px;
+            }
+        }
+    }
+}

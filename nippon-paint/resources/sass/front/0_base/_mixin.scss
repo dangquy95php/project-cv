@@ -1,0 +1,179 @@
+@import 'fonts';
+
+@mixin noto-sans {
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+@mixin yumin() {
+	font-family: '游明朝', YuMincho, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'HG明朝E', 'ＭＳ Ｐ明朝', serif;
+}
+
+@mixin yugot() {
+	font-family: '游ゴシック', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo',
+		sans-serif;
+}
+
+@mixin lato {
+	font-family: 'Lato', sans-serif;
+}
+
+@mixin poppins {
+	font-family: 'Poppins', sans-serif;
+}
+
+@mixin pc {
+	@media screen and (min-width: 1025px) {
+		@content;
+	}
+}
+
+@mixin pad {
+	@media screen and (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin sp {
+	@media screen and (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin min-w($breakpoint) {
+	@media screen and (min-width: #{$breakpoint}) {
+		@content;
+	}
+}
+
+@mixin max-w($breakpoint) {
+	@media screen and (max-width: #{$breakpoint}) {
+		@content;
+	}
+}
+
+@mixin ie {
+	@media all and (-ms-high-contrast: none) {
+		@content;
+	}
+}
+
+@mixin nonelink($clr: 'inherit') {
+	text-decoration: none;
+	color: unquote($clr);
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: unquote($clr);
+	}
+}
+
+@mixin shadow {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@mixin pseudo($w, $h, $top, $left) {
+	position: absolute;
+	content: '';
+	width: $w;
+	height: $h;
+	top: $top;
+	left: $left;
+}
+
+@mixin flex($content: 'flex-start', $direction: 'row', $items: 'flex-start') {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: unquote($direction);
+	justify-content: unquote($content);
+	align-items: unquote($items);
+}
+
+@mixin imghover($parent, $child) {
+	#{$parent} {
+		overflow-x: hidden;
+		overflow-y: hidden;
+
+		@include hover {
+			#{$child} {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
+
+		img {
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	#{$child} {
+		overflow-x: hidden;
+		overflow-y: hidden;
+
+		@include hover {
+			& {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+}
+
+@mixin hover {
+	@include min-w(1025px) {
+		&:hover,
+		&:focus {
+			@content;
+		}
+	}
+}
+
+@mixin center($pos) {
+	@if ($pos == 'x') {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	@if ($pos == 'y') {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	@if ($pos == 'xy') {
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@mixin clear {
+	*zoom: 1;
+	&:after {
+		display: block;
+		content: '';
+		clear: both;
+	}
+}
+
+@mixin liquid {
+	@media (max-width: 1600px) and (min-width: 1025px) {
+		@content;
+	}
+}
+
+@mixin placeholder($color) {
+    &::placeholder {
+        color: $color;
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+
+    &::-ms-input-placeholder {
+        color: $color;
+    }
+}

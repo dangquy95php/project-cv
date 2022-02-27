@@ -1,0 +1,3071 @@
+@charset 'utf-8';
+
+@import '../0_base/vars';
+@import '../0_base/mixin';
+
+/*------------------------------------------------------------
+/products/building/fire-protecting-material
+------------------------------------------------------------*/
+.p-material {
+    &__note {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #777777;
+        text-align: right;
+
+        @include sp {
+            font-size: 1.3rem;
+        }
+    }
+
+    .c-mainimg2__text {
+        padding: 0;
+
+        @include sp {
+            padding: 0 8px 0 0;
+        }
+    }
+
+    .c-title2 {
+        margin: 0 0 40px;
+
+        @include sp {
+            text-align: left;
+            margin: 0 0 18px;
+            padding: 0 14px 18px;
+        }
+    }
+
+    .c-table {
+        @include sp {
+            margin: 0 0 9px;
+        }
+    }
+
+    &1 {
+        padding: 75px 0 69px;
+        $root: &;
+
+        @include sp {
+            padding: 36px 0 34px;
+        }
+
+        &__box {
+            margin: 27px 0 0;
+
+            @include sp {
+                margin: 0;
+            }
+
+            +#{$root}__box {
+                margin: 45px 0 0;
+
+                @include sp {
+                    margin: 33px 0 0;
+                }
+            }
+
+            .c-title2 {
+                margin: 0 0 30px;
+
+                @include sp {
+                    text-align: center;
+                    margin: 0 0 15px;
+                    padding: 0 14px 16px;
+                }
+            }
+        }
+    }
+
+    &2 {
+        .c-table {
+            margin-bottom: 0;
+
+            &+.c-title2 {
+                margin-top: 45px;
+
+                @include sp {
+                    margin-top: 33px;
+                }
+            }
+
+            &+.c-text2 {
+                margin-top: 20px;
+            }
+        }
+
+        .c-text2 {
+            margin-bottom: 20px;
+
+            &+.c-title2 {
+                margin-top: 45px;
+
+                @include sp {
+                    margin-top: 33px;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/building/formaldehyde-emission
+------------------------------------------------------------*/
+.p-emission {
+    .c-mainimg2__text {
+        padding: 0;
+
+        @include sp {
+            padding: 0 8px 0 0;
+        }
+    }
+
+    .c-title2 {
+        margin: 0 0 40px;
+
+        @include sp {
+            margin: 0 0 18px;
+        }
+    }
+
+    .c-table {
+        margin: 0;
+    }
+
+    &1 {
+        padding: 75px 0 0;
+
+        @include sp {
+            padding: 35px 0 20px;
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/building/samplebook/
+------------------------------------------------------------*/
+.p-sample {
+    @include sp {
+        padding: 0;
+    }
+
+    .c-imgtext2 {
+        &__txt {
+            @include sp {
+                margin-top: 25px;
+            }
+        }
+
+        .c-btn2 {
+            @include sp {
+                margin-top: 25px;
+                padding: 22px 15px 23px 8px;
+            }
+
+            &__tag {
+                &:before {
+                    @include sp {
+                        top: 2px;
+                        left: -4px;
+                    }
+                }
+            }
+        }
+    }
+
+    .c-mainimg2 {
+        @include sp {
+            padding-top: 37px;
+        }
+
+        &__text {
+            padding: 0;
+
+            @include sp {
+                padding-right: 3px;
+            }
+        }
+    }
+
+    .c-title2--small {
+        @include sp {
+            padding-bottom: 11px;
+            margin: 0 0 14px;
+        }
+    }
+
+    &1 {
+        padding: 80px 0 93px;
+
+        @include sp {
+            padding: 35px 0 46px;
+        }
+    }
+
+    // .p-sample2 .
+    &2 {
+        @include sp {
+            padding: 0 5px;
+        }
+
+        // .p-sample2 .c-title2 .
+        .c-title2 {
+            margin: 0 0 33px;
+
+            @include sp {
+                margin: 0 0 14px;
+            }
+
+            // .p-sample2 .c-title2--small .
+            &--small {
+                @include sp {
+                    padding-bottom: 16px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        // .p-sample2 .c-singleImg .
+        .c-singleImg {
+            margin: 68px 0 0;
+
+            @include sp {
+                margin: 24px 0 0;
+                padding: 0 0;
+            }
+        }
+    }
+
+    // .p-sample3 .
+    &3 {
+        margin: 84px 0 0;
+
+        @include sp {
+            margin: 43px 0 0;
+        }
+
+        .c-btn2__tag {
+            padding: 17px 81px 21px 78px;
+
+            @include sp {
+                padding: 20px 29px 26px 19px;
+            }
+        }
+
+        .c-title2 {
+            margin: 0 0 32px;
+
+            @include sp {
+                margin: 0 0 14px;
+            }
+        }
+
+        .c-text1 {
+            margin: 0 0 35px;
+            color: #666;
+
+            @include sp {
+                font-size: 1.4rem;
+                line-height: 1.65;
+                color: #444;
+                margin: 0 0 25px;
+            }
+        }
+
+        .c-table {
+            margin: 0 0 40px;
+
+            @include sp {
+                margin: 0 0 28px;
+            }
+
+            tr {
+                width: 100%;
+                display: flex;
+            }
+
+            th {
+                display: block;
+            }
+
+            td {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: calc(100% / 3);
+                padding: 15px 19px 16px;
+                min-height: 80px;
+
+                @include sp {
+                    padding: 12px 14px 11px;
+                    justify-content: flex-start;
+                }
+            }
+        }
+
+        .c-block1 {
+            margin: 40px 0 0;
+
+            @include sp {
+                margin: 20px 0 0 -15px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/building/specifications/
+------------------------------------------------------------*/
+.p-specifications {
+    $root: &;
+
+    .c-mainimg2__text {
+        padding: 0;
+
+        @include sp {
+            padding-right: 3px;
+        }
+    }
+
+    &__box {
+        margin: 75px 0 0;
+
+        @include sp {
+            margin: 35px 0 0;
+        }
+
+        +#{$root}__box {
+            margin: 95px 0 0;
+
+            @include sp {
+                margin: 47px 0 0;
+            }
+        }
+
+        .c-title2 {
+            margin: 0 0 40px;
+
+            @include sp {
+                margin: 0 0 20px;
+            }
+        }
+
+        .c-btn2 {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/*------------------------------------------------------------
+products/building/catalog
+------------------------------------------------------------*/
+.p-bcatalog {
+    @include sp {
+        padding-bottom: 0;
+    }
+
+    &1 {
+        .c-form2 {
+            margin-top: 80px;
+
+            @include sp {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+products/building/catalog/cat
+------------------------------------------------------------*/
+.p-bcatalogcat {
+    @include sp {
+        padding-bottom: 0;
+    }
+
+    .c-title2 {
+        margin-top: 60px;
+
+        @include sp {
+            margin-top: 30px;
+        }
+    }
+
+    &1 {
+        .c-form2 {
+            margin-top: 80px;
+
+            @include sp {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/building/catalog/initial/initial
+------------------------------------------------------------*/
+.p-bcataloginit {
+    @include sp {
+        padding-bottom: 0;
+    }
+
+    .c-table3 {
+        margin: 50px 0;
+    }
+
+    // .p-bcataloginit1 .
+    &1 {
+        .c-table {
+            margin: 50px 0;
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large
+------------------------------------------------------------*/
+.p-large {
+    @include sp {
+        padding: 0;
+    }
+
+    .c-mainimg {
+        background: url('/images/products/large/maining.jpg') no-repeat center/cover;
+
+        &__title {
+            &:before {
+                // left: -50px;
+
+                // @include max-w(1400px) {
+                //     left: -20px;
+                // }
+
+                // @include sp {
+                //     left: 5px;
+                // }
+            }
+        }
+    }
+
+    &1 {
+        margin: 80px 0 111px;
+
+        @include sp {
+            margin: 40px 0 46px;
+        }
+
+        .c-boxlink {
+            margin: 20px 0 0;
+
+            @include sp {
+                margin: 15px 0 0;
+            }
+        }
+    }
+
+    &2 {
+        .c-title2 {
+            margin-bottom: 60px;
+
+            @include sp {
+                margin: 0 0 20px;
+            }
+        }
+
+        .c-block1 {
+            margin: 80px 0 0;
+
+            @include sp {
+                margin: 50px 0 0 -15px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large/paint
+------------------------------------------------------------*/
+.p-paint {
+    @include sp {
+        padding: 0 0 50px;
+    }
+
+    .c-mainimg {
+        background: url('/images/products/large/maining_paint.jpg') no-repeat center/cover;
+        padding-top: 75px;
+        padding-bottom: 83px;
+
+        @include sp {
+            background: url('/images/products/large/maining_paint_sp.jpg') no-repeat center/cover;
+            padding-top: 53px;
+            padding-bottom: 25px;
+        }
+
+        &__title__jap {
+            font-size: 4.6rem;
+            margin-bottom: 18px;
+
+            @include sp {
+                font-size: 3rem;
+                margin-bottom: 9px;
+            }
+        }
+
+        &__title__eng {
+            @include sp {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .c-title2 {
+        @include sp {
+            margin-bottom: 19px;
+        }
+    }
+
+    &1 {
+        margin: 91px 0;
+
+        @include sp {
+            margin: 46px 0;
+        }
+    }
+
+    &2 {
+        background: $color-gray11;
+        padding: 90px 0;
+
+        @include sp {
+            padding: 47px 0;
+        }
+
+        .c-list6 {
+            &__item {
+                width: calc((100% - 33px) / 4);
+                margin: 0 0 10px 11px;
+
+                @include sp {
+                    width: 100%;
+                    margin: 0 0 10px;
+                }
+
+                &:nth-child(4n + 1) {
+                    margin: 0 0 10px;
+                }
+
+                &:last-child {
+                    @include sp {
+                        margin: 0;
+                    }
+                }
+            }
+
+            &__txt {
+                font-size: 1.6rem;
+                line-height: 1.4;
+                font-weight: bold;
+                padding: 17px 65px 18px 29px;
+
+                @include sp {
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    padding: 16px 50px 17px 19px;
+                }
+
+                &::after {
+                    right: 19px;
+                }
+            }
+        }
+    }
+
+    &3 {
+        margin: 100px 0 111px;
+
+        @include sp {
+            margin: 49px 0 46px;
+        }
+
+        .c-block1 {
+            margin: 100px 0 40px;
+
+            @include sp {
+                margin: 50px 0 15px -15px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large/paint/standard/standard
+------------------------------------------------------------*/
+.p-standardDetail {
+    .c-block2__top {
+        padding-bottom: 60px;
+
+        @include sp {
+            padding-bottom: 25px;
+        }
+    }
+
+    &1 {
+        padding: 56px 0 80px;
+
+        @include sp {
+            padding: 37px 0 51px;
+        }
+
+        .c-title2 {
+            margin: 0 0 99px;
+
+            @include sp {
+                padding: 0 5px;
+                margin: 0 0 42px;
+            }
+
+            span {
+                display: block;
+                margin: 23px 0 0;
+
+                @include sp {
+                    margin: 13px 0 0;
+                }
+            }
+        }
+    }
+
+    &2 {
+        .c-block2 {
+            +.c-block2 {
+                margin: 50px 0 0;
+
+                @include sp {
+                    margin: 25px 0 0;
+                }
+            }
+        }
+
+        .c-nav2 {
+            margin: 40px 0 0;
+
+            @include sp {
+                margin: 20px 0 0;
+            }
+        }
+    }
+
+    &3 {
+        margin: 100px 0 111px;
+
+        @include sp {
+            margin: 15px 0 45px;
+        }
+
+        .c-boxlink {
+            margin: 40px 0 0;
+
+            @include sp {
+                margin: 15px 0 0;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large/paint/system/system
+------------------------------------------------------------*/
+.p-systemDetail {
+    &1 {
+        padding: 56px 0 80px;
+
+        @include sp {
+            padding: 37px 0 51px;
+        }
+
+        .c-title2 {
+            margin: 0 0 99px;
+
+            @include sp {
+                padding: 0 5px;
+                margin: 0 0 42px;
+            }
+        }
+    }
+
+    &2 {
+        .c-block2 {
+            +.c-block2 {
+                margin: 50px 0 0;
+
+                @include sp {
+                    margin: 25px 0 0;
+                }
+            }
+        }
+
+        .c-nav2 {
+            margin: 40px 0 0;
+
+            @include sp {
+                margin: 20px 0 0;
+            }
+        }
+    }
+
+    &3 {
+        margin: 100px 0 111px;
+
+        @include sp {
+            margin: 15px 0 45px;
+        }
+
+        .c-boxlink {
+            margin: 40px 0 0;
+
+            @include sp {
+                margin: 15px 0 0;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large/specification
+------------------------------------------------------------*/
+.p-largeSpec {
+    .c-title2 {
+        margin-bottom: 60px;
+
+        @include sp {
+            margin-bottom: 20px;
+        }
+    }
+
+    .c-tab {
+        .c-list6 {
+            &.c-list6--col4 {
+                .c-list6__txt {
+                    // padding:  20px 53px 20px 30px;
+
+                    // @include sp {
+                    //     padding: 15px 40px 15px 15px;
+                    // }
+                }
+            }
+
+            &__txt {
+
+                &:after {
+                    // right: 30px;
+
+                    // @include sp {
+                    //     right: 20px;
+                    // }
+                }
+            }
+        }
+    }
+
+    .c-mainimg {
+        background-image: url(/images/products/large/maining_specification.jpg);
+        padding-top: 75px;
+        padding-bottom: 83px;
+
+        @include sp {
+            background-image: url(/images/products/large/maining_specification_sp.jpg);
+            padding-top: 53px;
+            padding-bottom: 25px;
+        }
+
+        &__title {
+            &__jap {
+                font-size: 4.6rem;
+                margin-bottom: 18px;
+
+                @include sp {
+                    font-size: 3rem;
+                    margin-bottom: 9px;
+                }
+            }
+
+            &__eng {
+                @include sp {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .c-block1 {
+        margin: 80px 0 80px;
+
+        @include sp {
+            margin: 0 0 30px -15px;
+        }
+
+        &:not(:first-child) {
+            margin: 100px 0 40px;
+
+            @include sp {
+                margin: 51px 0 14px -15px;
+            }
+        }
+    }
+
+    .c-tab {
+        margin-bottom: 100px;
+
+        @include sp {
+            margin-bottom: 49px;
+        }
+
+        .c-title2 {
+            margin: 0 13px 32px;
+
+            @include sp {
+                margin: 0 0 16px;
+            }
+
+            &:not(:first-child) {
+                margin: 40px 0 0 13px;
+
+                @include sp {
+                    text-align: left;
+                    margin: 28px 0 0 0;
+
+                    &:after {
+                        left: 0;
+                        transform: none;
+                    }
+                }
+            }
+        }
+
+        &__content {
+            padding: 41px 36px 40px;
+
+            @include sp {
+                padding: 38px 20px 22px;
+
+                &.tab-specification2 {
+                    .c-form2__cb {
+                        width: 50%;
+                        padding-right: 12px;
+                    }
+
+                    .c-form2__grcheckbox {
+                        border: 1px solid #d8d8d8;
+                        margin-bottom: -1px;
+                    }
+
+                    .c-form2__cb {
+                        border: 1px solid #d8d8d8;
+                        border-width: 0 0 1px 0;
+
+                        &:nth-child(2n + 1) {
+                            border-width: 0 1px 1px 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .c-block2__header__title {
+            text-align: right;
+            margin: -7px 12px 26px 0;
+
+            @include sp {
+                margin: -1px -5px 15px 0;
+            }
+
+            &:not(:first-child) {
+                margin: -35px 0 28px 0 !important;
+                margin-left: auto !important;
+                
+                @include sp {
+                    margin: -31px 0 16px 0 !important; 
+                    margin-left: auto !important;
+                }
+            }
+
+            &.is-single {
+                margin-right: 0 !important;
+
+                .c-form2__title2 {
+                    justify-content: flex-end;
+
+                    @include sp {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .c-form2 {
+            margin: 0;
+
+            @include sp {
+                margin: 0 -5px 0;
+            }
+
+            &__row {
+                display: block;
+                padding: 33px 42px 33px;
+                border-bottom: none;
+                padding-bottom: 0;
+
+                @include sp {
+                    padding: 0;
+                }
+
+                &+.c-form2__row {
+                    padding-top: 12px;
+
+                    @include sp {
+                        padding-top: 0;
+                        margin: 0 0 0;
+                    }
+                }
+            }
+
+            &__grcheckbox {
+                width: auto;
+                margin: 22px 0 0;
+
+                @include sp {
+                    margin: -1px 0 0;
+                }
+
+                label {
+                    padding-left: 32px;
+                }
+            }
+
+            // .p-largeSpec .c-tab .c-form2__cb .
+            &__cb {
+                width: 25%;
+                padding-right: 3%;
+                margin-bottom: 10px;
+
+                @include sp {
+                    width: 50%;
+                    margin: 0 0;
+                    border: 1px solid #d8d8d8;
+                    border-bottom: none;
+                    border-right: none;
+                }
+
+                &:nth-child(2n + 2) {
+                    @include sp {
+                        border-right: 1px solid #d8d8d8;
+                    }
+                }
+            }
+
+            &__btn {
+                border: none;
+                background: #f6f6f6;
+                padding: 49px 0 40px;
+
+                @include sp {
+                    display: block;
+                    border: 1px solid #d8d8d8;
+                    padding: 15px 0;
+
+                    button {
+                        width: calc(100% - 30px);
+                    }
+                }
+            }
+
+            &__label {
+                @include sp {
+                    border: 1px solid #d8d8d8;
+                }
+            }
+        }
+    }
+
+    .c-box4 {
+        background-image: url(/images/products/large/img_05.jpg);
+
+        @include sp {
+            background-image: url(/images/products/large/img_05_sp.jpg);
+        }
+
+        .c-title2 {
+            @include sp {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+
+    .c-boxlink {
+        margin: 0 0 111px;
+
+        @include sp {
+            margin: 0 0 47px;
+        }
+    }
+
+    // .p-largeSpec1 .
+    &1 {
+        .c-tab {
+            .c-form2__title2 {
+                top: 0;
+            }
+
+            .c-title2 {
+                @include sp {
+                    width: max-content;
+                }
+
+                &:after {
+                    @include sp {
+                        left: 0 !important;
+                        transform: none !important;
+                    }
+                }
+            }
+
+            .c-block2__header__title {
+                @include sp {
+                    margin-bottom: 15px !important;
+                    width: max-content;
+                }
+
+                &.is-single {
+                    @include sp {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+products/large/catalog
+------------------------------------------------------------*/
+.p-large-catalog {
+    @include sp {
+        padding-bottom: 0;
+    }
+
+    // .p-large-catalog1 .
+    &1 {
+        padding-top: 56px;
+
+        @include sp {
+            padding-top: 36px;
+        }
+
+        .c-title2__style2 {
+            margin-bottom: 94px;
+
+            @include sp {
+                margin-bottom: 44px;
+                padding-right: 17px;
+                padding-left: 4px;
+            }
+        }
+
+        .c-block2__bottom__list {
+            margin-bottom: 100px;
+
+            @include sp {
+                margin-bottom: 50px;
+            }
+        }
+
+        // .p-large-catalog1 .c-list10 .
+        .c-list10 {
+            margin-bottom: 20px;
+
+            @include sp {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    // .p-large-catalog2 .
+    &2 {
+        padding-top: 111px;
+
+        @include sp {
+            padding-top: 46px;
+        }
+
+        .c-title2 {
+            @include sp {
+                margin-bottom: 19px;
+            }
+        }
+
+        // .p-large-catalog2 .c-list6 .
+        .c-list6 {
+            margin: 0 0 80px;
+
+            @include sp {
+                margin-bottom: 50px;
+            }
+
+            &__box {
+                @include sp {
+                    margin-top: 0;
+                }
+            }
+
+            &.c-list6--col4 {
+                .c-list6__txt {
+                    padding-right: 72px;
+
+                    @include sp {
+                        padding-right: 50px;
+                    }
+                }
+            }
+
+            &__item {
+                &.arrow {
+                    .c-list6__txt {
+
+                        // .p-large-catalog2 .c-list6__item.arrow .c-list6__txt:after .
+                        &:after {
+                            @include sp {
+                                width: 11px;
+                                height: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+products/large/specification-steele/detail
+------------------------------------------------------------*/
+.p-large-steele-detail {
+    padding-bottom: 100px;
+
+    @include sp {
+        padding-bottom: 50px;
+    }
+
+    .c-breadcrumb {
+        @include sp {
+            padding-bottom: 10px;
+            margin-bottom: 7px;
+            border-bottom: 1px solid $color-border;
+        }
+    }
+
+    // .p-large-steele-detail1 .
+    &1 {
+        padding-top: 76px;
+
+        @include sp {
+            padding-top: 41px;
+        }
+
+        .c-text2 {
+            padding-left: 0;
+        }
+
+        // .p-large-steele-detail1 .c-table4 /
+        .c-table4 {
+            margin-bottom: 23px;
+
+            @include sp {
+                padding-left: 5px;
+                padding-right: 5px;
+                margin-bottom: 20px;
+            }
+
+            & + p {
+                font-size: 1.1rem;
+                line-height: 2rem;
+                color: #777;
+                font-weight: normal;
+                @include sp{
+                    font-size: 1.3rem;
+                    line-height: 1.6rem;
+                }
+            }
+        }
+    }
+
+    // .p-large-steele-detail2 .
+    &2 {
+        padding-top: 90px;
+
+        @include sp {
+            padding-top: 26px;
+        }
+
+        &__list {
+            .c-list6__box {
+
+                // .p-large-steele-detail2__list .c-list6__box:not(:last-child) .
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                    border-bottom: 1px solid $color-border;
+
+                    @include sp {
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+
+        // .p-large-steele-detail2 .c-title2 .
+        .c-title2 {
+            margin-bottom: 40px;
+
+            @include sp {
+                margin-bottom: 18px;
+            }
+        }
+    }
+
+    // .p-large-steele-detail3 .
+    &3 {
+        padding-top: 71px;
+        padding-bottom: 100px;
+
+        @include sp {
+            padding-top: 47px;
+            padding-bottom: 50px;
+        }
+
+        // .p-large-steele-detail3 .c-block1 .
+        .c-block1 {
+            margin-bottom: 80px;
+
+            @include sp {
+                margin-bottom: 30px;
+            }
+        }
+
+        // .p-large-steele-detail3 .c-tab .
+        .c-tab {
+            &__switch__item {
+                &:nth-child(2) {
+                    @include sp {
+                        padding-left: 25px;
+                        padding-right: 25px;
+                    }
+                }
+            }
+
+            .c-title2__style3 {
+                @include sp {
+                    margin-bottom: 15px;
+                }
+            }
+
+            .c-form2__btn {
+
+                // .p-large-steele-detail3 .c-tab .c-form2__btn span .
+                span {
+                    position: relative;
+                    // top: -2px;
+                }
+            }
+        }
+
+        // .p-large-steele-detail3 .c-title2 .
+        .c-title2 {
+            @include sp {
+                margin-bottom: 19px;
+            }
+        }
+
+        .tab-work {
+            padding-top: 37px;
+
+            .c-form2 {
+                $root: '.c-form2';
+
+                &--style1 {
+                    #{$root} {
+
+                        // .p-large-steele-detail3 .tab-work .c-form2--style1 .c-form2__cb .
+                        &__cb {
+                            width: 24.6%;
+
+                            @include sp {
+                                width: 50%;
+                                border-right: 1px solid $color-border !important;
+                            }
+
+                            &:nth-child(2n + 2) {
+                                @include sp {
+                                    border-right: none !important;
+                                }
+                            }
+
+                            // .p-large-steele-detail3 .tab-work .c-form2--style1 .c-form2__cb:last-child .
+                            &:last-child {
+                                @include sp {
+                                    border-bottom: 1px solid $color-border;
+                                }
+                            }
+                        }
+
+                        // .p-large-steele-detail3 .tab-work .c-form2--style1 .c-form2__btn .
+                        &__btn {
+                            padding-top: 32px;
+
+                            @include sp {
+                                padding-top: 15px;
+                            }
+                        }
+
+                        // .p-large-steele-detail3 .tab-work .c-form2--style1 .c-form2__header .
+                        &__header {
+                            padding-right: 8px;
+                            padding-bottom: 25px;
+
+                            @include sp {
+                                padding-right: 0;
+                                padding-bottom: 10px;
+                            }
+                        }
+
+                        // .p-large-steele-detail3 .tab-work .c-form2--style1 .c-form2__label .
+                        &__label {
+                            margin-bottom: 19px;
+
+                            @include sp {
+                                margin-bottom: 0;
+                            }
+                        }
+
+                        // .p-large-steele-detail3 .tab-work .c-form2--style1 .c-form2__row .
+                        &__row {
+                            padding-top: 32px;
+                            padding-left: 39px;
+                            padding-bottom: 0;
+
+                            @include sp {
+                                padding: 0 0 0;
+                            }
+
+                            // .p-large-steele-detail3 .tab-work .c-form2--style1 .c-form2__row + .c-form2__row .
+                            &+#{$root}__row {
+                                padding-top: 21px;
+
+                                @include sp {
+                                    padding-top: 0;
+                                    border-top: none;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                #{$root} {
+                                    &__cb {
+                                        &:nth-child(2) {
+                                            top: 4px;
+
+                                            @include sp {
+                                                top: 0;
+                                            }
+
+                                            label {
+                                                span {
+                                                    &:before {
+                                                        top: 3px;
+
+                                                        @include sp {
+                                                            top: 50%;
+                                                            transform: translateY(-50%);
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        &:nth-child(5) {
+                                            top: 4px;
+
+                                            @include sp {
+                                                top: 0;
+                                            }
+
+                                            label {
+                                                span {
+                                                    &:before {
+                                                        top: 3px;
+
+                                                        @include sp {
+                                                            top: 50%;
+                                                            transform: translateY(-50%);
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    // .p-large-steele-detail3 .tab-work .c-form2--style1 .c-form2__row:nth-child(2) .c-form2__label .
+                                    &__label {
+                                        margin-bottom: 19px;
+
+                                        @include sp {
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &__grcheckbox {
+                            label {
+                                span {
+
+                                    // .p-large-steele-detail3 .tab-work .c-form2--style1 .c-form2__grcheckbox label span:before .
+                                    &:before {
+                                        top: 3px;
+
+                                        @include sp {
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // .p-large-steele-detail4 .
+    &4 {
+        .c-block1 {
+            margin-bottom: 40px;
+
+            @include sp {
+                margin: 0 0 14px;
+                width: 100%;
+            }
+
+            // .p-large-steele-detail4 .c-block1__form .
+            &__form {
+                @include sp {
+                    margin: 0 -15px;
+                    width: calc(100% + 30px);
+                }
+            }
+        }
+
+        // .p-large-steele-detail4 .c-box4 .
+        .c-box4 {
+            margin-bottom: 100px;
+            background: url(/images/common/imgtexts_img.jpg) no-repeat center/cover;
+
+            @include sp {
+                margin-bottom: 50px;
+            }
+
+            &__txt {
+                max-width: 811px;
+                margin-left: auto;
+                margin-right: auto;
+
+                @include sp {
+                    max-width: 100%;
+                }
+            }
+
+            .c-title2 {
+                @include sp {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    // .p-large-steele-detail5 .
+    &5 {
+        padding-top: 111px;
+
+        @include sp {
+            padding-top: 46px;
+        }
+
+        .c-list6__txt {
+            padding-right: 72px;
+
+            @include sp {
+                padding-right: 50px;
+            }
+        }
+
+        .c-title2 {
+            @include sp {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.c-imgtexts {
+    margin-bottom: 100px;
+    padding: 55px 20px 41px;
+    min-height: 406px;
+    text-align: center;
+    background: url(/images/common/imgtexts_img.jpg) no-repeat center / cover;
+
+    @include sp {
+        min-height: unset;
+        padding-top: 57px;
+        margin-bottom: 50px;
+    }
+
+    // .c-imgtexts .c-title2 .
+    .c-title2 {
+        margin-bottom: 32px;
+
+        @include sp {
+            margin-bottom: 7px;
+        }
+    }
+
+    // .c-imgtexts .c-text1 .
+    .c-text1 {
+        margin-bottom: 34px;
+        max-width: 811px;
+        color: #fff;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include sp {
+            margin-bottom: 26px;
+            text-align: left;
+            max-width: 100%;
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large/specification-bridge
+/products/large/specification-bridge/standard
+/products/large/specification-bridge/detail
+/products/large/specification-steele
+/products/large/specification-steele/detail
+------------------------------------------------------------*/
+.p-specification {
+    &1 {
+        padding-top: 74px;
+
+        @include sp {
+            padding-top: 36px;
+        }
+
+        .c-title2 {
+            margin-bottom: 60px;
+
+            @include sp {
+                margin-bottom: 28px;
+            }
+        }
+
+        .c-block1 {
+            margin: 0 0 80px;
+
+            @include sp {
+                margin: -9px 0 30px -15px;
+            }
+        }
+
+        .c-tab {
+            margin-bottom: 100px;
+
+            @include sp {
+                margin-bottom: 49px;
+            }
+
+            .c-title2 {
+                margin: 0 13px 32px;
+
+                @include sp {
+                    margin: 0 0 16px;
+                }
+
+                &:not(:first-child) {
+                    margin: 40px 0 0 13px;
+
+                    @include sp {
+                        text-align: left;
+                        margin: 28px 0 0 0;
+
+                        &:after {
+                            left: 0;
+                            transform: none;
+                        }
+                    }
+                }
+            }
+
+            &__content {
+                padding: 41px 36px 40px;
+
+                @include sp {
+                    padding: 38px 20px 22px;
+
+                    &.tab-specification2 {
+                        .c-form2__cb {
+                            width: 50%;
+                        }
+
+                        .c-form2__grcheckbox {
+                            border: 1px solid #d8d8d8;
+                            margin-bottom: -1px;
+                        }
+
+                        .c-form2__cb {
+                            border: 1px solid #d8d8d8;
+                            border-width: 0 0 1px 0;
+
+                            &:nth-child(2n + 1) {
+                                border-width: 0 1px 1px 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .c-block2__header__title {
+                text-align: right;
+                margin: -7px 12px 26px 0;
+
+                @include sp {
+                    margin: -1px -5px 15px 0;
+                }
+
+                &:not(:first-child) {
+                    margin: -35px 12px 28px 0;
+
+                    @include sp {
+                        margin: -31px -5px 16px 0;
+                    }
+                }
+            }
+
+            .c-form2 {
+                margin: 0;
+
+                @include sp {
+                    margin: 0 -5px 0;
+                }
+
+                &__row {
+                    display: block;
+                    padding: 33px 42px 33px;
+                    border-bottom: none;
+                    padding-bottom: 0;
+
+                    @include sp {
+                        padding: 0;
+                    }
+
+                    &+.c-form2__row {
+                        padding-top: 12px;
+
+                        @include sp {
+                            padding-top: 0;
+                            margin: 0 0 0;
+                        }
+                    }
+                }
+
+                &__grcheckbox {
+                    width: auto;
+                    margin: 22px 0 0;
+
+                    @include sp {
+                        margin: -1px 0 0;
+                    }
+
+                    label {
+                        padding-left: 32px;
+                    }
+                }
+
+                &__cb {
+                    width: 25%;
+                    padding-right: 3%;
+                    margin-bottom: 10px;
+
+                    @include sp {
+                        width: 100%;
+                        margin: 0 0 -1px;
+                        border: 1px solid #d8d8d8;
+                    }
+                }
+
+                &__btn {
+                    border: none;
+                    background: #f6f6f6;
+                    padding: 49px 0 40px;
+
+                    @include sp {
+                        display: block;
+                        border: 1px solid #d8d8d8;
+                        padding: 15px 0;
+
+                        button {
+                            width: calc(100% - 30px);
+                        }
+                    }
+                }
+
+                &__label {
+                    @include sp {
+                        border: 1px solid #d8d8d8;
+                    }
+                }
+            }
+        }
+
+        .c-box4 {
+            background-image: url(/images/products/large/img_05.jpg);
+
+            @include sp {
+                background-image: url(/images/products/large/img_05_sp.jpg);
+            }
+
+            .c-title2 {
+                margin-bottom: 30px;
+
+                @include sp {
+                    padding-left: 0;
+                    padding-right: 0;
+                    margin-bottom: 9px;
+                }
+            }
+        }
+
+        .c-tab {
+            .c-form2__title2 {
+                top: 0;
+            }
+
+            .c-title2 {
+                @include sp {
+                    width: max-content;
+                }
+
+                &:after {
+                    @include sp {
+                        left: 0 !important;
+                        transform: none !important;
+                    }
+                }
+            }
+
+            .c-block2__header__title {
+                text-align: right;
+                margin: -7px 12px 26px 0;
+    
+                @include sp {
+                    margin: -1px -5px 15px 0;
+                }
+    
+                &:not(:first-child) {
+                    margin: -35px 0 28px 0 !important;
+                    margin-left: auto !important;
+                    
+                    @include sp {
+                        margin: -31px -5px 16px 0 !important;
+                        margin-left: auto !important;
+                    }
+                }
+    
+                &.is-single {
+                    margin-right: 0 !important;
+    
+                    .c-form2__title2 {
+                        justify-content: flex-end;
+    
+                        @include sp {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &2 {
+        margin: 100px 0 0;
+
+        @include sp {
+            margin: 50px 0 0;
+        }
+
+        .c-title2 {
+            margin-bottom: 60px;
+
+            @include sp {
+                margin-bottom: 19px;
+            }
+        }
+
+        .c-boxlink {
+            margin: 40px 0 111px;
+
+            @include sp {
+                margin: 14px 0 47px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large/specification-bridge/detail
+------------------------------------------------------------*/
+.p-bridgedt {
+    &1 {
+        padding: 76px 0 71px;
+
+        @include sp {
+            padding: 40px 0 47px;
+        }
+
+        &__tb {
+            @include sp {
+                width: calc(100% + 10px);
+                position: relative;
+            }
+
+            & + p {
+                padding: 23px 0 0 0;
+                font-size: 1.1rem;
+                line-height: 2rem;
+                color: #777;
+                font-weight: normal;
+                @include sp{
+                    font-size: 1.3rem;
+                    line-height: 1.6rem;
+                }
+            }
+        }
+
+        .c-text2 {
+            padding: 23px 0 0 0;
+        }
+
+        .c-title2--small {
+            margin: 90px 0 40px 0;
+
+            @include sp {
+                margin: 40px 0 18px 0;
+            }
+        }
+
+        .c-list6 {
+            &__box {
+                &+.c-list6__box {
+                    border-top: 1px solid #d8d8d8;
+                    padding-top: 20px;
+
+                    @include sp {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large/specification-bridge/
+/products/large/specification-steele
+------------------------------------------------------------*/
+.p-bridge {
+    &1 {
+        padding: 56px 0 112px;
+
+        @include sp {
+            padding: 36px 0 48px;
+        }
+
+        &__txt {
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            margin: 93px 0 69px;
+
+            @include sp {
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                margin: 37px 0 47px;
+            }
+        }
+
+        .c-title2 {
+            margin: 0;
+
+            &+.c-block2 {
+                margin-top: 98px;
+
+                @include sp {
+                    margin-top: 42px;
+                }
+            }
+
+            span {
+                display: block;
+                margin: 23px 0 0;
+
+                @include sp {
+                    margin: 10px 0 0;
+                }
+            }
+        }
+
+        .c-nav2 {
+            margin: 40px 0 0;
+
+            @include sp {
+                margin: 18px 0 0;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large/detail
+------------------------------------------------------------*/
+.p-largedt {
+    .c-mainimg7 {
+        padding: 66px 0 70px 0;
+
+        @include sp {
+            padding: 35px 0 38px 0;
+        }
+
+        &__title {
+            margin-bottom: 19px;
+
+            @include sp {
+                margin-bottom: 7px;
+            }
+        }
+    }
+
+    &1 {
+        padding: 78px 0 0;
+
+        @include sp {
+            padding: 35px 0 0;
+        }
+
+        .c-title2 {
+            margin: 0;
+        }
+
+        &__txt {
+            margin: 0 0 69px;
+
+            @include sp {
+                font-size: 1.6rem;
+                line-height: 24px;
+                padding: 0 5px;
+                margin: 0 0 41px;
+            }
+        }
+
+        .c-title2__style3 {
+            margin: 30px 0 0;
+
+            @include sp {
+                margin: 16px 0 0;
+            }
+        }
+
+        .c-list6 {
+            &__box {
+                margin: 40px 0 95px;
+
+                @include sp {
+                    margin: 17px 0 47px;
+                }
+            }
+
+            &__item {
+                @include pc {
+                    width: calc((100% - 30px) / 3);
+                }
+
+                &+.c-list6__item {
+                    @include pc {
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+
+        .c-table__style2 {
+            @include sp {
+                padding: 0 5px 0;
+            }
+        }
+
+        .c-table {
+            margin: 40px 0 94px;
+
+            @include sp {
+                margin: 20px 0 43px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            & + p {
+                margin: 24px 0 68px;
+                padding-left: 1em;
+                text-indent: -1em;
+                font-size: 1.1rem;
+                line-height: 2rem;
+                color: #777;
+                font-weight: normal;
+                @include sp{
+                    margin: 12px 0 40px;
+                    font-size: 1.3rem;
+                    line-height: 1.6rem;
+                }
+            }
+        }
+    }
+
+    &2 {
+        padding: 100px 0 0;
+
+        @include sp {
+            padding: 15px 0 0;
+        }
+
+        .c-boxlink {
+            margin: 39px 0 111px;
+
+            @include sp {
+                margin: 14px 0 46px;
+            }
+        }
+
+        .c-title2 {
+            margin: 0 0 60px;
+
+            @include sp {
+                margin: 0 0 20px;
+            }
+        }
+    }
+
+    .c-side {
+        position: relative;
+        top: 0 !important;
+    }
+}
+
+/*------------------------------------------------------------
+products/large/technic
+------------------------------------------------------------*/
+.p-large-technic {
+    @include sp {
+        padding-bottom: 0;
+    }
+
+    &1 {
+        padding: 58px 0 0;
+
+        @include sp {
+            padding: 37px 0 0;
+        }
+
+        .c-title2__style2 {
+            margin: 0 0 87px;
+
+            @include sp {
+                margin: 0 5px 47px;
+            }
+        }
+
+        .c-title2--small {
+            @include sp {
+                margin: 0 0 18px;
+            }
+        }
+
+        .c-block2__bottom {
+            &__list.col-4 {
+                margin: 0 0 94px;
+
+                @include sp {
+                    margin: 0 0 49px;
+                }
+
+                .c-block2__bottom__item {
+                    a {
+                        padding: 16px 55px 17px 20px;
+
+                        @include sp {
+                            padding: 15px 45px 16px 14px;
+                            line-height: 1.7rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .c-boxlink {
+            margin: 20px 0 0;
+
+            @include sp {
+                margin: 16px 0 0;
+            }
+        }
+    }
+
+    &2 {
+        padding: 114px 0 0;
+
+        @include sp {
+            padding: 47px 0 0;
+        }
+
+        .c-title2 {
+            margin: 0 0 57px;
+
+            @include sp {
+                margin: 0 0 19px;
+            }
+        }
+
+        .c-block1 {
+            margin: 80px 0 0;
+
+            @include sp {
+                margin: 50px 0 0 -15px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+products/large/guidebook
+------------------------------------------------------------*/
+.p-guidebook {
+    &1 {
+        padding: 58px 0 91px;
+
+        @include sp {
+            padding: 38px 0 47px;
+        }
+
+        .c-title2 {
+            margin: 0 0 92px;
+
+            @include sp {
+                margin: 0 5px 42px;
+            }
+        }
+
+        .c-tab {
+            &__switch__item {
+                width: 25%;
+
+                @include sp {
+                    width: 50%;
+                    margin-top: 1px;
+
+                    &:nth-child(2n + 1) {
+                        margin-right: 1px;
+                        width: calc(50% - 1px);
+                    }
+                }
+            }
+        }
+
+        .c-btn2 {
+            margin: 40px auto 0;
+            display: block;
+            width: 365px;
+
+            @include sp {
+                width: 100%;
+                margin: 14px auto 0;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large/fireproof
+------------------------------------------------------------*/
+.p-fireproof {
+    &1 {
+        padding: 58px 0 0;
+
+        @include sp {
+            padding: 37px 0 19px;
+        }
+
+        .c-imgtext2 {
+            margin: 100px 0 72px;
+
+            @include sp {
+                display: flex;
+                flex-direction: column-reverse;
+                margin: 24px 0 37px;
+            }
+
+            &__img {
+                width: 29.2%;
+
+                @include sp {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+
+            &__info {
+                width: 62%;
+
+                @include sp {
+                    width: 100%;
+                    margin: 0 0 25px;
+                }
+            }
+
+            &__txt {
+                @include sp {
+                    padding: 0;
+                }
+            }
+        }
+
+        .c-block4 {
+            margin: 93px 0 0;
+
+            @include sp {
+                margin: 45px 0 0 -5px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large/tough-guard/be-mesh-method
+------------------------------------------------------------*/
+.p-toughMethod {
+    &1 {
+        padding: 57px 0 0;
+
+        @include sp {
+            padding: 38px 0 17px;
+        }
+
+        .c-title2__style2 {
+            span {
+                display: block;
+                margin: 22px 0 0;
+
+                @include sp {
+                    margin: 9px 0 0;
+                }
+            }
+        }
+
+        .c-nav3 {
+            &+.c-title2--small {
+                margin: 96px 0 31px;
+
+                @include sp {
+                    margin: 47px 0 10px;
+                }
+            }
+        }
+
+
+        .c-title2__style3 {
+            margin: 66px 0 24px;
+
+            @include sp {
+                margin: 33px 0 17px;
+            }
+        }
+
+        .c-list12 {
+            @include pc {
+                margin: 25px 0 0;
+            }
+
+            &__item {
+                line-height: 24px;
+                padding: 0 0 0 18px;
+
+                @include sp {
+                    padding: 0 0 0 11px;
+                }
+
+                &::before {
+                    top: 8px;
+
+                    @include sp {
+                        top: 9px;
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        .c-list6 {
+            &__box {
+                margin: 12px 0 32px;
+
+                @include sp {
+                    padding: 0;
+                    margin: 14px 0 27px;
+                }
+            }
+
+            &__item {
+                @include pc {
+                    width: calc(50% - 10px);
+                }
+            }
+
+            &__txt {
+                @include sp {
+                    line-height: 16px;
+                    padding: 16px 50px 19px 18px;
+                }
+            }
+        }
+
+        .c-contact2 {
+            margin: 100px 0 0;
+
+            @include sp {
+                margin: 50px 0 0 -5px;
+            }
+        }
+
+        .c-title2__style5 {
+            @include sp {
+                text-align: left;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large/tough-guard/results
+------------------------------------------------------------*/
+.p-toughResults {
+    &1 {
+        padding: 57px 0 0;
+
+        @include sp {
+            padding: 38px 0 17px;
+        }
+
+        .c-title2__style2 {
+            span {
+                display: block;
+                margin: 22px 0 0;
+
+                @include sp {
+                    margin: 9px 0 0;
+                }
+            }
+        }
+
+        .c-nav3 {
+            &+.c-title2--small {
+                margin: 96px 0 39px !important;
+
+                @include sp {
+                    margin: 47px 0 18px !important;
+                }
+            }
+        }
+
+        .c-title2--small:not(:first-child) {
+            margin: 0 0 29px;
+
+            @include sp {
+                margin: 0 0 14px;
+            }
+        }
+
+        .c-imgtext4 {
+            margin: 0 0 92px;
+
+            @include sp {
+                margin: 0 0 26px;
+            }
+
+        }
+
+        .c-table4 {
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+            margin: 0 0 30px;
+
+            @include sp {
+                margin: 0 0 20px -5px;
+                width: calc(100% + 5px);
+            }
+
+            th,
+            td {
+                padding: 15px 10px 14px;
+                width: auto !important;
+
+                @include sp {
+                    line-height: 21px;
+                    text-align: center;
+                    padding: 9px 10px 14px;
+                }
+
+                &:nth-child(3) {
+                    width: 160px !important;
+
+                    @include sp {
+                        width: auto !important;
+                    }
+                }
+            }
+        }
+
+        .c-contact2 {
+            margin: 100px 0 0;
+
+            @include sp {
+                margin: 50px 0 0 -5px;
+            }
+        }
+
+        .c-title2__style3 {
+            @include sp {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large/tough-guard/process
+------------------------------------------------------------*/
+.p-toughProcess {
+    &1 {
+        padding: 57px 0 0;
+
+        @include sp {
+            padding: 38px 0 17px;
+        }
+
+        .c-title2__style2 {
+            span {
+                display: block;
+                margin: 22px 0 0;
+
+                @include sp {
+                    margin: 9px 0 0;
+                }
+            }
+        }
+
+        .c-nav3 {
+            &+.c-title2--small {
+                margin: 96px 0 28px;
+
+                @include sp {
+                    margin: 47px 0 15px;
+                }
+            }
+        }
+
+        .c-title2__style3 {
+            margin: 0 0 22px;
+
+            @include sp {
+                margin: 0 0 20px;
+            }
+        }
+
+        .c-contact2 {
+            margin: 100px 0 0;
+
+            @include sp {
+                margin: 50px 0 0 -5px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large/tough-guard/about
+------------------------------------------------------------*/
+.p-toughAbout {
+    &1 {
+        padding: 57px 0 0;
+
+        @include sp {
+            padding: 38px 0 17px;
+        }
+
+        .c-title2__style2 {
+            span {
+                display: block;
+                margin: 22px 0 0;
+
+                @include sp {
+                    margin: 9px 0 0;
+                }
+            }
+        }
+
+        .c-nav3 {
+            &+.c-title2--small {
+                margin: 96px 0 28px;
+
+                @include sp {
+                    margin: 47px 0 15px;
+                }
+            }
+        }
+
+        .c-title2__style3 {
+            margin: 0 0 22px;
+
+            @include sp {
+                margin: 0 0 20px;
+            }
+        }
+
+        .c-contact2 {
+            margin: 100px 0 0;
+
+            @include sp {
+                margin: 50px 0 0 -5px;
+            }
+        }
+
+        .c-list18 {
+            margin: 0 0 87px;
+
+            @include sp {
+                margin: 0 0 46px;
+            }
+
+            .c-btn1 {
+                margin: 9px 0 0;
+
+                @include sp {
+                    display: none;
+                }
+            }
+        }
+
+        .c-table4 {
+            @include sp {
+                margin: -10px 0 0 -5px;
+                width: calc(100% + 5px);
+            }
+
+            table {
+                @include sp {
+                    width: 896px;
+                    min-width: 896px;
+                }
+            }
+
+            th,
+            td {
+                &:nth-child(1) {
+                    width: 12.6%;
+
+                    @include sp {
+                        width: 115px;
+                    }
+                }
+
+                &:nth-child(2) {
+                    width: auto;
+                }
+
+                &:nth-child(3) {
+                    width: 10.4%;
+
+                    @include sp {
+                        width: 115px;
+                    }
+                }
+
+                &:nth-child(4) {
+                    width: 10.4%;
+
+                    @include sp {
+                        width: 115px;
+                    }
+                }
+
+                &:nth-child(5) {
+                    width: 16.6%;
+
+                    @include sp {
+                        width: 115px;
+                    }
+                }
+
+                &:nth-child(6) {
+                    width: 16.6%;
+
+                    @include sp {
+                        width: 135px;
+                    }
+                }
+
+                padding: 13px 10px 12px;
+
+                @include sp {
+                    text-align: center !important;
+                    line-height: 21px;
+                    padding: 11px 10px 9px;
+                }
+
+                span {
+                    display: block;
+                    text-align: left;
+                    margin: 0 auto;
+                    width: 100%;
+                    max-width: 60px;
+
+                    @include sp {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .c-text2 {
+            margin: 26px 0 0;
+
+            @include sp {
+                margin: 10px -5px 0;
+            }
+
+            // .p-toughAbout1 .c-text2 + .c-text2 .
+            &+.c-text2 {
+                margin-top: 0;
+            }
+            
+            &+.c-title2 {
+                margin: 91px 0 39px;
+
+                @include sp {
+                    margin: 45px 0 17px;
+                }
+            }
+        }
+
+        .c-table5 {
+            @include sp {
+                margin: 0 -5px 0;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large/tough-guard
+------------------------------------------------------------*/
+.p-tough {
+    &1 {
+        padding: 57px 0 0;
+
+        @include sp {
+            padding: 38px 0 17px;
+        }
+
+        .c-title2__style2 {
+            span {
+                display: block;
+                margin: 22px 0 0;
+
+                @include sp {
+                    margin: 9px 0 0;
+                }
+            }
+        }
+
+        &__txt {
+            color: #E83820;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 92px 0 9px;
+
+            @include sp {
+                text-align: center;
+                font-size: 1.6rem;
+                margin: 47px 0 14px;
+            }
+
+            &+.c-title2 {
+                margin: 0 0 28px;
+
+                @include sp {
+                    margin: 0 0 14px;
+                }
+            }
+        }
+
+        .c-title2__style3 {
+            margin: 0 0 0;
+        }
+
+        &__text {
+            font-size: 1.6rem;
+            line-height: 28px;
+            margin: 26px 0 0;
+            @include clear;
+
+            @include sp {
+                line-height: 24px;
+                margin: 20px 0 0;
+            }
+
+            &+& {
+                margin-top: 46px;
+
+                @include sp {
+                    margin-top: 30px;
+                }
+            }
+
+            p {
+                overflow: hidden;
+            }
+
+            img {
+                float: right;
+                width: 320px;
+                margin: 0 0 10px 20px;
+
+                @include sp {
+                    float: none;
+                    width: calc(100% - 20px);
+                    margin: 5px 10px 35px;
+                }
+            }
+        }
+
+        .c-contact2 {
+            margin: 92px 0 0;
+
+            @include sp {
+                margin: 41px 0 0 -5px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large/fireproof/results
+------------------------------------------------------------*/
+.p-fResults {
+    &1 {
+        padding: 57px 0 0;
+
+        @include sp {
+            padding: 38px 0 17px;
+        }
+
+        .c-title2__style2 {
+            span {
+                display: block;
+                margin: 22px 0 0;
+
+                @include sp {
+                    margin: 9px 0 0;
+                }
+            }
+        }
+
+        .c-nav3 {
+            margin: 0 0 96px;
+
+            @include sp {
+                margin: 0 0 46px -20px;
+            }
+        }
+
+        &__txt {
+            font-size: 1.6rem;
+            line-height: 28px;
+            margin: -7px 0 68px;
+            @include clear;
+
+            @include sp {
+                line-height: 24px;
+                margin: -14px 0 48px;
+            }
+
+            p {
+                float: left;
+                width: calc(100% - 192px);
+
+                @include sp {
+                    float: none;
+                    width: 100%;
+                }
+            }
+
+            figure {
+                width: 152px;
+                float: right;
+
+                @include sp {
+                    float: none;
+                    width: 150px;
+                    margin: 35px auto 0;
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                figcaption {
+                    text-align: center;
+                    line-height: 20px;
+                    font-size: 1.3rem;
+                    margin: 17px 0 0;
+                    display: block;
+
+                    @include sp {
+                        line-height: 1.3rem;
+                        line-height: 16px;
+                        margin: 13px 0 0;
+                    }
+                }
+            }
+        }
+
+        .c-slide2 {
+            margin-bottom: 24px;
+
+            @include sp {
+                margin: 0 0 0;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large/fireproof/system
+------------------------------------------------------------*/
+.p-fSystem {
+    &1 {
+        padding: 57px 0 0;
+
+        @include sp {
+            padding: 38px 0 17px;
+        }
+
+        .c-title2__style2 {
+            span {
+                display: block;
+                margin: 22px 0 0;
+
+                @include sp {
+                    margin: 9px 0 0;
+                }
+            }
+        }
+
+        .c-nav3 {
+            margin: 0 0 96px;
+
+            @include sp {
+                margin: 0 0 46px -20px;
+            }
+        }
+
+        .c-text1 {
+            margin: -8px 0 64px;
+
+            @include sp {
+                margin: -8px 0 33px;
+            }
+        }
+
+        .c-list17 {
+            .c-title2__style3 {
+                margin: 0 0 22px;
+
+                @include sp {
+                    margin: 0 0 17px;
+                }
+            }
+
+            .c-text1 {
+                margin: 7px 0 0;
+
+                @include sp {
+                    margin: 13px 0 0;
+                }
+            }
+
+            &__item {
+                &:not(:last-child) {
+                    @include sp {
+                        margin-bottom: 42px;
+                    }
+                }
+            }
+        }
+
+        // .p-fSystem1__boximg .
+        &__boximg {
+            margin: 32px 0 0;
+            padding: 20px 20px 16px 19px;
+
+            @include sp {
+                display: block;
+                margin: 0 auto;
+                padding: 10px;
+            }
+
+            .c-boximg__text {
+                margin-top: 11px;
+            }
+        }
+
+        .c-block4 {
+            margin: 100px 0 0;
+
+            @include sp {
+                margin: 49px 0 0 -5px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+/products/large/fireproof/mechanism
+------------------------------------------------------------*/
+.p-mechanism {
+    &1 {
+        padding: 57px 0 0;
+
+        @include sp {
+            padding: 38px 0 17px;
+        }
+
+        .c-title2__style2 {
+            span {
+                display: block;
+                margin: 22px 0 0;
+
+                @include sp {
+                    margin: 9px 0 0;
+                }
+            }
+        }
+
+        .c-nav3 {
+            margin: 0 0 96px;
+
+            @include sp {
+                margin: 0 0 46px -20px;
+            }
+        }
+
+        .c-title2--small {
+            margin: 0 0 30px;
+
+            @include sp {
+                margin: 0 0 14px;
+            }
+        }
+
+        .c-title2__style3 {
+            margin: 0 0 25px;
+
+            @include sp {
+                margin: 0 0 18px;
+            }
+        }
+
+        &__img1 {
+            text-align: center;
+            margin: 57px 0 71px;
+
+            @include sp {
+                margin: 18px 0 44px;
+            }
+        }
+
+        &__img2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 47px 0 0;
+
+            @include sp {
+                margin: 33px 0 0;
+            }
+
+            &__box {
+                width: calc(50% - 20px);
+
+                @include sp {
+                    width: 100%;
+
+                    &+& {
+                        margin-top: 38px;
+                    }
+                }
+
+                p {
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    margin: 0 0 14px;
+                }
+            }
+        }
+
+        .c-title2__style5 {
+            @include sp {
+                line-height: 21px;
+                text-align: left;
+                margin: 21px 0 12px;
+            }
+        }
+    }
+
+    &2 {
+        .c-block4 {
+            margin: 100px 0 0;
+
+            @include sp {
+                margin: 36px 0 0 -5px;
+            }
+        }
+    }
+}

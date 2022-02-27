@@ -1,0 +1,2227 @@
+/*------------------------------------------------------------
+form
+------------------------------------------------------------*/
+.c-form {
+    // .c-form1 .
+    &1 {
+        height: 70px;
+        width: 100%;
+        box-sizing: border-box;
+        @include flex(space-between, row, center);
+        $root: &;
+
+        @include max-w(1600px) {
+            height: 4.375vw;
+        }
+
+        @include pad {
+            height: 70px;
+        }
+
+        @include sp {
+            height: auto;
+        }
+
+        // .c-form1__text .
+        &__text {
+            width: 148px;
+
+            @include max-w(1600px) {
+                width: 9.25vw;
+            }
+
+            @include pad {
+                width: 148px;
+            }
+
+            @include sp {
+                width: 100%;
+                margin-bottom: 21px;
+                @include flex(flex-start);
+            }
+
+            // .c-form1__text1 .
+            &1 {
+                margin-bottom: 6px;
+                font-size: 2rem;
+                line-height: 2.6rem;
+                font-weight: 700;
+                display: block;
+                color: $color-gray4;
+
+                @include max-w(1600px) {
+                    line-height: 1.625vw;
+                    font-size: 1.25vw;
+                    margin-bottom: 0.375vw;
+                }
+
+                @include pad {
+                    font-size: 2rem;
+                    line-height: 2.6rem;
+                }
+
+                @include sp {
+                    margin-bottom: 0;
+                    font-size: 1.6rem;
+                    line-height: 1.625vw;
+                }
+            }
+
+            // .c-form1__text2 .
+            &2 {
+                color: $color-gray9;
+                @include lato;
+                display: block;
+                font-size: 1.2rem;
+                line-height: 1;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                position: relative;
+                top: 2px;
+                left: 1px;
+
+                @include max-w(1600px) {
+                    // font-size: 0.75vw;
+                }
+
+                @include pad {
+                    font-size: 1.2rem;
+                }
+
+                @include sp {
+                    margin-left: 5px;
+                    padding-top: 0;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    letter-spacing: 0.01rem;
+                }
+            }
+        }
+
+        // .c-form1__form .
+        &__form {
+            width: calc(100% - 148px);
+            height: 100%;
+            background-color: #fff;
+            box-sizing: border-box;
+            @include flex(flex-start, row, center);
+            box-sizing: border-box;
+
+            @include max-w(1600px) {
+                width: calc(100% - 9.25vw);
+            }
+
+            @include pad {
+                width: calc(100% - 148px);
+            }
+
+            @include sp {
+                width: 100%;
+                background-color: transparent;
+            }
+        }
+
+        // .c-form1__btn .
+        &__btn {
+            width: 87px;
+            // transition: .3s ease-in-out;
+            height: 100%;
+            display: block;
+            box-shadow: none;
+            outline: none;
+            border: 1px solid $color-red2;
+            cursor: pointer;
+            margin: 0 0;
+            padding: 0 0;
+            margin-left: auto;
+            position: relative;
+            background-color: #fff;
+
+            @include max-w(1600px) {
+                width: 5.4375vw;
+            }
+
+            @include pad {
+                width: 87px;
+            }
+
+            // .c-form1__btn:before .
+            &:before {
+                @include pseudo(100%, 100%, 0, 0);
+                z-index: 1;
+                background: url(/images/common/icon_search-white.svg) no-repeat center / 23px 23px;
+                transition: 0.3s ease-in-out;
+
+                @include max-w(1600px) {
+                    background-size: 1.4375vw 1.4375vw;
+                }
+
+                @include pad {
+                    background-size: 23px 23px;
+                }
+
+                @include sp {
+                    background: url(/images/common/icon_search-white.svg) no-repeat center / 14px 14px;
+                }
+            }
+
+            // .c-form1__btn:after .
+            &:after {
+                @include pseudo(100%, 100%, 0, auto);
+                right: 0;
+                z-index: 0;
+                background-color: $color-red2;
+                transition: width 0.3s ease-in-out;
+            }
+
+            @include min-w(1025px) {
+                &:hover {
+                    &:before {
+                        background: url(/images/common/icon_search-red.svg) no-repeat center / 23px 23px;
+
+                        @include max-w(1600px) {
+                            background-size: 1.4375vw 1.4375vw;
+                        }
+
+                        @include pad {
+                            background-size: 23px 23px;
+                        }
+
+                        @include sp {
+                            background-size: 10px 10px;
+                        }
+                    }
+
+                    &:after {
+                        width: 0;
+                    }
+                }
+            }
+
+            @include sp {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        // .c-form1 select .
+        select {
+            width: 100%;
+            color: $color-gray4;
+            padding-left: 15px;
+            border: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            font-weight: 600;
+            background: url(/images/common/icon_arrow-select.svg) no-repeat right center / 24px 24px;
+            cursor: pointer;
+            @include noto-sans;
+
+            &::-ms-expand {
+                display: none;
+            }
+
+            @include max-w(1600px) {
+                padding-left: .9375vw;
+                font-size: 1vw;
+                line-height: 1.75vw;
+                background-size: 1.5vw 1.5vw;
+            }
+
+            @include pad {
+                font-size: 1.6rem;
+                line-height: 2.8rem;
+                background-size: 24px 24px;
+            }
+
+            @include sp {
+                padding-left: 12px;
+                width: 100%;
+                height: 100%;
+                font-size: 1.2rem;
+                font-weight: 700;
+                background: url(/images/common/icon_arrow-select.svg) no-repeat calc(100% - 9px) center / 20px 20px;
+            }
+        }
+
+        // .c-form1__select .
+        &__select {
+            width: 224px;
+            padding-left: 24px;
+            height: 26px;
+            cursor: pointer;
+            position: relative;
+            top: -1px;
+            @include noto-sans;
+            @include flex(flex-start, row, center);
+
+            @include max-w(1600px) {
+                width: 14vw;
+                height: 1.625vw;
+                padding-left: 1.5vw;
+            }
+
+            @include pad {
+                width: 210px;
+                height: 26px;
+            }
+
+            @include sp {
+                margin-bottom: 14px;
+                height: 41px;
+                width: 100%;
+                top: 0;
+                background-color: #fff;
+                border: 1px solid $color-border;
+            }
+        }
+
+        // .c-form1__input .
+        &__input {
+            width: calc(100% - 320px);
+            padding-left: 34px;
+            box-sizing: border-box;
+            height: 100%;
+
+            @include max-w(1600px) {
+                padding-left: 2.125vw;
+                width: calc(100% - 20vw);
+            }
+
+            @include pad {
+                width: calc(100% - 306px);
+                padding-left: 20px;
+            }
+
+            @include sp {
+                background-color: #fff;
+                height: 45px;
+                padding-left: 14px;
+                padding-right: 15px;
+                width: calc(100% - 45px);
+                position: relative;
+            }
+        }
+
+        // .c-form1 input .
+        input {
+            height: 100%;
+            width: 100%;
+            color: $color-gray4;
+            padding: 0 0;
+            margin: 0 0;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            font-size: 1.6rem;
+
+            &::-webkit-input-placeholder,
+            &::placeholder,
+            &:-ms-input-placeholder {
+                color: $color-gray1;
+            }
+
+            @include max-w(1600px) {
+                font-size: 1vw;
+                line-height: 1.75vw;
+            }
+
+            @include pad {
+                font-size: 1.6rem;
+                line-height: 2.8rem;
+            }
+
+            @include sp {
+                font-size: 1.3rem;
+            }
+        }
+
+        &--style2 {
+            #{$root}__text1 {
+                color: #ffffff;
+            }
+
+            #{$root}__input {
+                width: calc(100% - 87px);
+                padding-left: 0;
+                @include sp {
+                    width: calc(100% - 45px);
+                    padding-left: 15px;
+                }
+            }
+        }
+
+        &--style3 {
+            background: #F6F6F6;
+            padding: 40px 50px 40px 50px;
+            height: 150px;
+            @include sp{
+                height: auto;
+                width: calc(100% + 30px);
+                margin: 0 0 0 -15px;
+                height: auto;
+                padding: 20px 20px 20px 20px;
+            }
+            #{$root}__text{
+                width: 200px;
+                @include sp{
+                    width: 100%;
+                    margin: 0 0 15px;
+
+                }
+                &1{
+                    @include sp{
+                        line-height: 1;
+                        font-size: 1.4rem;
+                    }
+                }
+                &2{
+                    @include sp{
+                        font-size: 8px;
+                        margin: 4px 0 0 6px;
+                    }
+                }
+            }
+            #{$root}__form{
+                width: calc(100% - 229px);
+                padding-left: 0;
+                @include sp{
+                    width: 100%;
+                }
+            }
+            #{$root}__input{
+                width: calc(100% - 87px);
+                padding-left: 41px;
+                @include sp{
+                    width: calc(100% - 45px);
+                    padding-left: 15px;
+                    input{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    // .c-form2 .
+    &2 {
+        &__text {
+            @include sp {
+                border: 1px solid $color-border;
+                border-bottom: none;
+                background-color: #f6f6f6;
+                padding: 12px 15px 15px;
+            }
+
+            &2 {
+                @include sp {
+                    padding-left: 6px;
+                }
+            }
+
+            &1,
+            &2 {
+                @include sp {
+                    display: inline-block;
+                    font-size: 1rem;
+                    line-height: 1.4rem;
+                }
+            }
+
+            &__inner {
+                @include sp {
+                    padding: 13px 15px 10px;
+                    background-color: #fff;
+                }
+            }
+
+            &__row {
+                @include sp {
+                    margin-bottom: 5px;
+                    width: 100%;
+                    @include flex;
+                }
+            }
+        }
+
+        // .c-form2__header .
+        &__header {
+            padding: 35px 50px 33px;
+            box-sizing: border-box;
+            @include flex(space-between, row, center);
+            border-top: 3px solid $color-red2;
+            border-left: 1px solid $color-border;
+            border-right: 1px solid $color-border;
+            position: relative;
+
+            @include sp {
+                padding: 13px 14px 13px;
+                border-top: none;
+            }
+
+            // .c-form2__header:before .
+            &:before {
+                @include sp {
+                    @include pseudo(100%, 1px, 0, 0);
+                    background-color: $color-red2;
+                }
+            }
+        }
+
+        // .c-form2__title1 .
+        &__title1 {
+            @include sp {
+                width: 50%;
+            }
+
+            &__jap,
+            &__eng {
+                display: block;
+            }
+
+            // .c-form2__title1__eng .
+            &__eng {
+                @include lato;
+                font-size: 1.2rem;
+                line-height: 1;
+                font-weight: 700;
+                color: $color-gray9;
+
+                @include sp {
+                    font-size: 1rem;
+                }
+            }
+
+            // .c-form2__title1__jap .
+            &__jap {
+                margin-bottom: 13px;
+                font-size: 2rem;
+                line-height: 1;
+                font-weight: 700;
+                color: $color-gray4;
+
+                @include sp {
+                    margin-bottom: 7px;
+                    font-size: 1.7rem;
+                    line-height: 2.1rem;
+                }
+            }
+        }
+
+        // .c-form2__title2 .
+        &__title2 {
+            color: $color-gray4;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1;
+            position: relative;
+            top: -13px;
+            @include flex;
+            align-items: flex-end;
+
+            @include sp {
+                font-size: 1.2rem;
+                top: -10px;
+                width: 50%;
+                text-align: right;
+                letter-spacing: 0.4px;
+                justify-content: flex-end;
+            }
+
+            // .c-form2__title2__number .
+            &__number{
+                position: relative;
+                display: block; 
+                top: 2px;  
+                padding: 0 4px 0 4px;
+                text-align: center;
+                // margin: 0 1px 0 8px;
+
+                @include sp{
+                    // margin: 0 0 0 2px; 
+                    top: 1px;
+                }
+            }
+
+            .count-number{
+                font-size: 4rem;
+                font-weight: 600;
+                line-height: 1;
+                @include lato;
+                opacity: 0 !important;
+                color: #ffffff;
+
+                @include sp {
+                    font-size: 3rem;
+                }
+            }
+
+            .odometer {
+                display: inline-block;
+                width: max-content;
+                position: relative;
+                top:7px;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                @include lato;
+                font-size: 4rem;  
+                font-weight: 600;
+                line-height: 1;
+                color: $color-red2;
+
+                @include sp{
+                    font-size: 3rem;
+                }
+            }
+
+            #count-building {
+                display: inline-block;
+                // position: absolute;
+                position: relative;
+                top: 3px;
+                width: max-content;
+                font-size: 4rem;
+                font-weight: 600;
+                line-height: 1;
+                color: #E83820;
+                font-family: 'Lato', sans-serif;
+                padding: 0 5px 0 5px;
+                display: none;
+            }
+        }
+
+        // .c-form2__body .
+        &__body {
+            box-sizing: border-box;
+        }
+
+        // .c-form2__btn .
+        &__btn {
+            text-align: center;
+            width: 100%;
+            border: 1px solid $color-border;
+            border-top: none;
+            padding: 20px 10px;
+            @include noto-sans;
+
+            @include sp {
+                display: none;
+                padding: 21px 10px 20px;
+            }
+
+            &.is-open {
+                @include sp {
+                    display: block;
+                }
+            }
+
+            &.is-active {
+                display: block;
+
+                @include sp {
+                    border-top: 1px solid $color-border;
+                }
+            }
+
+            // .c-form2__btn button .
+            button {
+                width: 304px;
+                height: 70px;
+                padding-left: 32px;
+                display: inline-block;
+                box-shadow: none;
+                outline: none;
+                background: $color-red2 url(/images/common/icon_filter-white.svg) no-repeat 94px center / 16px 16px;
+                text-align: center;
+                color: #fff;
+                font-size: 1.7rem;
+                line-height: 65px;
+                font-weight: 700;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+                border: 2px solid $color-red2;
+                position: relative;
+                @include noto-sans;
+
+                &:before {
+                    transition: 0.3s ease-in-out;
+                    opacity: 0;
+                    @include pseudo(16px, 16px, 50%, 94px);
+                    transform: translateY(-50%);
+                    background: url(/images/common/icon_filter-red.svg) no-repeat center / 16px 16px;
+                    display: inline-block;
+
+                    @include sp {
+                        display: none;
+                    }
+                }
+
+                @include hover {
+                    opacity: 1;
+                    color: $color-red2;
+                    background-image: none;
+                    background-color: #fff;
+
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+
+                @include sp {
+                    padding-left: 18px;
+                    font-size: 1.4rem;
+                    width: calc(100% - 20px);
+                    margin: 0 auto;
+                    display: block;
+                    height: 55px;
+                    line-height: 5rem;
+                    background: $color-red url(/images/common/icon_filter-white.svg) no-repeat 92px center / 14px 14px;
+                }
+            }
+        }
+
+        // .c-form2__form .
+        &__form {
+            // .c-form2__form__inner .
+            &__inner {
+                box-sizing: border-box;
+                border: 1px solid $color-border;
+
+                // .c-form2__form__inner + .c-form2__btn .
+                & + .c-form2__btn {
+                    margin-top: -1px;
+                    background-color: #fff;
+                }
+            }
+        }
+
+        // .c-form2__row .
+        &__row {
+            padding: 35px 30px 27px 30px;
+            border-bottom: 1px solid $color-border;
+            background-color: #f6f6f6;
+            @include flex(flex-start, row, flex-start);
+            
+            &.is-hide{
+                display: none;
+            }
+            
+            &:nth-child(2),
+            &:nth-child(3) {
+                padding-top: 34px;
+
+                @include sp {
+                    padding-top: 0;
+                }
+            }
+
+            &:nth-child(3) {
+                padding-bottom: 28px;
+
+                @include sp {
+                    padding-bottom: 0;
+                }
+            }
+
+            &:nth-child(4) {
+                padding-bottom: 28px;
+
+                @include sp {
+                    padding-bottom: 0;
+                }
+            }
+
+            @include sp {
+                padding: 0 0;
+                background-color: transparent;
+                display: none;
+                &.is-show{
+                    display: block;
+                }
+                &.is-open {
+                    display: flex;
+                }
+            }
+
+            // .c-form2__rowadd .
+            &add {
+                padding: 15px 0 20px;
+                text-align: center;
+                background-color: transparent;
+                border-bottom: 1px solid $color-border;
+
+                @include sp {
+                    border-bottom: none;
+                    position: relative;
+                    padding: 0 0;
+                }
+
+                &.non-extend {
+                    display: none;
+
+                    @include sp {
+                        display: block;
+                    }
+                }
+
+                &__after {
+                    display: none;
+                }
+
+                // .c-form2__rowadd__text .
+                &__text {
+                    position: relative;
+                    font-size: 1.6rem;
+                    line-height: 2;
+                    font-weight: 700;
+                    color: $color-gray4;
+                    cursor: pointer;
+                    display: inline-block;
+                    transition: all 0.3s;
+
+                    @include sp {
+                        padding: 18px 0 18px 11px;
+                        font-size: 1.4rem;
+                        line-height: 1.3rem;
+                        display: block;
+                    }
+
+                    // .c-form2__rowadd__text:before .
+                    &:before {
+                        top: 7px;
+                        margin-right: 7px;
+                        left: -6px;
+                        width: 24px;
+                        height: 24px;
+                        position: relative;
+                        content: '';
+                        display: inline-block;
+                        background: url(/images/common/icon_plus.svg) no-repeat center / 24px 24px;
+
+                        @include sp {
+                            width: 12px;
+                            height: 12px;
+                            background: url(/images/common/icon_plus_sp.svg) no-repeat center / 12px 12px;
+                            top: 2px;
+                            margin-right: 0;
+                            left: -10px;
+                        }
+                    }
+
+                    &.is-active {
+                        &:before {
+                            background: url(/images/common/icon_minus.svg) no-repeat center / 20px 20px;
+
+                            @include sp {
+                                background: url(/images/common/icon_minus.svg) no-repeat center / 12px 12px;
+                            }
+                        }
+                    }
+
+                    &.is-open {
+                        & + .c-form2__rowadd__after {
+                            @include sp {
+                                z-index: 9;
+                                display: block;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                        @include sp {
+                            border-bottom: 1px solid $color-border;
+                        }
+                    }
+                    @include hover {
+                        color: $color-red2;
+                    }
+                }
+            }
+
+            &__extend {
+                display: none;
+
+                &.is-open {
+                    display: block;
+                }
+            }
+        }
+
+        // .c-form2__btnclose .
+        &__btnclose {
+            display: none;
+
+            @include sp {
+                padding: 18px 10px 19px;
+                font-size: 1.4rem;
+                line-height: 1;
+                font-weight: 700;
+                border-bottom: 1px solid $color-border;
+                text-align: center;
+
+                &.is-open {
+                    display: block;
+                }
+            }
+
+            &__text {
+                display: inline-block;
+                padding-left: 20px;
+                background: url(/images/common/icon_minus.svg) no-repeat 0 2px / 11.5px 11.5px;
+            }
+        }
+
+        // .c-form2__label .
+        &__label {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: $color-gray4;
+            padding-left: 15px;
+            position: relative;
+
+            @include sp {
+                padding: 14px 8.5px 15px 26px;
+                font-size: 1.5rem;
+                display: block;
+                width: 100%;
+                border-bottom: 1px solid $color-border;
+                line-height: 1;
+            }
+
+            // .c-form2__label:before .
+            &:before {
+                @include pseudo(2px, 16px, 7px, -1px);
+                background-color: $color-red2;
+
+                @include sp {
+                    top: 15px;
+                    left: 14px;
+                    height: 14px;
+                }
+            }
+        }
+
+        // .c-form2__cb .
+        &__cb {
+            padding-right: 30px;
+            margin-bottom: 12.5px;
+            position: relative;
+            width: 25.5%;
+            box-sizing: border-box;
+
+            &:nth-child(4n + 2) {
+                width: 25.5%;
+            }
+
+            &:nth-child(4n + 3) {
+                width: 25.5%;
+            }
+
+            &:nth-child(4n + 4) {
+                width: 23.5%;
+            }
+
+            @include sp {
+                line-height: 1.3rem;
+                margin-bottom: 0;
+                width: 50%;
+                padding: 14px 7.5px 15px;
+                padding-right: 7.5px;
+                border-bottom: 1px solid $color-border;
+                border-right: 1px solid $color-border;
+                @include flex(flex-start, row, center);
+            }
+
+            &:nth-child(4n + 4) {
+                padding-right: 0;
+            }
+
+            &:nth-child(3n + 1) {
+                @include sp {
+                    padding-right: 11px;
+                    width: 50%;
+                }
+            }
+
+            &:nth-child(3n + 2) {
+                @include sp {
+                    padding-right: 11px;
+                    width: 50%;
+                }
+            }
+
+            &:nth-child(3n + 3) {
+                @include sp {
+                    width: 50%;
+                }
+            }
+
+            &:last-child,
+            &:nth-last-child(2) {
+                border-bottom: none;
+            }
+
+            &:nth-child(2n + 2) {
+                @include sp {
+                    border-right: none;
+                }
+            }
+
+            &.is-disable {
+                opacity: 0.2;
+                pointer-events: none;
+
+                @include sp {
+                    opacity: 1;
+                    > label {
+                        opacity: 0.2;
+                    }
+                }
+            }
+        }
+
+        // .c-form2__grcheckbox .
+        &__grcheckbox {
+            padding-top: 1px;
+            width: calc(100% - 225px);
+            margin-left: auto;
+            @include flex;
+
+            @include sp {
+                // margin-top: 15px;
+                padding: 0 0;
+                width: 100%;
+                background-color: #f6f6f6;
+                align-items: stretch;
+                border-bottom: none;
+            }
+
+            // .c-form2__grcheckbox label .
+            label {
+                padding-left: 34px;
+                display: inline-block;
+                cursor: pointer;
+
+                @include sp {
+                    padding-left: 33px;
+                }
+
+                // .c-form2__grcheckbox label span .
+                span {
+                    font-size: 1.5rem;
+                    line-height: 2.2rem;
+                    font-weight: 500;
+                    color: $color-gray4;
+                    display: inline-block;
+
+                    @include sp {
+                        font-size: 1.3rem;
+                        line-height: 1.5rem;
+                    }
+
+                    // .c-form2__grcheckbox label span:before .
+                    &:before {
+                        cursor: pointer;
+                        @include pseudo(20px, 20px, 6px, 0);
+                        background: #fff url(/images/common/icon_checked.svg) no-repeat center / 13px 10px;
+                        border-radius: 2px;
+                        border: 1px solid #c8c8c8;
+                        box-sizing: border-box;
+                        z-index: 1;
+
+                        @include sp {
+                            height: 15px;
+                            width: 15px;
+                            border-radius: 2px;
+                            left: 15px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+
+                // .c-form2__grcheckbox label input .
+                input {
+                    cursor: pointer;
+                    top: 4px;
+                    opacity: 0;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    z-index: 2;
+                    margin: 0 0;
+
+                    @include sp {
+                        height: 15px;
+                        width: 15px;
+                    }
+
+                    &:checked {
+                        & + span {
+                            &:before {
+                                background-color: $color-gray7;
+                                border-color: $color-gray7;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // .c-form2__grcheckbox .c-form2__cb--dbline .
+            .c-form2__cb--dbline {
+                margin-top: 4px;
+
+                @include sp {
+                    margin-top: 0;
+                }
+
+                label {
+                    span {
+                        &:before {
+                            top: 2px;
+
+                            @include sp {
+                                top: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // .c-form2--style1 .
+        &--style1 {
+            .c-title2__style3 {
+                padding-bottom: 13px;
+                width: auto;
+                position: relative;
+                top: 6px;
+
+                @include sp {
+                    top: 0;
+                }
+
+                &:after {
+                    @include sp {
+                        bottom: -1px;
+                        left: 0;
+                        transform: none;
+                    }
+                }
+            }
+
+            > .l-cont {
+                @include sp {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+
+            .c-form2__title2 span {
+                margin: 0 3px 0 7px;
+            }
+
+            .c-form2 {
+                // .c-form2--style1 .c-form2__header .
+                &__header {
+                    border-top: 0;
+                    border-left: none;
+                    border-right: none;
+                    padding: 0 10px 6px 14px;
+
+                    @include sp {
+                        padding: 0 0 1px 5px;
+                    }
+
+                    &:before {
+                        @include sp {
+                            display: none;
+                        }
+                    }
+                }
+
+                // .c-form2--style1 .c-form2__form .
+                &__form {
+                    // .c-form2--style1 .c-form2__form__inner .
+                    &__inner {
+                        border: none;
+
+                        @include sp {
+                            border-bottom: 1px solid $color-border;
+                        }
+                    }
+                }
+
+                // .c-form2--style1 .c-form2__row .
+                &__row {
+                    border-bottom: none;
+                    padding: 33px 20px 16px 42px;
+
+                    // .c-form2--style1 .c-form2__row:nth-child(2) .
+                    &:nth-child(2) {
+                        padding-top: 0;
+
+                        .c-form2 {
+                            // .c-form2--style1 .c-form2__row:nth-child(2) .c-form2__label .
+                            &__label {
+                                margin-bottom: 19px;
+
+                                @include sp {
+                                    margin-bottom: 0;
+                                }
+                            }
+
+                            &__grcheckbox {
+                                label {
+                                    span {
+                                        // .c-form2--style1 .c-form2__row:nth-child(2) .c-form2__grcheckbox label span:before .
+                                        &:before {
+                                            top: 7px;
+                                            left: 0;
+
+                                            @include sp {
+                                                left: 15px;
+                                                top: 50%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @include sp {
+                        display: block;
+                        padding: 0 0 0;
+                        border: 1px solid $color-border;
+                        border-bottom: none;
+                    }
+                }
+
+                // .c-form2--style1 .c-form2__cb .
+                &__cb {
+                    padding-right: 32px;
+                    margin-bottom: 10px;
+                    width: 24.5%;
+
+                    @include sp {
+                        padding-right: 0;
+                        margin-bottom: 0;
+                        padding-left: 24px;
+                        padding-right: 20px;
+                        padding-bottom: 13px;
+                        width: 100%;
+                        border-right: none !important;
+                        border-bottom: 1px solid $color-border;
+                    }
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+
+                // .c-form2--style1 .c-form2__label .
+                &__label {
+                    margin-bottom: 23px;
+                    width: 100%;
+
+                    @include sp {
+                        margin-bottom: 0;
+                    }
+                }
+
+                &__grcheckbox {
+                    width: 100%;
+                    padding-top: 0;
+
+                    label {
+                        padding-left: 32px;
+
+                        @include sp {
+                            padding-left: 15px;
+                        }
+
+                        span {
+                            // .c-form2--style1 .c-form2__grcheckbox label span:before .
+                            &:before {
+                                top: 3px;
+
+                                @include sp {
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // .c-form2--style1 .c-form2__btn .
+                &__btn {
+                    border: none;
+                    background-color: #f6f6f6;
+                    padding-top: 33px;
+                    padding-bottom: 40px;
+
+                    @include sp {
+                        display: block;
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        border: 1px solid $color-border;
+                        border-top: none;
+                    }
+
+                    button {
+                        @include sp {
+                            padding-left: 17px;
+                            width: 100%;
+                            background-position-x: 92px;
+                        }
+                    }
+                }
+
+                // .c-form2--style1 .c-form2__title2 .
+                &__title2 {
+                    margin-left: auto;
+
+                    @include sp {
+                        top: -4px;
+                    }
+
+                    span {
+                        @include sp {
+                            margin: 0 1px 0 4px;
+                        }
+                    }
+                }
+            }
+        }
+
+        // .c-form2--shorten .
+        &--shorten {
+            .c-form2 {
+                &__row {
+                    display: none;
+
+                    &add {
+                        border-bottom: none;
+                    }
+                }
+
+                // .c-form2--shorten .c-form2__btn .
+                &__btn {
+                    display: none;
+
+                    &.is-active {
+                        @include sp {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        // .c-form2.is-expend .
+        &.is-expend {
+            .c-form2 {
+                &__row {
+                    @include sp {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    // .c-form3 .
+    &3 {
+        @include noto-sans;
+
+        // .c-form3 select .
+        select {
+            padding-left: 20px;
+            color: $color-gray-b;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+
+            @include sp {
+                padding-left: 13px;
+            }
+
+            &::-ms-expand {
+                display: none;
+            }
+
+            &.is-active {
+                color: $color-gray4;
+            }
+        }
+
+        // .c-form3 select, .c-form3 input, .c-form3 textarea .
+        select,
+        input,
+        textarea {
+            @include noto-sans;
+            width: 100%;
+            height: 100%;
+            border: none;
+            box-shadow: none;
+            outline: none;
+            background-color: #F6F6F6;
+            resize: none;
+            font-size: 1.5rem;
+            line-height: 2.4rem;
+            box-sizing: border-box;
+            &.is-error {
+                background-color: #FEEFED;
+            }
+
+            @include placeholder(#BBBBBB);
+
+            &::-webkit-input-placeholder,
+            &::placeholder,
+            &:-ms-input-placeholder {
+                color: $color-gray-b;
+            }
+
+            &:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0px 1000px #F6F6F6 inset;
+            }
+
+            @include sp {
+                line-height: 1;
+            }
+        }
+
+        // .c-form3 input
+        input {
+            padding: 15px;
+        }
+
+        // .c-form3 textarea .
+        textarea {
+            padding: 9px 20px 15px 18px;
+            vertical-align: bottom;
+            @include sp {
+                padding: 11px 12px;
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+        }
+
+        // .c-form3__error .
+        &__error {
+            display: none;
+            font-size: 1.5rem;
+            line-height: 2.4rem;
+            font-weight: 500;
+            position: relative;
+            color: $color-red2;
+
+            // .c-form3__error.is-active .
+            &.is-active {
+                display: block;
+                margin-top: -2px;
+
+                // .c-form3__error.is-active + .c-form3__input, .c-form3__error.is-active + .c-form3__select .
+                & + .c-form3__input,
+                & + .c-form3__select {
+                    margin-top: 7px;
+
+                    @include sp {
+                        margin-top: 10px;
+                    }
+                }
+
+                // .c-form3__error.is-active + .c-form3__checkbox .
+                & + .c-form3__checkbox {
+                    margin-top: 3px;
+
+                    @include sp {
+                        margin-top: 7px;
+                    }
+                }
+
+                // .c-form3__error.is-active + .c-form3__textarea .
+                & + .c-form3__textarea {
+                    margin-top: 7px;
+
+                    @include sp {
+                        margin-top: 10px;
+                    }
+                }
+
+                // .c-form3__error + .c-form3__input__text1 .
+                & + .c-form3__input__text1 {
+                    margin-top: -2px;
+
+                    @include sp {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            @include sp {
+                font-size: 1.5rem;
+                line-height: 1;
+            }
+
+            // .c-form3__error:before .
+            &:before {
+                margin-right: 15px;
+                @include pseudo(19px, 19px, 4px, 3px);
+                position: relative;
+                display: inline-block;
+                background: url(/images/common/icon_warning.svg) no-repeat center;
+                background-size: 19px 19px;
+
+                @include sp {
+                    margin-right: 7px;
+                    width: 14px;
+                    height: 14px;
+                    background-size: 14px 14px;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        // .c-form3__textarea .
+        &__textarea {
+            background-color: #f6f6f6;
+            width: 100%;
+            height: 150px;
+
+            &.is-error {
+                background-color: #FEEFED;
+                border-color: #FEEFED;
+            }
+
+            @include sp {
+                height: 120px;
+            }
+        }
+
+        // .c-form3__select .
+        &__select {
+            border: 1px solid $color-border;
+            width: 300px;
+            height: 46px;
+            background: url(/images/common/icon_selectbox.svg) no-repeat 95% 50%;
+            background-size: 14px 12px;
+
+            @include sp {
+                width: 100%;
+                height: 47px;
+                background-position-x: 96%;
+                background-size: 14px 11px;
+            }
+
+            @include ie {
+                background-size: 17px 10px;
+            }
+
+            &.is-error {
+                background-color: #FEEFED;
+                border-color: #FEEFED;
+            }
+
+            // .c-form3__select + .c-form3__input__input .
+            & + .c-form3__input {
+                margin-top: 10px;
+            }
+
+            // .c-form3__select + .c-form3__input__text1 .
+            & + .c-form3__input__text1 {
+                margin-top: 24px;
+
+                @include sp {
+                    margin-top: 9px;
+                }
+            }
+
+            & + .c-form3__js-error.margin {
+                margin-top: 25px;
+                @include sp{
+                    margin-top: 15px;
+                }
+            }
+
+            select {
+                background-color: transparent;
+            }
+        }
+
+        // .c-form3__grcheckbox .
+        &__grcheckbox {
+            @include sp {
+                padding: 0 !important;
+            }
+
+            // .c-form3__grcheckbox .c-form3__error.is-active .
+            .c-form3__error.is-active {
+                @include sp {
+                    padding: 16px 10px 0px 20px;
+                    margin-bottom: -12px;
+                }
+            }
+        }
+
+        // .c-form3__checkbox .
+        &__checkbox {
+            @include flex(space-between, row, center);
+
+            @include sp {
+                display: block;
+            }
+
+            &--nospace {
+                justify-content: flex-start;
+                .c-form3__checkbox__item:not(:first-child) {
+                    margin-left: 40px;
+                    @include sp{
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            // .c-form3__checkbox__item  .
+            &__item {
+                position: relative;
+                padding-left: 30px;
+                cursor: pointer;
+
+                @include sp {
+                    width: 100%;
+                    display: block;
+                    padding: 14px 30px 13px 40px;
+                    border-bottom: 1px solid $color-border;
+                }
+
+                &:last-child {
+                    @include sp {
+                        border-bottom: none;
+                        padding-bottom: 14px;
+                    }
+                }
+            }
+
+            // .c-form3__checkbox label .
+            label {
+                font-size: 1.5rem;
+                line-height: 2.4rem;
+                cursor: pointer;
+
+                @include sp {
+                    line-height: 2rem;
+                }
+            }
+
+            &__text {
+                // .c-form3__checkbox__text:before .
+                &:before {
+                    @include pseudo(20px, 20px, 50%, 0);
+                    background-color: #f6f6f6;
+                    border-radius: 50%;
+                    transform: translateY(-50%);
+                    border: 1px solid #dadada;
+
+                    @include sp {
+                        border-width: 2px;
+                        width: 14px;
+                        height: 14px;
+                        left: 12px;
+                    }
+                }
+
+                // .c-form3__checkbox__text:after .
+                &:after {
+                    @include pseudo(12px, 12px, 50%, 5px);
+                    transform: translateY(-50%);
+                    background-color: $color-red2;
+                    border-radius: 50%;
+                    opacity: 0;
+
+                    @include sp {
+                        width: 8px;
+                        height: 8px;
+                        left: 17px;
+                    }
+                }
+            }
+
+            input {
+                opacity: 0;
+                margin: 0 0;
+                position: absolute;
+                width: 0;
+                height: 0;
+
+                &:checked + .c-form3__checkbox__text {
+                    &:after {
+                        opacity: 1;
+                    }
+
+                    &:before {
+                        border-color: $color-red2;
+                    }
+                }
+            }
+        }
+
+        // .c-form3__input .
+        &__input {
+            padding: 8px 20px 10px 0;
+            width: 320px;
+
+            @include sp {
+                padding: 11px 11px 11px 0;
+                width: 100%;
+            }
+
+            &.is-error {
+                background-color: #FEEFED;
+            }
+
+            &--large {
+                width: 400px;
+
+                @include sp {
+                    width: 100%;
+                }
+            }
+
+            &--short {
+                width: 200px;
+
+                @include sp {
+                    width: 100%;
+                }
+            }
+
+            &--num {
+                width: 100px;
+            }
+
+            &--full {
+                width: 100%;
+            }
+
+            &__text {
+                // .c-form3__input__text1 .
+                &1 {
+                    font-size: 1.5rem;
+                    line-height: 2.4rem;
+
+                    // .c-form3__input__text1 + .c-form3__text1 .
+                    & + .c-form3__input__text1 {
+                        margin-top: 4px;
+                    }
+
+                    // .c-form3__input__text1 + .c-form3__input .
+                    & + .c-form3__input {
+                        margin-top: 10px;
+
+                        @include sp {
+                            margin-top: 6px;
+                        }
+                    }
+
+                    // .c-form3__input__text1.is-error .
+                    &.is-error {
+                        position: relative;
+                        color: $color-red2;
+                        font-weight: 500;
+
+                        @include sp {
+                            font-size: 1.5rem;
+                            line-height: 1;
+                        }
+
+                        // .c-form3__input__text1.is-error:before .
+                        &:before {
+                            margin-right: 15px;
+                            @include pseudo(19px, 19px, 4px, 3px);
+                            position: relative;
+                            display: inline-block;
+                            background: url(/images/common/icon_warning.svg) no-repeat center;
+                            background-size: 19px 19px;
+
+                            @include sp {
+                                margin-right: 7px;
+                                width: 14px;
+                                height: 14px;
+                                background-size: 14px 14px;
+                                top: 0;
+                                left: 0;
+                            }
+                        }
+
+                        // .c-form3__input__text1.is-error + .c-form3__input__text1 .
+                        & + .c-form3__input__text1 {
+                            margin-top: 5px;
+
+                            @include sp {
+                                margin-top: 4px;
+                            }
+                        }
+
+                        // .c-form3__input__text1.is-error + .c-form3__input .
+                        & + .c-form3__input,
+                        & + .c-form3__wrap {
+                            margin-top: 8px;
+
+                            @include sp {
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+
+                // .c-form3__input__text2 .
+                &2 {
+                    margin-top: 8px;
+                    color: $color-gray7;
+                    font-size: 1.1rem;
+                    line-height: 2rem;
+
+                    @include sp {
+                        margin-top: 7px;
+                        font-size: 1.3rem;
+                        line-height: 1.6rem;
+                        text-indent: -12px;
+                        padding-left: 10px;
+                        padding-right: 22px;
+                    }
+                }
+            }
+        }
+
+        // .c-form3__wrap .
+        &__wrap {
+            display: flex;
+            align-items: center;
+        }
+
+        // .c-form3__unit .
+        &__unit {
+            margin-left: 10px;
+            font-size: 1.5rem;
+        }
+
+        &__active02 {
+            display: none;
+        }
+
+        &__js-error {
+            &.margin {
+                margin-bottom: 7px;
+                @include sp {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        // .c-form3 dl .
+        dl {
+            @include flex(flex-start, row, stretch);
+
+            // .c-form3 dl:last-of-type .
+            &:last-of-type {
+                border-bottom: 1px solid $color-border;
+
+                dt {
+                    @include sp {
+                        padding: 19px 20px 18px;
+                    }
+                }
+
+                dd {
+                    @include sp {
+                        padding: 14px 20px 14px;
+                    }
+                }
+            }
+
+            @include sp {
+                border-bottom: none;
+            }
+
+            &:nth-child(2) {
+                // .c-form3 dl:nth-child(2) dd .
+                dd {
+                    padding: 24px 30px 29px 28px;
+
+                    @include sp {
+                        padding: 10px 20px 14px;
+                    }
+                }
+            }
+
+            &:nth-child(5) {
+                // .c-form3 dl:nth-child(5) dd .
+                dd {
+                    padding: 25px 30px 27px 28px;
+
+                    @include sp {
+                        padding: 13px 20px 14px;
+                    }
+                }
+            }
+
+            &:nth-child(6) {
+                // .c-form3 dl:nth-child(6) dd .
+                dd {
+                    padding: 25px 30px 25px 28px;
+
+                    @include sp {
+                        padding: 10px 20px 14px;
+                    }
+                }
+            }
+
+            &:nth-child(7) {
+                // .c-form3 dl:nth-child(7) dd .
+                dd {
+                    padding: 25px 30px 26px 28px;
+
+                    @include sp {
+                        padding: 12px 20px 15px;
+                    }
+                }
+
+                .c-form3 {
+                    &__input {
+                        @include sp {
+                            margin-top: 10px;
+                        }
+
+                        &__text {
+                            &1 {
+                                @include sp {
+                                    line-height: 2rem;
+                                }
+                            }
+
+                            &2 {
+                                @include sp {
+                                    padding-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(8) {
+                // .c-form3 dl:nth-child(8) dd .
+                dd {
+                    padding: 29px 30px 29px 28px;
+
+                    @include sp {
+                        padding: 13px 20px 15px;
+                    }
+                }
+            }
+
+            &:nth-child(9) {
+                // .c-form3 dl:nth-child(9) dd .
+                dd {
+                    padding: 24px 30px 29px 28px;
+
+                    @include sp {
+                        padding: 10px 20px 14px;
+                    }
+                }
+            }
+
+            &:nth-child(10) {
+                // .c-form3 dl:nth-child(10) dd .
+                dd {
+                    padding: 24px 30px 26px 28px;
+
+                    @include sp {
+                        padding: 15px 20px 15px;
+                    }
+                }
+            }
+        }
+
+        // .c-form3 dt .
+        dt {
+            padding: 0 80px 0 29px;
+            position: relative;
+            font-size: 1.5rem;
+            line-height: 2.4rem;
+            font-weight: 500;
+            @include noto-sans;
+            border: 1px solid $color-border;
+            border-bottom: none;
+            width: 260px;
+            background-color: #F6F6F6;
+            @include flex(flex-start, row, center);
+
+            @include sp {
+                padding: 17px 55px 16px 20px;
+                width: 100%;
+                line-height: 2rem;
+                border-bottom: 1px solid $color-border;
+            }
+        }
+
+        // .c-form3 dd .
+        dd {
+            padding: 26px 30px 26px 28px;
+            border: 1px solid $color-border;
+            border-bottom: none;
+            border-left: none;
+            width: calc(100% - 260px);
+
+            @include sp {
+                padding: 15px 20px 14px;
+                width: 100%;
+                border-top: none;
+                border-left: 1px solid $color-border;
+            }
+        }
+
+        // .c-form3__label .
+        &__label {
+            padding: 4px 0 5px;
+            width: 42px;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1;
+            font-weight: 700;
+            color: #fff;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            right: 29px;
+            transform: translateY(-50%);
+            background-color: $color-red2;
+
+            @include sp {
+                font-size: 1rem;
+                width: 30px;
+                right: 20px;
+                padding: 5px 0 5px;
+            }
+        }
+
+        // .c-form3__btn .
+        &__btn {
+            padding: 40px 0 0;
+            position: relative;
+            text-align: center;
+
+            @include sp {
+                padding: 30px 5px 0;
+            }
+
+        }
+        // .c-form3__div .
+        &__div {
+            background-color: $color-gray-b;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            width: 228px;
+            height: 70px;
+            display: inline-block;
+            cursor: pointer;
+            color: #fff;
+            font-size: 1.7rem;
+            line-height: 1;
+            font-weight: 700;
+
+            @include sp {
+                font-size: 1.4rem;
+                width: 100%;
+                max-width: 375px;
+                height: 55px;
+            }
+
+            input {
+                color: #fff;
+                font-size: 1.7rem;
+                font-weight: 700;
+                cursor: pointer;
+                background-color: $color-blue3;
+                border: 1px solid $color-blue3;
+                transition: .3s;
+                &:hover {
+                    color: $color-blue3;
+                    background-color: #fff;
+                }
+                &[disabled] {
+                    background-color: #BBBBBB;
+                    border-color: #BBBBBB;
+                    cursor: default;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        // .c-form3__img .
+        &__img {
+            max-width: 100px;
+            position: absolute;
+            top: 40px;
+            right: 0;
+
+            @include sp {
+                margin-top: 20px;
+                top: 0;
+                left: unset;
+                position: relative;
+                text-align: center;
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
+     // .c-form4 .
+     &4 {
+        @include sp {
+            margin: 0 -5px;
+        }
+
+        .c-title2 {
+            margin: 85px 0 26px;
+
+            @include sp {
+                margin: 39px 0 22px;
+            }
+        }
+
+        &__txt1 {
+            font-size: 1.8rem;
+            margin: 0 0 19px;
+
+            @include sp {
+                line-height: 25px;
+                margin: 0 0 22px;
+            }
+        }
+
+        &__txt2 {
+            font-size: 1.6rem;
+
+            span {
+                color: #E83820;
+                @include poppins;
+                font-weight: 700;
+                display: inline-block;
+                margin-right: 7px;
+            }
+        }
+
+        &__checkbox {
+            font-size: 1.5rem;
+            line-height: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px 0 17px;
+
+            @include sp {
+                margin: 12px 0 90px;
+                font-size: 1.4rem;
+                line-height: 15px;
+            }
+
+            li {
+                width: 25%;
+                padding-right: 10px;
+                margin: 0 0 18px 0;
+
+                &:last-child {
+                    width: 100%;
+                }
+
+                @include sp {
+                    width: 100%;
+                    border: 1px solid #D8D8D8;
+                    margin-bottom: -1px;
+                    padding: 14px 15px 16px;
+                }
+
+                input[type=checkbox] {
+                    display: none !important;
+
+                    &:checked+label {
+                        &::before {
+                            background: url(/images/common/icon_checked.svg) no-repeat center/13px 10px #777;
+                        }
+                    }
+                }
+
+                input[type=text] {
+                    @include noto-sans;
+                    width: 100%;
+                    max-width: 470px;
+                    height: 46px;
+                    border: none;
+                    box-shadow: none;
+                    outline: none;
+                    background-color: #F6F6F6;
+                    font-size: 1.5rem;
+                    line-height: 2.4rem;
+                    margin: 17px 0 0;
+                    display: block;
+                    padding: 0 20px 0;
+                    box-sizing: border-box;
+                    @include placeholder(#BBBBBB);
+
+                    @include sp {
+                        margin: 32px 0 -78px -16px;
+                        max-width: initial;
+                        width: calc(100% + 32px);
+                        padding: 15px;
+                        height: 45px;
+                    }
+                }
+
+                label {
+                    display: inline-block;
+                    position: relative;
+                    padding-left: 32px;
+
+                    @include sp {
+                        padding-left: 24px;
+                    }
+
+                    &::before {
+                        content: '';
+                        width: 21px;
+                        height: 21px;
+                        border: 1px solid #DADADA;
+                        background: #F6F6F6;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+
+                        @include sp {
+                            width: 14px;
+                            height: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*
+------------------------------------------------------------*/

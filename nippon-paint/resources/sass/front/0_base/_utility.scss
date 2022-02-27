@@ -1,0 +1,36 @@
+.u-center {
+    text-align: center;
+}
+
+.u-right {
+    text-align: right;
+}
+
+.u-left {
+    text-align: left !important;
+}
+
+.u-color-red {
+    color: $color-red2;
+}
+
+.u-hight-light {
+    position: relative;
+    background-color: rgba($color: $color-red2, $alpha: .15);
+}
+
+.u-medium {
+    font-weight: 500;
+}
+
+.u-medium-pc {
+    @include pc {
+        font-weight: 500;
+    }
+}
+
+.u-medium-sp {
+    @include sp {
+        font-weight: 500;
+    }
+}

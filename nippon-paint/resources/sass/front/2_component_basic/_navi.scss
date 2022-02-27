@@ -1,0 +1,477 @@
+/*------------------------------------------------------------
+navi
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-nav1 {
+    width: 100%;
+    background-color: $color-blue1;
+    color: $color-white;
+    display: none;
+    position: fixed;
+    top: 73px;
+    left: 0;
+
+    &.is-current {
+        // display: block;
+    }
+
+    &.is-active {
+        display: block;
+    }
+
+    &__cont {
+        margin: 0 auto;
+        padding: 20px 0;
+        width: 1440px;
+        display: flex;
+    }
+
+    &__left {
+        width: 30%;
+    }
+
+    &__ttl {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    &__txt {
+        font-size: 1.4rem;
+    }
+
+    &__right {
+        padding-left: 2%;
+        width: 100%;
+    }
+
+    &__subTtl {
+        font-size: 1.5rem;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-nav2 {
+    width: 100%;
+    @include flex(center, row, center);
+
+    // .c-nav2 a .
+    a {
+        @include nonelink;
+        display: block;
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+
+        @include sp {
+            width: 33px;
+            height: 33px;
+        }
+    }
+
+    // .c-nav2__pre, .c-nav2__next .
+    &__pre,
+    &__next {
+        transition: 0.3s ease-in-out;
+        background: url(/images/common/icon_dbarrow-right-gray.svg) no-repeat 13px center/ 13px 13px;
+        opacity: 0;
+        visibility: hidden;
+
+        &.is-active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @include sp {
+            border: 1px solid $color-border;
+            background-size: 10px 10px;
+            // opacity: 1;
+            // visibility: visible;
+        }
+
+        @include hover {
+            background: $color-gray4 url(/images/common/icon_dbarrow-right-white.svg) no-repeat 13px center/ 13px 13px;
+        }
+    }
+
+    // .c-nav2__pre .
+    &__pre {
+        transform: rotate(180deg);
+        margin-right: 5px;
+    }
+
+    // .c-nav2__page .
+    &__page {
+        margin: 0 5px;
+
+        @include sp {
+            margin: 0 2.5px;
+            display: none;
+        }
+
+        a {
+            padding-top: 12.5px;
+            line-height: 1;
+            color: $color-gray4;
+            text-align: center;
+            border: 1px solid $color-gray4;
+            font-weight: 400;
+            @include lato;
+
+            @include hover {
+                background-color: $color-gray4;
+                color: #fff;
+            }
+
+            @include sp {
+                padding-top: 10px;
+            }
+        }
+
+        // .c-nav2__pagenum .
+        &num {
+            display: none;
+
+            @include sp {
+                margin: 0 20px;
+                display: inline-block;
+                font-size: 1.4rem;
+                @include poppins;
+            }
+        }
+    }
+
+    &__next {
+        margin-left: 5px;
+    }
+
+    // .c-nav2__current .
+    &__current {
+        a {
+            background-color: $color-gray4;
+            color: #fff;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-nav3 {
+    display: flex;
+    flex-wrap: wrap;
+    $root: &;
+    @include sp {
+        width: calc(100% + 40px);
+        margin: 0 0 0 -20px;
+    }
+
+    &__item {
+        background: #f7f7f7;
+        width: calc(100% / 4);
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        @include sp {
+            width: calc((100% - 1px) / 2);
+            margin: 0 0 1px 1px;
+        }
+
+        &:nth-child(2n + 1) {
+            @include sp {
+                margin: 0 0 1px;
+            }
+        }
+
+        &.is-active {
+            background: $color-gray10;
+            #{$root}__txt {
+                color: $color-white;
+            }
+        }
+
+        @include hover {
+            background: $color-gray10;
+            #{$root}__txt {
+                color: $color-white;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__txt {
+        display: block;
+        text-decoration: none;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $color-gray10;
+        font-weight: bold;
+        padding: 27px 10px;
+        @include sp {
+            font-size: 1.2rem;
+            padding: 17px 5px;
+        }
+    }
+
+    &--col5 {
+        .c-nav3 {
+            &__item {
+                width: 20%;
+
+                @include sp {
+                    width: 50%;
+                    margin: 0 0;
+                    border-right: 1px solid #fff;
+                    border-bottom: 1px solid #fff;
+                }
+
+                &:nth-child(2n + 2) {
+                    @include sp {
+                        border-right: none;
+                    }
+                }
+
+                &:nth-last-child(1),
+                &:nth-last-child(2) {
+                    @include sp {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &--col8 {
+        .c-nav3 {
+            &__item {
+                width: calc(100% / 8);
+
+                @include sp {
+                    width: calc((100% - 3px) / 4);
+                }
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+// .c-nav4 .
+.c-nav4 {
+    @include flex(center, row, center);
+
+    @include sp {
+        justify-content: space-between;
+    }
+
+    a {
+        @include nonelink;
+        border-radius: 50%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        border: 1px solid $color-gray-b;
+        width: 100px;
+        height: 100px;
+        @include flex(center, column, center);
+        pointer-events: none;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+
+        @include sp {
+            width: 87px;
+            height: 87px;
+        }
+    }
+
+    &__num {
+        @include poppins;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-weight: 700;
+        color: $color-gray-b;
+        position: relative;
+        top: 5px;
+
+        @include sp {
+            top: 3px;
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+        }
+    }
+
+    &__text {
+        color: $color-gray-b;
+        font-size: 1.8rem;
+        line-height: 3.6rem;
+        font-weight: 700;
+        @include noto-sans;
+
+        @include sp {
+            font-size: 1.5rem;
+            line-height: 3rem;
+        }
+    }
+
+    &__item {
+        padding: 0 24px;
+        position: relative;
+
+        @include sp {
+            padding: 0 0;
+        }
+
+        &:not(:first-child) {
+            &:after {
+                @include pseudo(15px, 19px, 50%, -7px);
+                transform: translateY(-50%) rotate(-90deg);
+                background: url(/images/common/icon_nav4.svg) no-repeat center / 15px 19px;
+
+                @include sp {
+                    left: -27px;
+                    width: 13px;
+                    height: 17px;
+                    background-size: 13px 17px;
+                }
+            }
+        }
+
+        &.is-active {
+            a {
+                border-color: $color-red2;
+            }
+
+            .c-nav4 {
+                &__num,
+                &__text {
+                    color: $color-red2;
+                }
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-nav5 {
+    display: flex;
+    justify-content: center;
+    $root: &;
+
+    &__item {
+        width: 140px;
+        margin: 0 10px;
+        @include sp {
+            width: 88px;
+        }
+
+        &.prev {
+            #{$root}__txt {
+                span {
+                    padding: 0 0 0 22px;
+                    @include sp {
+                        padding: 0 0 0 20px;
+                    }
+
+                    &::after {
+                        left: 0;
+                        right: auto;
+                        transform: translate(0, -50%) rotate(-180deg);
+                    }
+
+                    &:before {
+                        left: 0;
+                        right: auto;
+                        transform: translate(0, -50%) rotate(-180deg);
+                    }
+                }
+            }
+        }
+    }
+
+    &__txt {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        border: 1px solid #d8d8d8;
+        box-sizing: border-box;
+        font-size: 1.5rem;
+        line-height: 1;
+        color: $color-gray4;
+        font-weight: 500;
+        padding: 12px 5px;
+
+        @include sp {
+            font-size: 1.4rem;
+            padding: 9.5px 5px;
+        }
+
+        span {
+            position: relative;
+            padding: 0 22px 0 0;
+            @include sp {
+                padding: 0 20px 0 0;
+            }
+
+            &::after {
+                content: '';
+                width: 13px;
+                height: 14px;
+                background: url('/images/common/icon_dbarrow-right-gray.svg') no-repeat center;
+                background-size: cover;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(0, -50%);
+                transition: .3s ease-in-out;
+                opacity: 1;
+
+                @include sp {
+                    width: 10px;
+                    height: 11px;
+                }
+            }
+
+            &:before {
+                content: '';
+                width: 13px;
+                height: 14px;
+                background: url('/images/common/icon_dbarrow-right-red.svg') no-repeat center;
+                background-size: cover;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(0, -50%);
+                transition: .3s ease-in-out;
+                opacity: 0;
+
+                @include sp {
+                    display: none;
+                }
+            }
+        }
+
+        @include hover {
+            opacity: 1;
+            color: $color-red2;
+            border-color: $color-red2;
+
+            span {
+                &:after {
+                    opacity: 0;
+                }
+                
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

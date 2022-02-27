@@ -1,0 +1,248 @@
+/*------------------------------------------------------------
+img
+------------------------------------------------------------*/
+.c-singleImg {
+    text-align: center;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-imgtext2 {
+    @include clear();
+
+    &__info {
+        float: left;
+        width: 64%;
+        @include sp {
+            width: 100%;
+            float: none;
+        }
+    }
+
+    &__img {
+        width: 31.2%;
+        float: right;
+        @include sp {
+            width: 100%;
+            float: none;
+            padding: 0 15px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__txt {
+        font-size: 1.6rem;
+        line-height: 1.75;
+        color: #444444;
+        @include sp {
+            width: 100%;
+            float: none;
+            line-height: 1.5;
+            margin: 21px 0 0;
+            padding: 0 4px;
+            box-sizing: border-box;
+        }
+    }
+
+    .c-title2 {
+        float: left;
+        width: 64%;
+        margin: -4px 0 32px 0;
+        @include sp {
+            width: 100%;
+            float: none;
+            margin: 0 0 11px;
+        }
+    }
+
+    .c-btn2 {
+        margin: 35px 0 0;
+        max-width: 353px;
+        width: 100%;
+        padding: 17px 5px 22px;
+        @include sp {
+            max-width: 100%;
+            margin: 27px auto 0;
+            padding: 15px 15px 19px 5px;
+        }
+    }
+
+    // .c-imgtext2__style1 .
+    &__style1 {
+        margin-bottom: 100px;
+        @include flex;
+
+        @include sp {
+            position: relative;
+            margin-bottom: 46px;
+        }
+
+        .c-title2 {
+            float: none;
+
+            @include sp {
+                padding-bottom: 17px;
+                margin-bottom: 0;
+            }
+        }
+
+        .c-btn2 {
+            padding-bottom: 21px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            @include sp {
+                padding-bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: calc(100% - 10px);
+            }
+        }
+
+        .c-imgtext2 {
+
+            // .c-imgtext2__style1 .c-imgtext2__txt .
+            &__txt {
+                margin-bottom: 105px;
+
+                @include sp {
+                    margin-top: 15px;
+                    margin-bottom: 25px;
+                    padding-right: 6px;
+                }
+            }
+
+            // .c-imgtext2__style1 .c-imgtext2__content .
+            &__content {
+                padding-right: 60px;
+                position: relative;
+                width: calc(100% - 400px);
+
+                @include sp {
+                    padding-right: 0;
+                    position: unset;
+                    width: 100%;
+                }
+            }
+
+            // .c-imgtext2__style1 .c-imgtext2__img .
+            &__img {
+                position: relative;
+                float: none;
+                width: 400px;
+
+                @include sp {
+                    margin-bottom: 85px;
+                    padding: 0 5px;
+                }
+
+                // .c-imgtext2__style1 .c-imgtext2__imgtext .
+                &text {
+                    position: absolute;
+                    font-size: 3.4rem;
+                    line-height: 1;
+                    color: #fff;
+                    font-weight: 500;
+                    @include center('xy');
+
+                    @include sp {
+                        font-size: 2.75rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-imgtext3 {
+    &__text {
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+        font-weight: 700;
+        color: $color-gray4;
+        text-align: center;
+        @include sp {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
+    }
+
+    &__img {
+        margin-bottom: 13px;
+        @include sp {
+            margin-bottom: 10px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-imgtext4{
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex; flex-wrap: wrap; justify-content: space-between;
+    @include sp{
+        margin: 0 5px;
+    }
+    li{
+        width: calc(25% - 23px);
+        @include sp{
+            width: calc(50% - 7px);
+            margin-bottom: 18px;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    &__txt{
+        text-align: center;
+        font-size: 1.3rem;
+        line-height: 20px;
+        margin: 11px 0 0;
+        @include sp{
+            font-size: 1.6rem;
+            margin: 6px 0 0;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+// .c-img .
+.c-img {
+    @include flex(flex-start, row, center);
+
+    img {
+        width: calc(50% - 20px);
+        display: inline-block;
+        margin-bottom: 40px;
+
+        @include sp {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        &:nth-child(2n + 2) {
+            margin-left: 40px;
+
+            @include sp {
+                margin-left: 0;
+            }
+        }
+    }
+}
