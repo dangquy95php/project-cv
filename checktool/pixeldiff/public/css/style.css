@@ -1,0 +1,228 @@
+h1 {
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+ul,
+li,
+dl,
+dt,
+dd,
+p {
+    margin: 0;
+    padding: 0;
+}
+a:hover{
+    opacity: 0.75;
+}
+
+.preview {
+    overflow: hidden;
+    background: url(../images/diff_bg.svg);
+    background-size: 30px;
+    padding: 1em;
+    touch-action:none;
+    display: inline-block;
+}
+
+.preview ul {
+    position: relative;
+}
+
+.preview img {
+    max-width: 100%;
+    height: auto;
+}
+
+.preview li:nth-child(2) img {
+    mix-blend-mode: difference;
+    cursor: move;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.logo {
+    height: 5em;
+    margin: 0 auto 5em;
+    display: block;
+}
+
+.wrap {
+    max-width: 700px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    background: url(../images/path.svg) center 4em no-repeat;
+    background-size: auto 100%;
+}
+
+.wrap dl {
+    margin-bottom: 1.5em;
+}
+
+.tar {
+    text-align: right;
+}
+
+.tac {
+    text-align: center;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.tbl {
+    display: inline-block;
+    background: #000;
+    padding: .75em 1em;
+    color: #fff;
+    /* margin-top: 2.5em; */
+    /* margin-bottom: 2.5em; */
+    text-align: left;
+}
+
+.tbl a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.thumb {
+    margin-right: 1em;
+}
+
+.thumb img {
+    height: 2.5em;
+    margin-right: .25em;
+}
+
+.upload_button {
+    border: 1px solid #000;
+    background: #fff;
+    color:#000;
+    cursor: pointer;
+    border-radius:.2em;
+    box-shadow:0 2px 0 0 #ccc;
+    margin-right: .5em;
+        font-size: 14px;
+}
+
+.uploadfile_icon {
+    height: 2.5em;
+    margin-right: .5em;
+    vertical-align: middle;
+}
+
+.section2 {
+    width: 320px;
+    margin: auto;
+    font-size: 1em;
+}
+.section2 > p{
+    font-size: .75em;
+}
+.info {
+    font-size: 1.1em;
+}
+
+.info li {
+    font-size: .75em;
+    margin-left:1em;
+    text-indent:-1em;
+}
+
+.info li:before {
+    content: "・";
+}
+.ex{
+    margin:auto;
+    margin-top: 4em;
+    /* display:flex;
+    overflow-y:auto;*/
+    width:320px;
+    padding-top:3em;
+    min-width:320px;
+    background:#fff;
+    border:1px solid #ccc;
+    box-sizing:border-box;
+    position:relative;
+}
+.ex:after{
+    content:"＼オススメコウコク／";
+    display:inline-block;
+    font-style:italic;
+    padding:0.25em 0.5em;
+    background:#333;
+    color:#fff;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.amazon_af{
+    margin:auto;
+    margin-top: 4em;
+    /* display:flex;
+    overflow-y:auto;*/
+    width:320px;
+    height:420px; 
+    padding-top:20px;
+    min-width:320px;
+    background:#fff;
+    border:1px solid #ccc;
+    box-sizing:border-box;
+    position:relative;
+}
+.amazon_af:after{
+    content:"＼オススメコウコク／";
+    /* content:"＼オリジナルグッズがデキタヨ。／"; */
+    display:inline-block;
+    font-style:italic;
+    padding:0.25em 0.5em;
+    background:#333;
+    color:#fff;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.center {
+    text-align: center;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+}
+.info1 {
+    font-size: 1.1em;
+}
+.l-0 {
+    left: 0;
+}
+
+.max-width-100 {
+    max-width: 100px;
+}
+.width-100 {
+    width: 100px;
+}
+.max-heigth-200 {
+    max-height: 200px;
+}
+.width-15em {
+    width: 15em;
+}
+
+.hidden-white-space {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.padding-design {
+    padding: 0 3px;
+}

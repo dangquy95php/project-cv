@@ -1,0 +1,28 @@
+<%if(typeof(success) != 'undefined' && success.length > 0) {%>
+    <div class="alert alert-success" role="alert">
+        <ul class="m-0">
+            <% success.forEach(function(message) { %>
+                <li><%-message%></li>
+            <%})%>
+        </ul>
+    </div>
+<%}%>
+<%if(typeof(errors) != 'undefined' && errors.length > 0) {%>
+    <div class="alert alert-danger" role="alert">
+        <ul class="m-0">
+            <% errors.forEach(function(message) { %>
+                <li><%-message%></li>
+            <%})%>
+        </ul>
+    </div>
+<%}%>
+
+<%if(typeof(validate) != 'undefined' && validate.length > 0) {%>
+    <div class="alert alert-danger" role="alert">
+        <ul class="m-0">
+            <% validate.forEach(function(error) { %>
+                <li><%-error.msg%></li>
+            <%})%>
+        </ul>
+    </div>
+<%}%>

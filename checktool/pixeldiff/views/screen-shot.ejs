@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/header') -%>
+    <title>PickDiff</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="w-100 mt-2 text-center">
+        <div class="content d-inline-block position-relative">
+            <button onclick="goBack()" type="button" id="back" class="l-0 pl-3 pr-3 btn btn-outline-primary position-absolute">Back</button>
+            <ul class="center nav-center nav nav-tabs" id="myTab" role="tablist">
+                <% if ('upload' in content[0]) { %>
+                    <li class="nav-item" id="flag_upload">
+                        <a class="nav-link active" id="chrome-tab" data-toggle="tab" href="#chrome" role="tab" aria-controls="chrome" aria-selected="false">File Vs Chrome</a>
+                    </li>
+                <% } %>
+                <li class="nav-item">
+                    <a class="nav-link <%if (content[0].upload == undefined) {%>active <%}%> " id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                        <%if (content[0].upload != undefined) {%> File <%} else { %> Chrome <% }%> VS Firefox</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                        <%if (content[0].upload != undefined) {%> File <%} else { %> Chrome <% }%> VS Webkit</a>
+                </li>
+                
+                <% if (content[0].upload == undefined && 'upload_ie' in content[content.length -1]) { %>
+                    <li class="nav-item">
+                        <a class="nav-link" id="ie-tab" data-toggle="tab" href="#ie" role="tab" aria-controls="ie" aria-selected="false">
+                            <%if (content[content.length - 1].upload_ie != undefined && content[0].upload != undefined) {%> File <%} else { %> Chrome <% }%> VS IE</a>
+                    </li>
+                <%}%>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <% if ('upload' in content[0]) { %>
+    
+                    <div class="center tab-pane fade show active" id="chrome" role="tabpanel" aria-labelledby="chrome-tab">
+                        <div id="fileList_chrome" class="preview">
+                            <ul class="chrome_and_design">
+                                <% content.forEach(function(browser){ %>
+                                    <% if ('upload' in browser) { %>
+                                        <li><img id="img0_chrome" src="../images/upload/<%= browser.upload.image %>" draggable="false"></li>
+                                    <% } %>
+                                    <% if ('chromium' in browser) { %>
+            <h1><%-user.email%></h1>
+                                        <li><img class="img1_chrome" src="../images/screenshot/<%-user.email%>/<%= browser.chromium.image %>" draggable="false"></li>
+                                    <% } %>
+                                <% }); %>
+                            </ul>
+                        </div>
+                    </div>
+                <% } %>
+    
+                <div class="center tab-pane fade <%if (content[0].upload == undefined) {%>show active <%}%>" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div id="fileList" class="preview">
+                        <ul class="chrome_and_firefox">
+                            <% content.forEach(function(browser) { %>
+                                <% if ('chromium' in browser) { %>
+                                    <li><img src="../images/screenshot/<%-user.email%>/<%= browser.chromium.image %>" draggable="false" id="img0"></li>
+                                <% } %>
+                                <% if ('firefox' in browser) { %>
+                                    <li><img src="../images/screenshot/<%-user.email%>/<%= browser.firefox.image %>" draggable="false" id="img1"></li>
+                                <% } %>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="center tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div id="fileList_webkit" class="preview">
+                        <ul class="chrome_and_webkit">
+                            <% content.forEach(function(browser){ %>
+                                <% if ('chromium' in browser) { %>
+                                    <li><img src="../images/screenshot/<%-user.email%>/<%= browser.chromium.image %>" draggable="false" id="img0_wbekit"></li>
+                                <% } %>
+                                <% if ('webkit' in browser) { %>
+                                    <li><img src="../images/screenshot/<%-user.email%>/<%= browser.webkit.image %>" draggable="false" id="img1_wbekit"></li>
+                                <% } %>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+
+                <% if (content[0].upload == undefined && 'upload_ie' in content[content.length - 1]) { %>
+                    <div class="center tab-pane fade" id="ie" role="tabpanel" aria-labelledby="ie-tab">
+                        <div id="fileList_ie" class="preview">
+                            <ul class="chrome_and_ie">
+                                <% content.forEach(function(browser){ %>
+                                    <% if ('upload_ie' in browser) { %>
+                                        <li><img id="img0_ie" src="../images/upload/<%= browser.upload_ie.image %>" draggable="false"></li>
+                                    <% } %>
+                                    <% if ('chromium' in browser) { %>
+                                        <h1><%-user.email%></h1>
+                                        <li><img class="img1_ie" src="../images/screenshot/<%-user.email%>/<%= browser.chromium.image %>" draggable="false"></li>
+                                    <% } %>
+                                <% }); %>
+                            </ul>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">User manual</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="tbl info">
+                <dl>
+                    <dt>Note</dt>
+                    <dd>
+                        <ul>
+                        <li>画像移動のショートカット（PCのみ）：shift+矢印キーで1pxずつ移動。altキーを加えると10pxずつ移動できます。</li>
+                            <li>アップロードした画像はデータベース等に保存されません</li>
+                            <li>Internet Explorer,ChromiumベースでないMicrosoft Edgeには対応していません。</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="i_knew()">I knew</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="../libraries/picdiff/keyboard.min.js"></script>
+    <script type="text/javascript" src="../libraries/picdiff/fileupload.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+    $(window).on('load',function() {
+        if (localStorage.getItem("user_guide") != 'true') {
+            $('#exampleModal').modal('show');
+        }
+    });
+
+    function i_knew() {
+        localStorage.setItem("user_guide", 'true');
+        $('#exampleModal').modal('hide');
+    }
+
+    function goBack() {
+        window.history.back();
+    }
+</script>

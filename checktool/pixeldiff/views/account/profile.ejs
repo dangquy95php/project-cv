@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/header') -%>
+    <title>Profile User</title>
+    <style>
+        .show-img {
+            width: 100px;
+            height: 200px;
+        }
+        .margin-top-30 {
+            margin-top: 30px;
+        }
+        .cursor {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Profie</li>
+            </ol>
+        </nav>
+        <div class="row mt-2">
+            <div class="col-md-12 order-lg-2">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a href="" data-target="#edit" data-toggle="tab" class="nav-link active">Edit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" data-target="#history" data-toggle="tab" class="nav-link">History</a>
+                    </li>
+                </ul>
+                <div class="tab-content py-4">
+                    <div class="active tab-pane" id="edit">
+                        <form role="form" action="" method="POST">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label"></label>
+                                <div class="col-lg-9">
+                                    <%- include('../component/flash') -%>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">Email:</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" type="text" disabled value="<%=user.email%>">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">Password old:</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" type="password" name="password" data-toggle="password" value="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">Password new:</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" type="password" name="password_new" data-toggle="password" value="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label">Confirm password:</label>
+                                <div class="col-lg-9">
+                                    <input class="form-control" type="password" name="password_comfirm" data-toggle="password" value="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label form-control-label"></label>
+                                <div class="col-lg-9">
+                                    <input type="reset" class="btn btn-secondary" value="Cancel">
+                                    <input type="submit" class="btn btn-primary" value="Save Changes">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane table-responsive-md" id="history">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="">#</th>
+                                    <th scope="" class="mw-20">Url</th>
+                                    <th scope="">Width</th>
+                                    <th scope="col">Data</th>
+                                    <th scope="col">Design</th>
+                                    <th scope="col">Username</th>
+                                    <th scope="col">Password</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <%histories.forEach(function(history, index) {%>
+                                    <tr style="border-bottom:2px solid black" class="<%if(history.success == false) {%>table-danger<%} else {%>table-success<%} %>">
+                                        <th scope="row" class="align-middle"><%-index+1%></th>
+                                        <td style="max-width:300px; overflow-x: hidden;vertical-align: middle; text-overflow: ellipsis;"><%-history.url%></td>
+                                        <td class="align-middle width-design"><%-history.width%></td>
+                                        <%if(history.success == true) {%>
+                                            <td class="d-flex justify-content-between align-middle">
+                                                <%JSON.parse(history.data).forEach(function(item) {%>
+                                                    <%if('chromium' in item) {%>
+                                                        <span class="d-flex flex-column text-center justify-content-between">
+                                                            <label>Chrome: </label>
+                                                            <img class="show-img cursor" src="/images/screenshot/<%-user.email%>/<%-item.chromium.image%>" alt="">
+                                                        </span>
+                                                    <%}%>
+                                                    <%if('firefox' in item) {%>
+                                                        <span class="d-flex flex-column text-center justify-content-between">
+                                                            <label>Firefox: </label>
+                                                            <img class="show-img cursor" src="/images/screenshot/<%-user.email%>/<%-item.firefox.image%>" alt="">
+                                                        </span>
+                                                    <%}%>
+                                                    <%if('webkit' in item) {%>
+                                                        <span class="d-flex flex-column text-center justify-content-between">
+                                                            <label>Webkit: </label>
+                                                            <img class="show-img cursor" src="/images/screenshot/<%-user.email%>/<%-item.webkit.image%>" alt="">
+                                                        </span>
+                                                    <%}%>
+                                                <%})%>
+                                            </td>
+                                        <%} else {%>
+                                            <td class="align-middle data-error cursor" style="max-width:300px; overflow-x: hidden;vertical-align: middle; text-overflow: ellipsis;">
+                                                <%-history.data%>
+                                            </td>
+                                        <%}%>
+                                        <td class="align-middle">
+                                            <img class="show-img margin-top-30 cursor" src="/images/upload/<%-history.design%>" alt="">
+                                        </td>
+                                        <td class="align-middle"><%-history.username%></td>
+                                        <td class="align-middle"><%-history.password%></td>
+                                    </tr>
+                                <%})%>
+                            </tbody>
+                        </table>
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content d-table">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body show-image-modal text-center">
+                                    
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    $('.show-img').click(function() {
+        var img = $(this)[0].getAttribute('src');
+        var file_name = img.split('/');
+        $('.modal-title').text(file_name[file_name.length-1]);
+        $('.show-image-modal').html(`<img src="${img}" style="max-width: 700px; height: auto;">`)
+        $('#exampleModal').modal('show');
+    })
+
+    $('.data-error').click(function() {
+        var text = $(this)[0].innerText;
+        $('.modal-title').text("Error:");
+        $('.show-image-modal').text(text);
+        $('#exampleModal').modal('show');
+        console.log(text);
+    })
+
+</script>

@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/header') -%>
+    <title>HTML & NO.1 Check</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Html Check</li>
+            </ol>
+        </nav>
+        <div class="row my-5">
+            <div class="col-md-12 text-center">
+                <h5 class="text-center">HTML & NO.1 Check</h5>
+            </div>
+        </div>
+        <form id="option-form mt-5" action="" method="GET">
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <div class="card">
+                        <h5 class="card-header">Basic Auth</h5>
+                        <div class="card-body">
+                            <div class="form-group mt-0">
+                                <label for="inputEmail4" name="username">Username:</label>
+                                <input type="text" class="form-control" id="username" value="yushin-c" placeholder="username">
+                            </div>
+                            <div class="form-group mt-0">
+                                <label for="inputEmail4">Password:</label>
+                                <input type="password" class="form-control" name="password" id="password" value="demo00" placeholder="password">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-md-1 d-flex align-items-center justify-content-end">
+                    <label class="font-weight-bold">URL: </label>
+                </div> -->
+                <div class="col-md-8">
+                    <div class="card">s
+                        <h5 class="card-header">URL</h5>
+                        <div class="card-body pb-2">
+                            <div class="form-group m-0 p-0 h-100">
+                                <textarea class="form-control h-100" name="input_link" id="input_link" rows="7">http://yushin-c.jp.no1-server28.com/</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-errors d-none>">
+                <div class="row d-flex flex-column">
+                    <div class="col-md-12 alert alert-danger d-none" role="alert">
+                        <ul class="m-0">
+                            <%if(typeof(error) != 'undefined'){%>
+                                <li><%-error%></li>
+                            <%}%>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <div class="card ">
+                        <div class="card-body">
+                            <h5 class="card-title text-underlined">
+                                <u>HTML check</u>
+                            </h5>
+                            <div class="card-body pt-0">
+                                <div class="row p-2">
+                                    <div class="col-md-7 text-right">Console error:</div>
+                                    <div class="col-md-5 pl-2">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" name="console" class="custom-control-input" id="console" checked="">
+                                            <label class="custom-control-label" for="console"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-2">
+                                    <div class="col-md-7 text-right">Meta:</div>
+                                    <div class="col-md-5 pl-2">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" name="meta" class="custom-control-input" id="meta" checked="">
+                                            <label class="custom-control-label" for="meta"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-2">
+                                    <div class="col-md-7 text-right">HTML Validate:</div>
+                                    <div class="col-md-5 pl-2">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="html_validate" id="html-validate" checked="">
+                                            <label class="custom-control-label" for="html-validate"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-2">
+                                    <div class="col-md-7 text-right">Href = "":</div>
+                                    <div class="col-md-5 pl-2">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="href1" id="href1" checked="">
+                                            <label class="custom-control-label" for="href1"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-2">
+                                    <div class="col-md-7 text-right">Href = "#":</div>
+                                    <div class="col-md-5 pl-2">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="href2" id="href2" checked="">
+                                            <label class="custom-control-label" for="href2"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-2">
+                                    <div class="col-md-7 text-right">PHP error:</div>
+                                    <div class="col-md-5 pl-2">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" name="php" id="php" checked="">
+                                            <label class="custom-control-label" for="php"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card ">
+                        <div class="card-body">
+                            <div class="title d-flex justify-content-between">
+                                <h5 class="card-title d-flex justify-content-between"><u>NO.1 Check</u></h5>
+                                <span class="d-flex align-items-center">
+                                    Timeout:
+                                    <input type="number" class="timeout ml-2 mr-1" min="70" max="200" value="70" name="timeout" id="timeout">second
+                                </span>
+                            </div>
+                            <div class="row p-2">
+                                <div class="col-md-12">
+                                    <%if(typeof(error_api) != 'undefined') {%>
+                                        <div class="alert alert-danger w-100" id="error_api" role="alert">
+                                            <ul class="m-0">
+                                                <li>Can't get company listing -><%-error_api%></li>
+                                            </ul>
+                                        </div>
+                                    <%}%>
+                                    <select id="company" name="select_company" class="form-control">
+                                        <option value="">Select company</option>
+                                        <%if(typeof(data_json) !="undefined") {%>
+                                            <% data_json.forEach(function(company) {%>
+                                                <option value="<%-company.official_company_name%>"><%-company.slack_channel_name%> <%if(typeof(company.slack_channel_name) != '') {%> - <%}%> <%-company.official_company_name%></option>
+                                            <% })%>
+                                        <%}%>
+                                    </select>
+                                    <input type="hidden" name="comapny_list" id="comapny_list">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="content mb-2 d-flex align-items-center justify-content-between">
+                                        <a class="text-decoration-underline show-hidden_a" href="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <i class="fa fa-snowflake" aria-hidden="true"></i>
+                                            <span class="show-and-hidden">Show</span> advanced
+                                        </a>
+                                        <span>
+                                            Choose All <input class="click-all" type="checkbox" value="1">
+                                        </span>
+                                    </div>
+                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">9.Copyright 2020:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input no1-check check-all" name="copyright" id="copyright">
+                                                            <label class="custom-control-label" for="copyright"></label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">4.Company name in HTML:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input no1-check check-all" name="company_name" id="company-name">
+                                                            <label class="custom-control-label" for="company-name"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">3.Apple-touch-icon.png?</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="apple_touch_icon" id="apple_touch_icon">
+                                                            <label class="custom-control-label" for="apple_touch_icon"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">2.Favicon has not yet?:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="favicon_yet" id="favicon_yet">
+                                                            <label class="custom-control-label" for="favicon_yet"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="row">
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">10.Link die:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="link_die" id="link_die">
+                                                            <label class="custom-control-label" for="link_die"></label>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">The illustration, is the icon svg?</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" name="illustration" id="illustration">
+                                                            <label class="custom-control-label" for="illustration"></label>
+                                                        </div>
+                                                    </div> -->
+                                                    <div class="col-md-6 d-flex justify-content-end pl-0">
+                                                        <label for="" class="mr-3">15.リセット」「送信する/reCAPTCHA :</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="re_captchar" id="re_captchar">
+                                                            <label class="custom-control-label" for="re_captchar"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="row"> -->
+                                                    <!-- <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">Header Ipad Remove Icon Phone:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" name="header_ipad" id="header_ipad">
+                                                            <label class="custom-control-label" for="header_ipad"></label>
+                                                        </div>
+                                                    </div> -->
+                                                    <!-- <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">Smart phone (tel_link):</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" name="tel_link" checked id="sp_tel_link">
+                                                            <label class="custom-control-label" for="sp_tel_link"></label>
+                                                        </div>
+                                                    </div> -->
+                                                <!-- </div> -->
+                                                <div class="row">
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">13.Check tel_link:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="tel_link" id="tel_link">
+                                                            <label class="custom-control-label" for="tel_link"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">16.Hidden reCAPTCHAR:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="hidden_recaptcha" id="hidden_recaptcha">
+                                                            <label class="custom-control-label" for="hidden_recaptcha"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- <div class="row"> -->
+                                                   
+                                                    <!-- <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">Valid 404 ERROR:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" name="404_error" id="404_error">
+                                                            <label class="custom-control-label" for="404_error"></label>
+                                                        </div>
+                                                    </div> -->
+                                                <!-- </div> -->
+
+                                                <div class="row">
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">24.FAQ cursor:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="faq_cursor" id="faq_cursor">
+                                                            <label class="custom-control-label" for="faq_cursor"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">5.Design and images same:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="design_same_image" id="design_same_image">
+                                                            <label class="custom-control-label" for="design_same_image"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">1.The first is text h1:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="first_h1" id="first_h1">
+                                                            <label class="custom-control-label" for="first_h1"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">14.tel_link does not exits in fax:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="tel_link_not_exits_fax" id="tel_link_not_exits_fax">
+                                                            <label class="custom-control-label" for="tel_link_not_exits_fax"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">6.H1 - H5:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="detail_h1_h5" id="detail_h1_h5">
+                                                            <label class="custom-control-label" for="detail_h1_h5"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">21.Google Address:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="google_map_address" id="google_map_address">
+                                                            <label class="custom-control-label" for="google_map_address"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        
+                                                <div class="row">
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">23.MV Background:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="mv_background" id="mv_background">
+                                                            <label class="custom-control-label" for="mv_background"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 d-flex justify-content-end pl-0">
+                                                        <label for="" class="mr-3">1.「No1_theme01」/「twentytwenty」:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="twentytwenty_and_no1" id="twentytwenty_and_no1">
+                                                            <label class="custom-control-label" for="twentytwenty_and_no1"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">2.No1_theme01/css/ and style.css:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="no1_theme01_css_style" id="no1_theme01_css_style">
+                                                            <label class="custom-control-label" for="no1_theme01_css_style"></label>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">3.File page(page post news, works):</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="page_post_news_works" id="page_post_news_works">
+                                                            <label class="custom-control-label" for="page_post_news_works"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">4.Toppage.php/front-page.php:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="toppage_front_page" id="toppage_front_page">
+                                                            <label class="custom-control-label" for="toppage_front_page"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">13.Plugin default:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="plugin_default" id="plugin_default">
+                                                            <label class="custom-control-label" for="plugin_default"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-6 d-flex justify-content-end">
+                                                        <label for="" class="mr-3">14.Set up All in One SEO yet?:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="all_seo" id="all_seo">
+                                                            <label class="custom-control-label" for="all_seo"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 d-flex justify-content-end pl-0">
+                                                        <label for="" class="mr-3">15.Is h1 added in function.php file yet?:</label>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input check-all" name="h1_added_in_function" id="h1_added_in_function">
+                                                            <label class="custom-control-label" for="h1_added_in_function"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card w-100 mt-2">
+                                        <div class="card-body py-2">
+                                            <button type="button" class="btn btn-info check-html">Check</button>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="col-md-12 mt-3">
+                                    <h5 class="text-center my-3">Check Wordpress</h5>
+                                    <div class="show-message-wordpress">
+
+                                    </div>
+                                    <form>
+                                        <div class="form-group row">
+                                          <label for="inputEmail3" class="col-sm-2 col-form-label">Username:</label>
+                                          <div class="col-sm-10">
+                                            <input type="text" name="username1" id="username1" value="p0506_admin" class="form-control" placeholder="Username">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputEmail3" class="col-sm-2 col-form-label">Password:</label>
+                                            <div class="col-sm-10">
+                                              <input type="text" class="form-control" id="password1" value="admin" placeholder="Password">
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <a class="text-decoration-underline show-hidden_a1" href="" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="fa fa-snowflake" aria-hidden="true"></i>
+                                        <span class="show-and-hidden1">Show</span> advanced
+                                    </a>
+                                    <span class="float-right">
+                                        Choose All <input class="click-all1" type="checkbox" value="1">
+                                    </span>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card mt-2">
+                                            <div class="card-body">
+                                                <div class="row p-2">
+                                                    <div class="col-md-12 pl-0 pr-0 d-flex">
+                                                        <div class="col-md-6 d-flex justify-content-end">
+                                                            <label for="" class="mr-3">7. Is there html content in static pages?:</label>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input no1-check check-all1" name="conten_static_pages" id="conten_static_pages">
+                                                                <label class="custom-control-label" for="conten_static_pages"></label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 d-flex justify-content-end">
+                                                            <label for="" class="mr-3">8. Links? ([Template_url], [url]):</label>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input no1-check check-all1" name="template_url_and_url" id="template_url_and_url">
+                                                                <label class="custom-control-label" for="template_url_and_url"></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 pl-0 pr-0 d-flex">
+                                                        <div class="col-md-6 d-flex justify-content-end">
+                                                            <label for="" class="mr-3">9. Unclassified tags not displayed:</label>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input no1-check check-all1" name="unclassified_not_displayed" id="unclassified_not_displayed">
+                                                                <label class="custom-control-label" for="unclassified_not_displayed"></label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 d-flex justify-content-end">
+                                                            <label for="" class="mr-3">10. Match company in contactform:</label>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input no1-check check-all1" name="match_company_contactform" id="match_company_contactform">
+                                                                <label class="custom-control-label" for="match_company_contactform"></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 pl-0 pr-0 d-flex">
+                                                        <div class="col-md-6 d-flex justify-content-end">
+                                                            <label for="" class="mr-3">11. Is the contactform message in Japanese?:</label>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input no1-check check-all1" name="contactform_msg_JP" id="contactform_msg_JP">
+                                                                <label class="custom-control-label" for="contactform_msg_JP"></label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 d-flex justify-content-end">
+                                                            <label for="" class="mr-3">12. Include contactform reCAPTCHA:</label>
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input no1-check check-all1" name="contactform_recapchar" id="contactform_recapchar">
+                                                                <label class="custom-control-label" for="contactform_recapchar"></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card w-100 mt-2">
+                                        <div class="card-body py-2 text-right">
+                                            <button type="button" class="btn btn-info check-wordpress">Check Wordpress</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    $(document).ready(function() {
+        $(".click-all").click(function() {
+            if($(this).val() == '1') {
+                $(".check-all").attr("checked", "checked");
+                $(this).val('0')
+            } else {
+                $(".check-all").removeAttr("checked");
+                $(this).val('1')
+            }
+        });
+
+        $(".click-all1").click(function() {
+            if($(this).val() == '1') {
+                $(".check-all1").attr("checked", "checked");
+                $(this).val('0')
+            } else {
+                $(".check-all1").removeAttr("checked");
+                $(this).val('1')
+            }
+        });
+
+        $('.show-hidden_a').click(function() {
+            if ($('.show-and-hidden').hasClass('show-and-hidden')) {
+                $('.show-and-hidden').text('Hidden');
+                $('.show-and-hidden').removeClass('show-and-hidden');
+            } else {
+                $('.show-hidden_a span').addClass('show-and-hidden');
+                $('.show-hidden_a span').text('Show');
+            }
+        });
+
+        $('.show-hidden_a1').click(function() {
+            if ($('.show-and-hidden1').hasClass('show-and-hidden1')) {
+                $('.show-and-hidden1').text('Hidden');
+                $('.show-and-hidden1').removeClass('show-and-hidden1');
+            } else {
+                $('.show-hidden_a1 span').addClass('show-and-hidden1');
+                $('.show-hidden_a1 span').text('Show');
+            }
+        });
+
+        var error = $('body').find('#error_api');
+        $('.check-html').click(function() {
+            if (error.length > 0) {
+                $('.show-errors ul li').remove();
+                $('.show-errors').find('.d-none').removeClass('d-none');
+                $('.show-errors ul').append(`<li>There was an error getting company listing in Japan... Please setting Proxy</li>`)
+                return;
+            }
+
+            if ($('.check-all:checked').length > 0 && $('.check-all1:checked').length > 0) {
+                $('.show-errors ul li').remove();
+                $('.show-errors').find('.d-none').removeClass('d-none');
+                $('.show-errors ul').append(`<li>Please choose check no1 or wodpress options`)
+                return;
+            }
+
+            $('.show-errors ul li').remove();
+            const object = {};
+            for (const el of $('form').serializeArray())
+                object[el.name] = el.value;
+            
+            return $.ajax({
+                url: '<%- process.env.DOMAIN%>api/validate-html',
+                method: 'GET',
+                data: object,
+                async: false,
+            }).done(function(response) {
+                let id = response.id
+                return new Promise(function(resovle, reject) {
+                    $.dialog({
+                        title: false,
+                        boxWidth: '30%',
+                        useBootstrap: false,
+                        cancelButton: false,
+                        confirmButton: true,
+                        theme: 'supervan',
+                        closeIcon: false,
+                        content: '<img src="/images/loading.gif">',
+                        onContentReady: function () {
+                            var self = this;
+                            return $.ajax({
+                                url: '<%- process.env.DOMAIN%>api/check-tool-html',
+                                method: 'POST',
+                                data: {
+                                    username: $('#username').val().trim(),
+                                    password: $('#password').val().trim(),
+                                    id: id
+                                }
+                            }).done(function(response) {
+                                self.setContent('Check Html Successfully');
+                                self.setTitle('SUCCESS');
+                                setTimeout(() => {
+                                    submitFrom(response.id);
+                                }, 1000);
+                                return resovle(response);
+                            }).fail(function(err) {
+                                self.setContent(err.responseJSON.message);
+                                self.setTitle('ERROR');
+
+                                var iconSlose = self.$closeIcon.closest('.jconfirm-closeIcon')[0];
+                                $(iconSlose).css('display', 'block');
+                                $('.jconfirm-closeIcon').click(function() {
+                                    $('.jconfirm-open').remove();
+                                });
+                                return reject(err);
+                            });
+                        }
+                    });
+                })
+            }).fail(function(err) {
+                $('.show-errors').find('.d-none').removeClass('d-none');
+                if (err.status == 422) {
+                    err.responseJSON.errors.forEach(element => {
+                        $('.show-errors ul').append(`<li>${element.msg}</li>`)
+                    });
+                }
+                return;
+            });
+        })
+        
+        $('.check-wordpress').click(function() {
+            if ($('#username1').val().trim() == '' || $('#password1').val().trim() =='') {
+                $('.show-message-wordpress').html(`<div class="col-md-12 alert alert-danger error-wordpress" role="alert">Please input username and password wordpress.</div>`);
+                return;
+            }
+
+            if (error.length > 0) {
+                $('.show-errors ul li').remove();
+                $('.show-errors').find('.d-none').removeClass('d-none');
+                $('.show-errors ul').append(`<li>There was an error getting company listing in Japan... Please setting Proxy</li>`)
+                return;
+            }
+
+            if ($('.check-all:checked').length > 0 && $('.check-all1:checked').length > 0) {
+                $('.show-errors ul li').remove();
+                $('.show-errors').find('.d-none').removeClass('d-none');
+                $('.show-errors ul').append(`<li>Please choose check no1 or wodpress options`)
+                return;
+            }
+
+            $('.show-errors ul li').remove();
+            const object = {};
+            for (const el of $('form').serializeArray())
+                object[el.name] = el.value;
+
+            return $.ajax({
+                url: '<%- process.env.DOMAIN%>api/validate-html',
+                method: 'GET',
+                data: object,
+                async: false,
+            }).done(function(response) {
+                let id = response.id
+                return new Promise(function(resovle, reject) {
+                    $.dialog({
+                        title: false,
+                        boxWidth: '30%',
+                        useBootstrap: false,
+                        cancelButton: false,
+                        confirmButton: true,
+                        theme: 'supervan',
+                        closeIcon: false,
+                        content: '<img src="/images/loading.gif">',
+                        onContentReady: function () {
+                            var self = this;
+                            return $.ajax({
+                                url: '<%- process.env.DOMAIN%>api/check-tool-wordpress-admin',
+                                method: 'POST',
+                                data: {
+                                    username: $('#username').val().trim(),
+                                    password: $('#password').val().trim(),
+                                    username1: $('#username1').val().trim(),
+                                    password1: $('#password1').val().trim(),
+                                    url: $("#input_link").val().trim(),
+                                    id: id
+                                }
+                            }).done(function(response) {
+                                self.setContent('Check Html Successfully');
+                                self.setTitle('SUCCESS');
+                                setTimeout(() => {
+                                    submitFromWordpress(response.id);
+                                }, 1000);
+                                return resovle(response);
+                            }).fail(function(err) {
+                                $('.error-wordpress').remove();
+                                self.setContent(err.responseJSON.message);
+                                self.setTitle('ERROR');
+
+                                var iconSlose = self.$closeIcon.closest('.jconfirm-closeIcon')[0];
+                                $(iconSlose).css('display', 'block');
+                                $('.jconfirm-closeIcon').click(function() {
+                                    $('.jconfirm-open').remove();
+                                });
+                                return reject(err);
+                            });
+                        }
+                    });
+                })
+            }).fail(function(err) {
+                $('.show-errors').find('.d-none').removeClass('d-none');
+                if (err.status == 422) {
+                    err.responseJSON.errors.forEach(element => {
+                        $('.show-errors ul').append(`<li>${element.msg}</li>`)
+                    });
+                }
+                return;
+            });
+        });
+    });
+
+    function submitFrom(id) {
+		var url = '<%- process.env.DOMAIN%>show-html-check';
+        var formElement = `<form action="${url}" method="GET" accept-charset="UTF-8">`;
+            formElement += `<input type="hidden" name="id" value="${id}">`;    
+        formElement += "</form>";
+        var form = $(formElement);
+
+        $('body').append(form);
+        form.submit();
+    }
+
+    function submitFromWordpress(id) {
+		var url = '<%- process.env.DOMAIN%>show-check-wordpress-admin';
+        var formElement = `<form action="${url}" method="GET" accept-charset="UTF-8">`;
+            formElement += `<input type="hidden" name="id" value="${id}">`;    
+        formElement += "</form>";
+        var form = $(formElement);
+
+        $('body').append(form);
+        form.submit();
+    }
+    
+</script>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title> List History Pixel Diff</title>
+        <link href="/sb-admin/css/styles.css" rel="stylesheet" />
+        <link href="/css/style.css" rel="stylesheet" />
+        <%- include('partials/header') -%>
+    </head>
+    <body class="sb-nav-fixed">
+        <%- include('partials/nav') -%>
+        <div id="layoutSidenav">
+            <%- include('partials/sidebar') -%>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid mt-4">
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+                            <li class="breadcrumb-item active">List History Pixel Diff</li>
+                        </ol>
+                            <div class="row mb-2">
+                                <form class="form-inline w-100 d-flex justify-content-between" action="" method="GET">
+                                    <div class="col-md-6 d-flex">
+                                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Show:</label>
+                                        <select class="custom-select my-1 mr-sm-2" name="per_page" id="inlineFormCustomSelectPref">
+                                            <option value="1" <%if (per_page == 1) {%> selected<%}%>>1</option>
+                                            <option value="10" <%if (per_page == 10) {%> selected<%}%>>10</option>
+                                            <option value="25" <%if (per_page == 25) {%> selected<%}%>>25</option>
+                                            <option value="50" <%if (per_page == 50) {%> selected<%}%>>50</option>
+                                            <option value="100" <%if (per_page == 100) {%> selected<%}%>>100</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <!-- Navbar Search-->
+                                            <div class="input-group">
+                                                <input class="form-control" name="text_seach" value="<%-search_query%>" type="text" placeholder="Search for url..." aria-label="Search" aria-describedby="basic-addon2" />
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                                                </div>
+                                            </div>
+                                        <!-- Navbar-->
+                                    </div>
+                                </form>
+                            </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table mr-1"></i>
+                                List History Pixel Diff
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <%- include('../component/flash') -%>
+                                    <table class="table table-bordered" width="100%" cellspacing="0">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th >#</th>
+                                                <th class="align-middle">Url</th>
+                                                <th class="width-15em">Email</th>
+                                                <th>Design</th>
+                                                <th style="width:100px">ScreenShot</th>
+                                                <th>Width</th>
+                                                <th>Created At</th>
+                                                <th>Status</th>
+                                                <th class="w-auto">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% var no = 1; %>
+                                            <%for(j = 1; j <= current; j++) {
+                                                no = j * per_page - per_page;
+                                            }%>
+                                            <%histories.forEach(function(pixel, index) {%>
+                                                <tr class="line">
+                                                    <th scope="row" class="align-middle">
+                                                        <%if(index == 0){%>
+                                                            <%-no + 1%>
+                                                        <%} else {%>
+                                                            <%-no + index + 1 %>
+                                                        <%}%>
+                                                    </th>
+
+                                                    <td class="width-15em align-middle">
+                                                        <p class="hidden-white-space width-15em m-0 justify-content-center align-middle"><%-pixel.url%></p>
+                                                    </td>
+
+                                                    <td class="email align-middle width-15em"><%-pixel.user_id.email%></td>
+                                                    <td class="width-100 align-middle p-0">
+                                                        <div class="design overflow-hidden max-heigth-200 max-width-100">
+                                                            <img class="max-width-100" src="<%if(pixel.design) {%>/images/upload/<%-pixel.design%><%}%>">
+                                                        </div>
+                                                    </td>
+                                                    <td class="<%if(pixel.success){%>d-table max-heigth-200<%}%>">
+                                                        <div class="screenshot d-flex">
+                                                            <%if(pixel.success == true) {%>
+                                                                <%JSON.parse(pixel.data).forEach(function(shot) {%>
+                                                                    <%if('chromium' in shot){%>
+                                                                        <!-- overflow-hidden max-heigth-200 max-width-100 -->
+                                                                        <div class="design padding-design overflow-hidden max-heigth-200">
+                                                                            <img class="max-width-100" src="/images/screenshot/<%-pixel.user_id.email%>/<%-shot.chromium.image%>" alt="">
+                                                                        </div>
+                                                                    <%}%>
+                                                                    <!-- overflow-hidden max-heigth-200 max-width-100 -->
+                                                                    <%if('firefox' in shot){%>
+                                                                        <div class="design padding-design overflow-hidden max-heigth-200">
+                                                                            <img class="max-width-100" src="/images/screenshot/<%-pixel.user_id.email%>/<%-shot.firefox.image%>" alt="">
+                                                                        </div>
+                                                                    <%}%>
+                                                                    <!-- overflow-hidden max-heigth-200 max-width-100 -->
+                                                                    <%if('webkit' in shot){%>
+                                                                        <div class="design padding-design overflow-hidden max-heigth-200">
+                                                                            <img class="max-width-100" src="/images/screenshot/<%-pixel.user_id.email%>/<%-shot.webkit.image%>" alt="">
+                                                                        </div>
+                                                                    <%}%>
+                                                                <%})%>
+                                                            <%} else {%>
+                                                                <%- pixel.data.replace(/"/g, '') %>
+                                                            <%}%>
+                                                        </div>
+                                                    </td>
+                                                    <td class="width-100 align-middle"><p class="d-flex m-0 justify-content-center align-middle"><%-pixel.width%></p></td>
+                                                    <td class="align-middle"><%-(pixel.created_at).toISOString().replace(/T/, ' ').replace(/\..+/, '')%></td>
+                                                    <td class="align-middle">
+                                                        <%if(pixel.success == true) {%>
+                                                            <span class="badge badge-success">Success</span>
+                                                        <%}else{%>
+                                                            <span class="badge badge-danger">Failed</span>
+                                                        <%}%>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <a href="#" onclick="deletePixelDiff('<%-pixel._id%>')" class="btn btn-danger">Delete</a>
+                                                    </td>
+                                                </tr>
+                                            <%})%>
+                                        </tbody>
+                                    </table>
+                                    <% if (pages > 0) { %>
+                                        <nav aria-label="...">
+                                            <ul class="pagination">
+                                                <% if (current == 1) { %>
+                                                    <li class="page-item disabled">
+                                                        <a class="page-link" href="/admin/pixel-diff?page=1&per_page=<%-per_page%>&text_seach=<%-search_query%>>" tabindex="-1">Previous</a>
+                                                    </li>
+                                                <%} else {%>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="/admin/pixel-diff?page=<%-current-1%>&per_page=<%-per_page%>&text_seach=<%-search_query%>" tabindex="-1">Previous</a>
+                                                    </li>
+                                                <% } %>
+                                                <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+                                                <% if (i !== 1) { %>
+                                                    <li class="disabled page-item"><a class="page-link">...</a></li>
+                                                <% } %>
+
+                                                <% for (; i <= (Number(current) + 4) && i <= pages; i++) { %>
+                                                    <% if (i == current) { %>
+                                                        <li class="page-item active">
+                                                            <a class="page-link" href="/admin/pixel-diff?page=<%-i%>&per_page=<%-per_page%>&text_seach=<%-search_query%>"><%- i %><span class="sr-only"></span></a>
+                                                        </li>
+                                                    <% } else { %>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="/admin/pixel-diff?page=<%= i %>&per_page=<%-per_page%>&text_seach=<%-search_query%>"><%= i %><span class="sr-only"></span></a>
+                                                        </li>
+                                                    <% } %>
+                                                    <% if (i == Number(current) + 4 && i < pages) { %>
+                                                        <li class="disabled page-item"><a class="page-link">...</a></li>
+                                                    <% } %>
+                                                <% } %>
+                                                <% if (current == pages) { %>
+                                                    <li class="page-item disabled">
+                                                        <a class="page-link">Next</a>
+                                                    </li>
+                                                <% } else { %>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="/admin/pixel-diff?page=<%=current+1%>&per_page=<%-per_page%>&text_seach=<%-search_query%>">Next</a>
+                                                    </li>
+                                                <% } %>
+                                            </ul>
+                                        </nav>
+                                    <% } else {%>
+                                        <h4 class="text-center pt-2">No data</h4>
+                                    <%}%>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <%- include('partials/footer') -%>
+                </footer>
+            </div>
+        </div>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/sb-admin/js/scripts.js"></script>
+    </body>
+</html>
+<script>
+    function deletePixelDiff(id) {
+        var result = confirm(`Do you want to delete?`);
+        if (result) {
+            window.location.href = "<%process.env.DOMAIN%>pixel-diff/delete/"+ id;
+        }
+    }
+</script>

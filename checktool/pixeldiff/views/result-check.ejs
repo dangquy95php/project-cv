@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/header') -%>
+        <title>HTML & NO.1 Check</title>
+    </head>
+    <body>
+        <div class="w-100 mt-2">
+            <div class="w-75 m-auto">
+                <div class="row">
+                    <div class="col-md-12">
+                        <button onclick="goBack()" type="button" id="back" class="pl-3 pr-3 btn btn-outline-primary">Back</button>
+                    </div>
+                </div>
+                <% data.forEach(function(item, index){ %>
+                    <div class="card w-100 mt-2">
+                        <div class="card-header font-weight-bold <%if(item.error) {%>bg-danger text-light<%}%>">
+                            <a href="<%= item.url %>" target="_blank"><%= item.url %></a>
+                            <%if(item.error) {%>
+                                <h6 class="bg-warning text-dark"><span class="badge badge-light">Message error</span> -> <%= item.error %></h6>
+                            <%}%>
+                        </div>
+                        <%if(!item.error) {%>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="card ">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-underlined"><u>HTML check</u></h5>
+                                                <!-- option -->
+                                                <div class="row pl-3">
+                                                    <div class="col-md-9">
+                                                        <label>Console error: </label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox col-md-1">
+                                                        <input type="checkbox" name="console" class="custom-control-input" id="console" disabled <%if (options.console == 'on') {%>checked="" <%}%>">
+                                                        <label class="custom-control-label" for="console"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="row pl-3">
+                                                    <div class="col-md-9">
+                                                        <label>Meta: </label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox col-md-1">
+                                                        <input type="checkbox" name="console" class="custom-control-input" id="meta" disabled <%if (options.meta == 'on') {%>checked="" <%}%>">
+                                                        <label class="custom-control-label" for="meta"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="row pl-3">
+                                                    <div class="col-md-9">
+                                                        <label>HTML Validate: </label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox col-md-1">
+                                                        <input type="checkbox" name="console" class="custom-control-input" id="html_validate" disabled <%if (options.html_validate == 'on') {%>checked="" <%}%>">
+                                                        <label class="custom-control-label" for="html_validate"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="row pl-3">
+                                                    <div class="col-md-9">
+                                                        <label>Href = "": </label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox col-md-1">
+                                                        <input type="checkbox" name="href1" class="custom-control-input" id="href1" disabled <%if (options.href1 == 'on') {%>checked="" <%}%>">
+                                                        <label class="custom-control-label" for="href1"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="row pl-3">
+                                                    <div class="col-md-9">
+                                                        <label>Href = "#":</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox col-md-1">
+                                                        <input type="checkbox" name="href2" class="custom-control-input" id="href2" disabled <%if (options.href2 == 'on') {%>checked="" <%}%>">
+                                                        <label class="custom-control-label" for="href2"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="row pl-3">
+                                                    <div class="col-md-9">
+                                                        <label>PHP error: </label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox col-md-1">
+                                                        <input type="checkbox" name="php" class="custom-control-input" id="php" disabled <%if (options.php == 'on') {%>checked="" <%}%>">
+                                                        <label class="custom-control-label" for="php"></label>
+                                                    </div>
+                                                </div>
+                                                <!-- option -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="row">
+                                            <p class="font-weight-bold">HTML check</p>
+                                            <table class="table table-bordered table-html-check">
+                                                <tbody>
+                                                    <% if (options.console == 'on') { %>
+                                                        <tr>
+                                                            <td class="w-25">Console</td>
+                                                            <td class="show-success">
+                                                                <% item.conso.forEach(function(element){ %>
+                                                                    <%if('syntax' in element) { %>
+                                                                        <p class="m-0"><%- element.syntax %></p>
+                                                                    <% } %>
+                                                                    <%if('status' in element) { %>
+                                                                        <p class="m-0"><%- element.status %></p>
+                                                                    <% } %>
+                                                                <% }) %>
+                                                            </td>
+                                                        </tr>
+                                                    <% } %>
+                                                    <% if (options.meta == 'on') { %>
+                                                        <tr>
+                                                            <td class="w-25">Meta</td>
+                                                            <td class="show-success">
+                                                                <% item.meta.forEach(function(element){ %>
+                                                                    <% if ('title' in element) { %>
+                                                                        <p class="m-0"><%- element.title %></p>
+                                                                    <% } %>
+                                                                    <% if ('description' in element) { %>
+                                                                        <p class="m-0"><%- element.description %></p>
+                                                                    <% } %>
+                                                                    <% if ('keywords' in element) { %>
+                                                                        <p class="m-0"><%- element.keywords %></p>
+                                                                    <% } %>
+                                                                <% }) %>
+                                                            </td>
+                                                        </tr>
+                                                    <%}%>
+                                                    <% if (options.html_validate == 'on') { %>
+                                                        <tr>
+                                                            <td class="w-25">HTML Validate:</td>
+                                                            <td class="show-success">
+                                                                <% item.validate.forEach(function(validate) { %>
+                                                                    <label>
+                                                                        <%if(validate.type == 'error') { %>
+                                                                            <span class="badge badge-danger"><%= validate.type%></span>
+                                                                        <% } %>
+                                                                        <%if(validate.type == 'info') { %>
+                                                                            <span class="badge badge-warning"><%= validate.type%></span>
+                                                                        <% } %>
+                                                                        near Line:<%= validate.lastLine %><br><%= validate.message%></label>
+                                                                    <p class="m-0">This tag? -> <%= validate.extract %></p>
+                                                                <% }) %>
+                                                            </td>
+                                                        </tr>
+                                                    <%}%>
+                                                    <% if (options.href1 == 'on'){ %>
+                                                        <tr>
+                                                            <% if ('href1' in item.href1[0]) { %>
+                                                                <td class="w-25">Href = "":</td>
+                                                                <td class="show-success"><%- item.href1[0].href1 %></td>
+                                                            <% } %>
+                                                        </tr>
+                                                    <%}%>
+                                                    <% if (options.href2 == 'on'){ %>
+                                                        <tr>
+                                                            <% if ('href2' in item.href2[0]) { %>
+                                                                <td class="w-25">Href = "#":</td>
+                                                                <td class="show-success"><%- item.href2[0].href2 %></td>
+                                                            <% } %>
+                                                        </tr>
+                                                    <%}%>
+
+                                                    <% if (options.php == 'on'){ %>
+                                                        <tr>
+                                                            <td class="w-25">PHP error:</td>
+                                                            <td class="show-success">
+                                                                <% item.php.forEach(function(element) { %>
+                                                                    <p class="m-0"><%- element %></p>
+                                                                <% })%>
+                                                            </td>
+                                                        </tr>
+                                                    <%}%>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <%if(options.copyright || options.company_name){%>
+                                    <div class="row mt-2">
+                                        <div class="col-md-4">
+                                            <div class="card ">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-underlined"><u>No.1 check</u></h5>
+                                                    <div class="row p-2">
+                                                        <select name="company" disabled class="form-control">
+                                                            <option><%- options.select_company%> </option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="row p-2">
+                                                        <div class="col-md-5">
+                                                            <div class="d-flex align-items-center justify-content-between">
+                                                                <label for="" class="mr-3">9.Copyright 2020:</label>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" name="copyright" id="copyright" disabled <%if (options.copyright) {%>checked="" <%}%>">
+                                                                    <label class="custom-control-label" for="copyright"></label>
+                                                                </div>
+                                                            </div>
+                                                            <% let contact = item.url.match(/\/contact\/$/gm); %>
+                                                            <%if(contact) {%>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <label for="" class="mr-3">16.Hidden reCAPTCHAR:</label>
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox" class="custom-control-input" name="hidden_recaptcha" id="hidden_recaptcha" disabled <%if (options.hidden_recaptcha) {%>checked="" <%}%>">
+                                                                        <label class="custom-control-label" for="hidden_recaptcha"></label>
+                                                                    </div>
+                                                                </div>
+                                                            <%}%>
+                                                    
+                                                            <% let faq = item.url.match(/\/faq\/$/gm); %>
+                                                            <%if(faq) {%>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <label for="" class="mr-3">24.FAQ cursor:</label>
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox" class="custom-control-input" name="faq_cursor" id="faq_cursor" disabled <%if (options.faq_cursor) {%>checked="" <%}%>">
+                                                                        <label class="custom-control-label" for="faq_cursor"></label>
+                                                                    </div>
+                                                                </div>
+                                                            <%}%>
+                                                            <div class="d-flex align-items-center justify-content-between">
+                                                                <label for="" class="mr-3">2.Favicon has not yet:</label>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" name="favicon_yet" id="favicon_yet" disabled <%if (options.favicon_yet) {%>checked="" <%}%>">
+                                                                    <label class="custom-control-label" for="favicon_yet"></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex align-items-center justify-content-between">
+                                                                <label for="" class="mr-3">3.Apple-touch-icon.png:</label>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" name="apple_touch_icon" id="apple_touch_icon" disabled <%if (options.apple_touch_icon) {%>checked="" <%}%>">
+                                                                    <label class="custom-control-label" for="apple_touch_icon"></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex align-items-center justify-content-between">
+                                                                <label for="" class="mr-3">1.The first is text h1:</label>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" name="first_h1" id="first_h1" disabled <%if (options.first_h1) {%>checked="" <%}%>">
+                                                                    <label class="custom-control-label" for="first_h1"></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex align-items-center justify-content-between">
+                                                                <label for="" class="mr-3">13.Plugin default:</label>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" name="plugin_default" id="plugin_default" disabled <%if (options.plugin_default) {%>checked="" <%}%>">
+                                                                    <label class="custom-control-label" for="plugin_default"></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex align-items-center justify-content-between">
+                                                                <label for="" class="mr-3">14.Set up All in One SEO yet?:</label>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" name="all_seo" id="all_seo" disabled <%if (options.all_seo) {%>checked="" <%}%>">
+                                                                    <label class="custom-control-label" for="all_seo"></label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="d-flex align-items-center justify-content-between">
+                                                                <label for="" class="mr-3">3.File page(page post news, works):</label>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" name="page_post_news_works" id="page_post_news_works" disabled <%if (options.h1_added_in_function) {%>checked="" <%}%>">
+                                                                    <label class="custom-control-label" for="page_post_news_works"></label>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <div class="d-flex align-items-center justify-content-between">
+                                                                <label for="" class="mr-3">4.Company name in HTML:</label>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" name="company_name" id="company_name" disabled <%if (options.company_name) {%>checked="" <%}%>">
+                                                                    <label class="custom-control-label" for="company_name"></label>
+                                                                </div>
+                                                            </div>
+                                                            <% if (options.re_captchar == 'on' && contact) { %>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <label for="" class="mr-3">リセット」「送信する/reCAPTCHA:</label>
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox" class="custom-control-input" name="re_captchar" id="re_captchar" disabled <%if (options.re_captchar) {%>checked="" <%}%>">
+                                                                        <label class="custom-control-label" for="re_captchar"></label>
+                                                                    </div>
+                                                                </div>
+                                                            <%}%>
+                                                            <div class="d-flex align-items-center justify-content-between">
+                                                                <label for="" class="mr-3">5.Design and images same:</label>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" name="design_same_image" id="design_same_image" disabled <%if (options.design_same_image) {%>checked="" <%}%>">
+                                                                    <label class="custom-control-label" for="design_same_image"></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex align-items-center justify-content-between">
+                                                                <label for="" class="mr-3">13.Check tel_link:</label>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" name="tel_link" id="tel_link" disabled <%if (options.tel_link) {%>checked="" <%}%>">
+                                                                    <label class="custom-control-label" for="tel_link"></label>
+                                                                </div>
+                                                            </div>
+                                                            <% let index = item.url.split('/'); %>
+                                                            <%if(index.length > 4 && index[3] !== "") {%>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <label for="" class="mr-3">23.MV Background:</label>
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox" class="custom-control-input" name="mv_background" id="mv_background" disabled <%if (options.mv_background) {%>checked="" <%}%>">
+                                                                        <label class="custom-control-label" for="mv_background"></label>
+                                                                    </div>
+                                                                </div>
+                                                            <%}%>
+                                                            <div class="d-flex align-items-center justify-content-between">
+                                                                <label for="" class="mr-3">10.Link die:</label>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" name="link_die" id="link_die" disabled <%if (options.link_die) {%>checked="" <%}%>">
+                                                                    <label class="custom-control-label" for="link_die"></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex align-items-center justify-content-between">
+                                                                <label for="" class="mr-3">1.「No1_theme01」/「twentytwenty」:</label>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" name="twentytwenty_and_no1" id="twentytwenty_and_no1" disabled <%if (options.twentytwenty_and_no1) {%>checked="" <%}%>">
+                                                                    <label class="custom-control-label" for="twentytwenty_and_no1"></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex align-items-center justify-content-between">
+                                                                <label for="" class="mr-3">2.No1_theme01/css/ and style.css:</label>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" name="no1_theme01_css_style" id="no1_theme01_css_style" disabled <%if (options.no1_theme01_css_style) {%>checked="" <%}%>">
+                                                                    <label class="custom-control-label" for="no1_theme01_css_style"></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex align-items-center justify-content-between">
+                                                                <label for="" class="mr-3">15.Is h1 added in function.php file yet?:</label>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" name="h1_added_in_function" id="h1_added_in_function" disabled <%if (options.h1_added_in_function) {%>checked="" <%}%>">
+                                                                    <label class="custom-control-label" for="h1_added_in_function"></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex align-items-center justify-content-between">
+                                                                <label for="" class="mr-3">4.Toppage.php/front-page.php:</label>
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" name="toppage_front_page" id="toppage_front_page" disabled <%if (options.toppage_front_page) {%>checked="" <%}%>">
+                                                                    <label class="custom-control-label" for="toppage_front_page"></label>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <%let google_add = item.url.match(/\/comapny\/$/g); %>
+                                                            <%if(google_add) {%>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <label for="" class="mr-3">Google Addess:</label>
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox" class="custom-control-input" name="google_map_address" id="google_map_address" disabled <%if (options.google_map_address) {%>checked="" <%}%>">
+                                                                        <label class="custom-control-label" for="google_map_address"></label>
+                                                                    </div>
+                                                                </div>
+                                                            <%}%>
+                                                            <%let h1_h5 = item.url.match(/\/news\/[0-9].*\/$/g); %>
+                                                            <%if(h1_h5) {%>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <label for="" class="mr-3">6.H1-H5:</label>
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox" class="custom-control-input" name="detail_h1_h5" id="detail_h1_h5" disabled <%if (options.detail_h1_h5) {%>checked="" <%}%>">
+                                                                        <label class="custom-control-label" for="detail_h1_h5"></label>
+                                                                    </div>
+                                                                </div>
+                                                            <%}%>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row">
+                                                <p class="font-weight-bold">No.1 check</p>
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="w-25">Company slect:</td>
+                                                            <td><%= options.select_company%></td>
+                                                        </tr>
+                                                        <% if (options.copyright == 'on'){ %>
+                                                            <tr>
+                                                                <td class="w-25">9.Copyright 2020:</td>
+                                                                <td class="show-success"><%- item.no1.copyright %></td>
+                                                            </tr>
+                                                        <%}%>
+                                                        <% if (options.company_name == 'on'){ %>
+                                                            <tr>
+                                                                <td class="w-25">4.Company name in HTML:</td>
+                                                                <td>
+                                                                    <%item.no1.company_in_html.forEach(function(com) { %>
+                                                                        <span class="m-0"><%- com %></span>
+                                                                    <% }) %>
+                                                                </td>
+                                                            </tr>
+                                                        <% } %>
+                                                        <% if (options.link_die == 'on'){ %>
+                                                            <tr>
+                                                                <td class="w-25">10.Link die:</td>
+                                                                <td>
+                                                                    <%item.no1.link_die.forEach(function(link) { %>
+                                                                        <label class="mr-3"><%- link.messages %> <%- link.url %></label>
+                                                                    <% }) %>
+                                                                </td>
+                                                            </tr>
+                                                        <% } %>
+                                                        <% if (options.re_captchar == 'on' && contact){ %>
+                                                            <tr>
+                                                                <td class="w-25">15.リセット」「送信する/reCAPTCHA:</td>
+                                                                <td>
+                                                                    <%item.no1.re_captchar.forEach(function(captchar) { %>
+                                                                        <label class="mr-3"><%- captchar %></label>
+                                                                    <% }) %>
+                                                                </td>
+                                                            </tr>
+                                                        <% } %>
+                                                        <% if (options.hidden_recaptcha == 'on' && contact){ %>
+                                                            <tr>
+                                                                <td class="w-25">16.Hidden reCAPTCHAR:</td>
+                                                                <td>
+                                                                    <label class="mr-3"><%- item.no1.hidden_recaptcha %></label>
+                                                                </td>
+                                                            </tr>
+                                                        <% } %>
+                                                        <% if (typeof(item.no1.show_faq_cursor) != 'undefined' && options.faq_cursor == 'on'){ %>
+                                                            <tr>
+                                                                <td class="w-25">24.FAQ cursor:</td>
+                                                                <td class="show-success">
+                                                                    <%if(item.no1.faq_cursor) {%>
+                                                                        <label class="mr-3"><span class="badge badge-danger mr-2">error </span><%- item.no1.faq_cursor %></label>
+                                                                    <%}%>
+                                                                </td>
+                                                            </tr>
+                                                        <% } %>
+                                                        <% if (options.design_same_image == 'on') { %>
+                                                            <tr>
+                                                                <td class="w-25">5.Design and images same:</td>
+                                                                <td>
+                                                                    <%item.no1.design_same_image.forEach(function(img) { %>
+                                                                        <%- img.message %> <%- img.src %>
+                                                                        <div class="wraper_info">
+                                                                            <div class="info_pic">
+                                                                                <span class="real"><%- (img.width == '') ? '' : 'width: ' %><%-img.width%> <%-(img.width == '') ? '' : ','%> <%- (img.height == '') ? '' : 'height: '%> <%-img.height%></span>
+                                                                                <span class="fake"><%- (img.naturalWidth == '') ? '' : 'naturalWidth: ' %><%-img.naturalWidth%> <%- (img.naturalWidth == '') ? '' : ',' %> <%- (img.naturalHeight == '') ? '' : 'naturalHeight: ' %> <%-img.naturalHeight%></span>
+                                                                            </div>
+                                                                        </div>
+                                                                    <%})%>
+                                                                </td>
+                                                            </tr>
+                                                        <% } %>
+                                                        <% if (options.favicon_yet == 'on') { %>
+                                                            <tr>
+                                                                <td class="w-25">2.Favicon has not yet?:</td>
+                                                                <td>
+                                                                    <%if(item.no1.favicon_yet) {%>
+                                                                        <label class="mr-3"><%- item.no1.favicon_yet %></label>
+                                                                    <%}%>
+                                                                </td>
+                                                            </tr>
+                                                        <% } %>
+                                                        <% if (options.apple_touch_icon == 'on'){ %>
+                                                            <tr>
+                                                                <td class="w-25">3.Apple-touch-icon.png:</td>
+                                                                <td>
+                                                                    <%if(item.no1.apple_touch_icon) {%>
+                                                                        <label class="mr-3"><%- item.no1.apple_touch_icon %></label>
+                                                                    <%}%>
+                                                                </td>
+                                                            </tr>
+                                                        <% } %>
+                                                        <% if (options.first_h1 == 'on'){ %>
+                                                            <tr>
+                                                                <td class="w-25">1.The first is text h1:
+                                                                </td>
+                                                                <td>
+                                                                    <%if(item.no1.first_h1) {%>
+                                                                        <label class="mr-3"><%- item.no1.first_h1 %></label>
+                                                                    <%}%>
+                                                                </td>
+                                                            </tr>
+                                                        <% } %>
+                                                        <% if (options.tel_link == 'on'){ %>
+                                                            <tr>
+                                                                <td class="w-25">13.Check class Tel_Link:
+                                                                </td>
+                                                                <td class="show-success">
+                                                                    <%item.no1.tel_link.forEach(function(item) { %>
+                                                                        <label class="mr-3"><span class="badge badge-danger mr-2">error </span><%= item %></label>
+                                                                    <%})%>
+                                                                </td>
+                                                            </tr>
+                                                        <% } %>
+                                                        <% var h5 = item.url.match(/[0-9]\/$/gm); %>
+                                                        <% if (options.detail_h1_h5 == 'on' && h5 != null){ %>
+                                                            <tr>
+                                                                <td class="w-25">6.H1-H5:
+                                                                </td>
+                                                                <td class="show-success">
+                                                                    <%item.no1.detail_h1_h5.forEach(function(item) { %>
+                                                                        <label class="mr-3"><%- item.item %> <%= item.message %></label>
+                                                                    <%})%>
+                                                                </td>
+                                                            </tr>
+                                                        <% } %>
+                                                        <% var google_map = item.url.match(/\/company/g); %>
+                                                        <% if (options.google_map_address == 'on' && google_map != null){ %>
+                                                            <tr>
+                                                                <td class="w-25">21.Google Address:
+                                                                </td>
+                                                                <td class="show-success">
+                                                                    <%if (item.no1.google_map_address){ %>
+                                                                        <label class="mr-3"><span class="badge badge-danger mr-2">error </span><%- item.no1.google_map_address %></label>
+                                                                    <%}%>
+                                                                </td>
+                                                            </tr>
+                                                        <% } %>
+                                                        <% let mv_check = item.url.split('/'); %>
+                                                        <% if (options.mv_background == 'on' && mv_check.length >= 4 && mv_check[3] != '') { %>
+                                                            <tr>
+                                                                <td class="w-25">23.MV Background:</td>
+                                                                <td>
+                                                                    <%if (item.no1.mv_background){ %>
+                                                                        <label class="mr-3"><%- item.no1.mv_background %></label>
+                                                                    <%}%>
+                                                                </td>
+                                                            </tr>
+                                                        <% } %>
+                                                        
+                                                        <tr>
+                                                            <td class="w-25">14.Tel_link does not exits in fax:
+                                                            </td>
+                                                            <td class="show-success">
+                                                                <%item.no1.tel_link_not_exits_fax.forEach(function(item) { %>
+                                                                    <label class="mr-3"><span class="badge badge-danger mr-2">error </span><%= item %></label>
+                                                                <%})%>
+                                                            </td>
+                                                        </tr>
+                                                        <% if (options.plugin_default == 'on') { %>
+                                                        <tr>
+                                                            <td class="w-25">13.Plugin default:</td>
+                                                            <td>
+                                                                <%if(item.no1.wordpress.success) {%>
+                                                                <%item.no1.wordpress.plugin_added.forEach(function(item) { %>
+                                                                        <%- item %>
+                                                                    <%})%>
+                                                                <%} else {%>
+                                                                    <span class="badge badge-danger mr-2">error </span><%-item.no1.wordpress.message%>
+                                                                <%}%>
+                                                            </td>
+                                                        </tr>
+                                                        <%}%>
+                                                        <% if (options.h1_added_in_function == 'on') { %>
+                                                        <tr>
+                                                            <td class="w-25">15.Is h1 added in function.php file yet?:</td>
+                                                            <td>
+                                                                <%if(item.no1.wordpress.success) {%>
+                                                                    <%- item.no1.wordpress.h1_file_in_func %>
+                                                                <%} else {%>
+                                                                    <span class="badge badge-danger mr-2">error </span><%-item.no1.wordpress.message%>
+                                                                <%}%>
+                                                            </td>
+                                                        </tr>
+                                                        <%}%>
+                                                        <% if (options.page_post_news_works == 'on' && item.no1.wordpress.success == true) { %>
+                                                            <tr>
+                                                                <td class="w-25">3.File page(page post news, works):</td>
+                                                                <td>
+                                                                    <%if(item.no1.wordpress.success) {%>
+                                                                        <%item.no1.wordpress.exist_structer_page.forEach(function(item) { %>
+                                                                            <%- item %>
+                                                                        <%})%>
+                                                                    <%} else {%>
+                                                                        <span class="badge badge-danger mr-2">error </span><%-item.no1.wordpress.message%>
+                                                                    <%}%>
+                                                                </td>
+                                                            </tr>
+                                                        <%}%>
+                                                        <% if (options.twentytwenty_and_no1 == 'on') { %>
+                                                            <tr>
+                                                                <td class="w-25">1.「No1_theme01」/「twentytwenty」:</td>
+                                                                <td>
+                                                                    <%if(item.no1.wordpress.success) {%>
+                                                                        <%- item.no1.wordpress.them_no1 %>
+                                                                        <%- item.no1.wordpress.them_twentytwenty %>
+                                                                    <%} else {%>
+                                                                        <span class="badge badge-danger mr-2">error </span><%-item.no1.wordpress.message%>
+                                                                    <%}%>
+                                                                </td>
+                                                            </tr>
+                                                        <%}%>
+                                                        <% if (options.no1_theme01_css_style == 'on') { %>
+                                                            <tr>
+                                                                <td class="w-25">2.No1_theme01/css/ and style.css:</td>
+                                                                <td>
+                                                                    <%if(item.no1.wordpress.success) {%>
+                                                                        <%- item.no1.wordpress.exist_css_and_style.exist_css %>
+                                                                        <%- item.no1.wordpress.exist_css_and_style.exist_style %>
+                                                                    <%} else {%>
+                                                                        <span class="badge badge-danger mr-2">error </span><%-item.no1.wordpress.message%>
+                                                                    <%}%>
+                                                                </td>
+                                                            </tr>
+                                                        <%}%>
+                                                        <% if (options.toppage_front_page == 'on') { %>
+                                                            <tr>
+                                                                <td class="w-25">4.Toppage.php/front-page.php:</td>
+                                                                <td>
+                                                                    <%if(item.no1.wordpress.success) {%>
+                                                                        <%- item.no1.wordpress.exists_toppage %>
+                                                                    <%} else {%>
+                                                                        <span class="badge badge-danger mr-2">error </span><%-item.no1.wordpress.message%>
+                                                                    <%}%>
+                                                                </td>
+                                                            </tr>
+                                                        <%}%>
+                                                        <% if (options.all_seo == 'on' && item.no1.wordpress.success == true) { %>
+                                                            <tr>
+                                                                <td class="w-25">14.Set up All in One SEO yet?:</td>
+                                                                <td>
+                                                                    <%if(item.no1.wordpress.success) {%>
+                                                                        <%item.no1.wordpress.in_seo.forEach(function(item) { %>
+                                                                            <%- item %>
+                                                                        <%})%>
+                                                                    <%} else {%>
+                                                                        <span class="badge badge-danger mr-2">error </span><%-item.no1.wordpress.message%>
+                                                                    <%}%>
+                                                                </td>
+                                                            </tr>
+                                                        <%}%>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <%}%>
+                            </div>
+                        <%}%>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    $(document).ready(function() {
+        var tbody = $(".table-html-check tbody");
+        if (tbody[0].innerText == '') {
+            $('.table-html-check').prev().remove();
+        }
+
+        $.each($('.show-success'), function( key, value ) {
+            var text = $(this).text();
+            text = text.replace(/\s/g, '');
+            if (!text) {
+                $(this).html(`<span><span class="badge badge-success">Successfully</span></span>`)
+            }
+        });
+
+    });
+
+    function goBack() {
+        window.history.back();
+    }
+
+</script>

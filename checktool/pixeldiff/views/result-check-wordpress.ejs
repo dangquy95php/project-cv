@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/header') -%>
+        <title>HTML & NO.1 Check</title>
+    </head>
+    <body>
+        <div class="w-100 mt-2">
+            <div class="w-75 m-auto">
+                <div class="row">
+                    <div class="col-md-12">
+                        <button onclick="goBack()" type="button" id="back" class="pl-3 pr-3 btn btn-outline-primary">Back</button>
+                    </div>
+                </div>
+                <div class="card w-100 mt-2">
+                    <%let wp_admin = options.input_link[0].match(/wp-login/g); %>
+                    <div class="card-header font-weight-bold">
+                        <%if(wp_admin) {%>
+                            <a href="<%= options.input_link[0] %>" target="_blank"><%= options.input_link[0] %></a>
+                        <%} else {%>
+                            <a href="<%= options.input_link[0] %>/wp-login.php %>" target="_blank"><%= options.input_link[0] %>/wp-login.php</a>
+                        <%}%>
+                    </div>
+                    <div class="card-body">
+                        <div class="row mt-2">
+                            <div class="col-md-4">
+                                <div class="card ">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-underlined"><u>No.1 check</u></h5>
+                                        <div class="row p-2">
+                                            <select name="company" disabled class="form-control">
+                                                <option><%- options.select_company%> </option>
+                                            </select>
+                                        </div>
+                                        <div class="row p-2">
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <label for="" class="mr-3">7. Is there html content in static pages?:</label>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" name="conten_static_pages" id="conten_static_pages" disabled <%if (options.conten_static_pages) {%>checked="" <%}%>">
+                                                        <label class="custom-control-label" for="conten_static_pages"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <label for="" class="mr-3">8. Links? ([Template_url], [url]):</label>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" name="template_url_and_url" id="template_url_and_url" disabled <%if (options.template_url_and_url) {%>checked="" <%}%>">
+                                                        <label class="custom-control-label" for="template_url_and_url"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row p-2">
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <label for="" class="mr-3">9. Unclassified tags not displayed:</label>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" name="unclassified_not_displayed" id="unclassified_not_displayed" disabled <%if (options.unclassified_not_displayed) {%>checked="" <%}%>">
+                                                        <label class="custom-control-label" for="unclassified_not_displayed"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <label for="" class="mr-3">10. Match company in contactform:</label>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" name="match_company_contactform" id="match_company_contactform" disabled <%if (options.match_company_contactform) {%>checked="" <%}%>">
+                                                        <label class="custom-control-label" for="match_company_contactform"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row p-2">
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <label for="" class="mr-3">11. Is the contactform message in Japanese?:</label>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" name="contactform_msg_JP" id="contactform_msg_JP" disabled <%if (options.contactform_msg_JP) {%>checked="" <%}%>">
+                                                        <label class="custom-control-label" for="contactform_msg_JP"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <label for="" class="mr-3">12. Include contactform reCAPTCHA:</label>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" name="contactform_recapchar" id="contactform_recapchar" disabled <%if (options.contactform_recapchar) {%>checked="" <%}%>">
+                                                        <label class="custom-control-label" for="contactform_recapchar"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <p class="font-weight-bold">No.1 check</p>
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <td class="w-25">Company slect:</td>
+                                                <td><%= options.select_company%></td>
+                                            </tr>
+                                            <%if(options.conten_static_pages == 'on') {%>
+                                                <tr>
+                                                    <td class="w-25">7. Is there html content in static pages?:</td>
+                                                    <td>
+                                                        <%data.data.content.forEach(function(item) { %>
+                                                            <p><%-item.title +' - '+ item.message%></p>
+                                                        <% }) %>
+                                                    </td>
+                                                </tr>
+                                            <%}%>
+                                            <%if(options.template_url_and_url == 'on') {%>
+                                                <tr>
+                                                    <td class="w-25">8. Links? ([Template_url], [url]):</td>
+                                                    <td>
+                                                        <%data.data.template_url.forEach(function(item) { %>
+                                                            <p><%-item.message%> <%=item.item%></p>
+                                                        <% }) %>
+                                                    </td>
+                                                </tr>
+                                            <%}%>
+                                            <%if(options.unclassified_not_displayed == 'on') {%>
+                                                <tr>
+                                                    <td class="w-25">9. Unclassified tags not displayed:</td>
+                                                    <td>
+                                                        <%data.data.categories_uncategorized.forEach(function(item) { %>
+                                                            <p><%-item.message%> <%-item.item%></p>
+                                                        <% }) %>
+                                                    </td>
+                                                </tr>
+                                            <%}%>
+                                            <%if(options.match_company_contactform == 'on') {%>
+                                                <tr>
+                                                    <td class="w-25">10. Match company in contactform:</td>
+                                                    <td>
+                                                        <p><%=data.data.fromCompany.item%> <%-data.data.fromCompany.message%></p>
+                                                    </td>
+                                                </tr>
+                                            <%}%>
+                                            <%if(options.contactform_msg_JP == 'on') {%>
+                                                <tr>
+                                                    <td class="w-25">11. Is the contactform message in Japanese?:</td>
+                                                    <td>
+                                                        <%data.data.message_jp_and_en.forEach(function(item) { %>
+                                                            <p><%-item.message%> <%-item.item%></p>
+                                                        <% }) %>
+                                                    </td>
+                                                </tr>
+                                            <%}%>
+                                            <%if(options.contactform_recapchar == 'on') {%>
+                                                <tr>
+                                                    <td class="w-25">12. Include contactform reCAPTCHA:</td>
+                                                    <td>
+                                                        <%data.data.recapchaData.forEach(function(item) { %>
+                                                            <p><%-item.message%></p>
+                                                        <% }) %>
+                                                    </td>
+                                                </tr>
+                                            <%}%>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    $(document).ready(function() {
+        var tbody = $(".table-html-check tbody");
+        if (tbody[0].innerText == '') {
+            $('.table-html-check').prev().remove();
+        }
+    });
+
+    function goBack() {
+        window.history.back();
+    }
+
+</script>
