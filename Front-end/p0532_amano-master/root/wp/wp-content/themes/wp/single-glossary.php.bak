@@ -1,0 +1,58 @@
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/header.php'); ?>
+
+<main class="p-glossaryDetail">
+    <div class="c-heading">
+        <h1 class="c-heading__txt">
+            <span class="c-heading__sub">スムーズなお仕事のために知っておきたい</span>
+            <span class="c-heading__main">人事・労務の注目用語</span>
+        </h1>
+    </div>
+
+    <div class="p-glossaryDetail__wrap">
+        <div class="l-container">
+            <div class="l-content is-outlinkarea">
+                <!-- パンくず -->
+                <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/breadcrumb.php'); ?>
+                <section class="p-glossaryDetail1">
+                    <h2 class="c-title11">
+                        <span class="c-title11__txt"><?php the_title(); ?></span>
+                        <!-- WAITING TO DO SOMETHING. -->
+                        <?php if (get_field("word_yomi")) : ?>
+                            <span class="c-title11_sub">読み方：<?php the_field("word_yomi"); ?></span>
+                        <?php endif; ?>
+                    </h2>
+                    <?php ///////////////////////////////////////////////////////
+                    // タグ・更新日時
+                    ///////////////////////////////////////////////////////////// 
+                    ?>
+                    <?php
+                    $tagname = "glossary_tag";
+                    include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/single_tagtime.php'); ?>
+
+                    <div class="c-text03">
+                        <?php the_content(); ?>
+                    </div>
+                </section>
+                <section class="c-box4">
+                    <?php ///////////////////////////////////////////////////////
+                    // 柔軟コンテンツ
+                    ///////////////////////////////////////////////////////////// 
+                    ?>
+                    <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/single_flexible_content.php'); ?>
+                </section>
+            </div>
+            <div class="pc-only">
+                <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/side.php'); ?>
+            </div>
+        </div>
+    </div>
+
+    <?php $type = "glossary";
+    include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/recommnded.php'); ?>
+    <div class="l-container sp-only">
+        <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/side.php'); ?>
+    </div>
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/download-blue.php'); ?>
+</main>
+
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/footer.php'); ?>

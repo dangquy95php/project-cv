@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+/*----------------------------------------------------
+base
+----------------------------------------------------*/
+@import "0_base/vars";
+@import "0_base/mixin";
+@import "0_base/reset";
+@import "0_base/fonts";
+
+/*----------------------------------------------------
+ルートのフォントサイズを10pxと同サイズに設定
+----------------------------------------------------*/
+html {
+	font-size: 62.5%;
+}
+
+/*----------------------------------------------------
+margin class name
+----------------------------------------------------*/
+.mg {
+	&t {
+		/*margin-top*/
+		@for $i from 1 through 8 {
+			&#{$i * 5} {
+				margin-top: #{$i * 5}px !important;
+			}
+		}
+	}
+
+	&b {
+		/*margin-bottom*/
+		@for $i from 1 through 8 {
+			&#{$i * 5} {
+				margin-bottom: #{$i * 5}px !important;
+			}
+		}
+	}
+
+	&l {
+		/*margin-left*/
+		@for $i from 1 through 8 {
+			&#{$i * 5} {
+				margin-left: #{$i * 5}px !important;
+			}
+		}
+	}
+
+	&r {
+		/*margin-right*/
+		@for $i from 1 through 8 {
+			&#{$i * 5} {
+				margin-right: #{$i * 5}px !important;
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------
+padding class name
+----------------------------------------------------*/
+.pd {
+	&t {
+		/*padding-top*/
+		@for $i from 1 through 8 {
+			&#{$i * 5} {
+				padding-top: #{$i * 5}px !important;
+			}
+		}
+	}
+
+	&b {
+		/*padding-bottom*/
+		@for $i from 1 through 8 {
+			&#{$i * 5} {
+				padding-bottom: #{$i * 5}px !important;
+			}
+		}
+	}
+
+	&l {
+		/*padding-left*/
+		@for $i from 1 through 8 {
+			&#{$i * 5} {
+				padding-left: #{$i * 5}px !important;
+			}
+		}
+	}
+
+	&r {
+		/*padding-right*/
+		@for $i from 1 through 8 {
+			&#{$i * 5} {
+				padding-right: #{$i * 5}px !important;
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------
+text class name
+----------------------------------------------------*/
+.text {
+	&-left {
+		text-align: left;
+	}
+
+	&-right {
+		text-align: right;
+	}
+
+	&-center {
+		text-align: center;
+	}
+}
+
+/*----------------------------------------------------
+float class name
+----------------------------------------------------*/
+.float {
+	&-left {
+		float: left;
+	}
+
+	&-right {
+		float: right;
+	}
+}
+
+/*----------------------------------------------------
+clearfix class name
+----------------------------------------------------*/
+.clearfix {
+	min-height: 0;
+
+	&:after {
+		content: "";
+		visibility: hidden;
+		display: block;
+		clear: both;
+		font-size: 0;
+		height: 0;
+	}
+}
+
+/*----------------------------------------------------
+wp class name
+----------------------------------------------------*/
+body.wp-autoresize {
+	margin: 8px;
+	min-height: auto;
+}
+
+body.wp-autoresize, .wp-content {
+	h1, h2, h3, h4, h5, h6 {
+		position: relative;
+		padding-bottom: 5px;
+
+		// &:before {
+		// 	content: '';
+		// 	width: 45px;
+		// 	height: 1px;
+		// 	background: #4c7f30;
+		// 	position: absolute;
+		// 	bottom: -1px;
+		// 	left: 0;
+		// }
+	}
+	h1 {
+		font-weight: bold;
+		font-size: 2em;
+		margin: 0.67em 0;
+		padding-bottom: 0;
+	}
+
+	h2 {
+		font-weight: bold;
+		font-size: 1.5em;
+		margin: 0.83em 0;
+		border-bottom: 1px solid #a5a6ab;
+		padding-bottom: 0;
+		&:before {
+			content: '';
+			width: 45px;
+			height: 1px;
+			background: #4c7f30;
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+		}
+	}
+
+	h3 {
+		font-weight: bold;
+		font-size: 1.17em;
+		margin: 1em 0;
+		padding-left: 12px;
+		padding-bottom: 0;
+		&:after {
+			content: '';
+			width: 1px;
+			height: 12px;
+			background: #4c7f30;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+		}
+	}
+
+	h4 {
+		font-weight: bold;
+		font-size: 1em;
+		margin: 1.33em 0;
+		padding-bottom: 0;
+		color: #4c7f30;
+	}
+
+	h5 {
+		font-weight: bold;
+		font-size: 0.83em;
+		margin: 1.67em 0;
+		padding-bottom: 0;
+	}
+
+	h6 {
+		font-weight: bold;
+		font-size: 0.6em;
+		margin: 2em 0;
+	}
+
+	a {
+		text-decoration: underline;
+		color: inherit;
+	}
+
+	ul{
+		list-style-type: disc;
+	}
+	ol, ul {
+		padding-inline-start: 40px;
+		li {
+				  list-style-type: inherit;
+		}
+	}
+	ol {
+			list-style: decimal;
+	}
+	table, th, td{
+			border: 1px solid #ccc;
+			padding: 5px;
+	}
+}
+
+/*----------------------------------------------------
+layout
+----------------------------------------------------*/
+@import "1_layout/*";
+
+/*----------------------------------------------------
+component
+----------------------------------------------------*/
+@import "2_component/*";
+
+/*----------------------------------------------------
+utility
+----------------------------------------------------*/
+@import "0_base/utility";

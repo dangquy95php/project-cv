@@ -1,0 +1,84 @@
+/*------------------------------------------------------------
+tayorou-download
+------------------------------------------------------------*/
+.p-tayorou-download {
+    padding: 120px 0 0;
+
+    @include sp {
+        padding: 0;
+    }
+
+    &1 {
+        padding: 40px 0 80px;
+
+        @include sp {
+            padding: 20px 0 40px;
+        }
+
+        .c-text03 {
+            line-height: 1.5;
+            margin: 40px 0 0;
+
+            @include sp {
+                font-size: 1.6rem;
+                line-height: 1.75;
+                margin: 16px 0 0;
+            }
+        }
+
+        .c-list43 {
+            margin: 39px 0 0;
+
+            @include sp {
+                margin: 18px 0 0;
+            }
+        }
+
+        .c-pagenavi2 {
+            margin-top: 50px;
+
+            @include sp {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+
+/*------------------------------------------------------------
+tayorou-download_detail
+------------------------------------------------------------*/
+.p-tayorou-downloadDetail {
+    padding: 120px 0 0;
+
+    @include sp {
+        padding: 0;
+    }
+
+    &1 {
+        padding: 40px 0 80px;
+
+        @include sp {
+            padding: 20px 0 40px;
+        }
+
+        .c-btn12 {
+            max-width: 320px;
+            margin: 40px auto 0;
+
+            @include sp {
+                max-width: 295px;
+                margin: 20px auto 0;
+            }
+        }
+    }
+
+    .c-imgtext08 {
+        img {
+            max-width: 620px;
+            @include sp  {
+                max-width: 100%;
+            }
+        }
+    }
+}

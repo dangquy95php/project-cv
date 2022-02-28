@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63.174" height="81.319" viewBox="0 0 63.174 81.319">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="SVGID" width="63.174" height="81.319" fill="#ccc" stroke="#ccc" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_16853" data-name="Group 16853" transform="translate(-327 -2663)">
+    <g id="Group_16851" data-name="Group 16851" transform="translate(7)">
+      <g id="Group_16849" data-name="Group 16849" transform="translate(320 2663)">
+        <g id="Group_16787" data-name="Group 16787" transform="translate(0 0)" clip-path="url(#clip-path)">
+          <path id="パス_16514" data-name="パス 16514" d="M435.776,537.137H391.969a1.083,1.083,0,0,0-1.083,1.076v61.955a1.082,1.082,0,0,0,1.083,1.082h43.807a1.087,1.087,0,0,0,1.086-1.082V538.213a1.085,1.085,0,0,0-1.086-1.076m-1.082,61.945H393.054V539.3h41.639Z" transform="translate(-390.887 -519.931)" fill="#ccc" stroke="#ccc" stroke-width="1"/>
+          <path id="パス_16515" data-name="パス 16515" d="M438.422,534.489H394.614a1.082,1.082,0,0,0-1.082,1.082V539a1.084,1.084,0,1,0,2.168,0v-2.34h41.639v59.784h-2.747a1.084,1.084,0,0,0,0,2.168h3.829a1.082,1.082,0,0,0,1.082-1.082V535.575a1.082,1.082,0,0,0-1.079-1.086h0" transform="translate(-384.932 -525.89)" fill="#ccc" stroke="#ccc" stroke-width="1"/>
+          <path id="パス_16516" data-name="パス 16516" d="M441.063,531.844H397.256a1.083,1.083,0,0,0-1.076,1.082v3.686a1.082,1.082,0,1,0,2.165,0h0v-2.6h41.633v59.783H437.6a1.084,1.084,0,0,0,0,2.168h3.465a1.082,1.082,0,0,0,1.082-1.082h0V532.926a1.082,1.082,0,0,0-1.082-1.082h-.007" transform="translate(-378.972 -531.843)" fill="#ccc" stroke="#ccc" stroke-width="1"/>
+        </g>
+      </g>
+      <rect id="Rectangle_11533" data-name="Rectangle 11533" width="44" height="61" transform="translate(321 2682)" fill="#ccc"/>
+    </g>
+  </g>
+</svg>

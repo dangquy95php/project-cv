@@ -1,0 +1,6 @@
+<svg id="icon-clock" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+  <path id="Path_49" data-name="Path 49" d="M6.933,0a7,7,0,1,0,7,7A7,7,0,0,0,6.933,0Zm0,12.6a5.6,5.6,0,1,1,5.6-5.6A5.6,5.6,0,0,1,6.933,12.6Z" transform="translate(0.067)" fill="#595959"/>
+  <path id="Path_50" data-name="Path 50" d="M35.916,15h-.7l-.569,4.409a.9.9,0,0,0,.894,1.016h.051a.9.9,0,0,0,.893-1.016Z" transform="translate(-28.566 -12.375)" fill="#595959"/>
+  <path id="Path_51" data-name="Path 51" d="M38.55,36.1v-.7l-3.512-.54a.9.9,0,0,0-1.038.89h0a.9.9,0,0,0,1.038.89Z" transform="translate(-28.038 -28.753)" fill="#595959"/>
+  <circle id="Ellipse_7" data-name="Ellipse 7" cx="1.05" cy="1.05" r="1.05" transform="translate(5.962 5.95)" fill="#595959"/>
+</svg>

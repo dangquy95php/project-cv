@@ -1,0 +1,45 @@
+/*------------------------------------------------------------
+Page customer-support
+------------------------------------------------------------*/
+.p-customerSupport {
+    &1 {
+        padding: 82px 0 80px;
+        @include sp {
+            padding: 40px 0;
+        }
+
+        .c-text01 {
+            margin: 38px 0 0;
+        }
+
+        .c-imgSingle {
+            margin: 58px auto 79px;
+            @include sp {
+                margin: 20px auto 30px;
+            }
+        }
+    }
+
+    &3 {
+        margin: 98px 0 0;
+        padding: 109px 0 101px;
+        @include sp {
+            margin: 48px 0 0;
+            padding: 55px 0;
+        }
+
+        .c-text01 {
+            margin: 38px 0 0;
+            @include sp {
+                margin: 19px 0 0;
+            }
+        }
+
+        .c-area {
+            margin: 78px 0 0;
+            @include sp {
+                margin: 39px 0 0;
+            }
+        }
+    }
+}

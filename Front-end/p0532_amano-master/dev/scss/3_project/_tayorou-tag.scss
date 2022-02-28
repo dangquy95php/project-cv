@@ -1,0 +1,101 @@
+/*------------------------------------------------------------
+tayorou-tag
+------------------------------------------------------------*/
+.p-tayorou-tag {
+    padding: 120px 0 0;
+    $root: &;
+
+    @include sp {
+        padding: 0;
+    }
+
+    .c-title23 {
+        margin: 0 0 39px;
+        @include sp {
+            margin: 0 -20px 20px;
+        }
+
+        &__tit {
+            &__txt {
+                margin: 0;
+            }
+        }
+    }
+
+    &__wrap {
+        padding: 40px 0 61px;
+
+        @include sp {
+            padding: 20px 0 40px;
+        }
+    }
+
+    &__box {
+        + #{$root}__box {
+            margin: 40px 0 0;
+        }
+
+        &.terms {
+            margin: 40px 0 80px;
+            @include sp {
+                margin: 40px -20px;
+            }
+        }
+
+        .c-list43 {
+            margin: 40px 0 0;
+            @include sp {
+                margin: -1px 0 0;
+            }
+
+            &__item {
+                margin-bottom: 20px;
+
+                a {
+                    padding: 19px;
+                }
+
+                &:last-child {
+                    @include sp {
+                        margin: 0;
+                    }
+                }
+            }
+
+            &__tit {
+                font-size: 1.8rem;
+                line-height: 27px;
+                @include sp {
+                    font-size: 1.6rem;
+                    line-height: 1.5;
+                    margin: 15px 0 9.5px;
+                }
+            }
+        }
+
+        .c-list46 {
+            &__item {
+                &:first-child {
+                    @include sp {
+                        border-top: 1px solid #DDDDDD;
+                        padding-top: 20px;
+                    }
+                }
+
+                &:last-child {
+                    @include sp {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .c-side01 {
+        &__inner2 {
+            .c-title25 {
+                margin: 40px 0 17px;
+            }
+        }
+    }
+}

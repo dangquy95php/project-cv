@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="Group_66" data-name="Group 66" transform="translate(-770 -1695)">
+    <rect id="Rectangle_49" data-name="Rectangle 49" width="64" height="64" rx="32" transform="translate(770 1695)" fill="#13b5b1"/>
+    <g id="icon-download" transform="translate(786 1713.001)">
+      <path id="Path_59" data-name="Path 59" d="M3.2,51H28.8A3.2,3.2,0,0,0,32,47.8V38.2A3.2,3.2,0,0,0,28.8,35H26a.4.4,0,0,0-.4.4v2.4a.4.4,0,0,0,.4.4h2a.8.8,0,0,1,.8.8v8a.8.8,0,0,1-.8.8H4a.8.8,0,0,1-.8-.8V39a.8.8,0,0,1,.8-.8H6a.4.4,0,0,0,.4-.4V35.4A.4.4,0,0,0,6,35H3.2A3.2,3.2,0,0,0,0,38.2v9.6A3.2,3.2,0,0,0,3.2,51Z" transform="translate(0 -23)" fill="#fff"/>
+      <path id="Path_60" data-name="Path 60" d="M36.2,14.6H32.6a.4.4,0,0,1-.4-.4V5.4a.4.4,0,0,0-.4-.4h-4a.4.4,0,0,0-.4.4v8.8a.4.4,0,0,1-.4.4H23.4a.4.4,0,0,0-.32.64l6.4,8.533a.4.4,0,0,0,.64,0l6.4-8.533a.4.4,0,0,0-.32-.64Z" transform="translate(-13.8 -5)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

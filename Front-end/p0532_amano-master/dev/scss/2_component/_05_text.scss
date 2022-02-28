@@ -1,0 +1,451 @@
+/*------------------------------------------------------------
+text
+------------------------------------------------------------*/
+.c-text01 {
+    font-size: 1.6rem;
+    line-height: 28px;
+
+    @include sp {
+        font-size: 1.4rem;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &--mg {
+        margin: 20px 0 0;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-text02 {
+    font-size: 1.6rem;
+    line-height: 28px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+
+    @include sp {
+        font-size: 1.4rem;
+    }
+
+    &--custom {
+        line-height: 32px;
+        font-weight: 400;
+
+        @include sp {
+            line-height: 24px;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-text03 {
+    font-size: 1.8rem;
+    line-height: 1.9;
+    color: #333;
+    font-weight: 400;
+
+    @include sp {
+        font-size: 1.4rem;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-text04 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: $color1;
+    line-height: 1.4;
+
+    @include sp {
+        font-size: 1.4rem;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-text05 {
+    margin: 40px 0 33px;
+    border-bottom: 1px solid #000;
+    padding: 0 0 46px;
+
+    &__txt {
+        font-size: 3.4rem;
+        line-height: 45px;
+        background: url(/assets/img/common/icon/icon_Q.svg) no-repeat top 8px left;
+        background-size: 56px 70px;
+        padding-left: 77px;
+        min-height: 78px;
+        @include ffc;
+
+        @include sp {
+            font-size: 2rem;
+            line-height: 30px;
+            background-size: 45px auto;
+            padding-left: 60px;
+            min-height: 60px;
+        }
+    }
+
+    &__text {
+        font-size: 2rem;
+        line-height: 36px;
+        background: url(/assets/img/common/icon/a.svg) no-repeat top 6px left;
+        background-size: 56px 57px;
+        padding-left: 77px;
+        margin: 39px 0 0;
+        min-height: 72px;
+        @include ffc;
+
+        @include sp {
+            font-size: 1.4rem;
+            line-height: 24px;
+            background-size: 45px auto;
+            padding-left: 60px;
+            margin: 20px 0 0;
+            min-height: 54px;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-text06 {
+    border: 2px solid #2d3d45;
+
+    @include pc {
+        @include ffc;
+    }
+
+    @include sp {
+        @include fcc;
+    }
+
+    &__txt {
+        background: #2d3d45;
+        font-size: 2rem;
+        line-height: 71px;
+        color: #ffffff;
+        padding: 0 46px 0;
+        font-weight: bold;
+
+        @include sp {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__calendar {
+        font-size: 2.4rem;
+        background: url(/assets/img/common/icon/icon_date.svg) no-repeat center left;
+        background-size: 26px 24px;
+        padding-left: 43px;
+        margin: 0 0 0 38px;
+        font-weight: 500;
+
+        @include sp {
+            font-size: 1.8rem;
+            margin: 10px;
+        }
+    }
+
+    &__time {
+        font-size: 2.4rem;
+        background: url(/assets/img/common/icon/icon_time.svg) no-repeat center left;
+        background-size: 27px 27px;
+        padding-left: 41px;
+        margin: 0 0 0 53px;
+        font-weight: 500;
+
+        @include sp {
+            font-size: 1.8rem;
+            margin: 10px;
+        }
+    }
+
+    &__box {
+        @include pc {
+            @include f;
+        }
+
+        @include sp {
+            display: inline-block;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+
+.c-text07 {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.8;
+
+    @include sp {
+        font-size: 1.8rem;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-text08 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2rem;
+    border-radius: 5px;
+    background: #1c5472;
+    font-weight: 400;
+    padding: 3px 0 4px;
+
+    @include sp {
+        font-size: 1.6rem;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-text09 {
+    background: #f7f9fa;
+    font-size: 2rem;
+    @include montserrat;
+    text-align: center;
+    font-weight: bold;
+    color: #1c5472;
+    margin: 0 0 80px;
+    padding: 31px 0 28px;
+    letter-spacing: 1px;
+
+    @include sp {
+        margin: 0 0 40px;
+        font-size: 1.5rem;
+        padding: 20px 0 20px;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-text10 {
+    background: #ffffff;
+    padding: 40px;
+    padding-right: 70px;
+    position: relative;
+    overflow: hidden;
+
+    @include sp {
+        padding: 20px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 75px;
+        left: 77px;
+        bottom: 75px;
+        border-left: 6px dotted #cccccc;
+        width: 0;
+
+        @include sp {
+            border-width: 3px;
+            left: 50px;
+        }
+    }
+
+    dl {
+        @include ffc;
+        position: relative;
+        z-index: 1;
+    }
+
+    dt {
+        width: 110px;
+        position: relative;
+
+        @include sp {
+            width: 75px;
+
+            img {
+                width: 60px;
+            }
+        }
+    }
+
+    dd {
+        width: calc(100% - 110px);
+        font-size: 2rem;
+        line-height: 26px;
+        font-weight: bold;
+
+        @include sp {
+            font-size: 1.6rem;
+            line-height: 22px;
+        }
+    }
+
+    &__q {
+        dt {
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: #ffffff;
+                height: 1000px;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__a {
+        margin: 23px 0 0;
+        color: #0181c0;
+
+        dt {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                background: #ffffff;
+                height: 1000px;
+                z-index: -1;
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-text11 {
+    border-collapse: collapse;
+    width: 100%;
+
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+
+        @include max-w(414px){
+            margin: 0;
+        }
+    }
+
+    &__item{
+        padding: 0 10px;
+        box-sizing: border-box;
+        width: (100% / 4);
+        margin-bottom: 20px;
+
+        @include sp{
+            width: (100% / 3);
+            margin-bottom: 10px;
+        }
+
+        @include max-w(414px){
+            width: 100%;
+            padding: 0;
+        }
+
+        a{
+            text-decoration: none;
+        }
+    }
+
+    th,
+    td {
+        vertical-align: middle;
+        border: 2px solid #2d3d45;
+        background: #ffffff;
+    }
+
+    th {
+        background: #2d3d45;
+        color: #ffffff;
+        text-align: center;
+        width: 172px;
+        font-size: 1.8rem;
+
+        @include sp {
+            font-size: 1.6rem;
+            width: 120px;
+        }
+    }
+
+    td {
+        padding: 30px 40px 10px 40px;
+        
+        img{
+            width: 200px;
+            height: auto;
+        }
+
+        a,span{
+            display:inline-block;
+            margin-right:15px;
+        }
+
+
+        a{
+            text-decoration: none;
+        }
+
+        @include sp{
+            padding: 10px 20px;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-text12 {
+    background: #ffffff;
+    @include f;
+    padding: 48px 40px 48px 51px;
+
+    @include sp {
+        padding: 25px;
+    }
+
+    &__tit {
+        font-size: 2rem;
+        font-weight: bold;
+        padding-left: 40px;
+        position: relative;
+        width: 220px;
+
+        @include sp {
+            width: auto;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 17px;
+            left: 0;
+            width: 20px;
+            height: 2px;
+            background: #0181c0;
+        }
+    }
+
+    &__txt {
+        line-height: 28px;
+        font-size: 1.6rem;
+        width: calc(100% - 220px);
+
+        @include sp {
+            width: auto;
+            font-size: 1.4rem;
+        }
+    }
+}

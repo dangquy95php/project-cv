@@ -1,0 +1,109 @@
+///*------------------------------------------------------------
+//Anchor position
+//------------------------------------------------------------*/
+.u-bg01 {
+    background-color: #f4f4f4;
+}
+
+/*
+------------------------------------------------------------*/
+
+.u-bg02 {
+    background: url(/assets/img/common/bg02.png) repeat;
+}
+
+/*
+------------------------------------------------------------*/
+
+.u-bg03 {
+    background-color: $color3;
+}
+
+/*
+------------------------------------------------------------*/
+
+.u-bg04 {
+    background: #f4f4f4 url(/assets/img/common/bg_dotted.png) repeat top center;
+}
+/*
+------------------------------------------------------------*/
+
+.u-bg05 {
+    background: #fff url(/assets/img/common/bg_dotted.png) repeat top center;
+}
+
+/*
+------------------------------------------------------------*/
+
+.u-window {
+    a {
+        background: url(/assets/img/common/icon/icon8.svg) no-repeat top 7px right;
+        background-size: 10px 10px;
+        padding-right: 16px;
+    }
+}
+
+.u-window2 {
+    a {
+        background: url(/assets/img/common/icon/icon8_blue.svg) no-repeat top 7px right;
+        background-size: 10px 10px;
+        padding-right: 16px !important;
+        margin-right: 8px;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+
+.u-noentry {
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 50px 0;
+}
+
+/*
+------------------------------------------------------------*/
+
+.u-center {
+    text-align: center;
+}
+
+.u-blue {
+    color: #0181c0;
+}
+
+.u-hidden {
+    display: none !important;
+}
+
+/*
+------------------------------------------------------------*/
+
+.is-outlink {
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+    margin-right: 4px;
+    @include sp {
+        padding-right: 0;
+    }
+
+    &:after {
+        position: absolute;
+        content: '';
+        right: 0px;
+        width: 14px;
+        height: 14px;
+        top: 50%;
+        transform: translateY(-35%);
+        background: url(/assets/img/common/icon/icon8_blue.svg) no-repeat center;
+        background-size: 14px 14px;
+        @include sp {
+            position: relative;
+            display: inline-block;
+            top: 3px;
+            transform: none;
+            margin: 0 0 0 4px;
+        }
+    }
+}

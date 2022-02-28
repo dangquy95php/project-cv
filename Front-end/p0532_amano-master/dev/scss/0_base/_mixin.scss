@@ -1,0 +1,341 @@
+//============================================
+// サイト幅でセンタリング
+//============================================
+//@mixin center{
+//	width: $baseWidth;
+//	margin: 0 auto;
+//}
+
+//============================================
+// clearfix
+//============================================
+@mixin clear {
+  *zoom: 1;
+
+  &:after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
+//============================================
+// フォント
+//============================================
+@mixin mincyo() {
+  font-family: '游明朝', YuMincho, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'HG明朝E', 'ＭＳ Ｐ明朝',
+    'ＭＳ 明朝', serif;
+}
+
+@mixin mincho() {
+  font-family: '游明朝', YuMincho, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'HG明朝E', 'ＭＳ Ｐ明朝',
+    'ＭＳ 明朝', serif;
+}
+
+@font-face {
+  font-family: "DIN";
+  font-style: normal;
+  font-weight: 300;
+  src: local("DIN 2014"),
+    url("/assets/fonts/DIN2014-Light.woff") format("woff"),
+    url("/assets/fonts/DIN2014-Light.ttf") format("truetype"),
+    url('/assets/fonts/DIN2014-Light.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: "DIN";
+  font-style: normal;
+  font-weight: 400;
+  src: local("DIN 2014"),
+    url("/assets/fonts/DIN2014-ExtraLight.woff") format("woff"),
+    url("/assets/fonts/DIN2014-ExtraLight.ttf") format("truetype"),
+    url('/assets/fonts/DIN2014-ExtraLight.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: "DIN";
+  font-style: normal;
+  font-weight: 500;
+  src: local("DIN 2014"),
+    url("/assets/fonts/DIN2014-Regular.woff") format("woff"),
+    url("/assets/fonts/DIN2014-Regular.ttf") format("truetype"),
+    url('/assets/fonts/DIN2014-Regular.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: "DIN";
+  font-style: normal;
+  font-weight: 600;
+  src: local("DIN 2014"),
+    url("/assets/fonts/DIN2014-DemiBold.woff") format("woff"),
+    url("/assets/fonts/DIN2014-DemiBold.ttf") format("truetype"),
+    url('/assets/fonts/DIN2014-DemiBold.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: "DIN";
+  font-style: normal;
+  font-weight: 700;
+  src: local("DIN 2014"),
+    url("/assets/fonts/DIN2014-Bold.woff") format("woff"),
+    url("/assets/fonts/DIN2014-Bold.ttf") format("truetype"),
+    url('/assets/fonts/DIN2014-Bold.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: "DIN";
+  font-style: normal;
+  font-weight: 900;
+  src: local("DIN 2014"),
+    url("/assets/fonts/DIN2014-ExtraBold.woff") format("woff"),
+    url("/assets/fonts/DIN2014-ExtraBold.ttf") format("truetype"),
+    url('/assets/fonts/DIN2014-ExtraBold.eot?#iefix') format('embedded-opentype');
+}
+
+//============================================
+// breakpoint
+//============================================
+@mixin sp {
+  @media screen and (max-width: #{$breakpoint1}) {
+    @content;
+  }
+}
+
+@mixin pad {
+
+  // <- 1060px
+  @media screen and (max-width: #{$breakpoint3}) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media screen and (min-width: #{$breakpoint1+1}) {
+    @content;
+  }
+}
+
+@mixin min-w($breakpoint) {
+  @media screen and (min-width: #{$breakpoint}) {
+    @content;
+  }
+}
+
+@mixin max-w($breakpoint) {
+  @media screen and (max-width: #{$breakpoint}) {
+    @content;
+  }
+}
+
+@mixin ie {
+  @media all and (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @include pc {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin f {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin fs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@mixin fsc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin fc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@mixin fcc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin ffc {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@mixin fec {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin abf {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+  }
+}
+
+@mixin arrow1 {
+  .slick-slider {
+    position: relative;
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    z-index: 9;
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    appearance: none;
+
+    @include sp {
+      width: 35px;
+      height: 35px;
+    }
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 1px solid $color4;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.3s;
+      transform: scale(0.86);
+      transform-origin: center;
+
+      @include sp {
+        transform: scale(1);
+      }
+    }
+
+    &::before {
+      display: block;
+      content: '';
+      width: 10px;
+      height: 16px;
+      background: url(/assets/img/common/icon/icon_arrow02.svg) no-repeat center;
+      background-size: 10px 16px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @include sp {
+        width: 8px;
+        height: 12px;
+        background-size: 8px 12px;
+      }
+    }
+
+    @include hover {
+      &::after {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .slick-track {
+    display: flex !important;
+  }
+
+  .slick-slide {}
+
+  .slick-prev {
+    left: -90px;
+
+    @include sp {
+      left: -40px;
+    }
+  }
+
+  .slick-next {
+    right: -90px;
+
+    @include sp {
+      right: -40px;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+  }
+}
+
+@mixin trbl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+@mixin bf_hover {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 300ms;
+    border: solid #fff;
+    border-width: 0 0 0 0;
+  }
+}
+
+@mixin montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin fz($fz, $lh, $lt:null) {
+  font-size: $fz/10+rem;
+  line-height: $lh+px;
+
+  @if($lt) {
+    letter-spacing: $fz*$lt/1000+px;
+  }
+}
+
+@mixin fz2($fz, $lh, $lt:null) {
+  font-size: $fz/2/10+rem;
+  line-height: $lh/2+px;
+}
+
+@mixin roboto {
+  font-family: 'Roboto Condensed', sans-serif;
+}

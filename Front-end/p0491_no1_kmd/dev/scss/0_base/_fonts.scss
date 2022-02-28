@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+/*----------------------------------------------------
+Noto Sans CJK JP
+----------------------------------------------------*/
+@font-face {
+	font-family: "NotoSansCJKjp";
+	src: local('Noto Sans CJK JP Thin'), local('NotoSansCJKjp-Thin'),
+	url(../font/NotoSansCJKjp-Thin.woff2) format("woff2"),
+	url(../font/NotoSansCJKjp-Thin.woff) format("woff"),
+	url(../font/NotoSansCJKjp-Thin.otf) format("opentype");
+	font-style: normal;
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: "NotoSansCJKjp";
+	src: local('Noto Sans CJK JP Light'), local('NotoSansCJKjp-Light'),
+	url(../font/NotoSansCJKjp-Light.woff2) format("woff2"),
+	url(../font/NotoSansCJKjp-Light.woff) format("woff"),
+	url(../font/NotoSansCJKjp-Light.otf) format("opentype");
+	font-style: normal;
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: "NotoSansCJKjp";
+	src: local('Noto Sans CJK JP DemiLight'), local('NotoSansCJKjp-DemiLight'),
+	url(../font/NotoSansCJKjp-DemiLight.woff2) format("woff2"),
+	url(../font/NotoSansCJKjp-DemiLight.woff) format("woff"),
+	url(../font/NotoSansCJKjp-DemiLight.otf) format("opentype");
+	font-style: normal;
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: "NotoSansCJKjp";
+	src: local('Noto Sans CJK JP Regular'), local('NotoSansCJKjp-Regular'),
+	url(../font/NotoSansCJKjp-Regular.woff2) format("woff2"),
+	url(../font/NotoSansCJKjp-Regular.woff) format("woff"),
+	url(../font/NotoSansCJKjp-Regular.otf) format("opentype");
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "NotoSansCJKjp";
+	src: local('Noto Sans CJK JP Medium'), local('NotoSansCJKjp-Medium'),
+	url(../font/NotoSansCJKjp-Medium.woff2) format("woff2"),
+	url(../font/NotoSansCJKjp-Medium.woff) format("woff"),
+	url(../font/NotoSansCJKjp-Medium.otf) format("opentype");
+	font-style: normal;
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: "NotoSansCJKjp";
+	src: local('Noto Sans CJK JP Bold'), local('NotoSansCJKjp-Bold'),
+	url(../font/NotoSansCJKjp-Bold.woff2) format("woff2"),
+	url(../font/NotoSansCJKjp-Bold.woff) format("woff"),
+	url(../font/NotoSansCJKjp-Bold.otf) format("opentype");
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "NotoSansCJKjp";
+	src: local('Noto Sans CJK JP Black'), local('NotoSansCJKjp-Black'),
+	url(../font/NotoSansCJKjp-Black.woff2) format("woff2"),
+	url(../font/NotoSansCJKjp-Black.woff) format("woff"),
+	url(../font/NotoSansCJKjp-Black.otf) format("opentype");
+	font-style: normal;
+	font-weight: 900;
+}
+
+@font-face {
+	font-family: 'Noto Serif JP';
+	font-style: normal;
+	font-weight: 500;
+	src: url('../font/NotoSerifJP-Medium.eot');
+	src: local('Noto Serif JP Medium'), local('NotoSerifJP-Medium'),
+	url('../font/NotoSerifJP-Medium.eot?#iefix') format('embedded-opentype'),
+	url('../font/NotoSerifJP-Medium.woff2') format('woff2'),
+	url('../font/NotoSerifJP-Medium.woff') format('woff'),
+	url('../font/NotoSerifJP-Medium.svg#NotoSerifJP') format('svg');
+}
+
+@font-face {
+	font-family: "DidotLTStd-Bold";
+	src: url(../font/DidotLTStd-Bold.otf);
+}

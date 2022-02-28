@@ -1,0 +1,86 @@
+/*------------------------------------------------------------
+Page Product CLOUZA
+------------------------------------------------------------*/
+.p-clouza {
+    .c-mv5 .c-list28 {
+        @include pc {
+            margin: 20px 0 0 6px;
+        }
+    }
+
+    .c-title09 {
+        &__main {
+            line-height: 1.5;
+            padding-bottom: 37px;
+
+            @include sp {
+                padding: 0 0 20px;
+            }
+        }
+    }
+
+    &1 {
+        padding: 116px 0 120px;
+
+        @include sp {
+            padding: 50px 0;
+        }
+    }
+
+    &2 {
+        padding: 99px 0 80px;
+
+        @include sp {
+            padding: 50px 0;
+        }
+
+        .c-title09 {
+            margin: 0 0 80px;
+
+            @include sp {
+                margin: 0 0 40px;
+            }
+        }
+    }
+
+    &3 {
+        padding: 99px 0 0;
+
+        @include sp {
+            padding: 50px 0 0;
+        }
+
+        .c-title09 {
+            margin: 0 0 80px;
+
+            @include sp {
+                margin: 0 0 40px;
+            }
+        }
+
+        .c-btn06 {
+            width: 270px;
+            margin: 16px auto 0;
+
+            @include sp {
+                width: auto;
+                text-align: center;
+                margin: 20px auto 30px;
+            }
+
+            &__link {
+                @include sp {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .c-link {
+            margin: 100px 0 0;
+
+            @include sp {
+                margin: 50px 0 0;
+            }
+        }
+    }
+}

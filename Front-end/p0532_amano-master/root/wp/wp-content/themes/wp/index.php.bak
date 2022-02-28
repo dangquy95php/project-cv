@@ -1,0 +1,324 @@
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/header.php'); ?>
+
+<main class="p-top">
+
+
+    <?php ///////////////////////////////////////////////////////
+    // メイン画像
+    /////////////////////////////////////////////////////////////
+    ?>
+    <?php
+    $the_query_slider = new WP_Query(array(
+        'posts_per_page' => 5,
+        'post_type' => array('hr_news', 'gyomu_kaizen'),
+    )); ?>
+    <section class="p-top1 c-mv">
+        <div class="l-container">
+            <div class="c-mv1">
+                <?php if ($the_query_slider->have_posts()) : ?>
+                    <?php while ($the_query_slider->have_posts()) : $the_query_slider->the_post(); ?>
+                        <div class="c-mv1__item">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
+                                <?php if ($featured_img_url) : ?>
+                                    <img src=" <?php echo $featured_img_url ?>" alt="<?php the_title(); ?>">
+                                <?php else : ?>
+                                    <img src="/assets/img/common/default.png" alt="">
+                                    <?php /* <img src="/assets/img/top/mv1.jpg" alt="" /> */ ?>
+                                <?php endif; ?>
+                            </a>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
+            <?php if ($the_query_slider->have_posts()) : ?>
+                <div class="c-news3">
+                    <?php while ($the_query_slider->have_posts()) : $the_query_slider->the_post(); ?>
+                        <div class="c-news3__item">
+                            <div class="c-news3__heading">
+                                <p class="c-news3__tag<?php if ( 'hr_news' == get_post_type() ){ echo ' green'; } elseif('faq_column' == get_post_type()) { echo ' orange'; } ?>"><?php if ( 'hr_news' == get_post_type() ){ echo 'HR NEWS'; } elseif('gyomu_kaizen' == get_post_type()) { echo '業務改善ガイド'; }  elseif('faq_column' == get_post_type()) { echo 'なんでもQ&A'; } ?></p>
+                                <p class="c-new__time">
+                                    <?php mark_new_post(30, '<span class="c-new__tag">New</span>'); ?>
+                                    <span class="c-new__date2"><?php the_time('Y.m.d'); ?></span>
+                                </p>
+                            </div>
+                            <div class="c-news3__info">
+                                <p class="c-news3__txt"><a href="<?php the_permalink(); ?>">
+                                <?php characters_limit(get_the_title(), "65"); ?>
+                                </a></p>
+                                <?php $local_tags = get_the_terms($post->ID, 'hr_news_tag'); ?>
+                                <?php if ($local_tags) : ?>
+                                    <div class="c-news3__hastag">
+                                        <?php foreach ($local_tags as $tag) : ?>
+                                            <a href="<?php echo get_tag_link($tag); ?>" class="c-tag7"><?php echo $tag->name; ?></a>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <!-- End c-news3__item-->
+                    <?php endwhile; ?>
+                </div>
+            <?php endif; ?>
+        </div>
+    </section>
+
+    <?php ///////////////////////////////////////////////////////
+    // 話題テーマ
+    /////////////////////////////////////////////////////////////
+    ?>
+
+    <?php if ($userName == $userNameDisplayAll) { ?>
+
+    <section class="p-top2">
+        <div class="l-container">
+            <h2 class="c-title01 c-title01--blue">
+                <span class="c-title01__sm">今、知っておきたい！</span>
+                <span class="c-title01__big">人事・労務担当の話題テーマ</span>
+            </h2>
+            <ul class="c-list01">
+                <li class="c-list01__item">
+                    <a href="/tag/law/" class="c-list01__ttl">
+                        <span class="c-list01__sm">勤怠管理者が知っておきたい！</span>
+                        <span class="c-list01__big">労働関連の法律解説</span>
+                    </a>
+                </li>
+                <li class="c-list01__item">
+                    <a href="/tag/joseikin/" class="c-list01__ttl">
+                        <span class="c-list01__sm">自社で使えるのはどれ？</span>
+                        <span class="c-list01__big">助成金制度</span>
+                    </a>
+                </li>
+                <li class="c-list01__item">
+                    <a href="/tag/roumu-kanri/" class="c-list01__ttl">
+                        <span class="c-list01__sm">労務・人事が抑えておくべき</span>
+                        <span class="c-list01__big">労務管理のポイント</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <?php } ?>
+
+
+    <?php ///////////////////////////////////////////////////////
+    // 人事・労務の業務改善ガイド
+    /////////////////////////////////////////////////////////////
+    ?>
+    <?php
+    $the_query = new WP_Query(array(
+        'posts_per_page' => 7,
+        'post_type' => 'gyomu_kaizen',
+    ));
+    if ($the_query->have_posts()) : ?>
+        <section class="p-top4 u-bg05">
+            <div class="l-container">
+                <h2 class="c-title01 c-title01--blue">
+                    <span class="c-title01__sm">効率化・ノウハウから法律や助成金まで！</span>
+                    <span class="c-title01__big">人事・労務の業務改善ガイド</span>
+                </h2>
+                <ul class="c-list03 firstview">
+                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                        <?php component_loop_6("first"); ?>
+                    <?php endwhile; ?>
+                </ul>
+                <div class="c-btn01 c-btn01--blue">
+                    <?php component_btn_1("/gyomu_kaizen", "全ての記事をみる"); ?>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
+
+    <?php ///////////////////////////////////////////////////////
+    // 人事・労務なんでもQ＆A
+    /////////////////////////////////////////////////////////////
+    ?>
+    <?php
+    $the_query = new WP_Query(array(
+        'posts_per_page' => 6,
+        'post_type' => 'faq_column',
+    ));
+    if ($the_query->have_posts()) : ?>
+        <section class="p-top6">
+            <div class="l-container">
+                <h2 class="c-title01 c-title01--blue">
+                    <span class="c-title01__sm">様々な課題を抱えるご担当者様に向けて</span>
+                    <span class="c-title01__big">人事・労務なんでもQ＆A</span>
+                </h2>
+                <ul class="c-list33">
+                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                        <?php component_loop_2(); ?>
+                    <?php endwhile; ?>
+                </ul>
+                <div class="c-btn01 c-btn01--blue">
+                    <?php component_btn_1("/faq_column", "全ての記事をみる"); ?>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
+
+    <?php ///////////////////////////////////////////////////////
+    // HR News
+    /////////////////////////////////////////////////////////////
+    ?>
+    <?php
+    $the_query = new WP_Query(array(
+        'posts_per_page' => 7,
+        'post_type' => 'hr_news',
+    ));
+    if ($the_query->have_posts()) : ?>
+        <section class="p-top3">
+            <div class="l-container">
+                <h2 class="c-title01 c-title01--blue">
+                    <span class="c-title01__sm">人事・労務の最前線をコラムでお届け</span>
+                    <span class="c-title01__big">HR News</span>
+                </h2>
+                <ul class="c-list02 firstview">
+                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>                    
+                        <?php component_loop_1("first"); ?>
+                    <?php endwhile; ?>
+                </ul>
+               <div class="c-btn01 c-btn01--blue">
+                    <?php component_btn_1("/hr_news", "全ての記事をみる"); ?>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
+
+    <?php ///////////////////////////////////////////////////////
+    // 人事・労務のツールガイド
+    /////////////////////////////////////////////////////////////
+    ?>
+    <section class="p-top8">
+        <div class="l-container">
+            <h2 class="c-title01 c-title01--blue">
+                <span class="c-title01__sm">人事・労務の業務改善はツール選びから！</span>
+                <span class="c-title01__big">人事・労務のツールガイド</span>
+            </h2>
+            <div class="c-list36 c-list36--big">
+                <a href="https://www.tis.amano.co.jp/tool_guide/1379/" class="c-list36__item">
+                    <figure class="c-list36__img">
+                        <img src="/assets/img/common/icon/icon64.svg" alt="">
+                        <img src="/assets/img/common/icon/icon64_white.svg" alt="">
+                    </figure>
+                    <p class="c-list36__txt1"><span>01</span>基礎知識</p>
+                    <p class="c-list36__txt2">勤怠管理の意義と<br class="pc-only">重要性</p>
+                </a>
+                <a href="https://www.tis.amano.co.jp/tool_guide/1380/" class="c-list36__item">
+                    <figure class="c-list36__img">
+                        <img src="/assets/img/common/icon/icon65.svg" alt="">
+                        <img src="/assets/img/common/icon/icon65_white.svg" alt="">
+                    </figure>
+                    <p class="c-list36__txt1"><span>02</span>選び方</p>
+                    <p class="c-list36__txt2">勤怠管理システム<br class="pc-only">選び方の基本</p>
+                </a>
+                <a href="https://www.tis.amano.co.jp/tool_guide/1381/" class="c-list36__item">
+                    <figure class="c-list36__img">
+                        <img src="/assets/img/common/icon/icon66.svg" alt="">
+                        <img src="/assets/img/common/icon/icon66_white.svg" alt="">
+                    </figure>
+                    <p class="c-list36__txt1"><span>03</span>実践編</p>
+                    <p class="c-list36__txt2">勤怠管理システム<br class="pc-only">導入のポイント</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="p-top5">
+        <div class="l-container">
+            <?php if ($userName == $userNameDisplayAll) { ?>
+                <h2 class="c-title01 c-title01--blue">
+                    <span class="c-title01__sm">人事・労務の業務改善はツール選びから！</span>
+                    <span class="c-title01__big">人事・労務のツールガイド</span>
+                </h2>
+                <div class="c-btn03">
+                    <a href="/tool_guide" class="c-btn03__link"><span class="c-btn03__txt">勤怠管理システムまるわかりガイド</span></a>
+                </div>
+            <?php } ?>
+            <h3 class="c-title03">
+                <span class="c-title03__sm">勤怠管理なら<br class="sp-only">AMANOにおまかせください</span>
+                <span class="c-title03__big">製品のご紹介</span>
+            </h3>
+
+            <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/block09.php'); ?>
+
+            <ul class="c-list09">
+                <li class="c-list09__item">
+                    <a href="#" class="c-list09__txt">打刻機器の製品情報</a>
+                </li>
+                <li class="c-list09__item">
+                    <a href="#" class="c-list09__txt">入退室管理の製品情報</a>
+                </li>
+                <li class="c-list09__item">
+                    <a href="#" class="c-list09__txt">ICカードの製品情報</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <?php ///////////////////////////////////////////////////////
+    // 人事・労務の注目用語
+    /////////////////////////////////////////////////////////////
+    ?>
+    <?php
+    $the_query = new WP_Query(array(
+        'posts_per_page' => 6,
+        'post_type' => 'glossary',
+    ));
+
+    if ($the_query->have_posts()) : ?>
+        <section class="p-top7">
+            <div class="l-container">
+                <h2 class="c-title01 c-title01--blue">
+                    <span class="c-title01__sm">スムーズなお仕事のために知っておきたい</span>
+                    <span class="c-title01__big">人事・労務の用語集</span>
+                </h2>
+                <ul class="c-list05">
+                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                        <?php component_loop_3(); ?>
+                    <?php endwhile; ?>
+                </ul>
+                <div class="c-btn01 c-btn01--blue">
+                    <?php component_btn_1("/glossary", "全ての記事をみる"); ?>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
+
+    <?php ///////////////////////////////////////////////////////
+    // セミナー
+    /////////////////////////////////////////////////////////////
+    ?>
+
+    <?php
+    $the_query = new WP_Query(array(
+        'posts_per_page' => 6,
+        'post_type' => 'seminar',
+    ));
+    $i = 0;
+    if ($the_query->have_posts()) : ?>
+    
+        <section class="c-block01">
+            <div class="l-container">
+                <h2 class="c-title01 c-title01--blue">
+                    <span class="c-title01__sm">ご担当者様の業務改善をサポートする</span>
+                    <span class="c-title01__big">セミナーのご案内</span>
+                </h2>
+                <p class="c-text01 c-text01--center">「毎月の勤怠処理を効率化したい」「ツール導入が不安」そんなお悩みを解決するセミナーを開催中です。<br>お気軽にご参加ください。</p>
+                <ul class="c-list06 c-list06--gray jsSlide06">
+                    <?php while ($the_query->have_posts()) : $the_query->the_post(); $i++; ?>
+                        <?php component_loop_4(); ?>
+                    <?php endwhile; ?>
+                </ul>
+                <?php if ($i > 3) { ?>
+                    <div class="c-btn01 c-btn01--blue">
+                        <?php component_btn_1("/seminar", "セミナーの一覧をみる"); ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </section><!-- End c-block01-->
+    <?php endif; ?>
+
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/download-blue.php'); ?>
+</main>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/footer.php'); ?>

@@ -1,0 +1,2173 @@
+.page-seminar_2017{
+    header{
+        display: none;
+    }
+
+    footer{
+        display: none;
+    }
+}
+.p-seminar_2017{
+    background: #F8F8F8;
+    font-size: 2rem;
+    color: #333333;
+    font-weight: bold;
+
+    .l-cont{
+        max-width: 980px;
+        margin: 0 auto;
+
+        @include sp{
+            max-width: 100%;
+            padding: 0 20px;
+        }
+    }
+
+    .db-line{
+        position: relative;
+        background: url(/assets/img/seminar_2017/icon-dotted.svg) repeat-x left bottom;
+        background-size: 14px 4px;
+        padding: 0 0 8px;
+    
+        // @include sp{
+        //     color: #13C3C3;
+        // }
+
+        // &::after{
+        //     content: "";
+        //     position: absolute;
+        //     left: 2px;
+        //     width: 100%;
+        //     height: 4px;
+        //     @include sp{
+        //         display: none;
+        //     }
+        // }
+
+        &.yellow {
+            background: url('/assets/img/seminar_2017/icon_line-03.svg') repeat-x left bottom;
+            background-size: 14px 4px;
+            padding: 0 0 11px;
+            @include sp {
+                padding: 0 0 5px;
+            }
+        }
+    }
+
+    .c-text001{   
+        position: relative;
+        font-size: 2.4rem;
+        line-height: 42px;
+        padding-left: 64px;
+
+        @include sp{
+            font-size: 2rem;
+            line-height: normal;
+            padding-left: 50px;
+        }
+
+        &::before{
+            content: '0'counter(number);
+            position: absolute;
+            top: 7px;
+            left: 0;
+            font-size: 3rem;
+            line-height: 1;
+            color: #DBAE43;
+
+            @include sp{
+                font-size: 2.5rem;
+                top: 2px;
+            }
+        }
+
+        &.style01{
+            font-size: 1.8rem;
+            padding-left: 42px;
+            line-height: 22.5px;
+
+            &::before{
+                top: 53%;
+                transform: translateY(-50%);
+                font-size: 2.4rem;
+            }
+        }
+
+        &.style02{
+            font-size: 2rem;
+            padding-left: 55px;
+
+            &::before{
+                top: 50%;
+                color: #13C3C3;
+                transform: translateY(-50%);
+            }
+        }
+
+        &.style03{
+            font-size: 2rem;
+            padding: 0 50px;
+            display: block;
+            color: #333333;
+            text-decoration: none;
+
+            &::before{
+                content: 'Q.';
+                top: 20px;
+                color: #13C3C3;
+                transform: translateY(-50%);
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+                background: url('/assets/img/seminar_2017/icon_logout.svg') no-repeat center;
+            }
+        }
+    }
+
+    .c-title001{
+        position: relative;
+        padding-bottom: 28px;
+        text-align: center;
+        margin-bottom: 60px;
+
+        @include sp{
+            padding-bottom: 14px;
+            margin-bottom: 30px;
+        }
+        
+        span{
+            display: block;
+        }
+
+        &__01{
+            color: #13C3C3;
+
+            & + .c-title001__02{
+                margin-top: 4px;
+            }
+        }
+       
+        &__02{
+            font-size: 4.4rem;
+            line-height: 60px;
+            
+            color: #3F3D56;
+
+            @include sp{
+                font-size: 2.2rem;
+                line-height: 30px;
+            }
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 4px;
+            background: #13C3C3;
+        }
+
+        &.style01{
+            padding-bottom: 19px;
+            .c-title001__02{
+                font-size: 2.8rem;
+                line-height: normal;
+            }
+        }
+    }
+
+    .c-title002{
+        margin-bottom: 40px;
+        text-align: center;
+        span{
+            display: block;
+        }
+        &__01{
+            color: #1C5472;
+            
+            & + .c-title002__02{
+                margin-top: 18px;
+            }
+        }
+
+        &__02{
+            font-size: 4.4rem;
+            line-height: 1;
+            color: #3F3D56;
+        }
+    }
+
+    .c-list001{
+        counter-reset: number;
+        &__item{
+            counter-increment: number;
+            padding: 30px 0 40px;
+            position: relative;
+            border-bottom: 1px solid #EFF2EF;
+
+            @include sp{
+                padding: 20px 0 !important;
+            }
+
+            .c-text001{
+                &::before{
+                    font-family: 'Roboto';
+                }
+
+                & + .c-subitem{
+                    margin-top: 22px;
+                }
+            }
+
+            .c-subitem{
+                margin-left: 70px;
+
+                &:not(:last-child){
+                    margin-bottom: 24px;
+                }
+
+                @include sp{
+                    margin-left: 0;
+                }
+            }
+
+            &:nth-child(1){
+                padding-top: 0;
+                padding-bottom: 35px;
+
+                @include sp{
+                    padding-top: 0 !important;
+                }
+                
+                .c-text001{
+                    font-size: 2.8rem;
+
+                    @include sp{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .c-list002{
+        counter-reset: number;
+        background: #fff;
+        border-radius: 15px;
+        padding: 60px;
+        box-shadow: 3px 3px 20px rgba($color: #000000, $alpha: 0.1);
+
+        @include sp{
+            padding: 40px 20px;
+        }
+
+        &__item{
+            counter-increment: number;
+            position: relative;
+            max-width: 456px;
+            margin-left: auto;
+            margin-right: auto;
+            &:not(:last-child){
+                margin-bottom: 18px;
+
+                @include sp{
+                    margin-bottom: 20px;
+                }
+            }
+
+            @include sp{
+                max-width: 100%;
+            }
+        }
+    }
+
+    .c-list003{
+        counter-reset: number;
+        background: #fff;
+        border-radius: 15px;
+        padding: 60px;
+        box-shadow: 3px 3px 20px rgba($color: #000000, $alpha: 0.1);
+
+        @include sp{
+            padding: 40px 20px;
+        }
+
+        &__item{
+            counter-increment: number;
+            position: relative;
+            padding: 20px 0 18px;
+
+            @include sp{
+                padding: 20px 0;
+            }
+
+            &:nth-child(1){
+                padding-top: 0;
+            }
+
+            &:last-child{
+                padding-bottom: 0;
+            }
+
+            &:not(:last-child){
+                border-bottom: 1px solid #EFF2EF;
+            }
+        }
+    }
+
+    .c-list004{
+        display: flex;
+        flex-wrap: wrap;
+
+        &__item{
+            width: calc((100% - 80px) / 3);
+            margin-right: 40px;
+
+            @include sp{
+                width: 100%;
+                padding: 0;
+                margin-right: 0;
+                &:not(:last-child){
+                    margin-bottom: 10px;
+                }
+            }
+
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .c-list005{
+        display: flex;
+        flex-wrap: wrap;
+        &__item{
+            width: calc((100% - 80px) / 4);
+            margin: 0 0 0 calc(79px / 3);
+            @include sp{
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            &:nth-child(4n + 1) {
+                margin: 0;
+                @include sp {
+                    margin: 0 0 30px;
+                }
+            }
+
+            &:last-child {
+                @include sp {
+                    margin: 0;
+                }
+            }
+        }
+
+        .c-bl002 {
+            max-width: 100%;
+        }
+    }
+
+
+    .c-btn001{
+
+        &__inner{
+            background: #13C3C3;
+            box-shadow: 3px 3px 20px rgba($color: #031515, $alpha: 0.3);
+            border-radius: 52px;
+            width: 572px;
+            margin: 0 auto;
+            transition: none;
+
+            @include sp{
+                width: 100%;
+            }
+        }
+
+        a{
+            position: relative;
+            display: block;
+            width: 470px;
+            background: #13C3C3;
+            border-radius: 52px;
+            font-size: 2.4rem;
+            line-height: 34px;
+            color: #fff;
+            padding: 35px 50px;
+            text-decoration: none;
+            border: 1px solid #00C7C7;
+            box-shadow: -3px -3px 20px rgba($color: #9FFFFF, $alpha: 0.7);
+            letter-spacing: 0;
+            margin: 0 auto;
+            transition: none;
+
+            @include sp{
+                font-size: 2rem;
+                line-height: 30px;
+                padding: 24px 0 18px;
+                width: 100%;
+
+                span{
+                    position: relative;
+                    left: 39px;
+                }
+            }
+
+            @media screen and (max-width:374px){
+                font-size: 1.4rem;
+                line-height: 20px;
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 40px;
+                width: 64px;
+                height: 64px;
+                transform: translateY(-50%);
+                background: url('/assets/img/seminar_2017/icon_arrow-02.svg') no-repeat center;
+
+                @include sp{
+                    right: 21px;
+                }
+
+                @media screen and (max-width:374px){
+                    width: 50px;
+                    height: 50px;
+                    background-size: 50px !important;
+                }
+            }
+        }
+
+        &.style01{
+            a{
+                background: #EFF2EF;
+                border: 1px solid #fff;
+                color: #DBAE43;
+                box-shadow: -3px -3px 20px rgba($color: #fff, $alpha: 1.0);
+
+
+                &::after{
+                    background: url('/assets/img/seminar_2017/icon_arrow-02_2.svg') no-repeat center;
+                }
+            }
+        }
+
+        @include hover{
+            .c-btn001__inner{
+                box-shadow: 3px 3px 10px rgba($color: #031515, $alpha: 0.3);
+            }
+            a{
+                opacity: 1;
+            }
+        }
+    }
+
+    .c-btn002{
+        a{
+            display: block;
+            border: 1px solid #fff;
+            border-radius: 40px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 6px 33px 8px 20px;
+            position: relative;
+            text-decoration: none;
+            color: #fff;
+
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 19px;
+                width: 10px;
+                height: 10px;
+                transform: translateY(-50%);
+                background: url('/assets/img/seminar_2017/icon_tabs.svg') no-repeat center;
+                transition: .3s ease-in-out;
+            }
+
+            @include hover{
+                color: #1C5472;
+                background: #fff;
+                opacity: 1;
+                &::after{
+                    background: url('/assets/img/seminar_2017/icon_tabs01.svg') no-repeat center;
+                }
+            }
+        }
+    }
+
+
+    .c-bl001{
+        position: relative;
+        max-width: 300px;
+
+        @include sp{
+            max-width: 100%;
+            height: auto;
+        }
+
+        &__content{
+            background: #fff;
+            border-radius: 15px;
+            padding: 50px 20px;
+            font-size: 2rem;
+            line-height: 2.5;
+            text-align: center;
+            @include sp{
+                font-size: 1.8rem;
+                line-height: 40px;
+                height: auto;
+                padding: 25px 20px !important;
+            }
+
+            @media screen and (max-width:374px) {
+                font-size: 1.6rem;
+            }
+
+            span {
+                background: url('/assets/img/seminar_2017/icon-dotted.svg') repeat-x left bottom;
+                background-size: 14px 4px;
+                padding: 0 0 3px;
+            }
+        }
+    }
+
+
+    .c-bl002{
+        position: relative;
+        max-width: 196px;
+        
+        @include sp{
+            max-width: 100%;
+        }
+
+        &__img{
+            & + .c-bl002__content{
+                margin-top: 20px;
+            }
+
+            @include sp{
+                text-align: center;
+            }
+        }
+
+        &__content{
+            line-height: 30px;
+            text-align: center;
+        }
+    }
+
+    .c-bl003{
+        border-radius: 15px;
+        overflow: hidden;
+
+        &__inner {
+            display: flex;
+            text-decoration: none;
+            @include sp{
+                display: block;
+            }
+        }
+
+        &__img{
+            width: 461px;
+
+            @include sp{
+                width: 100%;
+            }
+        }
+
+        &__content{
+            width: 519px;
+            position: relative;
+            background: #265B7F;
+            font-size: 2.4rem;
+            line-height: 36px;
+            color: #fff;
+            display: flex;
+            padding: 0 90px 0 60px;
+            align-items: center;
+
+            @include sp{
+                width: 100%;
+                padding: 40px 60px 40px 20px;
+                font-size: 2rem;
+
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 40px;
+                width: 32px;
+                height: 20px;
+                transform: translateY(-50%);
+                background: url('/assets/img/seminar_2017/icon_arrow-04.svg') no-repeat center;
+
+                @include sp{
+                    right: 20px;
+                }
+            }
+        }
+    }
+
+    .c-bl004{
+        background: #fff;
+        padding: 35px;
+        box-shadow: 6px 6px 20px rgba($color: #000000, $alpha: 0.16);
+        display: flex;
+
+        @include sp{
+            padding: 30px 20px;
+            flex-wrap: wrap;
+        }
+    
+        &__img{
+            width: 158px;
+
+            @include sp{
+                width: 100%;
+                order: 1;
+                text-align: center;
+            }
+        }
+
+        &__content{
+            width: calc(100% - 158px);
+            padding-right: 40px;
+
+            @include sp{
+                width: 100%;
+                padding-right: 0;
+                order: 2;
+                margin-top: 40px;
+            }
+        }
+
+        &__text01{
+            position: relative;
+            font-size: 2rem;
+            color: #DBAE43;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            &::after{
+                content: "";
+                position: relative;
+                display: block;
+                width: calc(100% - 100px);
+                height: 2px;
+                background: #DBAE43;
+                margin-left: 18px;
+            }
+        }
+
+        &__text02{
+            font-size: 2rem;
+            line-height: 1;
+            display: flex;
+            align-items: flex-end;
+            color: #111111;
+            margin-bottom: 5px;
+
+            @include sp{
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            &-1{
+                font-size: 1.4rem;
+                
+                @include sp{
+                    display: block;
+                    margin-top: 5px;
+                    text-indent: -10px;
+                }
+            }
+        }
+
+        &__text03{
+            font-size: 1.4rem;
+            line-height: 21px;
+            font-weight: 400;
+            color: #555555;
+            margin-bottom: 20px;
+        }
+
+        &__text04{
+            font-size: 1.6rem;
+            line-height: 28px;
+            font-weight: 400;
+            color: #111111;
+
+            @include sp{
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .c-step001{
+        display: flex;
+        counter-reset: number;
+
+        @include sp{
+            display: block;
+        }
+
+        &__item{
+            background: #fff;
+            position: relative;
+            border: 1px solid #EFF2EF;
+            padding: 26px 0 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            counter-increment: number;
+
+            @include sp{
+                width: 100% !important;
+                padding: 20px;
+                justify-content: flex-start;
+
+                .c-text001{
+                    left: 0 !important;
+                }
+            }
+
+            &:nth-child(1){
+                width: 310px;
+                .c-text001{
+                    left: 5px;
+                }
+            }
+
+            &:nth-child(2){
+                width: 308px;
+
+                .c-text001{
+                    left: 14px;
+                }
+            }
+
+            &:nth-child(3){
+                width: 364px;
+
+                .c-text001{
+                    left: 11px;
+                }
+            }
+
+            &:not(:last-child){
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: -28px;
+                    width: 28px;
+                    height: 100%;
+                    background: url('/assets/img/seminar_2017/icon_arrow-03.svg') no-repeat center;
+                    z-index: 1;
+
+                    @include sp{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .c-table001{
+        background: #fff;
+        border-radius: 15px;
+        padding: 60px;
+        box-shadow: -3px -3px 20px rgba($color: #000000, $alpha: 0.1);
+        @include sp{
+            padding: 40px 20px;
+        }
+        &__row{
+            display: flex;
+            border-bottom: 1px solid #D0DBD0;
+
+            @include sp{
+                display: block;
+            }
+
+            &:nth-child(1){
+                border-top: 1px solid #D0DBD0;
+            }
+
+            &:nth-child(2){
+                .c-table001__column{
+                    padding: 20px 20px 22px;
+                }
+            }
+
+            &:nth-child(4){
+                .c-table001__column{
+                    padding: 20px 20px 22px;
+                }
+            }
+        }
+
+        &__column{
+            padding: 20px;
+            font-size: 1.4rem;
+            line-height: 20px;
+
+            @include sp{
+                width: 100% !important;
+                padding: 10px 20px !important;
+            }
+
+            &:nth-child(1){
+                background: #DFE8DF;
+                width: 200px;
+            }
+
+            &:nth-child(2),
+            &:nth-child(3){
+                font-weight: 400;
+            }
+
+            &:nth-child(2){
+                background: #EFF2EF;
+                width: 190px;
+            }
+
+            &:nth-child(3){
+                background: #fff;
+                width: calc(100% - 390px);
+            }
+        }
+    }
+
+    .c-info001{
+        display: flex;
+        align-items: center;
+        color: #fff;
+
+        @include sp{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__01{
+            width: 118px;
+            height: 118px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            font-size: 2.7rem;
+            line-height: 34px;
+
+            @include sp{
+                width: 90px;
+                height: 90px;
+                font-size: 2.2rem;
+                line-height: 28px;
+                position: relative;
+                left: -30px;
+            }
+
+            @media screen and (max-width:374px){
+                width: 70px;
+                height: 70px;
+                font-size: 1.4rem;
+                line-height: 20px;
+                letter-spacing: 0.05em;
+                left: -20px;
+            }
+        }
+
+        &__02{
+            font-family: 'DIN';
+            line-height: 1;
+            width: 228px;
+            margin: 0 40px 0 20px;
+
+            @include sp{
+                margin: 0 0 0 20px;
+                width: auto;
+                position: relative;
+                left: -30px;
+            }
+
+            @media screen and (max-width:374px){
+                left: -20px;
+            }
+        }
+
+        &__text01{
+            font-size: 2.4rem;
+
+            @media screen and (max-width:374px){
+                font-size: 2rem;
+            }
+        }
+
+        &__text02{
+            font-size: 3rem;
+            margin: 6px 0 9px;
+            position: relative;
+
+            @media screen and (max-width:374px){
+                font-size: 2.5rem;
+            }
+
+            .txt{
+                position: relative;
+                left: -10px;
+
+                @include sp{
+                    position: absolute;
+                    bottom: 3px;
+                    right: -80px;
+                    left: inherit;
+                }
+
+                @media screen and (max-width:374px){
+                    font-size: 2.5rem;
+                    right: -65px;
+                }
+            }
+        }
+
+        &__text03{
+            font-size: 2.4rem;
+            letter-spacing: 0.05em;
+
+            @media screen and (max-width:374px){
+                font-size: 2rem;
+            }
+        }
+
+        &__number{
+            font-size: 4.8rem;
+
+            @media screen and (max-width:374px){
+                font-size: 4rem;
+            }
+        }
+
+        .c-btn001{
+            position: relative;
+            left: 4px;
+
+            @include sp{
+                width: 100%;
+                left: 0;
+                margin-top: 23px;
+            }
+        }
+    }
+
+    .c-subitem{
+
+        &:not(:last-child){
+            margin-bottom: 24px;
+        }
+
+        &__title{
+            position: relative;
+            font-size: 2rem;
+            color: #545367;
+            padding-left: 25px;
+
+            @include sp{
+                font-size: 1.6rem;
+            }
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: 16px;
+                left: 0;
+                width: 10px;
+                height: 4px;
+                background: #DBAE43;
+                border-radius: 10px;
+
+                @include sp{
+                    top: 12px;
+                }
+            }
+        }
+
+        &__text{
+            position: relative;
+            font-size: 1.6rem;
+            color: #545367;
+            font-weight: 400;
+            padding-left: 15px;
+            line-height: 27px;
+            margin-left: 28px;
+
+            @include sp{
+                font-size: 1.4rem;
+            }
+
+            &.none{
+                padding-left: 0;
+                margin-left: 25px;
+                &::before{
+                    display: none;
+                }
+            }
+
+            &:not(:last-child){
+                margin-bottom: 5px;
+            }
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: 13.5px;
+                left: 0;
+                width: 5px;
+                height: 5px;
+                background: #545367;
+                border-radius: 50%;
+
+                @include sp{
+                    top: 11px;
+                }
+            }
+        }
+    }
+
+    .c-slide{
+        position: relative;
+        margin: 73px 0;
+        background: #fff;
+
+        @include sp{
+            margin: 0;
+            background: #EFF2EF;
+            .l-cont{
+                padding: 0;
+            }
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: -75px;
+            left: 0;
+            width: 100%;
+            height: 316px;
+            background: url('/assets/img/seminar_2017/ellipse.svg') no-repeat center;
+            background-size: cover;
+
+            @include sp{
+                display: none;
+            }
+        }
+
+        &__img{
+            position: absolute;
+            top: 0;
+            right: -150px;
+            width: 100%;
+            max-width: 1189px;
+            z-index: 1;
+            border-radius: 63px;
+            overflow: hidden;
+
+            @include sp{
+                max-width: 100%;
+                right: 0;
+                border-radius: 0;
+                top: 55px;
+                display: none;
+            }
+        }
+
+        &__content{
+            position: relative;
+            z-index: 2;
+            margin-left: -156px;
+
+            @include sp{
+                margin-left: 0;
+                padding: 34px 10px 0 30px;
+            }
+        }
+
+        &__text01{
+            max-width: 342px;
+            font-size: 2.2rem;
+            color: #DBAE43;
+            background: #fff;
+            border: 1px solid #DBAE43;
+            border-radius: 31px;
+            box-sizing: border-box;
+            padding: 4px 37px 8px;
+            position: relative;
+            margin: 0 0 0 -8px;
+            @include sp{
+                border-width: 2px;
+                font-size: 1.4rem;
+                max-width: 196px;
+                padding: 3px 10px 4px 45px;
+                margin: 0 0 0 25px;
+            }
+
+            .icon {
+                width: 113px;
+                height: 96px;
+                position: absolute;
+                top: 50%;
+                right: -39px;
+                transform: translate(0, -50%);
+                @include sp {
+                    width: 79px;
+                    height: 64px;
+                    right: auto;
+                    left: -43px;
+                }
+            }
+        }
+
+        &__text02{
+            position: relative;
+            font-size: 2rem;
+            letter-spacing: 0.9px;
+            margin: 21px 0 0;
+            @include sp{
+                font-size: 1.6rem;
+                margin: 13px 0 0;
+            }
+
+            @media screen and (max-width:374px){
+                font-size: 1.4rem;
+            }
+
+            span {
+                background: url('/assets/img/seminar_2017/icon-dotted.svg') repeat-x left bottom;
+                background-size: 14px 4px;
+                padding: 0 0 8px;
+            }
+        }
+
+        &__title{
+            font-size: 5.8rem;
+            line-height: 1.25;
+            color: #3F3D56;
+            font-feature-settings: "palt";
+            margin: 55px 0 0;
+            @include sp{
+                font-size: 3.6rem;
+                line-height: 1.65;
+                margin: 40px 0 0;
+            }
+
+            @media screen and (max-width:374px){
+                font-size: 3rem;
+            }
+
+            &01,&02 {
+                display: block;
+            }
+
+            &01{
+                letter-spacing: 3px;
+                @include sp {
+                    letter-spacing: 4px;
+                }
+            }
+
+            &02{
+                @include sp {
+                    font-size: 3.8rem;
+                    line-height: 1.2;
+                }
+                span {
+                    display: inline-block;
+                    background: #545367;
+                    border-radius: 4px;
+                    color: #fff;
+                    line-height: 1;
+                    letter-spacing: 8px;
+                    padding: 0 3px 5px;
+                    @include sp {
+                        letter-spacing: 5px;
+                    }
+                }
+            }
+        }
+
+        &__person{
+            display: flex;
+            align-items: center;
+            margin: 64px 0 0;
+            @include sp {
+                margin: 42px 0 0;
+            }
+        }
+
+        &__avatar{
+            @include sp{
+                width: 67px;
+            }
+        }
+
+        &__info{
+            margin-left: 28px;
+            padding: 0 20px;
+            border-left: 2px solid #EFF2EF;
+
+            @include sp{
+                width: calc(100% - 67px);
+                border-left: none;
+                margin-left: 0;
+                padding: 0 0 0 23px;
+            }
+        }
+
+        &__name{
+            font-size: 2.2rem;
+            margin-right: 8px;
+            display: inline;
+
+            @include sp{
+                font-size: 1.8rem;
+                margin-right: 11px;
+            }
+        }
+
+        &__job{
+            display: inline;
+            font-size: 1.6rem;
+            position: relative;
+            top: 1px;
+
+            @include sp{
+                font-size: 1.3rem;
+                top: 0;
+            }
+        }
+
+        &__description{
+            font-size: 1.2rem;
+            line-height: 21px;
+            margin-top: 6px;
+
+            @include sp{
+                font-size: 1rem;
+                line-height: 17px;
+                margin-top: 4px;
+            }
+        }
+
+        &__block{
+            position: relative;
+            z-index: 2;
+            max-width: 1140px;
+            margin: 30px auto 0;
+
+            @include sp{
+                max-width: 100%;
+                margin: 0;
+                padding: 110px 10px 0;
+            }
+
+            &::before {
+                @include sp {
+                    content: '';
+                    width: 620px;
+                    height: 271px;
+                    background: url('/assets/img/seminar_2017/img02_sp.png') no-repeat top left -17px;
+                    background-size: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            &__inner {
+                background: #13C3C3;
+                border-radius: 15px;
+                padding: 53px 80px;
+                @include sp {
+                    position: relative;
+                    z-index: 2;
+                    padding: 34px 20px 30px;
+                }
+            }
+        }
+
+        &__link{
+            position: relative;
+            z-index: 2;
+            margin-top: 13px;
+            a{
+                display: block;
+                text-decoration: underline;
+                text-align: center;
+                color: #13C3C3;
+                font-size: 1.6rem;
+                font-weight: 400;
+            }
+
+            @include sp{
+                padding: 24px 0 40px;
+                background: #F8F8F8;
+                margin-top: 5px;
+                a{
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+
+    .section01{
+        max-width: 1070px;
+        margin: 0 auto;
+        padding: 49px 0 65px;
+
+        @include sp{
+            padding: 60px 0 0;
+        }
+
+        .c-title001{
+            margin-bottom: -40px;
+
+            @include sp{
+                margin-bottom: 40px;
+            }
+        }
+
+        &__inner{
+            background: url('/assets/img/seminar_2017/img15.png') no-repeat center;
+            height: 643px;
+            padding: 160px 45px 0;
+            position: relative;
+
+            @include sp{
+                background: none;
+                padding: 176px 30px 120px;
+                height: auto;
+            }
+        }
+
+        &__img01,
+        &__img02{
+            position: absolute;
+            z-index: 1;
+        }
+
+        &__img01{
+            top: -25px;
+            left: 0;
+            height: 100%;
+
+            img{
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__img02{
+            bottom: 0;
+            right: -40px;
+            max-width: 317px;
+        }
+
+        .c-list004{
+            @include sp{
+                position: relative;
+                z-index: 2;
+            }
+            &__item{
+
+                &:nth-child(1){
+                    margin-top: 40px;
+
+                    @include sp{
+                        margin-top: 0;
+                    }
+
+                    .c-bl001__content{
+                        padding: 39px 20px;
+                    }
+                }
+
+                &:nth-child(2){
+                    .c-bl001__content{
+                        padding: 50px 20px 70px;
+                    }
+                }
+
+                &:nth-child(3){
+                   margin-top: 132px;
+
+                   @include sp{
+                       margin-top: 0;
+                   }
+
+                    .c-bl001__content{
+                        padding: 35px 20px;
+
+                        @include sp{
+                            padding: 40px 20px 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section02{
+        padding: 65px 0 214px;
+        position: relative;
+        margin-top: -65px;
+
+        @include sp{
+            padding: 60px 0;
+            margin-top: 0;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: -169px;
+            left: 0;
+            width: 100%;
+            height: 316px;
+            background: url('/assets/img/seminar_2017/ellipse.svg') no-repeat center;
+            background-size: cover;
+        }
+
+        .c-title001{
+            margin-bottom: 40px;
+        }
+
+        &__inner{
+            position: relative;
+        }
+
+        &__list{
+            position: relative;
+            background: #fff;
+            border-radius: 15px;
+            padding: 80px;
+            box-shadow: 3px 3px 20px rgba($color: #000000, $alpha: 0.1);
+            z-index: 2;
+
+            @include sp{
+                padding: 40px 20px;
+            }
+        }
+
+        &__img01,
+        &__img02,
+        &__img03{
+            position: absolute;
+            z-index: 3;
+
+            @include sp{
+                display: none;
+            }
+        }
+
+        &__img01{
+            bottom: 164px;
+            left: -216px;
+            z-index: 1;
+        }
+
+        &__img02{
+            bottom: -24px;
+            right: 56px;
+        }
+
+        &__img03{
+            top: 40px;
+            right: -48px;
+        }
+
+        &__text01{
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: center;
+            margin-bottom: 58px;
+        }
+
+        &__text02{
+            font-size: 1.4rem;
+            margin-top: 38px;
+
+            @include sp{
+                font-size: 1.2rem;
+                margin-top: 20px;
+            }
+        }
+
+        .c-bl004{
+            position: relative;
+            z-index: 2;
+            margin-top: 80px;
+
+            @include sp{
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .section03{
+        position: relative;
+        background: #13C3C3;
+        z-index: 1;
+        padding: 98px 0 100px;
+
+        @include sp{
+            padding: 60px 0;
+        }
+
+        &__title{
+            color: #fff;
+            text-align: center;
+            border-bottom: 1px solid rgba($color: #fff, $alpha: 0.4);
+            padding-bottom: 79px;
+
+            @include sp{
+                padding-bottom: 40px;
+            }
+        }
+
+        &__text01{
+            font-size: 3rem;
+            letter-spacing: 0.1em;
+            line-height: 1;
+            margin-bottom: 6px;
+            position: relative;
+
+            &::before,
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 15px;
+                width: 22px;
+                height: 2px;
+                background: #fff;
+
+                @include sp{
+                    width: 20px;
+                    bottom: 10px;
+                }
+            }
+
+            &::before{
+                left: -30px;
+                transform: rotate(50deg);
+            }
+
+            &::after{
+                right: -15px;
+                transform: rotate(-50deg);
+
+                @include sp{
+                    right: -20px;
+                    bottom: 12px;
+                }
+            }
+
+            @include sp{
+                font-size: 2rem;
+            }
+        }
+
+        &__text02{
+            font-size: 5.2rem;
+            letter-spacing: 0.05em;
+            position: relative;
+            display: block;
+
+            @include sp{
+                font-size: 2.6rem;
+            }
+        }
+
+        .c-info001{
+            margin-top: 61px;
+
+            @include sp{
+                margin-top: 30px;
+                max-width: 335px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    .section04{
+        padding: 56px 0 190px;
+        background: #EFF2EF;
+
+        @include sp{
+            padding: 60px 0;
+        }
+        
+        &__title{
+            position: relative;
+            text-align: center;
+            font-size: 2.4rem;
+            position: relative;
+            margin-bottom: 50px;
+
+            @include sp{
+                font-size: 2rem;
+                line-height: 1.8;
+            }
+
+
+            .db-line{
+                background-position: left 10px bottom;
+                @include sp {
+                    padding: 0 0 3px;
+                }
+            }
+        }
+
+        .c-btn001{
+            margin-top: 48px;
+
+            @include sp{
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .section05{
+        padding: 17px 0 120px;
+        background: #F8F8F8;
+        position: relative;
+
+        @include sp{
+            padding: 60px 0;
+        }
+
+        .c-title001{
+            position: relative;
+            z-index: 2;
+            margin-bottom: 40px;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: -90px;
+            left: 0;
+            width: 100%;
+            height: 316px;
+            background: url('/assets/img/seminar_2017/ellipse_01.svg') no-repeat center;
+            background-size: cover;
+            z-index: 1;
+
+            @include sp{
+                display: none;
+            }
+        }
+
+        .c-table001{
+            position: relative;
+            z-index: 2;
+        }
+
+        &__02{
+            position: relative;
+            z-index: 2;
+            margin: 0 0 75px;
+
+            @include sp{
+                margin: 0 0 60px;
+            }
+        }
+
+        &__04{
+            background: #EFF2EF;
+            border: 1px solid #E4EBE4;
+            border-radius: 15px;
+            margin-top: 99px;
+            padding: 65px 20px 87px;
+
+            @include sp{
+                margin-top: 60px;
+                padding: 40px 20px;
+            }
+
+            .text01{
+                font-size: 3.4rem;
+                text-align: center;
+                color: #3F3D56;
+                margin-bottom: 9px;
+
+                @include sp{
+                    font-size: 2rem;
+                }
+            }
+
+            .text02{
+                font-size: 1.6rem;
+                text-align: center;
+                font-weight: 400;
+
+                @include sp{
+                    font-size: 1.4rem;
+                }
+            }
+
+            .contact{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 47px;
+
+                @include sp{
+                    display: block;
+                    margin-top: 30px;
+                }
+
+                &__btn{
+                    width: 156px;
+                    padding: 10px 0;
+                    font-size: 1.6rem;
+                    color: #fff;
+                    background: #3F3D56;
+                    border-radius: 4px;
+                    height: 52px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include sp{
+                        margin: 0 auto;
+                    }
+                }
+
+                &__info{
+                    margin-left: 30px;
+
+                    @include sp{
+                        margin-left: 0;
+                        margin-top: 10px;
+                    }
+                }
+
+                &__mail{
+                    display: flex;
+                    align-items: flex-end;
+                    position: relative;
+
+                    @include sp{
+                        justify-content: center;
+                        margin-top: 10px;
+                        margin-left: 0;
+                    }
+                }
+
+                &__label{
+                    font-size: 2rem;
+                    line-height: 1;
+                    position: relative;
+
+                    @include sp{
+                        font-size: 1.4rem;
+                        display: none;
+                    }
+                }
+
+                &__text01{
+                    font-size: 1.4rem;
+                    color: #3F3D56;
+                    line-height: 1;
+                    margin-bottom: 10px;
+
+                    @include sp{
+                        text-align: center;
+                        line-height: normal;
+                    }
+                }
+
+                &__text02{
+                    font-size: 2.6rem;
+                    color: #DBAE43;
+                    font-weight: 600;
+                    line-height: 1;
+                    position: relative;
+                    margin-left: 22px;
+
+                    @include sp{
+                        font-size: 2.2rem;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .section06{
+        background: #fff;
+        padding: 94px 0 107px;
+
+        @include sp{
+            padding: 60px 0;
+        }
+
+        &__text{
+            text-align: center;
+            font-size: 3rem;
+            position: relative;
+            margin-top: 67px;
+
+            @include sp{
+                font-size: 2rem;
+                line-height: 1.8;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .section07{
+        background: #13C3C3;
+        padding: 64px 0 76px;
+        color: #fff;
+
+        @include sp{
+            padding: 60px 0;
+        }
+
+        &__text01{
+            font-size: 3rem;
+            letter-spacing: 0.1em;
+            line-height: 70px;
+            text-align: center;
+            position: relative;
+
+            @include sp{
+                font-size: 2rem;
+                line-height: 1.9;
+            }
+        }
+
+        .c-btn001{
+            margin: 31px 0 23px;
+
+            @include sp{
+                margin: 30px 0 20px;
+            }
+        }
+
+        &__text02{
+            display: block;
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-decoration: underline;
+            color: #fff;
+        }
+    }
+
+    .section08{
+        background: #FAFAFA;
+        padding: 124px 0 121px;
+
+        @include sp{
+            padding: 60px 0;
+        }
+
+        .c-title002{
+            margin-bottom: 47px;
+
+            @include sp{
+                margin-bottom: 40px;
+            }
+        }
+
+        &__text01,
+        &__text02{
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-align: center;
+            line-height: 32px;
+
+            @include sp{
+                font-size: 1.4rem;
+                line-height: 28px;
+            }
+        }
+
+
+        .c-list004{
+            margin: 56px 0 55px;
+
+            @include sp{
+                margin: 40px 0;
+            }
+
+            &__item{
+
+                &:not(:last-child){
+                    @include sp{
+                        margin: 0 0 20px;
+                    }
+                }
+            }
+
+            &__link{
+                display: block;
+                overflow: hidden;
+                border-radius: 15px;
+                text-decoration: none;
+                height: 100%;
+
+                @include sp{
+                    height: auto;
+                }
+
+
+                @include hover{
+                    opacity: 1;
+                    .c-list004{
+                        &__img{
+                            padding: 10px;
+                            &::before{
+                                border-width: 10px 10px 10px 10px;
+                            }
+
+                            img{
+                                opacity: 1;
+                            }
+                        }
+
+                        &__title{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            &__img{
+                position: relative;
+                height: 185px;
+                padding: 0;
+                transition: .3s;
+                overflow: hidden;
+
+                @include sp{
+                    height: auto;
+                }
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    transition: .3s;
+                    border: solid #fff;
+                    border-width: 0;
+                }
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+
+                    @include sp{
+                        height: auto;
+                    }
+                }
+            }
+
+            &__tag{
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #79D7DE;
+                border-top-left-radius: 15px;
+                border-bottom-right-radius: 10px;
+                width: 78px;
+                height: 30px;
+                font-size: 1.3rem;
+                font-weight: 900;
+                line-height: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+            }
+
+            &__content{
+                position: relative;
+                padding: 35px 30px 30px;
+                background: #fff;
+                height: 100%;
+
+                @include sp{
+                    padding: 30px 20px;
+                    height: auto;
+                }
+            }
+
+            &__date{
+                position: absolute;
+                background: #464646;
+                width: 102px;
+                height: 30px;
+                font-size: 1.3rem;
+                font-weight: 900;
+                line-height: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                top: -16px;
+                left: 30px;
+            }
+
+            &__title{
+                font-size: 2rem;
+                color: #1C5472;
+                line-height: 30px;
+            }
+        }
+
+        .c-bl003{
+            margin-top: 26px;
+        }
+    }
+
+    .section09{
+        background: #3F3D56;
+        color: #fff;
+        padding: 80px 0;
+
+        @include sp{
+            padding: 40px 0 20px;
+        }
+
+        &__inner{
+            width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include sp{
+                width: 100%;
+                display: block;
+                padding: 0 20px;
+            }
+        }
+
+        &__logo{
+            .section09__text{
+                font-size: 1.2rem;
+                margin-top: 7px;
+            }
+
+            @include sp{
+                text-align: center;
+            }
+        }
+
+        &__link{
+            display: flex;
+            justify-content: flex-end;
+
+            @include sp{
+                display: block;
+            }
+
+            &Item{
+                position: relative;
+                display: block;
+                font-size: 1.2rem;
+                color: #fff;
+                text-decoration: none;
+                font-weight: 400;
+                padding-right: 16px;
+
+                &:not(:last-child){
+                    margin-right: 19px;
+
+                    @include sp{
+                        margin-right: 0;
+                        margin-bottom: 20px;
+                    }
+                }
+                
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 6px;
+                    right: 0;
+                    width: 10px;
+                    height: 10px;
+                    background: url('/assets/img/seminar_2017/icon_tabs.svg') no-repeat center;
+                }
+            }
+        }
+
+        &__copyright{
+            font-size: 1.2rem;
+            margin-top: 17px;
+            font-weight: 400;
+
+            @include sp{
+                text-align: center;
+            }
+        }
+
+        &__01{
+            display: flex;
+            align-items: center;
+
+            @include sp{
+                display: block;
+                margin-bottom: 40px;
+            }
+
+            .c-btn002{
+                position: relative;
+                margin-left: 39px;
+
+                @include sp{
+                    width: 200px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        &__02{
+            position: relative;
+            top: -1px;
+        }
+    }
+}

@@ -1,0 +1,204 @@
+/*------------------------------------------------------------
+service
+------------------------------------------------------------*/
+.service {
+	&_sc02 {
+		padding: 89px 0 100px;
+		box-sizing: border-box;
+
+		@include pad {
+			overflow-x: hidden;
+		}
+
+		@include sp {
+			padding: 40px 0 40px;
+		}
+
+		.c-title02 {
+			margin-bottom: 57px;
+
+			@include sp {
+				margin-bottom: 30px;
+			}
+		}
+
+		.c-title03 {
+			margin-bottom: 15px;
+
+			&_jp {
+				letter-spacing: 0.3rem;
+			}
+		}
+	}
+
+	&_kitchen {
+		display: flex;
+		flex-wrap: wrap;
+		background-color: $color4;
+		padding: 18px 0 17px 24px;
+		box-sizing: border-box;
+		margin-bottom: 60px;
+
+		@include pad {
+			padding: 10px;
+		}
+
+		@include sp {
+			padding: 15px;
+			margin-bottom: 30px;
+		}
+
+		li {
+			width: (100% / 3);
+			font-size: 1.4rem;
+			line-height: 2.143;
+			color: #444444;
+			position: relative;
+			padding-left: 19px;
+
+			@include pad {
+				font-size: 1.3rem;
+			}
+
+			@include sp {
+				width: 50%;
+			}
+
+			@include max-w(567px) {
+				width: 100%;
+			}
+
+			&:before {
+				position: absolute;
+				content: "";
+				width: 10px;
+				height: 2px;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: $color3;
+			}
+		}
+	}
+
+	&_sc03 {
+		padding: 89px 0 100px;
+		box-sizing: border-box;
+		background-color: $color4;
+
+		@include sp {
+			padding: 40px 0 40px;
+		}
+
+		.c-title02 {
+			margin-bottom: 48px;
+
+			@include sp {
+				margin-bottom: 30px;
+			}
+		}
+
+		.sc01 {
+			&_text {
+				margin-top: 0;
+				letter-spacing: 0.16rem;
+
+				&.sc01_text--other {
+					margin-bottom: 52px;
+
+					@include sp {
+						margin-bottom: 30px;
+					}
+				}
+			}
+
+			&_content {
+				top: 40px;
+
+				@include sp {
+					top: 0;
+				}
+			}
+		}
+
+		@include min-w(768px) {
+			.sc01_img {
+				background-image: url(../img/service/img03.jpg);
+				background-position: center bottom;
+
+				&:before {
+					background-color: $color4;
+				}
+			}
+		}
+	}
+
+	&_sc04 {
+		padding: 94px 0 100px;
+		box-sizing: border-box;
+
+		@include sp {
+			padding: 40px 0 50px;
+		}
+
+		.c-title02 {
+			margin-bottom: 59px;
+
+			@include pad {
+				margin-bottom: 50px;
+			}
+
+			@include sp {
+				margin-bottom: 30px;
+			}
+		}
+
+		.c-title03 {
+			margin-bottom: 10px;
+
+			@include sp {
+				margin-bottom: 15px;
+			}
+		}
+
+		.sc01 {
+			&_content {
+				top: 38px;
+
+				@include sp {
+					top: 0;
+				}
+			}
+
+			&_text {
+				margin-top: 0;
+
+				@include sp {
+					&.mgb30 {
+						margin-bottom: 20px !important;
+					}
+				}
+			}
+		}
+
+		@include min-w(768px) {
+			.sc04_img01 {
+				.sc01_img {
+					background-image: url(../img/service/img04.jpg);
+					background-position: center top;
+
+					@include pad {
+						background-position: -175% top;
+					}
+				}
+			}
+
+			.sc04_img02 {
+				.sc01_img {
+					background-image: url(../img/service/img05.jpg);
+					background-position: center bottom;
+				}
+			}
+		}
+	}
+}

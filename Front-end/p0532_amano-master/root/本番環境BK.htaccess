@@ -1,0 +1,206 @@
+
+redirect 301 /products.html http://www.tis.amano.co.jp/product/employment/
+redirect 301 /terminal/cont01/cont01.html http://www.tis.amano.co.jp/product/employment/id-card/
+redirect 301 /terminal/cont01/cont03.html http://www.tis.amano.co.jp/product/employment/time-card/
+redirect 301 /terminal/cont01/cont04.html http://www.tis.amano.co.jp/product/employment/biometric-authentication/
+redirect 301 /products/TimeAsset/ http://www.tis.amano.co.jp/product/employment/front-end-solution/
+redirect 301 /products/TimeProXG_shuugyou/index.html http://www.tis.amano.co.jp/product/employment/integrated/
+redirect 301 /products/TimeProCX/index.html http://www.tis.amano.co.jp/product/employment/cloud-based/
+redirect 301 /products/TimeProXG_tuushin/index.html http://www.tis.amano.co.jp/product/TimePro-XG/
+redirect 301 /terminal/cont08/index.html http://www.tis.amano.co.jp/product/entering-room/real-time-monitoring/
+redirect 301 /terminal/cont02/index.html http://www.tis.amano.co.jp/product/entering-room/system-timeclock/
+redirect 301 /products/TimeProXG_nyuushitsu/index.html http://www.tis.amano.co.jp/product/entering-room/access-control/
+redirect 301 /products/TimeProXG_jinji/index.html http://www.tis.amano.co.jp/product/personnel-affairs/human-resource/
+redirect 301 /products/TimeProXG_kyuuyo/index.html http://www.tis.amano.co.jp/product/salary/salary-information/
+redirect 301 /terminal/cont03/index.html http://www.tis.amano.co.jp/product/dining-hall/id-card/
+redirect 301 /products/TimeProXG_shokudou/index.html http://www.tis.amano.co.jp/product/dining-hall/canteen-management/
+redirect 301 /terminal/cont05/iccard2.html http://www.tis.amano.co.jp/product/ic-card/issuance-services/
+redirect 301 /terminal/cont05/iccard.html http://www.tis.amano.co.jp/product/ic-card/web/
+redirect 301 /terminal/cont05/icsolution.html http://www.tis.amano.co.jp/product/ic-card/versatile-use/
+redirect 301 /terminal/cont05/index.html http://www.tis.amano.co.jp/product/ic-card/printer/
+redirect 301 /terminal/cont05/encoder.html http://www.tis.amano.co.jp/product/ic-card/encoder/
+redirect 301 /products/TimeProXG_tuushin/index.html http://www.tis.amano.co.jp/product/TimePro-XG/
+redirect 301 /products/ATMS/index.html http://www.tis.amano.co.jp/customer-support/maintenance-service/
+redirect 301 /support.html http://www.tis.amano.co.jp/customer-support/support-system/
+redirect 301 /jisseki.html http://www.tis.amano.co.jp/introduction-results/
+redirect 301 /jirei/hankyu/index.html http://www.tis.amano.co.jp/introduction-results/introduction-results04.html
+redirect 301 /jirei/kawagoe/index.html http://www.tis.amano.co.jp/introduction-results/introduction-results00.html
+redirect 301 /jirei/chiyoda/index.html http://www.tis.amano.co.jp/introduction-results/introduction-results06.html
+redirect 301 /jirei/furukawa/index.html http://www.tis.amano.co.jp/introduction-results/introduction-results03.html
+redirect 301 /jirei/jr-w/index.html http://www.tis.amano.co.jp/introduction-results/introduction-results05.html
+redirect 301 /jirei/koto/index.html http://www.tis.amano.co.jp/introduction-results/introduction-results01.html
+redirect 301 /jirei/norin/index.html http://www.tis.amano.co.jp/introduction-results/introduction-results02.html
+redirect 301 /results/index.html http://www.tis.amano.co.jp/select-reason/
+redirect 301 /event.html http://www.tis.amano.co.jp/seminars-events/
+redirect 301 /partners01.html http://www.tis.amano.co.jp/industry-solutions/industry-solutions00.html
+redirect 301 /partners02.html http://www.tis.amano.co.jp/industry-solutions/industry-solutions01.html
+redirect 301 /partners03.html http://www.tis.amano.co.jp/industry-solutions/industry-solutions02.html
+redirect 301 /partners04.html http://www.tis.amano.co.jp/industry-solutions/industry-solutions03.html
+redirect 301 /sitemap.html http://www.tis.amano.co.jp/site-map/
+ErrorDocument 404 /404.html
+
+# 210127追記　リニューアルに際したリダイレクト
+redirect 301 /atsnews/index.html https://www.tis.amano.co.jp/hr_news/
+redirect 301 /atsnews/atsnews09.html https://www.tis.amano.co.jp/hr_news/796/
+redirect 301 /atsnews/atsnews10.html https://www.tis.amano.co.jp/hr_news/792/
+redirect 301 /atsnews/atsnews11.html https://www.tis.amano.co.jp/hr_news/687/
+redirect 301 /atsnews/atsnews12.html https://www.tis.amano.co.jp/hr_news/789/
+redirect 301 /atsnews/atsnews13.html https://www.tis.amano.co.jp/hr_news/785/
+redirect 301 /atsnews/atsnews14.html https://www.tis.amano.co.jp/hr_news/796/
+redirect 301 /atsnews/atsnews15.html https://www.tis.amano.co.jp/hr_news/682/
+redirect 301 /atsnews/atsnews16.html https://www.tis.amano.co.jp/hr_news/663/
+redirect 301 /atsnews/atsnews17.html https://www.tis.amano.co.jp/hr_news/635/
+redirect 301 /atsnews/ https://www.tis.amano.co.jp/hr_news/
+redirect 301 /seminars-events/index.html https://www.tis.amano.co.jp/seminar/
+redirect 301 /seminars-events/ https://www.tis.amano.co.jp/seminar/
+redirect 301 /select-reason/index.html https://www.tis.amano.co.jp/strengths/
+redirect 301 /select-reason/ https://www.tis.amano.co.jp/strengths/
+# redirect 301 /product/index.html https://www.tis.amano.co.jp/product/top/
+# redirect 301 /product/ https://www.tis.amano.co.jp/product/top/
+redirect 301 /product/TimePro-VG/index.html https://www.tis.amano.co.jp/product/timepro-vg/
+redirect 301 /product/TimePro-VG/ https://www.tis.amano.co.jp/product/timepro-vg/
+redirect 301 /product/TimePro-VGcloud/index.html https://www.tis.amano.co.jp/product/vg_cloud/
+redirect 301 /product/TimePro-VGcloud/ https://www.tis.amano.co.jp/product/vg_cloud/
+redirect 301 /product/personnel-affairs/timepro-by-zeem/index.html https://www.tis.amano.co.jp/product/timepro-vg_zeem/
+redirect 301 /product/personnel-affairs/timepro-by-zeem/ https://www.tis.amano.co.jp/product/timepro-vg_zeem/
+redirect 301 /product/personnel-affairs/timepro-nx/index.html https://www.tis.amano.co.jp/product/timepro-nx/
+redirect 301 /product/personnel-affairs/timepro-nx/ https://www.tis.amano.co.jp/product/timepro-nx/
+redirect 301 /product/employment/cloud-service/index.html https://www.tis.amano.co.jp/product/cyber_xeed/
+redirect 301 /product/employment/cloud-service/ https://www.tis.amano.co.jp/product/cyber_xeed/
+redirect 301 /product/personnel-affairs/cloud-based/index.html https://www.tis.amano.co.jp/product/cyber_xeed/
+redirect 301 /product/personnel-affairs/cloud-based/ https://www.tis.amano.co.jp/product/cyber_xeed/
+redirect 301 /product/salary/cloud-based/index.html https://www.tis.amano.co.jp/product/cyber_xeed/
+redirect 301 /product/salary/cloud-based/ https://www.tis.amano.co.jp/product/cyber_xeed/
+redirect 301 /product/employment/id-card/index.html https://www.tis.amano.co.jp/product/ic_card_authentication/
+redirect 301 /product/employment/id-card/ https://www.tis.amano.co.jp/product/ic_card_authentication/
+redirect 301 /product/employment/biometric-authentication/index.html https://www.tis.amano.co.jp/product/biometrics_authentication/
+redirect 301 /product/employment/biometric-authentication/ https://www.tis.amano.co.jp/product/biometrics_authentication/
+redirect 301 /product/employment/time-card/index.html https://www.tis.amano.co.jp/product/time_card/
+redirect 301 /product/employment/time-card/ https://www.tis.amano.co.jp/product/time_card/
+redirect 301 /product/employment/stamping-aggregation/index.html https://www.tis.amano.co.jp/product/time_card/
+redirect 301 /product/employment/stamping-aggregation/ https://www.tis.amano.co.jp/product/time_card/
+redirect 301 /product/entering-room/real-time-monitoring/index.html https://www.tis.amano.co.jp/product/real-time-monitoring/
+redirect 301 /product/entering-room/real-time-monitoring/ https://www.tis.amano.co.jp/product/real-time-monitoring/
+redirect 301 /product/entering-room/system-timeclock/index.html https://www.tis.amano.co.jp/product/system-timeclock/
+redirect 301 /product/entering-room/system-timeclock/ https://www.tis.amano.co.jp/product/system-timeclock/
+redirect 301 /product/entering-room/hands-free/index.html https://www.tis.amano.co.jp/product/hands-free/
+redirect 301 /product/entering-room/hands-free/ https://www.tis.amano.co.jp/product/hands-free/
+redirect 301 /product/ic-card/issuance-services/index.html https://www.tis.amano.co.jp/product/ic-card/
+redirect 301 /product/ic-card/issuance-services/ https://www.tis.amano.co.jp/product/ic-card/
+redirect 301 /product/ic-card/web/index.html https://www.tis.amano.co.jp/product/ic-card/
+redirect 301 /product/ic-card/web/ https://www.tis.amano.co.jp/product/ic-card/
+redirect 301 /product/ic-card/versatile-use/index.html https://www.tis.amano.co.jp/product/ic-card/
+redirect 301 /product/ic-card/versatile-use/ https://www.tis.amano.co.jp/product/ic-card/
+redirect 301 /product/ic-card/printer/index.html https://www.tis.amano.co.jp/product/ic-card/
+redirect 301 /product/ic-card/printer/ https://www.tis.amano.co.jp/product/ic-card/
+redirect 301 /product/ic-card/encoder/index.html https://www.tis.amano.co.jp/product/ic-card/
+redirect 301 /product/ic-card/encoder/ https://www.tis.amano.co.jp/product/ic-card/
+redirect 301 /introduction-results/index.html https://www.tis.amano.co.jp/product_case/
+redirect 301 /introduction-results/ https://www.tis.amano.co.jp/product_case/
+redirect 301 /product_case/introduction-results05.html https://www.tis.amano.co.jp/product_case/
+redirect 301 /product_case/introduction-results10.html https://www.tis.amano.co.jp/product_case/customer_01/
+redirect 301 /product_case/introduction-results08.html https://www.tis.amano.co.jp/product_case/customer_02/
+# redirect 301 /customer-support/index.html https://www.tis.amano.co.jp/customer-support/
+# redirect 301 /customer-support/ https://www.tis.amano.co.jp/customer-support/
+redirect 301 /customer-support/maintenance-service/index.html https://www.tis.amano.co.jp/customer-support/
+redirect 301 /customer-support/maintenance-service/ https://www.tis.amano.co.jp/customer-support/
+redirect 301 /customer-support/support-system/index.html https://www.tis.amano.co.jp/customer-support/
+redirect 301 /customer-support/support-system/ https://www.tis.amano.co.jp/customer-support/
+redirect 301 /customer-support/support-system/index.html https://www.tis.amano.co.jp/customer-support/
+redirect 301 /product/personnel-affairs/index.html https://www.tis.amano.co.jp/product/top/#id05
+redirect 301 /product/personnel-affairs/ https://www.tis.amano.co.jp/product/top/#id05
+redirect 301 /product/salary/index.html https://www.tis.amano.co.jp/product/top/#id05
+redirect 301 /product/salary/ https://www.tis.amano.co.jp/product/top/#id05
+redirect 301 /product/entering-room/index.html https://www.tis.amano.co.jp/product/top/#id03
+redirect 301 /product/entering-room/ https://www.tis.amano.co.jp/product/top/#id03
+
+# --------------------------------------------------------------------
+# // どのURLにアクセスしてもメンテページを表示する
+# --------------------------------------------------------------------
+# <IfModule mod_rewrite.c>
+ 
+  # -- メンテHTML指定
+  # ErrorDocument 503 /maintenance/index.php
+  # RewriteEngine on
+  # RewriteCond %{REQUEST_URI} !^/maintenance/index.php$
+
+  # -- その他、メンテ中に先方で確認するための特定ディレクトリを除外したい場合や別途ページなど
+  # RewriteCond %{REQUEST_URI} !^/atms/
+  # RewriteCond %{REQUEST_URI} !^/carddb/
+  # RewriteCond %{REQUEST_URI} !^/clipmail/
+  # RewriteCond %{REQUEST_URI} !^/demo/
+  # RewriteCond %{REQUEST_URI} !^/e-amano/
+  # RewriteCond %{REQUEST_URI} !^/parkcarddb/
+  # RewriteCond %{REQUEST_URI} !^/remote/
+  # RewriteCond %{REQUEST_URI} !^/TimePro-NX/
+  # RewriteCond %{REQUEST_URI} !^/timeprovg/
+  # RewriteCond %{REQUEST_URI} !^/timeprovg_v2/
+  # RewriteCond %{REQUEST_URI} !^/update/
+  # RewriteCond %{REQUEST_URI} !^/workstyle/
+
+  # -- 画像等のリソースファイルは除外（メンテページから参照されている場合がある為）
+  # RewriteCond %{REQUEST_FILENAME} !\.(css|jpe?g|gif|png|svg|js)$
+ 
+  # -- 作業者のIP除外
+  # RewriteCond %{REMOTE_ADDR} !^122.217.37.50$
+  # RewriteCond %{HTTP:X-Forwarded-For} !^122.217.37.50$
+ 
+  # -- HTTPレスポンスコード503で返す（ブラウザ上でのURL書き換えは発生しない）
+  # RewriteRule ^.*$ - [R=503,L]
+
+# </IfModule>
+
+# --------------------------------------------------------------------
+# // IP制限
+# --------------------------------------------------------------------
+SetEnvIF X-Forwarded-For "122.217.37.50" AllowIP
+SetEnvIF X-Forwarded-For "165.76.243.147" AllowIP
+SetEnvIF X-Forwarded-For "165.76.243.148" AllowIP
+SetEnvIF X-Forwarded-For "165.76.243.149" AllowIP
+SetEnvIF X-Forwarded-For "202.33.135.136" AllowIP
+SetEnvIF X-Forwarded-For "202.33.135.202" AllowIP
+SetEnvIF X-Forwarded-For "202.33.135.203" AllowIP
+SetEnvIF X-Forwarded-For "202.33.135.204" AllowIP
+
+<Files wp-config.php>
+  <RequireAny>
+    Require all denied
+  </RequireAny>
+</Files>
+
+<Files wp-login.php>
+  <RequireAll>
+    AuthType Basic
+    AuthName "Basic Auth"
+    AuthUserFile /add_disk1/www/www.tis.amano.co.jp/data/basic/.htpasswd
+    Require valid-user
+    <RequireAny>
+      Require all denied
+      Require env AllowIP
+    </RequireAny>
+  </RequireAll>
+</Files>
+
+
+
+# --------------------------------------------------------------------
+
+# BEGIN WordPress
+# "BEGIN WordPress" から "END WordPress" までのディレクティブ (行) は
+# 動的に生成され、WordPress フィルターによってのみ修正が可能です。
+# これらのマーカー間にあるディレクティブへのいかなる変更も上書きされてしまいます。
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+php_flag session.cookie_httponly On
+php_flag session.cookie_secure On
+Options -Indexes

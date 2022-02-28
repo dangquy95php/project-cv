@@ -1,0 +1,138 @@
+/*------------------------------------------------------------
+Page Product TimePro-VG_zeem
+------------------------------------------------------------*/
+.p-Zeem {
+    .c-mv4 {
+        .c-mv4__ttl2 {
+            color: #0181C0;
+        }
+    }
+
+    .c-block06 {
+        .c-title01__sub {
+            @include pc {
+                font-size: 1.7rem;
+            }
+        }
+
+        .c-title09__main:after {
+            background: #0181C0;
+        }
+    }
+
+    &1 {
+        padding: 140px 0 53px;
+
+        @include sp {
+            padding: 50px 0;
+        }
+
+        .c-title01 {
+            margin: 0 0 117px;
+
+            @include sp {
+                margin: 0 0 100px;
+            }
+
+            &__sm {
+                text-transform: none;
+            }
+        }
+
+        .c-box11 {
+            +.c-box11 {
+                margin: 141px 0 0;
+
+                @include sp {
+                    margin: 70px 0 0;
+                }
+            }
+        }
+    }
+
+    &3 {
+        padding: 40px 0 0;
+
+        @include sp {
+            padding: 0;
+        }
+
+        .c-slide1 {
+            margin: 86px 0 0;
+
+            @include sp {
+                margin: 43px 0 0;
+            }
+        }
+
+        .c-slide2 {
+            margin: 68px 0 0;
+
+            @include sp {
+                margin: 34px 0 0;
+            }
+        }
+
+        .c-slide2-noslide {
+            margin: 68px 0 0;
+
+            @include sp {
+                margin: 34px 0 0;
+            }
+        }
+
+        .c-slide1 {
+            .c-box9--style3 .c-title09__main:after {
+                background-color: #0181C0;
+            }
+
+            .c-tag2 {
+                background-color: #444444;
+            }
+        }
+    }
+
+    &4 {
+        padding: 160px 0 0;
+
+        @include sp {
+            padding: 50px 0 0;
+        }
+
+        .c-flow2 {
+            margin: 86px 0 0;
+
+            @include sp {
+                margin: 43px 0 0;
+            }
+
+            &__ttl {
+                color: #111111;
+            }
+        }
+    }
+
+    &5 {
+        padding: 155px 0 130px;
+
+        @include sp {
+            padding: 50px 0;
+        }
+
+        .c-title01 {
+            margin: 0 0 79px;
+
+            @include sp {
+                margin: 0 0 40px;
+            }
+        }
+
+        .c-list27 {
+            margin: 60px 0 0;
+
+            @include sp {
+                margin: 30px 0 0;
+            }
+        }
+    }
+}

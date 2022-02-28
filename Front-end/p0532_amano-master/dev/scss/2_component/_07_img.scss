@@ -1,0 +1,1058 @@
+/*------------------------------------------------------------
+img
+------------------------------------------------------------*/
+
+.c-imgSingle {
+    text-align: center;
+    $root: &;
+
+    img {
+        max-width: 100%;
+        height: auto;
+
+        +#{$root}__txt {
+            margin: 20px 0 0;
+
+            @include sp {
+                margin: 10px 0 0;
+            }
+        }
+    }
+
+    &__txt {
+        text-align: center;
+        font-size: 1.8rem;
+        line-height: 1.6;
+        color: #1c5472;
+        font-weight: bold;
+
+        @include sp {
+            font-size: 1.6rem;
+        }
+
+        +img {
+            margin: 19px 0 0;
+
+            @include sp {
+                margin: 10px 0 0;
+            }
+        }
+    }
+
+    &--left {
+        text-align: left;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-imgtext01 {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    $root: &;
+
+    @include sp {
+        flex-wrap: wrap;
+        margin-left: 0;
+    }
+
+    &__img {
+        width: 640px;
+        margin-left: 100px;
+
+        @include sp {
+            width: 100%;
+            text-align: center;
+            margin-left: 0;
+            order: 1;
+        }
+    }
+
+    &__txt {
+        flex-basis: 0;
+        flex-grow: 1;
+        margin-top: -8px;
+
+        @include sp {
+            flex-basis: auto;
+            width: 100%;
+            order: 2;
+            margin-top: 20px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 30px;
+        font-size: 1.6rem;
+        line-height: 28px;
+        color: #111111;
+        margin: 17px 0 28px;
+
+        @include sp {
+            font-size: 1.4rem;
+            line-height: 24px;
+        }
+    }
+
+    .c-btn01__link {
+        padding: 19px 58px 19px 58px;
+
+        @include sp {
+            padding: 13px 30px 13px 30px;
+        }
+    }
+
+    &--ct {
+        margin-right: 100px;
+        margin-left: 60px;
+
+        @include sp {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        #{$root}__text {
+            font-size: 1.5rem;
+            line-height: 28px;
+            margin: 24px auto 37px;
+            max-width: 500px;
+
+            @include sp {
+                font-size: 1.4rem;
+                line-height: 24px;
+                margin: 17px 0 28px;
+                max-width: 100%;
+            }
+        }
+
+        #{$root}__img {
+            width: 500px;
+            margin-left: 40px;
+
+            @include sp {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+
+        .c-btn01__link {
+            padding: 16px 56px 16px 56px;
+
+            @include sp {
+                padding: 13px 30px 13px 30px;
+            }
+        }
+    }
+
+    &__row {
+        .c-imgtext01 {
+            &:not(:first-child) {
+                border-top: 1px dotted $color1;
+                padding-top: 108px;
+                margin-top: 100px;
+                box-sizing: border-box;
+
+                @include sp {
+                    padding-top: 50px;
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-imgtext02 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    $root: &;
+
+    //-------------------------------------------------------
+    &__info {
+        flex: 1;
+
+        @include sp {
+            width: 100%;
+            flex: inherit;
+        }
+    }
+
+    //-------------------------------------------------------
+    &__ttl {
+        font-size: 2rem;
+        line-height: 1.4;
+        color: $color2;
+        font-weight: bold;
+
+        @include sp {
+            font-size: 1.6rem;
+        }
+
+        &:not(:first-child) {
+            margin: 38px 0 0;
+
+            @include sp {
+                margin: 19px 0 0;
+            }
+        }
+    }
+
+    //-------------------------------------------------------
+    &__txt {
+        font-size: 1.6rem;
+        line-height: 1.75;
+        color: #111;
+        word-break: break-all;
+
+        @include sp {
+            font-size: 1.4rem;
+        }
+
+        &:not(:first-child) {
+            margin: 19px 0 0;
+
+            @include sp {
+                margin: 10px 0 0;
+            }
+        }
+    }
+
+    //-------------------------------------------------------
+    &__img {
+        width: 367px;
+        margin: 10px 0 0 25px;
+
+        @include sp {
+            width: 100%;
+            margin: 20px 0 0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .c-singlenote2 {
+        margin-top: 15px;
+        color: #444;
+
+        @include sp {
+            margin-top: 10px;
+        }
+    }
+
+    //-------------------------------------------------------
+    &--big {
+        #{$root}__img {
+            width: 500px;
+            margin: 2px 0 0 55px;
+
+            @include sp {
+                width: 100%;
+                margin: 20px 0 0;
+            }
+        }
+
+        .c-btn06 {
+            margin: 38px 0 0;
+
+            @include sp {
+                margin: 19px 0 0;
+            }
+
+            &__link {
+                width: 236px;
+
+                @include sp {
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    //-------------------------------------------------------
+    &--small {
+        padding: 0 40px 0 0;
+
+        @include sp {
+            padding: 0;
+        }
+
+        #{$root}__img {
+            width: 160px;
+            margin: 2px 0 0 40px;
+
+            @include sp {
+                width: 100%;
+                margin: 20px 0 0;
+                text-align: center;
+            }
+
+            img {
+                @include sp {
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-imgtext03 {
+    display: flex;
+    $root: &;
+
+    @include sp {
+        flex-wrap: wrap;
+    }
+
+    &__img {
+        width: 35.4%;
+        margin-left: 30px;
+
+        @include sp {
+            width: 100%;
+            margin-left: 0;
+            text-align: center;
+            order: 1;
+            margin-bottom: 20px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &__txt {
+        flex-basis: 0;
+        flex-grow: 1;
+        margin-top: -4px;
+
+        @include sp {
+            margin-top: 0;
+            order: 2;
+        }
+
+        p {
+            font-size: 1.8rem;
+            line-height: 34px;
+            font-weight: 400;
+            color: #333;
+
+            @include sp {
+                font-size: 1.4rem;
+                line-height: 24px;
+            }
+
+            +#{$root}__text {
+                margin: 30px 0 0;
+
+                @include sp {
+                    margin: 15px 0 0;
+                }
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-imgtext04 {
+    position: relative;
+    padding: 100px 120px 78px;
+    $root: &;
+
+    @include sp {
+        padding: 30px 15px;
+    }
+
+    &:not(:last-child) {
+        margin: 0 0 100px;
+
+        @include sp {
+            margin: 0 0 50px;
+        }
+    }
+
+    //-------------------------------------------------------
+    &__bg {
+        position: absolute;
+        width: calc(100% - 100px);
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        @include sp {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    //-------------------------------------------------------
+    &__inner {
+        max-width: 1488px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    //-------------------------------------------------------
+    &__info {
+        width: 50%;
+        min-height: 389px;
+        background: #fff;
+        position: relative;
+        padding: 83px 7% 106px;
+        display: flex;
+        align-items: center;
+
+        @include sp {
+            width: 100%;
+            min-height: auto;
+            padding: 20px 15px;
+        }
+
+        &::after {
+            content: '';
+            width: calc(100% + ((100vw - 1000px) / 2));
+            height: 100%;
+            background: #fff;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+
+            @include sp {
+                width: 100%;
+            }
+        }
+    }
+
+    //-------------------------------------------------------
+    &__txt {
+        font-size: 1.7rem;
+        line-height: 2.4;
+        color: #111111;
+
+        @include sp {
+            font-size: 1.5rem;
+            line-height: 1.8;
+        }
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    //-------------------------------------------------------
+    &__img {
+        width: 44.6%;
+
+        @include sp {
+            width: 100%;
+            order: -1;
+            margin: 0 0 30px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    //-------------------------------------------------------
+    &--reverse {
+        padding: 100px 120px 110px;
+
+        @include sp {
+            padding: 30px 15px;
+        }
+
+        #{$root}__bg {
+            left: auto;
+            right: 0;
+        }
+
+        #{$root}__inner {
+            flex-direction: row-reverse;
+        }
+
+        #{$root}__info {
+            padding: 93px 7.7% 96px 6.7%;
+
+            @include sp {
+                padding: 20px 15px;
+            }
+
+            &::after {
+                left: 0;
+                right: auto;
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-imgtext05 {
+    position: relative;
+    $root: &;
+    margin-bottom: 120px;
+    padding: 180px 120px 100px;
+
+    @include sp {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #f4f4f4;
+        padding: 0 0 40px;
+        margin-bottom: 60px;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        background-color: #f4f4f4;
+        max-width: 1600px;
+        width: 100%;
+        height: calc(100% - 60px);
+        top: 60px;
+        left: 0;
+
+        @include sp {
+            display: none !important;
+        }
+    }
+
+    .c-title15 {
+        margin: 0 0 57px;
+
+        @include sp {
+            margin: 0 0 20px;
+        }
+    }
+
+    &__box {
+        &:not(:last-child) {
+            margin: 0 0 42px;
+
+            @include sp {
+                margin: 0 0 20px;
+            }
+        }
+    }
+
+    &__ttl {
+        font-size: 2.4rem;
+        line-height: 1.4;
+        color: $color2;
+
+        @include sp {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__txt {
+        font-size: 1.5rem;
+        line-height: 28px;
+        color: $color1;
+        word-break: break-all;
+
+        @include sp {
+            font-size: 1.4rem;
+            line-height: 1.8;
+        }
+
+        &:not(:first-child) {
+            margin: 19px 0 0;
+
+            @include sp {
+                margin: 10px 0 0;
+            }
+        }
+    }
+
+    .c-btn01 {
+        margin-top: 56px;
+        z-index: 1;
+        justify-content: flex-start;
+
+        @include sp {
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        &__link {
+            min-width: 300px;
+            padding: 21px 59px 21px 59px;
+
+            @include sp {
+                min-width: auto;
+                padding: 13px 30px 13px 30px;
+            }
+        }
+    }
+
+    &__inner {
+        max-width: 1280px;
+        margin: 0 auto;
+
+        @include pad {
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        @include sp {
+            max-width: 100%;
+            padding: 15px;
+            order: -1;
+            position: relative;
+            z-index: 3;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        width: calc((100% / 2) - 15px);
+        height: 60%;
+        overflow: hidden;
+        transform: translate(0, -50%);
+        top: 50%;
+        right: 0;
+
+        @include sp {
+            width: 100%;
+            height: auto;
+            position: relative;
+            top: auto;
+            transform: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 70%;
+        }
+    }
+
+    &__num {
+        position: absolute;
+        left: 120px;
+        top: -25px;
+
+        @include sp {
+            left: 50% !important;
+            transform: translateX(-50%);
+            width: 140px;
+        }
+
+        &02 {
+            left: 100px;
+            top: -25px;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        width: 855px;
+        background-color: #fff;
+        padding: 126px 93px 120px 120px;
+        box-sizing: border-box;
+        margin-left: -120px;
+        background: #fff url(/assets/img/common/bg_dotted.png) repeat top center;
+
+        @include sp {
+            width: 100%;
+            padding: 80px 20px 30px;
+            margin-left: 0;
+            z-index: 10;
+        }
+    }
+
+    &.right {
+
+        &::before {
+            right: 0;
+            left: auto;
+        }
+
+        #{$root}__content {
+            margin-left: auto;
+            margin-right: -120px;
+            padding: 126px 85px 93px 100px;
+
+            @include sp {
+                padding: 80px 20px 30px;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        #{$root}__box {
+            &:not(:last-child) {
+                margin: 0 0 56px;
+
+                @include sp {
+                    margin: 0 0 20px;
+                }
+            }
+        }
+
+        #{$root}__img {
+            left: 0;
+            right: auto;
+
+            @include sp {
+                margin: -60px 0 0;
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-imgtext06 {
+    padding: 0 100px 40px;
+    position: relative;
+    $root: &;
+
+    @include sp {
+        padding: 0 15px 20px;
+    }
+
+    &::after {
+        content: '';
+        width: calc(100% - 320px);
+        height: calc(100% - 40px);
+        background: #f4f4f4;
+        position: absolute;
+        top: 40px;
+        left: 0;
+
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    &:not(:last-child) {
+        margin: 0 0 100px;
+
+        @include sp {
+            margin: 0 0 50px;
+        }
+    }
+
+    //-------------------------------------------------------
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        position: relative;
+        z-index: 2;
+    }
+
+    //-------------------------------------------------------
+    &__img {
+        width: 49.1%;
+
+        @include sp {
+            width: 100%;
+            order: -1;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    //-------------------------------------------------------
+    &__info {
+        width: 55.5%;
+        margin: 140px -4.6% 0 0;
+        position: relative;
+        z-index: 2;
+        padding: 0 6.5% 74px 12.8%;
+
+        @include sp {
+            width: 100%;
+            margin: -20px 15px 0;
+            padding: 0 20px 20px;
+        }
+
+        &::after {
+            content: '';
+            width: calc(100% + 100px);
+            height: 100%;
+            background: url('/assets/img/common/bg_dotted.png') repeat top left, #fff;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+
+            @include sp {
+                width: 100%;
+                left: 0;
+                right: auto;
+            }
+        }
+    }
+
+    //-------------------------------------------------------
+    &__number {
+        margin: -50px 0 38px -20px;
+
+        @include sp {
+            margin: -30px auto 20px;
+            text-align: center;
+            max-width: 100px;
+        }
+    }
+
+    //-------------------------------------------------------
+    &__ttl {
+        font-size: 3.4rem;
+        line-height: 1.6;
+        color: #111;
+        font-weight: bold;
+
+        @include sp {
+            font-size: 2.5rem;
+        }
+    }
+
+    //-------------------------------------------------------
+    &__txt {
+        font-size: 1.7rem;
+        line-height: 2.15;
+        color: #111;
+        margin: 23px 0 0;
+
+        @include sp {
+            font-size: 1.4rem;
+            margin: 15px 0 0;
+        }
+    }
+
+    //-------------------------------------------------------
+    &--reverse {
+        &::after {
+            left: auto;
+            right: 0;
+
+            @include sp {
+                left: 0;
+                right: auto;
+            }
+        }
+
+        #{$root}__inner {
+            flex-direction: row-reverse;
+        }
+
+        #{$root}__info {
+            margin: 140px 0 0 -4.6%;
+            padding: 0 12.8% 74px 6.8%;
+
+            @include sp {
+                margin: -20px 15px 0;
+                padding: 0 20px 20px;
+            }
+
+            &::after {
+                right: auto;
+                left: 0;
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-imgtext07 {
+    position: relative;
+    padding: 80px 0;
+    position: relative;
+    $root: &;
+
+    @include sp {
+        padding: 20px 15px 30px;
+    }
+
+    &::after {
+        content: '';
+        width: calc(100% - ((100% - 1280px) / 2) - 320px);
+        height: 100%;
+        background: url('/assets/img/common/bg_dotted.png') repeat top left, #f4f4f4;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    &:not(:last-child) {
+        margin: 0 0 80px;
+
+        @include sp {
+            margin: 0 0 40px;
+        }
+    }
+
+    //-------------------------------------------------------
+    &__inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+
+        @include sp {
+            max-width: 100%;
+        }
+    }
+
+    //-------------------------------------------------------
+    &__info {
+        width: 43.8%;
+
+        @include sp {
+            width: 100%;
+            margin: 20px 0 0;
+        }
+    }
+
+    //-------------------------------------------------------
+    &__img {
+        width: 50%;
+
+        @include sp {
+            width: 100%;
+            order: -1;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    //-------------------------------------------------------
+    &__ttl {
+        font-weight: bold;
+        margin: 0 0 38px;
+
+        @include sp {
+            margin: 0 0 15px;
+        }
+    }
+
+    //-------------------------------------------------------
+    &__subttl {
+        display: block;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        color: $color4;
+
+        @include sp {
+            font-size: 1.6rem;
+        }
+    }
+
+    //-------------------------------------------------------
+    &__mainttl {
+        display: block;
+        font-size: 3.4rem;
+        line-height: 1.6;
+        color: #111111;
+        margin: 8px 0 0;
+
+        @include sp {
+            font-size: 2.6rem;
+        }
+    }
+
+    .c-list25 {
+        margin: 29px 0 0;
+
+        @include sp {
+            margin: 15px 0 0;
+        }
+    }
+
+    //-------------------------------------------------------
+    &--reverse {
+        &::after {
+            left: auto;
+            right: 0;
+        }
+
+        #{$root}__inner {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.c-imgtext08 {
+    @include clear;
+    margin-top: 40px;
+
+    @include sp {
+        margin: 0 -20px;
+    }
+
+    img {
+        float: right;
+        margin-left: 40px;
+        display: block;
+        border-radius: 8px;
+        max-width: 440px;
+        @include sp {
+            border-radius: 0;
+            margin: 0;
+            float: none;
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    &__txt {
+        @include fz(18, 31.5);
+
+        @include sp {
+            @include fz2(32, 56);
+            padding: 17px 20px 0;
+        }
+    }
+
+    &__inner {
+        overflow: hidden;
+
+        .c-time2 {
+            margin-top: 37px;
+
+            @include sp {
+                margin: 18px 20px 0;
+            }
+        }
+    }
+}

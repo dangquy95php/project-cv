@@ -1,0 +1,110 @@
+/*------------------------------------------------------------
+Page Seminar
+------------------------------------------------------------*/
+
+.p-seminar {
+    &__recruiting {
+        margin: 102px 0 0;
+        @include sp {
+            margin: 50px 0 0;
+        }
+    }
+    &__tit1 {
+        margin: 90px 0 80px;
+        @include sp {
+            margin: 45px 0 40px;
+        }
+    }
+
+    &__recruited {
+        margin: 116px 0 0;
+        @include sp {
+            margin: 50px 0 0;
+        }
+    }
+
+    &__tit2 {
+        margin: 90px 0 80px;
+        @include sp {
+            margin: 45px 0 40px;
+        }
+    }
+    &__list1 {
+        .c-list06 {
+            @include sp {
+                padding: 0;
+            }
+            &__time {
+                margin: 12px 0 44px;
+            }
+            &__wrap {
+                padding: 40px 30px 31px;
+            }
+        }
+    }
+    &__list2 {
+        .c-list06 {
+            &__time {
+                margin: 12px 0 44px;
+            }
+            &__wrap {
+                padding: 40px 30px 29px;
+            }
+        }
+    }
+    .c-pagenavi {
+        margin: 81px 0 0;
+        @include sp {
+            margin: 20px 0 0;
+        }
+    }
+    .c-contact {
+        padding: 217px 0 121px;
+        @include sp {
+            padding: 100px 0 60px;
+        }
+    }
+}
+
+.p-seminardetail {
+    &__wrap {
+        padding: 0 0 180px;
+        @include sp {
+            padding: 0 0 60px;
+        }
+        .l-content {
+            float: none;
+        }
+        .c-title08 {
+            &::before {
+                background-color: #0181C0;
+            }
+        }
+    }
+    &__btn {
+        .c-btn01 {
+            margin: 100px 0 0;
+            @include sp {
+                margin: 50px 0 0;
+            }
+            &__link {
+                @include pc {
+                    padding: 22px 90px 20px;
+                }
+                @include hover {
+                    .c-btn01__txt::after {
+                        right: -45px;
+                    }
+                }
+            }
+            &__txt {
+                @include pc {
+                    padding-right: 25px;
+                    &::after {
+                        right: -40px;
+                    }
+                }
+            }
+        }
+    }
+}

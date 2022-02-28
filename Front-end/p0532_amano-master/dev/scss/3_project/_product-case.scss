@@ -1,0 +1,155 @@
+/*------------------------------------------------------------
+Page Product Case
+------------------------------------------------------------*/
+.p-productcase {
+    &__list {
+        margin: 79px 0 124px;
+
+        @include sp {
+            margin: 40px 0 70px;
+        }
+    }
+	.c-singlelist__item::before {
+		background-color: #0e82c6;
+	}
+    .c-list12 {
+        margin: 79px 0 0;
+    }
+
+    .c-contact {
+        padding: 139px 0 121px;
+
+        @include sp {
+            padding: 70px 0 60px;
+        }
+    }
+
+    .c-price {
+        margin-top: 80px;
+
+        @include sp {
+            margin-top: 40px;
+        }
+    }
+    
+    .c-btn01 {
+        margin-top: 30px;
+
+        .c-btn01__link {
+            padding: 11px 61px 12px 65px;
+        }
+    }
+
+    .c-brand {
+        margin-top: 30px;
+    }
+
+    .c-form1 {
+        margin-top: 100px;
+
+        @include sp {
+            margin-top: 50px;
+        }
+    }
+}
+
+.p-productcasedetail {
+    .c-text11{
+        &__item{
+            margin-bottom: 10px;
+        }
+
+        td{
+            padding: 10px 20px;
+        }
+    }
+    &__wrap {
+        &1 {
+            padding: 81px 0 79px;
+
+            @include sp {
+                padding: 40px 0;
+            }
+
+            .c-tag {
+                font-size: 1.6rem;
+                padding: 1px 19px 4px 14px;
+            }
+
+            .c-title09 {
+                margin: 12px 0 34px;
+
+                @include sp {
+                    margin: 12px 0;
+                }
+            }
+
+            .c-new {
+                &__txt {
+                    font-size: 1.6rem;
+
+                    @include sp {
+                        font-size: 1.4rem;
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 17px;
+                    }
+                }
+            }
+
+            .c-box9 {
+                margin: 60px 0 0;
+
+                @include sp {
+                    margin: 30px 0 0;
+                }
+            }
+        }
+
+        &2 {
+            background: #f4f4f4;
+            padding: 100px 0;
+
+            @include sp {
+                padding: 50px 0;
+            }
+
+            .l-content {
+                float: none;
+            }
+
+            .c-text10 {
+                margin: 0 0 41px;
+
+                @include sp {
+                    margin: 0 0 20px;
+                }
+            }
+
+            .c-text12 {
+                margin: 40px 0 0;
+
+                @include sp {
+                    margin: 20px 0 0;
+                }
+            }
+        }
+
+        &3 {
+            padding: 100px 0 73px;
+
+            @include sp {
+                padding: 50px 0 40px;
+            }
+
+            .l-content {
+                float: none;
+            }
+        }
+    }
+	.c-box15 {
+		margin: 0;
+	}
+}
+

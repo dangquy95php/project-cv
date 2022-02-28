@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* CSS Document */
+@media screen and (min-width:769px){
+
+.seminar_info_right a:hover {
+	box-shadow: 0 3px 5px rgba(3,21,4,.3), 0 -3px 5px rgba(255,255,255,1);
+}
+#seminarInfo .seminar_info_right a:hover {
+	box-shadow: 3px 3px 20px rgba(3,21,4,.8);
+}
+.soudan_info .soudan_btn a:hover {
+	box-shadow: 3px 3px 20px rgba(3,21,4,.6);
+}
+.dl_btn a:hover {
+	opacity: .8;
+}
+.dl_banner a:hover {
+	background: rgba(38,91,127,.7);
+}
+.amano_link a:hover {
+	opacity: 1;
+	border:1px solid #3F3D56;
+	background: url(../img/gaibu_ico2.svg) no-repeat right 20px center / 10px, #fff;
+	color:#3F3D56;
+}
+.footer_nav li a:hover {
+	text-decoration: underline;
+}
+
+}

@@ -1,0 +1,208 @@
+/*------------------------------------------------------------
+oneday
+------------------------------------------------------------*/
+.workflow {
+
+    .sc01_text{
+        letter-spacing: 0.12rem;
+    }
+
+    &_sc{
+        padding: 98px 0 98px;
+
+        @include sp {
+            padding: 40px 0 50px;
+        }
+    }
+
+    &_content {
+        display: flex;
+
+        @include sp{
+            flex-wrap: wrap;
+        }
+    }
+
+    &_img {
+        width: 346px;
+        margin-right: 39px;
+
+        @include pad{
+            width: 40%;
+        }
+
+        @include sp {
+            margin-bottom: 30px;
+            width: 100%;
+            margin-right: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &_item {
+        @include sp{
+            width: 48%;
+            margin-right: 4%;
+        }
+
+        &:nth-child(even){
+            @include sp{
+                margin: 0;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+
+            @include sp {
+                margin-bottom: 4%;
+            }
+        }
+
+        img {
+            @include sp {
+                width: 100%;
+            }
+        }
+    }
+
+    &_timelist {
+        position: relative;
+        flex-grow: 1;
+        flex-basis: 0;
+
+        @include sp{
+            width: 100%;
+            flex-basis: auto;
+        }
+
+        &:after {
+            content: "";
+            width: 2px;
+            height: calc(100% - 90px);
+            position: absolute;
+            background-color: #ddd;
+            top: 40px;
+            left: 122px;
+            z-index: 1;
+
+            @include pad {
+                left: 121px;
+            }
+
+            @include max-w(992px) {
+                left: 121px;
+                top: 45px;
+            }
+
+            @include sp {
+                height: calc(100% - 80px);
+                top: 40px;
+                left: 94px;
+            }
+
+            @include max-w(414px) {
+                left: 94px;
+            }
+        }
+    }
+    
+    &_timerow {
+        border: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        padding: 17px 30px 15px;
+        position: relative;
+        min-height: 80px;
+        z-index: 2;
+
+        @include sp {
+            padding: 15px 20px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 11px;
+        }
+    }
+
+    &_time {
+        width: 94px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include sp {
+            width: 84px;
+        }
+
+        .time {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: 0.19rem;
+            color: $color3;
+            position: relative;
+            top: -1px;
+
+            @include sp {
+                font-size: 1.8rem;
+            }
+        }
+
+        .icon {
+            display: inline-block;
+            background-color: #fff;
+            border-radius: 100%;
+            height: 20px;
+            width: 20px;
+            font-size: 0;
+            position: relative;
+            left: 9px;
+            top: -1px;
+
+            @include pad{
+                left: 7px;
+            }
+
+            @include sp{
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
+    &_timecontent {
+        width: calc(100% - 94px);
+        padding-left: 36px;
+        position: relative;
+        top: -2px;
+
+        @include pad{
+            top: 0;
+        }
+
+        @include sp {
+            width: calc(100% - 84px);
+            padding-left: 20px;
+        }
+
+        .title {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #000;
+            letter-spacing: 0.04rem;
+            margin-bottom: 2px;
+
+            @media screen and (max-width: 375px) {
+                font-size: calc((100vw / 375) * 14);
+            }
+        }
+
+        .text {
+            line-height: 1.5;
+            font-size: 1.4rem;
+            color: #666;
+            letter-spacing: -0.09rem;
+        }
+    }
+}

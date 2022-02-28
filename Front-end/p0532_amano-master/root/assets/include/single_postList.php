@@ -1,0 +1,52 @@
+<div class="row mt-5">
+    <div class="col-md-12 mb-4 block_item">
+        <div class="card bg-light">
+            <div class="card-header">
+                <div class="block_title mx-auto">
+                    おすすめ記事
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <?php
+                    $single_postList = get_field('single_postList');
+                    $count = 0;
+                    if ($single_postList) : ?>
+                        <?php foreach ($single_postList as $postList) : $count++;
+                            setup_postdata($postList);
+                            if($count <= 3) : ?>
+                                <div class="col-md-4">
+                                    <div class="block">
+                                        <div class="image">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <?php $post_thumbnail_id = get_post_thumbnail_id( $postList->ID, 'full' );
+                                                if(!empty($post_thumbnail_id)) {
+                                                    $img_ar = wp_get_attachment_image_src( $post_thumbnail_id, 'full' ); ?>
+                                                    <img class="w-100" src="<?php echo $img_ar[0];?>" />
+                                                <?php } else { ?>
+                                                    <img class="w-100" src="<?php echo get_template_directory_uri() ?>/assets/image/common/default.png" alt="">
+                                                <?php } ?>
+                                            </a>
+                                        </div>
+                                        <h3 class="block_title mt-1 mb-3"><?php echo $postList->post_title; ?></h3>
+                                        <p class="block_date my-3"><?php echo get_the_date('Y.m.d'); ?></p>
+                                        <div class="block_tags">
+                                            <?php $tags = get_the_tags($postList->ID); ?>
+                                            <?php $post_tags = get_the_tags(); ?>
+                                            <?php if ($tags) :
+                                                foreach ($tags as $tag) : ?>
+                                                    <a href="<?php echo get_tag_link($tag);?>" class="tag"><?php echo $tag->name; ?></a>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                        <?php wp_reset_postdata(); ?>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

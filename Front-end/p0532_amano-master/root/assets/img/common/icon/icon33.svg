@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="SVGID" width="19.435" height="25.017" transform="translate(390.886 531.844)" fill="#0181c0"/>
+    </clipPath>
+  </defs>
+  <g id="Group_16825" data-name="Group 16825" transform="translate(-1078.092 601)">
+    <g id="楕円形_737" data-name="楕円形 737" transform="translate(1078.092 -601)" opacity="0.07">
+      <circle id="Ellipse_774" data-name="Ellipse 774" cx="30" cy="30" r="30" fill="#0181c0"/>
+      <circle id="Ellipse_775" data-name="Ellipse 775" cx="29.571" cy="29.571" r="29.571" transform="translate(0.429 0.429)" fill="#0181c0"/>
+    </g>
+    <g id="Group_16788" data-name="Group 16788" transform="translate(707.105 -1114.844)">
+      <g id="Group_16787" data-name="Group 16787" clip-path="url(#clip-path)">
+        <path id="パス_16514" data-name="パス 16514" d="M404.7,537.137H391.219a.333.333,0,0,0-.333.331v19.06a.333.333,0,0,0,.333.333H404.7a.334.334,0,0,0,.334-.333v-19.06a.334.334,0,0,0-.334-.331m-.333,19.057h-12.81V537.8h12.81Z" fill="#0181c0"/>
+        <path id="パス_16515" data-name="パス 16515" d="M407.342,534.489H393.865a.333.333,0,0,0-.333.333h0v1.053a.333.333,0,1,0,.667,0v-.72h12.81v18.392h-.845a.334.334,0,0,0,0,.667h1.178a.333.333,0,0,0,.333-.333V534.823a.333.333,0,0,0-.332-.334h0" fill="#0181c0"/>
+        <path id="パス_16516" data-name="パス 16516" d="M409.988,531.844H396.511a.333.333,0,0,0-.331.333v1.134a.333.333,0,1,0,.666,0h0v-.8h12.808V550.9h-.73a.333.333,0,0,0,0,.667h1.066a.333.333,0,0,0,.333-.333h0V532.177a.333.333,0,0,0-.333-.333h0" fill="#0181c0"/>
+      </g>
+    </g>
+  </g>
+</svg>

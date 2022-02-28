@@ -1,0 +1,130 @@
+/*------------------------------------------------------------
+Page Product Hands Free
+------------------------------------------------------------*/
+.p-handsFree{
+
+    .c-mv5{
+        margin-bottom: 80px;
+
+        @include sp{
+            margin-bottom: 10px;
+        }
+        
+        &__box{
+            padding-top: 9px;
+        }
+
+        &__tit{
+            line-height: 1.2;
+        }
+
+        &__txt{
+            line-height: 1.8;
+            margin-top: 29px;
+
+            @include pad{
+                font-size: 1.8rem;
+            }
+
+            @include sp{
+                font-size: 1.6rem;
+                margin-top: 18px;
+            }
+        }
+    }
+
+    .c-title09{
+        margin-bottom: 80px;
+
+        @include sp{
+            margin-bottom: 40px;
+        }
+    }
+
+    &1{
+        padding: 40px 0 22px;
+        box-sizing: border-box;
+
+        @include sp{
+            padding: 40px 0 20px;
+        }
+
+        .c-list15{
+            &__item{
+                margin-bottom: 78px;
+
+                @include sp{
+                    margin-bottom: 30px;
+                }
+            }
+
+            &__img{
+                margin-top: 58px;
+
+                @include sp{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    &2{
+        padding: 122px 0 40px;
+        box-sizing: border-box;
+
+        @include sp{
+            padding: 50px 0 20px;
+        }
+
+        .c-list15{
+            &__item{
+                margin-bottom: 81px;
+
+                @include sp{
+                    margin-bottom: 30px;
+                }
+            }
+
+            &__img{
+                margin-top: 57px;
+
+                @include sp{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    &3{
+        padding: 122px 0 40px;
+        box-sizing: border-box;
+
+        @include sp{
+            padding: 50px 0 20px;
+        }
+
+        .c-box6{
+            margin-bottom: 80px;
+
+            @include sp{
+                margin-bottom: 30px;
+            }
+        }
+
+        .c-imgtext02{
+            margin-top: 37px;
+
+            @include sp{
+                margin-top: 30px;
+            }
+
+            &__img{
+                margin-top: 3px;
+
+                @include sp{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

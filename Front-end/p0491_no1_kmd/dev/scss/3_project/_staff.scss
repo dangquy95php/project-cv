@@ -1,0 +1,184 @@
+/*------------------------------------------------------------
+staff
+------------------------------------------------------------*/
+.staff {
+	&_content {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+
+		@include sp {
+			flex-direction: column;
+		}
+	}
+
+	&_wrap {
+		&:nth-child(1) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin-top: 175px;
+
+			@include pad {
+				margin-top: 190px;
+			}
+
+			@include sp {
+				margin-top: 0;
+				margin-bottom: 30px;
+			}
+		}
+
+		&:nth-child(2) {
+			width: 440px;
+			margin-top: 39px;
+
+			@include max-w(950px) {
+				width: 275px;
+			}
+
+			@include sp {
+				width: 100%;
+				margin-top: 0;
+			}
+		}
+	}
+
+	&_year {
+		align-self: flex-start;
+		margin-bottom: 10px;
+
+		@include sp {
+			align-self: center;
+		}
+	}
+
+	&_year,
+	&_job {
+		color: $color3;
+		font-size: 2rem;
+		font-weight: 500;
+		line-height: 1;
+		letter-spacing: 0.3rem;
+
+		@include pad {
+			font-size: 1.6rem;
+			letter-spacing: 0.1rem;
+		}
+
+		@include sp {
+			text-align: center;
+		}
+	}
+
+	&_name {
+		font-size: 3rem;
+		color: #000;
+		letter-spacing: 0.67rem;
+		font-family: "Noto Serif JP";
+		font-weight: 500;
+		margin-left: 5px;
+
+		@include pad {
+			margin-top: 10px;
+			margin-left: 0;
+			display: block;
+			letter-spacing: 0.1rem;
+		}
+	}
+
+	.sc01 {
+		&.left {
+			@include max-w(950px) {
+				.sc01_img {
+					left: 280px;
+				}
+			}
+			.staff_wrap {
+				&:nth-child(1) {
+					order: 1;
+					position: relative;
+					left: 10px;
+
+					@include pad {
+						left: 0;
+					}
+				}
+
+				&:nth-child(2) {
+					@include sp {
+						order: 1;
+					}
+				}
+			}
+		}
+
+		&.right {
+			.sc01_img {
+				@include max-w(950px) {
+					right: 280px;
+				}
+			}
+		}
+
+		&_text {
+			margin-top: 0;
+		}
+	}
+
+	&_sc01 {
+		background-color: $color4;
+		padding: 100px 0 91px;
+		box-sizing: border-box;
+
+		@include sp {
+			padding: 40px 0 40px;
+		}
+
+		@include min-w(768px) {
+			.sc01_img {
+				background-image: url(../img/staff/img01.jpg);
+				background-position: bottom bottom;
+
+				&:before {
+					background-color: $color4;
+				}
+			}
+		}
+	}
+
+	&_sc02 {
+		padding: 101px 0 91px;
+		box-sizing: border-box;
+
+		@include sp {
+			padding: 40px 0 50px;
+		}
+
+		@include min-w(768px) {
+			.sc01_img {
+				background-image: url(../img/staff/img02.jpg);
+				background-position: center top;
+			}
+		}
+
+		.staff_wrap {
+			&:nth-child(1) {
+				margin-top: 240px !important;
+
+				@include pad {
+					margin-top: 260px !important;
+				}
+
+				@include max-w(950px) {
+					margin-top: 190px !important;
+				}
+
+				@include sp {
+					margin-top: 0 !important;
+				}
+			}
+		}
+	}
+}

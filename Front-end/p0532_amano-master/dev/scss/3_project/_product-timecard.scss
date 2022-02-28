@@ -1,0 +1,89 @@
+/*------------------------------------------------------------
+Page Product Time Card
+------------------------------------------------------------*/
+.p-timecard{
+
+    .c-mv5{
+        &__img{
+            margin-top: 12px;
+
+            @include sp{
+                margin-top: 20px;
+            }
+        }
+
+        &__tit {
+            @include pc {
+                font-feature-settings: "palt";
+                letter-spacing: 5px;
+            }
+        }
+    }
+
+    .c-title09{
+        margin-bottom: 80px;
+
+        @include sp{
+            margin-bottom: 40px;
+        }
+    }
+
+    &1{
+        padding: 110px 0 116px;
+        box-sizing: border-box;
+
+        @include sp{
+            padding: 50px 0 50px;
+        }
+
+        .c-box2{
+            &:not(:first-child) {
+                margin-top: 80px;
+
+                @include sp{
+                    margin-top: 40px;
+                }
+            }
+
+            .c-box{
+                margin-top: -3px;
+                padding-bottom: 33px;
+    
+                @include sp{
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .c-list22{
+            margin: 50px 0 -19px;
+        }
+
+        .c-banner {
+            margin: 110px auto 0;
+
+            @include sp {
+                margin: 58px auto 0;
+            }
+        }
+
+        .c-support {
+            .l-container {
+                padding: 0;
+            }
+        }
+    }
+
+    &2{
+        padding: 101px 0 0;
+        box-sizing: border-box;
+
+        @include sp{
+            padding: 50px 0 50px;
+        }
+
+        .c-list15 {
+            margin: 0;
+        }
+    }
+}

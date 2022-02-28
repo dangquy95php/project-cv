@@ -1,0 +1,145 @@
+/*------------------------------------------------------------
+commitment
+------------------------------------------------------------*/
+.commitment {
+	.c-title02 {
+		margin-bottom: 99px;
+
+		@include pad {
+			margin-bottom: 50px;
+		}
+
+		@include sp {
+			margin-bottom: 30px;
+		}
+	}
+
+	&_sc01 {
+		padding: 89px 0 100px;
+		box-sizing: border-box;
+
+		@include sp {
+			padding: 40px 0 40px;
+		}
+
+		.sc01_text {
+			margin-top: 0;
+		}
+	}
+
+	&_sc02 {
+		padding: 89px 0 99px;
+		box-sizing: border-box;
+		background-color: $color4;
+
+		@include sp {
+			padding: 40px 0 40px;
+		}
+
+		.sc01 {
+			&_img {
+				&:before {
+					background-color: $color4;
+				}
+			}
+
+			&_content {
+				top: 38px;
+
+				@include sp {
+					top: 0;
+				}
+			}
+
+			&_text {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&_sc03 {
+		padding: 92px 0 101px;
+		box-sizing: border-box;
+
+		@include sp {
+			padding: 40px 0 50px;
+		}
+
+		.sc01 {
+			&_content {
+				top: 40px;
+
+				@include sp {
+					top: 0;
+				}
+			}
+
+			&_text {
+				margin-top: 0;
+			}
+		}
+
+		.c-title02 {
+			margin-bottom: 100px;
+
+			@include pad {
+				margin-bottom: 50px;
+			}
+
+			@include sp {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	.p-sc01 {
+		@include min-w(768px) {
+			.sc01_commitment01 {
+				.sc01_img {
+					background-image: url(../img/commitment/img01.jpg);
+					background-position: center top;
+
+					@include pad {
+						background-position: -175% top;
+					}
+				}
+			}
+
+			.sc01_commitment02 {
+				.sc01_img {
+					background-image: url(../img/commitment/img02.jpg);
+					background-position: center bottom;
+				}
+			}
+
+			.sc01_commitment03 {
+				.sc01_img {
+					background-image: url(../img/commitment/img03.jpg);
+					background-position: center top;
+
+					@include pad {
+						background-position: -175% top;
+					}
+				}
+			}
+
+			.sc01_commitment04 {
+				.sc01_img {
+					background-image: url(../img/commitment/img04.jpg);
+					background-position: center bottom;
+				}
+			}
+
+			.sc01_commitment05 {
+				.sc01_img {
+					background-image: url(../img/commitment/img05.jpg);
+					background-position: center top;
+
+					@include pad {
+						background-position: -175% top;
+					}
+				}
+			}
+		}
+	}
+}

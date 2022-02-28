@@ -1,0 +1,157 @@
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/header.php'); ?>
+
+<main class="p-glossary">
+    <div class="c-heading">
+        <h1 class="c-heading__txt">
+            <span class="c-heading__sub">スムーズなお仕事のために知っておきたい</span>
+            <span class="c-heading__main">人事・労務の注目用語</span>
+        </h1>
+    </div>
+    <div class="p-faqcolumn__wrap">
+        <div class="l-container">
+            <div class="l-content">
+                <?php ///////////////////////////////////////////////////////
+                // パンくず
+                ///////////////////////////////////////////////////////////// 
+                ?> <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/breadcrumb.php'); ?>
+
+                <?php ///////////////////////////////////////////////////////
+                // 新着用語
+                ///////////////////////////////////////////////////////////// 
+                ?>
+                <h2 class="c-title07 p-glossary__tit1">新着用語</h2>
+                <?php
+                $the_query = new WP_Query(array(
+                    'posts_per_page' => 6,
+                    'post_type' => 'glossary',
+                ));
+                if ($the_query->have_posts()) : ?>
+                    <ul class="c-list05">
+                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                            <?php component_loop_3('word_yomi'); ?>
+                        <?php endwhile; ?>
+                        <!-- End c-list05__item-->
+                    </ul>
+                    <?php wp_reset_postdata(); ?>
+                <?php else : ?>
+                    <?php echo '<h3 class="u-center">投稿はありません</h3>'; ?>
+                <?php endif; ?>
+
+                <?php ///////////////////////////////////////////////////////
+                // 50音順から探す
+                ///////////////////////////////////////////////////////////// 
+                ?>
+                <h2 class="c-title07  p-glossary__tit2">50音順から探す</h2>
+                <ul class="c-anchor">
+                    <li class="c-anchor__item">
+                        <a href="#a" class="c-anchor__txt">あ</a>
+                    </li>
+                    <li class="c-anchor__item">
+                        <a href="#ka" class="c-anchor__txt">か</a>
+                    </li>
+                    <li class="c-anchor__item">
+                        <a href="#sa" class="c-anchor__txt">さ</a>
+                    </li>
+                    <li class="c-anchor__item">
+                        <a href="#ta" class="c-anchor__txt">た</a>
+                    </li>
+                    <li class="c-anchor__item">
+                        <a href="#na" class="c-anchor__txt">な</a>
+                    </li>
+                    <li class="c-anchor__item">
+                        <a href="#ha" class="c-anchor__txt">は</a>
+                    </li>
+                    <li class="c-anchor__item">
+                        <a href="#ma" class="c-anchor__txt">ま</a>
+                    </li>
+                    <li class="c-anchor__item">
+                        <a href="#ya" class="c-anchor__txt">や</a>
+                    </li>
+                    <li class="c-anchor__item">
+                        <a href="#ra" class="c-anchor__txt">ら</a>
+                    </li>
+                    <li class="c-anchor__item">
+                        <a href="#wa" class="c-anchor__txt">わ</a>
+                    </li>
+                </ul>
+
+                <?php
+                $the_query_word = new WP_Query(array(
+                    'post_type' => 'glossary',
+                    'posts_per_page' => -1,
+                ));
+                ?>
+                <h3 class="c-title12" id="a">
+                    <span class="c-title12__alpha">あ</span>
+                    <span class="c-title12__txt">「あ・い・う・え・お」<br class="sp-only">から始まる用語</span>
+                </h3>
+                <?php component_loop_7($the_query_word, 'a'); ?>
+
+                <!-- 「か・き・く・け・こ」から始まる用語 -->
+                <h3 class="c-title12" id="ka">
+                    <span class="c-title12__alpha">か</span>
+                    <span class="c-title12__txt">「か・き・く・け・こ」<br class="sp-only">から始まる用語</span>
+                </h3>
+                <?php component_loop_7($the_query_word, 'k'); ?>
+
+                <!-- 「「さ・し・す・せ・そ」から始まる用語 -->
+                <h3 class="c-title12" id="sa">
+                    <span class="c-title12__alpha">さ</span>
+                    <span class="c-title12__txt">「さ・し・す・せ・そ」<br class="sp-only">から始まる用語</span>
+                </h3>
+                <?php component_loop_7($the_query_word, 's'); ?>
+
+                <!-- 「た・ち・つ・て・と」から始まる用語 -->
+                <h3 class="c-title12" id="ta">
+                    <span class="c-title12__alpha">た</span>
+                    <span class="c-title12__txt">「た・ち・つ・て・と」<br class="sp-only">から始まる用語</span>
+                </h3>
+                <?php component_loop_7($the_query_word, 't'); ?>
+
+                <!-- 「な・に・ぬ・ね・の」から始まる用語 -->
+                <h3 class="c-title12" id="na">
+                    <span class="c-title12__alpha">な</span>
+                    <span class="c-title12__txt">「な・に・ぬ・ね・の」<br class="sp-only">から始まる用語</span>
+                </h3>
+                <?php component_loop_7($the_query_word, 'n'); ?>
+
+                <!-- 「は・ひ・ふ・へ・ほ」から始まる用語 -->
+                <h3 class="c-title12" id="ha">
+                    <span class="c-title12__alpha">は</span>
+                    <span class="c-title12__txt">「は・ひ・ふ・へ・ほ」<br class="sp-only">から始まる用語</span>
+                </h3>
+                <?php component_loop_7($the_query_word, 'h'); ?>
+
+                <!-- 「ま・み・む・め・も」から始まる用語 -->
+                <h3 class="c-title12" id="ma">
+                    <span class="c-title12__alpha">ま</span>
+                    <span class="c-title12__txt">「ま・み・む・め・も」<br class="sp-only">から始まる用語</span>
+                </h3>
+                <?php component_loop_7($the_query_word, 'm'); ?>
+
+                <!-- 「や・ゆ・よ」から始まる用語 -->
+                <h3 class="c-title12" id="ya">
+                    <span class="c-title12__alpha">や</span>
+                    <span class="c-title12__txt">「や・ゆ・よ」<br class="sp-only">から始まる用語</span>
+                </h3>
+                <?php component_loop_7($the_query_word, 'y'); ?>
+
+                <!-- 「ら・り・る・れ・ろ」から始まる用語 -->
+                <h3 class="c-title12" id="ra">
+                    <span class="c-title12__alpha">ら</span>
+                    <span class="c-title12__txt">「ら・り・る・れ・ろ」<br class="sp-only">から始まる用語</span>
+                </h3>
+                <?php component_loop_7($the_query_word, 'r'); ?>
+
+                <!-- 「わ・を・ん」から始まる用語 -->
+                <h3 class="c-title12" id="wa">
+                    <span class="c-title12__alpha">わ</span>
+                    <span class="c-title12__txt">「わ・を・ん」<br class="sp-only">から始まる用語</span>
+                </h3>
+                <?php component_loop_7($the_query_word, 'w'); ?>
+            </div>
+            <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/side.php'); ?>
+        </div>
+    </div>
+</main>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/footer.php'); ?>

@@ -1,0 +1,93 @@
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/searchbar.php'); ?>
+<main class="p-tag">
+    <div class="c-heading">
+        <h1 class="c-heading__txt">
+            <span class="c-heading__main"><?php wp_title(""); ?></span>
+        </h1>
+    </div>
+
+    <?php
+    $tag = get_queried_object();
+    $arg = array(
+        'tag'              => $tag->slug,
+        'order'            => 'DESC',
+        'posts_per_page'   => -1,
+    );
+    $args = array(
+        'post_type' => 'hr_news',
+    );
+    $args = array_merge($args, $arg);
+    $hr_news = new WP_Query($args);
+
+    $args1 = array(
+        'post_type'  => 'gyomu_kaizen',
+    );
+    $args = array_merge($args1, $arg);
+    $gyomu_kaizen = new WP_Query($args);
+
+    $args2 = array(
+        'post_type'  => 'faq_column',
+    );
+    $args2 = array_merge($args2, $arg);
+
+    $faq_column = new WP_Query($args2);
+
+    $args3 = array(
+        'post_type'  => 'glossary',
+    );
+    $args3 = array_merge($args3, $arg);
+
+    $glossary = new WP_Query($args3);
+    ?>
+
+    <div class="p-glossary__wrap">
+        <div class="l-container">
+            <div class="l-content">
+                <?php ///////////////////////////////////////////////////////
+                // パンくず
+                ///////////////////////////////////////////////////////////// 
+                ?> <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/breadcrumb.php'); ?>
+
+                <?php if ($hr_news->have_posts()) : ?>
+                    <h2 class="c-title07 p-glossary__tit1 p-glossary_right">HR News<span class="p-glossary_text">人事・労務の最前線をコラムでお届け</span></h2>
+                    <ul class="c-list02 c-list02--border c-block__hrNews">
+                        <?php while ($hr_news->have_posts()) : $hr_news->the_post(); ?>
+                            <?php component_loop_1(); ?>
+                            <!-- End c-list02__item-->
+                        <?php endwhile; ?>
+                    </ul>
+                <?php endif; ?>
+
+                <?php if ($gyomu_kaizen->have_posts()) : ?>
+                    <h2 class="c-title07 p-glossary__tit1 p-glossary_right">業務改善ガイド<span class="p-glossary_text">効率化・ノウハウから法律や助成金まで！</span></h2>
+                    <ul class="c-list02 c-list02--border">
+                        <?php while ($gyomu_kaizen->have_posts()) : $gyomu_kaizen->the_post(); ?>
+                            <?php component_loop_14(); ?>
+                        <?php endwhile; ?>
+                    </ul>
+                <?php endif; ?>
+
+                <?php if ($faq_column->have_posts()) : ?>
+                    <h2 class="c-title07 p-glossary__tit1 p-glossary_right">なんでもQ＆A<span class="p-glossary_text">様々な課題を抱えるご担当者様に向けて</span></h2>
+                    <ul class="c-list33">
+                        <?php while ($faq_column->have_posts()) : $faq_column->the_post(); ?>
+                            <?php component_loop_2(); ?>
+                        <?php endwhile; ?>
+                    </ul>
+                <?php endif; ?>
+
+                <?php if ($glossary->have_posts()) : ?>
+                    <h2 class="c-title07 p-glossary__tit1 p-glossary_right">注目用語<span class="p-glossary_text">スムーズなお仕事のために知っておきたい</span></h2>
+                    <ul class="c-list05">
+                        <?php while ($glossary->have_posts()) : $glossary->the_post(); ?>
+                            <?php component_loop_3(); ?>
+                        <?php endwhile; ?>
+                    </ul>
+                <?php endif; ?>
+            </div>
+            <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/side.php'); ?>
+        </div>
+    </div>
+</main>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/footer.php'); ?>

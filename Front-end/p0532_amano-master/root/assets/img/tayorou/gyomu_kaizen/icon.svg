@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="Group_16348" data-name="Group 16348" transform="translate(-319.978 -1695)">
+    <rect id="Rectangle_48" data-name="Rectangle 48" width="64" height="64" rx="32" transform="translate(319.978 1695)" fill="#f79e39"/>
+    <g id="icon-guide" transform="translate(335.978 1713.667)">
+      <path id="Path_64" data-name="Path 64" d="M8.4,57h-4a.4.4,0,0,0-.4.4v6.8H8.8V57.4A.4.4,0,0,0,8.4,57Z" transform="translate(-2.399 -36.202)" fill="#fff"/>
+      <path id="Path_65" data-name="Path 65" d="M28.4,49h-4a.4.4,0,0,0-.4.4v10h4.8v-10A.4.4,0,0,0,28.4,49Z" transform="translate(-14.4 -31.402)" fill="#fff"/>
+      <path id="Path_66" data-name="Path 66" d="M48.4,41h-4a.4.4,0,0,0-.4.4V54.6h4.8V41.4A.4.4,0,0,0,48.4,41Z" transform="translate(-26.4 -26.602)" fill="#fff"/>
+      <path id="Path_67" data-name="Path 67" d="M68.4,33h-4a.4.4,0,0,0-.4.4V49.8h4.8V33.4A.4.4,0,0,0,68.4,33Z" transform="translate(-38.4 -21.802)" fill="#fff"/>
+      <path id="Path_68" data-name="Path 68" d="M24.819,5.55,25.564,7.4a.4.4,0,0,1-.22.52L.248,18.053a.4.4,0,0,0-.22.52l.894,2.214a.4.4,0,0,0,.52.22L26.538,10.866a.4.4,0,0,1,.52.22l.746,1.845a.4.4,0,0,0,.71.057l3.429-5.68a.4.4,0,0,0-.24-.59l-6.413-1.7a.4.4,0,0,0-.471.534Z" transform="translate(0.001 -5.004)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

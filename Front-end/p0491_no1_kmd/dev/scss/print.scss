@@ -1,0 +1,361 @@
+@charset "UTF-8";
+
+@mixin page-before {
+	page-break-before: always;
+}
+
+@mixin page-after {
+	page-break-after: always;
+}
+
+@mixin page-inside {
+	page-break-inside: avoid;
+}
+
+body {
+	-webkit-print-color-adjust: exact;
+}
+
+.wp-pagenavi, .breadcrumb, .c-btn, #gnav, #pagetop, .c-btn01,
+.c-navi, .c-combtn, .tBtn_box {
+	display: none!important;
+}
+
+.home #header .logo .logo_top{
+	display: none;
+}
+
+.home #header .logo .logo_page{
+	display: block;
+}
+
+#header{
+	box-shadow: none;
+	position: inherit;
+	margin-top: -100px;
+
+	.h_box{
+		padding-left: 0;
+		padding-bottom: 20px;
+	}
+}
+
+.home #header{
+	margin-top: 0;
+}
+
+.c-title02{
+
+	&_eng{
+		font-size: 10rem!important;
+	}
+
+	&_jp{
+		font-size: 3rem!important;
+	}
+}
+
+.sc01.right .sc01_img{
+	right: 400px;
+}
+
+.sc01.left .sc01_img{
+	left: 400px;
+}
+
+.sc01_content{
+	width: 50%;
+}
+
+.sc01_img{
+	background: none;
+}
+
+.sc01_img img{
+	display: block;
+}
+
+.mainvisual{
+	height: 250px;
+
+	&_eng{
+		font-size: 8rem;
+	}
+}
+
+.main_table{
+
+	th, td{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+.top{
+
+	&_mainimg_ttl{
+
+		.eng{
+			font-size: 11rem;
+		}
+
+		.jap{
+			font-size: 3rem;
+			bottom: 120px;
+		}
+	}
+
+	.top_mainimg_txt{
+		font-size: 1.4rem;
+	}
+
+	&_news{
+		@include page-after;
+	}
+
+	&_commitment{
+		margin-top: 0;
+		@include page-after;
+	}
+
+	&_trouble{
+		padding-top: 10px;
+
+		.p-sc01{
+			&:not(:last-child){
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	&_construction{
+		@include page-after;
+	}
+
+	&_recruit{
+		padding-top: 10px;
+
+		.sc01_img{
+			&:before{
+				background-color: #f1f1f1;
+			}
+		}
+
+		.p-sc01{
+			&:not(:last-child){
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&_other{
+
+		&__content{
+			width: 100%;
+			overflow: hidden;
+		}
+
+		.c-title05{
+			margin-bottom: 0;
+		}
+	}
+
+	&_recruitment{
+		@include page-before;
+	}
+}
+
+.commitment{
+
+	&_sc01{
+		padding-top: 10px;
+
+		.c-title01{
+			margin-bottom: 20px;
+		}
+
+		.c-title02{
+			margin-bottom: 20px;
+		}
+	}
+
+	&_sc02{
+		padding-top: 30px;
+
+		.c-title02{
+			margin-bottom: 30px;
+		}
+
+		.p-sc01{
+			&:not(:last-child){
+				margin-bottom: 30px!important;
+			}
+
+			&:nth-of-type(3){
+				@include page-before;
+			}
+		}
+	}
+}
+
+.service{
+
+	.c-block01{
+		@include page-after;
+	}
+
+	&_sc02{
+		@include page-after;
+	}
+
+	&_sc03{
+		.sc01_img{
+			&:before{
+				background-color: #f1f1f1;
+			}
+		}
+	}
+}
+
+.company{
+
+	&_sc01{
+		padding-top: 20px;
+
+		.c-title02{
+			margin-bottom: 30px;
+		}
+
+		.main_table{
+
+			tr{
+				&:nth-child(11){
+					border-top: 1px solid #fff;
+				}
+			}
+		}
+	}
+
+	&_sc02{
+		@include page-after;
+	}
+
+	&_sc03{
+		@include page-after;
+	}
+}
+
+.construction{
+
+	&_sc{
+		@include page-after;
+	}
+
+	.c-cate{
+		margin: 0 -8px 60px;
+
+		li{
+			padding: 0 8px;
+		}
+	}
+}
+
+.recruit{
+
+	.c-block01{
+		@include page-after;
+	}
+
+	&_sc01{
+		@include page-after;
+	}
+
+	&_sc02{
+		padding-top: 30px;
+		@include page-after;
+	}
+
+	&-detail{
+
+		.main_table{
+			tr{
+				&:nth-child(3){
+					border-top: 1px solid #fff
+				}
+			}
+		}
+	}
+}
+
+.staff{
+
+	.staff_wrap:nth-child(1){
+		margin-top: 0;
+		width: 50%!important;
+		display: none;
+	}
+
+	.staff_wrap:nth-child(2){
+		width: 100%!important;
+		margin-top: 10px;
+	}
+
+	&_sc01{
+		@include page-after;
+
+		.sc01_img{
+			&:before{
+				background-color: #f1f1f1;
+			}
+		}
+	}
+}
+
+.workflow{
+
+	.c-block01{
+		@include page-after;
+	}
+
+	&_sc{
+		@include page-after;
+	}
+}
+
+.contact{
+
+	.c-block01{
+		padding-top: 30px;
+	}
+
+	.contact_phone_tel span, 
+	.contact_phone_tel .tel_link{
+		font-size: 3rem;
+	}
+
+	.contact_section2 .contact_text3{
+		height: 100px;
+	}
+
+	.contact_form{
+
+		dt, dd{
+			padding-top: 10px!important;
+			padding-bottom: 10px!important;
+			padding-left: 10px!important;
+		}
+
+		.contact_textarea textarea{
+			height: 50px;
+		}
+
+		.contact_require{
+			right: 10px;
+		}
+
+		.contact_wrap2 .contact_select:before{
+			height: 36px;
+			top: 2px;
+		}
+	}
+}

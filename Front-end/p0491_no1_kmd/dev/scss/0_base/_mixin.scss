@@ -1,0 +1,191 @@
+/*-------------------------------------------
+フォント
+-------------------------------------------*/
+@mixin yumin() {
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+}
+
+@mixin yugot() {
+	font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+}
+
+@mixin open-sans($w: '') {
+	font-family: 'Open Sans', sans-serif;
+	@if $w == li {
+		font-weight: 300;
+	} @else if $w == re {
+		font-weight: 400;
+	} @else if $w == se {
+		font-weight: 600;
+	} @else if $w == bo {
+		font-weight: 700;
+	} @else if $w == ex {
+		font-weight: 800;
+	}
+}
+
+@mixin noto-sans-cjk-jp($w: '') {
+	//font-family: 'NotoSansCJKjp', sans-serif;
+	@if $w == th {
+		//Thin
+		font-weight: 100;
+	} @else if $w == li {
+		//Light
+		font-weight: 200;
+	} @else if $w == de {
+		//DemiLight
+		font-weight: 300;
+	} @else if $w == re {
+		//Regular
+		font-weight: 400;
+	} @else if $w == me {
+		//Medium
+		font-weight: 500;
+	} @else if $w == bo {
+		//Bold
+		font-weight: 700;
+	} @else if $w == bl {
+		//Black
+		font-weight: 900;
+	}
+}
+
+/*-------------------------------------------
+breakpoint
+-------------------------------------------*/
+@mixin sm {
+	// <- 480px
+	@media screen and (max-width: #{$breakpoint0}) {
+		@content;
+	}
+}
+
+@mixin sp {
+	// <- 767px
+	@media screen and (max-width: #{$breakpoint1}) {
+		@content;
+	}
+}
+
+@mixin pad {
+	// <- 1060px
+	@media screen and (max-width: #{$breakpoint2}) {
+		@content;
+	}
+}
+
+@mixin pc {
+	// 1061px ->
+	@media screen and (min-width: #{($breakpoint2 + 1px)}) {
+		@content;
+	}
+}
+
+@mixin min-w($breakpoint) {
+	@media screen and (min-width: #{$breakpoint}) {
+		@content;
+	}
+}
+
+@mixin max-w($breakpoint) {
+	@media screen and (max-width: #{$breakpoint}) {
+		@content;
+	}
+}
+
+@mixin ie {
+	@media all and (-ms-high-contrast: none) {
+		@content;
+	}
+}
+
+/*-------------------------------------------
+SPの際はhover(opacityを含む)を無効化してください。
+-------------------------------------------*/
+@mixin hover {
+	&:hover {
+		@media screen and (min-width: #{($breakpoint2 + 1px)}) {
+			@content;
+		}
+	}
+}
+
+/*-------------------------------------------
+Calculate letter-spacing photoshop
+-------------------------------------------*/
+@mixin letter-spacing($size, $tracking) {
+	letter-spacing: ($size * $tracking / 1000);
+}
+
+/*-------------------------------------------
+Clearfix
+-------------------------------------------*/
+@mixin clear {
+	*zoom: 1;
+	&:after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+
+/*-------------------------------------------
+Other
+-------------------------------------------*/
+@mixin shadow {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@mixin opacity80 {
+	transition: all .3s ease-in-out;
+	&:hover {
+		opacity: .8;
+		filter: alpha(opacity=80);
+		-ms-filter: "alpha(opacity=80)";
+	}
+}
+
+@mixin nonelink {
+	text-decoration: none;
+	color: inherit;
+
+	&:hover, &:focus {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+@mixin pseudo($w, $h, $top, $left) {
+	position: absolute;
+	content: "";
+	width: $w;
+	height: $h;
+	top: $top;
+	left: $left;
+}
+
+@mixin text($size, $lh, $color, $letter) {
+	font-size: $size;
+	@if ($lh == null) {
+		line-height: 1;
+	} @else {
+		line-height: $lh;
+	}
+	color: $color;
+	@if ($letter == null) {
+		letter-spacing: 0;
+	} @else {
+		letter-spacing: $letter;
+	}
+}
+
+//============================================
+// flex
+//============================================
+@mixin flex($direction, $content, $items) {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: $direction;
+	justify-content: $content;
+	align-items: $items;
+}

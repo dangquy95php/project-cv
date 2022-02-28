@@ -1,0 +1,7 @@
+<svg id="icon-seminar" xmlns="http://www.w3.org/2000/svg" width="24" height="21" viewBox="0 0 24 21">
+  <path id="Path_70" data-name="Path 70" d="M21.6,5H2.4A2.4,2.4,0,0,0,0,7.4V20.6A2.4,2.4,0,0,0,2.4,23H4.5a.3.3,0,0,0,.3-.3V20.9a.3.3,0,0,0-.3-.3H3a.6.6,0,0,1-.6-.6V8A.6.6,0,0,1,3,7.4H21a.6.6,0,0,1,.6.6V20a.6.6,0,0,1-.6.6H13.5a.3.3,0,0,0-.3.3v1.8a.3.3,0,0,0,.3.3h8.1A2.4,2.4,0,0,0,24,20.6V7.4A2.4,2.4,0,0,0,21.6,5Z" transform="translate(0 -5)" fill="#333"/>
+  <path id="Path_71" data-name="Path 71" d="M21.9,43H24.1A1.9,1.9,0,0,1,26,44.9v7.7H20V44.9A1.9,1.9,0,0,1,21.9,43Z" transform="translate(-14 -31.6)" fill="#333"/>
+  <circle id="Ellipse_9" data-name="Ellipse 9" cx="2.4" cy="2.4" r="2.4" transform="translate(6.6 6)" fill="#333"/>
+  <rect id="Rectangle_41" data-name="Rectangle 41" width="6" height="2.4" rx="1.2" transform="translate(8.98 11.4)" fill="#333"/>
+  <path id="Path_72" data-name="Path 72" d="M47.8,34.538l-3.182,3.906a1.2,1.2,0,0,1-1.7,0h0a1.2,1.2,0,0,1,0-1.7l3.906-3.182Z" transform="translate(-29.796 -24.995)" fill="#333"/>
+</svg>

@@ -1,0 +1,59 @@
+/*------------------------------------------------------------
+company
+------------------------------------------------------------*/
+.company{
+
+    &_sc01{
+        padding: 86px 0 99px;
+        box-sizing: border-box;
+
+        @include sp{
+            padding: 40px 0 40px;
+        }
+    }
+
+    &_sc02{
+        padding: 93px 0 99px;
+        box-sizing: border-box;
+        background-color: $color4;
+
+        @include sp{
+            padding: 40px 0 40px;
+        }
+    }
+
+    &_sc03{
+        padding: 90px 0 95px;
+        box-sizing: border-box;
+
+        @include sp{
+            padding: 40px 0 50px;
+        }
+
+        .sc01_text{
+            margin-top: 0;
+            margin-bottom: 13px;
+        }
+
+        .c-title02{
+            margin-bottom: 44px;
+        
+            @include sp{
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &_map{
+
+        iframe{
+            border-top: 1px solid #ccc;
+            width: 100%;
+            height: 517px;
+
+            @include sp{
+                height: 300px;
+            }
+        }
+    }
+}

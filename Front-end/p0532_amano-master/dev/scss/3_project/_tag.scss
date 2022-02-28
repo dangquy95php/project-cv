@@ -1,0 +1,63 @@
+.p-tag {
+    .c-list02 {
+        &__item {
+            margin: 0 0 19px 21px;
+            border: 2px solid #8da9b7;
+            width: 306px;
+
+            @include sp {
+                width: 100%;
+                margin: 0 0 20px;
+                border-width: 1px;
+            }
+
+            @include pc {
+                &:nth-child(3n+1) {
+                    margin: 0 0 19px;
+                }
+            }
+        }
+
+        &__img {
+            height: 186px;
+            @include sp {
+                height: 55vw;
+            }
+        }
+
+        &__time {
+            top: -10px;
+            left: 13px;
+
+            span {
+                font-size: 9px;
+                line-height: 22px;
+                height: 22px;
+
+                &:first-child {
+                    padding: 0 16px 0 12px;
+                }
+
+                &:last-child {
+                    padding: 0 8px 0;
+                }
+            }
+        }
+
+        &__content {
+            padding: 34px 21px 20px;
+        }
+
+        &__ttl {
+            font-size: 1.6rem;
+            line-height: 26px;
+            margin-bottom: 11px;
+        }
+
+        .c-new {
+            &__txt {
+                font-size: 1rem;
+            }
+        }
+    }
+}

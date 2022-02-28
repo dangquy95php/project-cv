@@ -1,0 +1,23 @@
+/*------------------------------------------------------------
+construction
+------------------------------------------------------------*/
+.construction{
+
+    &_sc{
+        padding: 99px 0 101px;
+        box-sizing: border-box;
+
+        @include sp{
+            padding: 40px 0 50px;
+        }
+        
+        .c-cate {
+            justify-content: center;
+        }
+    }
+    .c-list01_img {
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,727 @@
+/*------------------------------------------------------------
+top
+------------------------------------------------------------*/
+.top {
+	.p-sc01 {
+		@include sp {
+			&:not(:last-child) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.c-title02 {
+		margin-bottom: 93px;
+
+		@include sp {
+			margin-bottom: 60px;
+		}
+
+		&_eng {
+			font-size: 14rem;
+
+			@include pad {
+				font-size: 11rem;
+			}
+
+			@include sp {
+				font-size: 7rem;
+			}
+
+			@include max-w(567px) {
+				font-size: 5.4rem;
+			}
+		}
+
+		&_jp {
+			line-height: 1.389;
+			bottom: -52px;
+			font-weight: 500;
+
+			@include pad {
+				bottom: -37px;
+				font-size: 3rem;
+				letter-spacing: 0.1rem;
+			}
+
+			@include sp {
+				font-size: 2.2rem;
+				bottom: -24px;
+			}
+
+			@include max-w(400px) {
+				font-size: 1.8rem;
+			}
+		}
+	}
+
+	&_mainimg {
+		position: relative;
+
+		&_body {
+			@include pad {
+				width: 100%;
+				overflow-x: hidden;
+			}
+		}
+
+		&_inner {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			color: #fff;
+			transform: translateX(-50%) translateY(-50%);
+			margin-top: 45px;
+
+			@include pad {
+				margin-top: 0;
+			}
+		}
+
+		&_ttl {
+			width: 100%;
+			position: relative;
+
+			.eng {
+				font-size: 14rem;
+				font-weight: 700;
+				line-height: 1;
+				text-transform: uppercase;
+				font-family: "DidotLTStd-Bold";
+				color: rgba(255, 255, 255, 0.3);
+
+				@include pad {
+					font-size: 11rem;
+				}
+
+				@include sp {
+					font-size: 7rem;
+				}
+
+				@include max-w(567px) {
+					font-size: 4.5rem;
+				}
+			}
+
+			.jap {
+				font-size: 3.6rem;
+				font-family: "Noto Serif JP";
+				letter-spacing: 0.5rem;
+				line-height: 1.5;
+				font-weight: 500;
+				position: absolute;
+				top: 64%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				width: 100%;
+				text-align: center;
+				color: #fff;
+
+				@include pad {
+					font-size: 3rem;
+					top: 50%;
+					letter-spacing: 0;
+				}
+
+				@include sp {
+					font-size: 2rem;
+					top: 80%;
+				}
+
+				@include max-w(567px) {
+					font-size: 1.8rem;
+					top: 137%;
+				}
+			}
+		}
+
+		&_txt {
+			font-size: 1.6rem;
+			text-align: center;
+			letter-spacing: 0.1rem;
+			line-height: 2.25;
+			margin-top: 25px;
+
+			@include pad {
+				font-size: 1.4rem;
+			}
+
+			@include sp {
+				margin-top: 50px;
+				line-height: 1.8;
+			}
+
+			@include max-w(567px) {
+				margin-top: 80px;
+			}
+		}
+	}
+
+	&_news {
+		@include sp {
+			background: url("../img/top/bg_news.png") repeat center;
+		}
+
+		.c-newslist {
+			margin-top: -31px;
+			margin-bottom: 0;
+
+			&_item {
+				background-color: #fff;
+				border-top: none;
+				border-bottom: none;
+			}
+
+			&_more {
+				width: 60px;
+				height: 60px;
+				background-color: $color5;
+				border: 1px solid $color5;
+				margin-right: 0;
+				margin-left: auto;
+				position: relative;
+				flex-shrink: 0;
+
+				@include sp {
+					width: 30px;
+					height: 30px;
+					bottom: 0;
+				}
+
+				&:after {
+					position: absolute;
+					content: "";
+					width: 10px;
+					height: 10px;
+					border-right: 1px solid #fff;
+					border-top: 1px solid #fff;
+					top: 50%;
+					left: 50%;
+					transform: translateY(-50%) translateX(-50%) rotate(45deg);
+
+					@include sp {
+						width: 7px;
+						height: 7px;
+					}
+				}
+			}
+
+			&_title {
+				font-size: 1.2rem;
+				letter-spacing: 0.01rem;
+				margin-left: 16px;
+
+				@include sp {
+					margin-left: 0;
+					padding-right: 0;
+					margin-bottom: 8px;
+				}
+			}
+
+			&_ttl {
+				font-size: 2rem;
+				@include open-sans;
+				color: #000;
+				font-weight: 700;
+				line-height: 1;
+			}
+
+			&_date {
+				margin-left: 22px;
+				letter-spacing: 0;
+			}
+
+			&_labelt {
+				color: #fff;
+				background: #4c7f30;
+				font-size: 1.2rem;
+				font-weight: 500;
+				line-height: 20px;
+				white-space: nowrap;
+				text-align: center;
+				min-width: 60px;
+				letter-spacing: 1px;
+				margin-left: 49px;
+
+				@include sp {
+					margin-left: 18px;
+					margin-right: 0;
+				}
+			}
+
+			a {
+				padding: 0 0 0 62px;
+
+				@include pad {
+					padding: 0 0 0 30px;
+				}
+
+				@include sp {
+					padding: 15px 10px;
+				}
+
+				&:after {
+					display: none;
+				}
+
+				&:hover {
+					@include min-w(768px) {
+						.c-newslist_ttl {
+							color: #fff;
+						}
+
+						.c-newslist_labelt {
+							background-color: #fff;
+							color: #000;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&_commitment {
+		background: url("../img/top/bg_commitment.jpg") no-repeat center;
+		background-size: cover;
+		padding: 120px 0 100px;
+		box-sizing: border-box;
+		margin-top: -31px;
+
+		@include pad {
+			padding: 80px 0 60px;
+		}
+
+		@include sp {
+			padding: 60px 0 40px;
+			margin-top: 0;
+		}
+
+		.sc01_text {
+			padding: 0 102px;
+			box-sizing: border-box;
+
+			@include pad {
+				padding: 0;
+			}
+		}
+
+		.c-btn01 {
+			margin-top: 55px;
+
+			@include sp {
+				margin-top: 30px;
+			}
+		}
+		.c-title02_jp {
+			@include sp() {
+				font-size: 1.7rem;
+				letter-spacing: -0.9px;
+			}
+		}
+	}
+
+	&_trouble {
+		padding: 86px 0 100px;
+		box-sizing: border-box;
+
+		@include pad {
+			padding: 60px 0 60px;
+		}
+
+		@include sp {
+			padding: 40px 0 40px;
+		}
+
+		.c-title02 {
+			margin-bottom: 102px;
+
+			@include sp {
+				margin-bottom: 70px;
+			}
+		}
+
+		.c-btn01 {
+			margin-top: auto;
+
+			@include ie {
+				margin-top: 40px;
+			}
+
+			@include sp {
+				margin-top: 30px;
+			}
+		}
+
+		.sc01 {
+			display: flex;
+
+			&_content {
+				margin-top: 40px;
+				margin-bottom: 40px;
+				display: flex;
+				flex-direction: column;
+
+				@include sp {
+					margin-top: 0;
+					margin-bottom: 0;
+				}
+			}
+
+			&_text {
+				margin-top: 0;
+			}
+
+			&_service {
+				@include min-w(768px) {
+					.sc01_img {
+						background-image: url(../img/top/img_service.jpg);
+						background-position: bottom bottom;
+					}
+				}
+			}
+
+			&_company {
+				@include min-w(768px) {
+					.sc01_img {
+						background-image: url(../img/top/img_company.jpg);
+						background-position: bottom bottom;
+					}
+				}
+			}
+		}
+	}
+
+	&_construction {
+		padding: 82px 0 100px;
+		box-sizing: border-box;
+		background-color: $color5;
+
+		@include pad {
+			padding: 60px 0 60px;
+		}
+
+		@include sp {
+			padding: 40px 0 40px;
+		}
+
+		p {
+			color: #fff;
+		}
+
+		.c-list01 {
+			margin-bottom: 11px;
+
+			@include sp {
+				margin-bottom: 0;
+			}
+		}
+
+		.c-title02 {
+			margin-bottom: 56px;
+
+			@include sp {
+				margin-bottom: 40px;
+			}
+
+			&_eng {
+				color: #fff;
+				opacity: 0.05;
+			}
+
+			&_jp {
+				color: #fff;
+				bottom: -4px;
+
+				@include sp {
+					bottom: 6px;
+				}
+			}
+		}
+
+		.c-title04 {
+			padding: 2px 11px 0;
+			box-sizing: border-box;
+
+			@include pad {
+				padding: 2px 0 0;
+			}
+
+			&_t {
+				letter-spacing: 0.1rem;
+			}
+
+			&_b {
+				color: #fff;
+			}
+		}
+
+		.c-btn01 {
+			margin-top: 11px;
+
+			@include sp {
+				margin-top: 15px;
+			}
+
+			a {
+				background-color: #fff;
+				color: $color5;
+
+				&:after {
+					border-color: $color5;
+				}
+
+				&:hover {
+					@include min-w(768px) {
+						background-color: $color3;
+						color: #fff;
+
+						&:after {
+							border-color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&_recruit {
+		padding: 84px 0 61px;
+		box-sizing: border-box;
+		background-color: $color4;
+
+		@include pad {
+			padding: 60px 0 60px;
+		}
+
+		@include sp {
+			padding: 40px 0 40px;
+		}
+
+		.c-title02 {
+			margin-bottom: 54px;
+
+			@include sp {
+				margin-bottom: 40px;
+			}
+
+			&_jp {
+				bottom: -3px;
+
+				@include sp {
+					bottom: 6px;
+				}
+			}
+		}
+
+		.c-btn01 {
+			margin-top: auto;
+
+			@include ie {
+				margin-top: 40px;
+			}
+
+			@include sp {
+				margin-top: 30px;
+			}
+		}
+
+		.sc01 {
+			display: flex;
+
+			&_content {
+				margin-top: 40px;
+				margin-bottom: 40px;
+				display: flex;
+				flex-direction: column;
+
+				@include sp {
+					margin-top: 0;
+					margin-bottom: 0;
+				}
+			}
+
+			&_text {
+				margin-top: 0;
+			}
+
+			&_recruit {
+				@include min-w(768px) {
+					.sc01_img {
+						background-image: url(../img/top/img_recruit.jpg);
+						background-position: bottom bottom;
+
+						&:before {
+							background-color: $color4;
+						}
+					}
+				}
+			}
+
+			&_staff {
+				@include min-w(768px) {
+					.sc01_img {
+						background-image: url(../img/top/img_staff.jpg);
+						background-position: bottom bottom;
+
+						&:before {
+							background-color: $color4;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&_other {
+		padding-bottom: 100px;
+		background-color: $color4;
+
+		@include pad {
+			padding-bottom: 60px;
+		}
+
+		@include sp {
+			padding-bottom: 40px;
+		}
+
+		&__list {
+			display: flex;
+			margin-bottom: 100px;
+
+			@include pad {
+				margin-bottom: 60px;
+			}
+
+			@include sp {
+				margin-bottom: 40px;
+				flex-wrap: wrap;
+			}
+		}
+
+		&__item {
+			width: 50%;
+			position: relative;
+
+			@include max-w(567px) {
+				width: 100%;
+
+				&:not(:last-child) {
+					margin-bottom: 30px;
+				}
+			}
+		}
+
+		&__content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			z-index: 2;
+			margin-top: -2px;
+
+			@include sp {
+				margin-top: 0;
+			}
+		}
+
+		&__img {
+			height: 300px;
+			position: relative;
+
+			&:after {
+				transition: 0.3s ease-in-out;
+				position: absolute;
+				content: "";
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+
+			img {
+				width: 100%;
+				height: 300px;
+				object-fit: cover;
+			}
+		}
+
+		&__link {
+			text-align: center;
+		}
+	}
+
+	&_recruitment {
+		padding: 81px 0 101px;
+		box-sizing: border-box;
+
+		@include pad {
+			padding: 60px 0 60px;
+		}
+
+		@include sp {
+			padding: 40px 0 50px;
+		}
+
+		.c-newslist {
+			margin-bottom: 50px;
+
+			@include sp {
+				margin-bottom: 40px;
+			}
+
+			&_label {
+				left: 169px;
+
+				@include pad {
+					left: 20px;
+				}
+
+				@include sp {
+					left: 0;
+				}
+			}
+
+			&_item {
+				a {
+					padding-left: 227px;
+
+					@include pad {
+						padding-left: 80px;
+					}
+
+					@include sp {
+						padding-left: 10px;
+					}
+
+					&:after {
+						@include pad {
+							right: 20px;
+						}
+
+						@include sp {
+							right: 15px;
+						}
+					}
+				}
+			}
+
+			&_title {
+				letter-spacing: 0.06rem;
+			}
+		}
+
+		.c-title02 {
+			margin-bottom: 37px;
+
+			&_jp {
+				bottom: -3px;
+
+				@include sp {
+					bottom: 6px;
+				}
+			}
+		}
+	}
+}

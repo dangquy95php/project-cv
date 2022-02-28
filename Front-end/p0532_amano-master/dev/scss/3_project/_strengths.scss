@@ -1,0 +1,50 @@
+/*------------------------------------------------------------
+Page Strengths
+------------------------------------------------------------*/
+.p-strengths {
+    .c-mv6 {
+        margin-bottom: 95px;
+
+        @include sp {
+            margin-bottom: 40px;
+        }
+    }
+
+    &01 {
+        margin-bottom: 155px;
+
+        @include sp {
+            margin-bottom: 80px;
+        }
+
+        &__txt {
+            text-align: center;
+            font-size: 1.7rem;
+            line-height: 2.15;
+            color: #111;
+            margin: 0 0 50px;
+            @include sp {
+                font-size: 1.4rem;
+                line-height: 1.6;
+                margin: 0 0 25px;
+            }
+        }
+
+        .c-brand {
+            margin: 38px 0 70px;
+            @include sp {
+                margin: 19px 0 70px;
+            }
+        }
+    }
+
+    .c-download2 {
+        .c-btn01 {
+            margin-top: 21px;
+
+            @include sp {
+                margin-top: 30px;
+            }
+        }
+    }
+}

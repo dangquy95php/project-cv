@@ -1,0 +1,91 @@
+/*------------------------------------------------------------
+icon
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+$bar-width: 20px;
+$bar-height: 1px;
+$bar-spacing:6px;
+$black: #ffffff;
+
+.c-icon1 {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    width: $bar-width;
+    height: $bar-height + $bar-spacing * 2;
+    cursor: pointer;
+
+    @include pc {
+        display: none;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -13px;
+        left: -10px;
+        right: -10px;
+        height: 60px;
+        z-index: 9;
+
+        @include sp {
+            display: none;
+        }
+    }
+
+    &.is-active {
+        span {
+            background: rgba(255, 255, 255, 0);
+
+            &::before {
+                bottom: 0;
+                transform: rotate(-45deg);
+                transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1),
+                    transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+            }
+
+            &::after {
+                top: 0;
+                transform: rotate(45deg);
+                transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1),
+                    transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+            }
+        }
+    }
+
+    span {
+        width: $bar-width;
+        height: $bar-height;
+        position: relative;
+        transform: translateY($bar-spacing);
+        background: $black;
+        transition: all 0ms 300ms;
+        display: block;
+
+        &::before {
+            width: $bar-width;
+            height: $bar-height;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: $bar-spacing;
+            background: $black;
+            transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+                transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        &:after {
+            width: $bar-width;
+            height: $bar-height;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: $bar-spacing;
+            background: $black;
+            transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+                transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+    }
+}

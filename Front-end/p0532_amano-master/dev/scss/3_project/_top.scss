@@ -1,0 +1,199 @@
+/*------------------------------------------------------------
+Page Top 
+------------------------------------------------------------*/
+.p-top1 {
+    margin: 0 0 40px;
+}
+
+.p-top2 {
+    padding: 45px 0 120px;
+
+    @include sp {
+        padding: 90px 0 30px;
+    }
+
+    .c-title01 {
+        margin-bottom: 40px;
+
+        @include sp {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.p-top3 {
+    background: #F4F4F4;
+    padding: 100px 0 90px;
+
+    @include sp {
+        padding: 50px 0;
+    }
+
+    .c-title01 {
+        margin: 0 0 59px;
+    }
+
+    .c-list02 {
+        &__ttl {
+            font-size: 2rem;
+            line-height: 1.5;
+
+            @include sp {
+                font-size: 1.6rem;
+            }
+        }
+
+        &__content {
+            padding: 46px 40px 32px 40px;
+
+            @include sp {
+                padding: 30px 20px 20px;
+            }
+        }
+    }
+
+    .c-btn01 {
+        margin-top: 10px;
+
+        @include sp {
+            margin-top: 20px;
+        }
+
+        &__link {
+            width: 269px;
+            padding: 21px 35px;
+
+            @include sp {
+                width: auto;
+                padding: 13px 30px 13px 30px;
+            }
+        }
+    }
+}
+
+.p-top4 {
+    padding: 120px 0;
+    /*border-bottom: 1px solid #E6E6E6;*/
+
+    @include sp {
+        padding: 40px 0;
+    }
+
+    .c-title01 {
+        margin-bottom: 59px;
+
+        @include sp {
+            margin-bottom: 30px;
+        }
+    }
+
+    .c-btn01 {
+        margin-top: 10px;
+
+        &__link {
+            width: 269px;
+            padding: 21px 35px;
+        }
+    }
+}
+
+.p-top5 {
+    padding: 104px 0 49px;
+
+    @include sp {
+        padding: 50px 0;
+    }
+
+    .c-btn03 {
+        margin: 40px 0 82px;
+
+        @include sp {
+            margin: 20px 0 40px;
+        }
+    }
+
+    .c-slide3 {
+        margin: 78px 0 0;
+
+        @include sp {
+            margin: 50px 0 0;
+        }
+    }
+
+    .c-list09 {
+        margin: 30px 0 0;
+
+        @include sp {
+            margin: 15px 0 0;
+        }
+    }
+}
+
+.p-top6 {
+    padding: 51px 0 120px;
+
+    @include sp {
+        padding: 0 0 50px;
+    }
+
+    .c-title01 {
+        margin-bottom: 53px;
+
+        @include sp {
+            margin-bottom: 30px;
+        }
+    }
+
+    .c-btn01:not(.c-list04__btn) {
+        .c-btn01__link {
+            width: 269px;
+            padding: 21px 35px;
+        }
+    }
+
+    .c-list33 {
+        margin-bottom: 31px;
+    }
+}
+
+.p-top7 {
+    background: #F4F4F4;
+    padding: 100px 0 120px;
+
+    @include sp {
+        padding: 40px 0;
+    }
+
+    .c-title01 {
+        margin-bottom: 39px;
+
+        @include sp {
+            margin-bottom: 30px;
+        }
+    }
+
+    .c-btn01 {
+        margin-top: 31px;
+
+        .c-btn01__link {
+            width: 269px;
+            padding: 21px 35px;
+        }
+    }
+}
+
+.p-top8 {
+    padding: 120px 0 0;
+
+    @include sp {
+        padding: 50px 0 0;
+    }
+
+    .c-title01 {
+        margin-bottom: 59px;
+
+        @include sp {
+            margin-bottom: 30px;
+        }
+    }
+}

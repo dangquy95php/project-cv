@@ -1,0 +1,94 @@
+<?php
+/* ===============================================================================
+  その他
+=============================================================================== */
+
+////////////////////////////////////////////////
+// 改行変換
+////////////////////////////////////////////////
+function ConvertText($data)
+{
+
+	$data = rtrim($data);
+	$data = nl2br($data);
+	echo $data;
+}
+
+////////////////////////////////////////////////
+// NEWマーク表示
+////////////////////////////////////////////////
+function mark_new_post($days, $echo = '')
+{
+	$today     = date_i18n('U');
+	$entry_day = get_the_time('U');
+	$post_day  = date('U', ($today - $entry_day)) / 86400;
+
+	if ($days > $post_day) {
+		echo empty($echo) ? 'NEW' : $echo;
+	}
+}
+
+////////////////////////////////////////////////
+// WordPress Popular Postsの返り値を変更
+////////////////////////////////////////////////
+function custom_single_popular_post($content, $p, $instance)
+{
+	component_loop_10();
+}
+add_filter('wpp_post', 'custom_single_popular_post', 10, 3);
+
+////////////////////////////////////////////////
+// 表示文字数制限
+////////////////////////////////////////////////
+function characters_limit($text, $limit)
+{
+	if (mb_strlen($text) > $limit) {
+		$text = mb_substr($text, 0, $limit);
+		$text .= '･･･';
+	}
+	echo $text;
+}
+
+////////////////////////////////////////////////
+//  Aioseoでdescriptionの設定がない場合は
+// 柔軟コンテンツの最初の本文を表示する
+////////////////////////////////////////////////
+add_filter('aioseop_description', 'custom_aioseop_description');
+function custom_aioseop_description($description)
+{
+
+	if (empty($description)) {
+
+		$description = '';
+		if (get_the_content()) {
+			$description .= wp_strip_all_tags(get_the_content());
+		}
+
+		if (get_field('single_lead')) {
+			$description .= wp_strip_all_tags(get_field('single_lead'));
+		}
+
+		if (have_rows('single_flexible_content')) {
+			while (have_rows('single_flexible_content')) : the_row();
+				if (get_row_layout() == 'single_contents') :
+					$description .= wp_strip_all_tags(get_sub_field('single_contents_text'));
+				endif;
+			endwhile;
+		}
+	}
+
+	$limit = 120;
+	if (mb_strlen($description) > $limit) {
+		$description = mb_substr($description, 0, $limit) . '･･･';
+	}
+
+	return $description;
+}
+
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page(array(
+		'page_title' 	=> '導入企業一覧',
+		'menu_title'	=> '導入企業一覧',
+		'menu_slug' => 'case_list',
+  ));
+}

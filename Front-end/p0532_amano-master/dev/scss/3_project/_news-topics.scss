@@ -1,0 +1,114 @@
+/*------------------------------------------------------------
+Page News Topics
+------------------------------------------------------------*/
+
+.p-topics {
+    &__wrap {
+        padding: 77px 0 0;
+        @include sp {
+            padding: 40px 0 0;
+        }
+        .l-content {
+            float: none;
+        }
+    }
+    .c-list08 {
+        border-top: 1px solid #e4e4e4;
+    }
+    .c-pagenavi {
+        margin: 66px 0 0;
+        @include sp {
+            margin: 20px 0 0;
+        }
+    }
+    .c-contact {
+        padding: 119px 0 121px;
+        @include sp {
+            padding: 50px 0 60px;
+        }
+    }
+}
+
+.p-topicsdetail {
+    &__wrap {
+        padding: 100px 0 0;
+        @include sp {
+            padding: 50px 0 0;
+        }
+        &--nocontact {
+            padding-bottom: 121px;
+            @include sp {
+                padding-bottom: 60px;
+            }
+        }
+        .l-content {
+            float: none;
+        }
+    }
+    .l-content {
+        // width: 100%;
+    }
+    .c-tag {
+        font-size: 1.6rem;
+        padding: 2px 16.5px 3px;
+    }
+    .c-title09 {
+        margin: 14px 0 24px;
+    }
+    .c-title08 {
+        &::before {
+            background-color: #0181c0;
+        }
+    }
+    .c-contact {
+        padding: 119px 0 121px;
+        @include sp {
+            padding: 100px 0 60px;
+        }
+    }
+    .c-btn01 {
+        margin: 20px 0 0;
+        &__txt {
+            padding-right: 3.5em;
+            display: inline-block;
+            &:before {
+                position: absolute;
+                content: '';
+                right: 2.5em;
+                width: 12px;
+                height: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: url(/assets/img/common/icon/icon5.svg) no-repeat center;
+                background-size: 12px 12px;
+                transition: all .3s ease-in-out;
+            }
+            &:after {
+                right: -5px;
+            }
+        }
+        &__link:hover .c-btn01__txt {
+            &:after {
+                right: -8px;
+            }
+            &:before {
+                background: url(/assets/img/common/icon/icon8.svg) no-repeat center;
+                background-size: 12px 12px;
+            }
+        }
+    }
+    a.c-btn01__link.is-outlink:after {
+        content: none;
+    }
+    @include sp {
+        .c-btn01__link {
+            padding: 13px 10px 13px 20px;
+        }
+        .c-btn01__txt:after {
+            right: 5px;
+        }
+    }
+}
+
+
+/* end____.p-topicsdetail*/

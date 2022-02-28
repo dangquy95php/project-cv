@@ -1,0 +1,623 @@
+/*------------------------------------------------------------
+footer
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-footer {
+    background: #1b516d;
+    $root: &;
+
+    &1 {
+        padding: 59px 2px 56px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+        @include sp {
+            display: none;
+        }
+
+        &__nav {
+            @include f;
+
+            &__item {
+                &:nth-child(2) {
+                    margin-left: 226px;
+                }
+
+                &:nth-child(3) {
+                    margin-left: 308px;
+                }
+
+                li {
+                    margin: 0 0 2px 20px;
+
+                    a {
+                        color: rgba(255, 255, 255, 0.75);
+                        font-size: 1.4rem;
+                        line-height: 21px;
+                        text-decoration: none;
+                        opacity: 1 !important;
+
+                        @include hover {
+                            color: #ffffff;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    &:first-child {
+                        margin: 0 0 7px 0;
+                        font-weight: bold;
+
+                        a {
+                            font-size: 1.6rem;
+                            line-height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__bannerList {
+            margin: 35px 0 0;
+        }
+
+        &__bannerItem {
+            &:not(:first-child) {
+                margin: 20px 0 0;
+            }
+        }
+    }
+
+    &2 {
+        @include pc {
+            @include fs;
+            padding: 60px 0 64px 3px;
+        }
+
+        @include sp {
+            padding: 30px 0 27px;
+        }
+
+        &__logo {
+            @include clear;
+
+            @include sp {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            }
+
+            img {
+                @include pc {
+                    float: left;
+                }
+
+                @include sp {
+                    width: 130px;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+        }
+
+        &__bnt {
+            display: block;
+            border-radius: 100px;
+            background: url(/assets/img/common/icon/icon8.svg) no-repeat center right 18px;
+            border: 1px solid #ffffff;
+            font-size: 1.1rem;
+            font-weight: 599;
+            line-height: 1;
+            padding: 10px 35px 11px 18px;
+            margin: 16px 0 0 40px;
+            color: #ffffff;
+            text-decoration: none;
+            float: left;
+            opacity: 0.75;
+
+            @include hover {
+                opacity: 1;
+                color: #1c5472;
+                background: url(/assets/img/common/icon/icon8_blue.svg) no-repeat center right 18px #ffffff;
+            }
+
+            @include sp {
+                margin: 21px auto 25px;
+                display: block;
+                float: none;
+                width: 172px;
+                box-sizing: border-box;
+                font-size: 1rem;
+                padding: 8px 0 9px 19px;
+            }
+        }
+
+        &__nav {
+            &1 {
+                @include pc {
+                    @include f;
+                    margin: 5px 0 18px;
+                }
+
+                @include sp {
+                    @include fc;
+                    margin: 22px 0 11px;
+                }
+
+                li {
+                    opacity: 0.75;
+                    transition: 300ms;
+
+                    @include hover {
+                        opacity: 1;
+
+                        a {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    @include sp {
+                        margin: 0 9px 8px;
+                    }
+
+                    &+li {
+                        @include pc {
+                            margin-left: 20px;
+                        }
+                    }
+
+                    a {
+                        color: #ffffff;
+                        text-decoration: none;
+                        font-size: 1.2rem;
+                        line-height: 18px;
+                        background: url(/assets/img/common/icon/icon8.svg) no-repeat center right;
+                        background-size: 10px 10px;
+                        padding-right: 15px;
+                        display: block;
+                        opacity: 1 !important;
+
+                        @include sp {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__copyright {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1.2rem;
+            line-height: 18px;
+            text-align: right;
+
+            @include sp {
+                text-align: center;
+                font-size: 9px;
+            }
+        }
+    }
+
+    &.gray {
+        background: #f6f6f6;
+
+        #{$root}__copyright {
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            color: #707070;
+            letter-spacing: 0.5px;
+            padding: 14.5px 10px;
+
+            @include sp {
+                font-size: 1rem;
+                padding: 10px 5px;
+            }
+        }
+    }
+}
+
+.u-product {
+    .c-footer {
+        background: #2d3d45;
+    }
+}
+
+.c-footer3 {
+    color: #FFFFFF;
+
+    &__inner1 {
+        padding: 40px 0 40px;
+        background: #595959;
+
+        @include sp {
+            padding: 30px 0 17px;
+        }
+    }
+
+    &__inner2 {
+        background: #333333;
+        padding: 59px 0;
+
+        @include sp {
+            padding: 30px 0;
+        }
+    }
+
+    &__logo1 {
+        @include sp {
+            display: block;
+            margin: 0 auto;
+            width: 263px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    &__logo2 {
+        @include sp {
+            display: block;
+            width: 130px;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    &__content {
+        @include pc {
+            @include fsc;
+        }
+    }
+
+    &__content1 {
+        @include pc {
+            @include f;
+        }
+    }
+
+    &__content2 {
+        @include pc {
+            @include fs;
+            border-top: 1px solid #595959;
+            margin-top: 60px;
+            padding-top: 60px;
+        }
+    }
+
+    &__nav {
+        @include f;
+        @include fz(14, 21);
+        margin-right: 12px;
+
+        @include sp {
+            font-size: 1.3rem;
+            margin: 27px 0 0;
+            justify-content: space-between;
+        }
+
+        li {
+            @include pc {
+                &+li {
+                    margin-left: 30px;
+                }
+            }
+
+            @include sp {
+                width: calc(50% - 7px);
+                margin-bottom: 12px;
+            }
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+
+            @include hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__bnt {
+        display: block;
+        border: 1px solid #FFFFFF;
+        color: #ffffff;
+        text-decoration: underline;
+        border-radius: 100px;
+        margin-top: 24px;
+        text-align: center;
+        width: 198px;
+        padding: 0 0 0 1px;
+        transition: background 300ms;
+        opacity: 0.75;
+
+        @include sp {
+            width: 53%;
+            margin-top: 0;
+            line-height: 1;
+        }
+
+        &+& {
+            @include pc {
+                margin-top: 5px;
+            }
+
+            @include sp {
+                width: 42%;
+            }
+        }
+
+        span {
+            display: inline-block;
+            @include fz(12, 32);
+            padding: 0 10px 0 0;
+            padding-right: 17px;
+            background: url(/assets/img/tayorou/common/icon-window3.svg) no-repeat center right;
+            background-size: 10px 10px;
+
+            @include sp {
+                @include fz(10, 30);
+            }
+        }
+
+        @include hover {
+            color: #1C5472;
+            background: #ffffff;
+            border-color: #ffffff;
+            opacity: 0.5;
+
+            span {
+                background-image: url(/assets/img/tayorou/common/icon-window4.svg);
+            }
+        }
+    }
+
+    &__search {
+        width: 200px;
+        position: relative;
+        margin-top: 5px;
+
+        @include sp {
+            width: auto;
+            margin: 0;
+        }
+
+        input[type=text] {
+            border: 1px solid #e4e4e4;
+            background: #f4f4f4;
+            box-sizing: border-box;
+            height: 34px;
+            border-radius: 100px;
+            @include fz(12, 24);
+            padding: 0 14px;
+            display: block;
+            width: 100%;
+
+            @include sp {
+                height: 40px;
+                @include fz(16, 24);
+                padding: 0 20px;
+            }
+
+            &::placeholder {
+                color: #AAAAAA;
+            }
+        }
+
+        input[type=submit] {
+            position: absolute;
+            top: calc(50% - 7px);
+            right: 16px;
+            width: 14px;
+            height: 14px;
+            background: url(/assets/img/tayorou/common/icon-search.svg) no-repeat center;
+            background-size: 14px 14px;
+            z-index: 2;
+            border: none;
+            margin: 0;
+            padding: 0;
+            text-indent: -9999px;
+
+            @include sp {
+                width: 16px;
+                height: 16px;
+                background-size: 16px 16px;
+                right: 20px;
+                top: calc(50% - 8px);
+            }
+        }
+    }
+
+    &__box {
+        &+& {
+            @include pc {
+                border-left: 1px solid #595959;
+                margin-left: 39px;
+                padding-left: 39px;
+            }
+
+            @include sp {
+                border-bottom: 1px solid #595959;
+                margin: 28px 0 20px;
+                padding-bottom: 22px;
+            }
+        }
+    }
+
+    &__box2 {
+        @include sp {
+            @include fs;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            margin: 21px 0 30px;
+            padding: 0 0 30px;
+        }
+    }
+
+    &__txt {
+        font-size: 1.6rem;
+
+        a {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+
+            @include hover {
+                color: #fff;
+                opacity: 1;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__nav1 {
+        @include pc {
+            @include f;
+            margin: 14px 0 0 0;
+        }
+
+        @include sp {
+            margin: 14px 15px 0;
+        }
+
+        ul {
+            @include pc {
+                margin-left: 15px;
+
+                &+ul {
+                    margin: 0 50px 0 142px;
+                }
+            }
+
+            @include sp {
+                @include fs;
+            }
+        }
+
+        a {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+
+            @include hover {
+                color: #fff;
+                opacity: 1;
+                text-decoration: underline;
+            }
+
+            @include sp {
+                font-size: 1.3rem;
+            }
+        }
+
+        li {
+
+            @include pc {
+                &+li {
+                    margin-top: 3px;
+                }
+            }
+
+            @include sp {
+                margin-bottom: 7px;
+                width: calc(50% - 23px);
+            }
+        }
+    }
+
+    &__nav2 {
+        @include pc {
+            @include f;
+        }
+
+        @include sp {
+            @include fc;
+            margin: 28px 0 14px;
+        }
+
+        li {
+            @include pc {
+                &+li {
+                    margin-left: 20px;
+                }
+            }
+
+            @include sp {
+                margin: 0 9px 15px;
+            }
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            line-height: 18px;
+            background: url(/assets/img/common/icon/icon8.svg) no-repeat center right;
+            background-size: 10px 10px;
+            padding-right: 15px;
+            display: block;
+            opacity: 1 !important;
+
+            @include hover {
+                text-decoration: underline;
+            }
+
+            @include sp {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    &__banner {
+        li+li {
+            margin-top: 10px;
+        }
+
+        @include sp {
+            max-width: 240px;
+            margin: 0 auto 10px;
+        }
+    }
+
+    &__copyright {
+        @include fz(12, 18);
+
+        @include sp {
+            text-align: center;
+            font-size: 9px;
+        }
+    }
+
+    &__gotop {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 100px;
+        cursor: pointer;
+        background: rgba(153, 153, 153, 0.5);
+        transition: 300ms;
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+
+        @include sp {
+            right: 10px;
+            bottom: 10px;
+
+            img {
+                width: 40px;
+            }
+        }
+
+        &.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        @include hover {
+            background: #999999;
+        }
+    }
+}

@@ -1,0 +1,197 @@
+/*------------------------------------------------------------
+Page Product VG-cloud
+------------------------------------------------------------*/
+
+.p-VGCloud {
+    .c-mv4 {
+        &__intro {
+            padding: 88px 50px 84px;
+            @include sp {
+                padding: 50px 15px;
+            }
+        }
+        &__box {
+            padding: 20px 0 92px;
+            @include sp {
+                padding: 0;
+            }
+        }
+        &__img {
+            margin: 0 11px 0 25px;
+            @include sp {
+                margin: 30px 0 0;
+            }
+        }
+        &__logo {
+            margin: 0 0 0 41px;
+            @include sp {
+                margin: 0;
+            }
+        }
+        &__price {
+            margin: 39px 8px 0;
+            @include sp {
+                margin: 20px 0 0;
+            }
+        }
+        &__subttl {
+            font-size: 3.1rem;
+            @include sp {
+                font-size: 2rem;
+            }
+        }
+        &__mainttl {
+            font-size: 4.8rem;
+            letter-spacing: 2.1px;
+            @include sp {
+                font-size: 3.2rem;
+                letter-spacing: 1px;
+            }
+        }
+        &__ttl {
+            margin: 37px 0 0;
+            @include sp {
+                margin: 20px 0 0;
+            }
+        }
+    }
+    .c-title01 {
+        margin: 0 0 86px;
+        @include sp {
+            margin: 0 0 43px;
+        }
+    }
+    &1 {
+        padding: 133px 0 120px;
+        @include sp {
+            padding: 50px 0;
+        }
+        .c-title01__sm {
+            text-transform: none;
+        }
+    }
+    &2 {
+        background: url('/assets/img/product/vg-cloud/bg.jpg') no-repeat center;
+        background-size: cover;
+        padding: 100px 0 142px;
+        border-bottom: 5px solid #f4f4f4;
+        margin: 120px 0 ;
+        @include sp {
+            padding: 50px 0;
+            border-bottom: 2px solid #f4f4f4;
+            margin: 50px 0;
+        }
+        &__tag {
+            text-align: center;
+            padding: 0 37px 0 0;
+            @include sp {
+                padding: 0 20px;
+            }
+        }
+        &__ttl {
+            text-align: center;
+            font-size: 4rem;
+            line-height: 1.5;
+            color: $color4;
+            font-weight: bold;
+            margin: 39px 35px 34px 0;
+            @include sp {
+                font-size: 2.4rem;
+                margin: 20px 0;
+            }
+        }
+        &__txt {
+            font-size: 1.8rem;
+            line-height: 2;
+            color: #111111;
+            @include sp {
+                font-size: 1.6rem;
+                line-height: 1.6;
+            }
+        }
+        .c-table02 {
+            &__wrap {
+                margin: 75px 0 40px;
+                @include sp {
+                    margin: 36px 0 20px;
+                }
+            }
+            th.u-bg03 {
+                padding: 12px 15px 14px 25px;
+                @include sp {
+                    padding: 11px 15px 14px 39px;
+                }
+            }
+        }
+        .c-btn01 {
+            margin: 60px auto 0;
+            width: 318px;
+            @include sp {
+                margin: 20px auto 0;
+                width: 100%;
+                max-width: 280px;
+            }
+            &__link {
+                width: 100%;
+                padding: 16px 35px 17px 35px;
+                @include sp {
+                    padding: 13px 30px 13px 30px;
+                }
+            }
+            &__txt {
+                font-size: 1.5rem;
+                @include sp {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+    &4 {
+        padding: 160px 0 0;
+        @include sp {
+            padding: 50px 0 0;
+        }
+        .c-slide2 {
+            margin: 68px 0 0;
+            @include sp {
+                margin: 34px 0 0;
+            }
+        }
+        .c-slide2-noslide {
+            margin: 68px 0 0;
+            @include sp {
+                margin: 34px 0 0;
+            }
+        }
+    }
+    &5 {
+        padding: 120px 0 0;
+        @include sp {
+            padding: 50px 0 0;
+        }
+        .c-flow2 {
+            margin: 59px 0 0;
+            @include sp {
+                margin: 30px 0 0;
+            }
+        }
+    }
+    &6 {
+        padding: 115px 0 130px;
+        @include sp {
+            padding: 50px 0;
+        }
+        .c-title01 {
+            margin: 0 0 79px;
+            @include sp {
+                margin: 0 0 40px;
+            }
+        }
+        .c-list27 {
+            margin: 60px 0 0;
+            @include sp {
+                margin: 30px 0 0;
+            }
+        }
+    }
+}

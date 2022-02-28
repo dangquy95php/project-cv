@@ -1,0 +1,49 @@
+/*------------------------------------------------------------
+Page Product Detail
+------------------------------------------------------------*/
+.p-productDetail {
+    .c-mv5 {
+        &__box {
+            padding: 21px 0 60px;
+            @include sp {
+                padding: 0;
+            }
+        }
+        &__tit {
+            font-size: 5.6rem;
+            @include sp {
+                font-size: 3.5rem;
+            }
+        }
+
+        &__txt {
+            margin: 34px 0 0;
+            @include sp {
+                margin: 18px 0 0;
+            }
+        }
+    }
+    &1 {
+        padding: 120px 0 100px;
+
+        @include sp {
+            padding: 50px 0 50px;
+        }
+    }
+
+    &2 {
+        padding: 122px 0 119px;
+
+        @include sp {
+            padding: 50px 0 50px;
+        }
+    }
+
+    &3 {
+        padding: 122px 0 82px;
+
+        @include sp {
+            padding: 50px 0 50px;
+        }
+    }
+}

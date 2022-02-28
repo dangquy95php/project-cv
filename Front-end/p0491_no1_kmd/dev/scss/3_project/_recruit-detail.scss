@@ -1,0 +1,40 @@
+/*------------------------------------------------------------
+recruit-detail
+------------------------------------------------------------*/
+.recruit-detail{
+
+    .c-title02{
+        margin-bottom: 57px;
+
+        @include sp{
+            margin-bottom: 30px;
+        }
+
+        &_eng{
+            @include max-w(414px){
+                font-size: 5.5rem;
+            }
+        }
+    }
+
+    &_sc{
+        padding: 89px 0 100px;
+        box-sizing: border-box;
+
+        @include sp{
+            padding: 40px 0 50px;
+        }
+    }
+
+    .main_table{
+        margin-bottom: 61px;
+
+        @include pad{
+            margin-bottom: 40px;
+        }
+
+        @include sp{
+            margin-bottom: 30px;
+        }
+    }
+}

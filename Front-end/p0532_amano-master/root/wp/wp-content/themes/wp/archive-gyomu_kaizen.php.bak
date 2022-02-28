@@ -1,0 +1,46 @@
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/header.php'); ?>
+
+<main class="p-hrnews">
+    <div class="c-heading">
+        <h1 class="c-heading__txt">
+            <span class="c-heading__sub">効率化・ノウハウから法律や助成金まで！</span>
+            <span class="c-heading__main">業務改善ガイド</span>
+        </h1>
+    </div>
+    <?php $the_query = new WP_Query($query_string . '&posts_per_page=15&paged=' . get_query_var('paged')); ?>
+    <div class="p-hrnews__wrap">
+        <div class="l-container">
+            <div class="l-content">
+
+                <?php ///////////////////////////////////////////////////////
+                // パンくず
+                ///////////////////////////////////////////////////////////// 
+                ?>
+                <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/breadcrumb.php'); ?>
+
+                <?php ///////////////////////////////////////////////////////
+                // 本文
+                ///////////////////////////////////////////////////////////// 
+                ?>
+                <?php if ($the_query->have_posts()) : ?>
+                    <ul class="c-list02 c-list02--border">
+                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                            <?php component_loop_1(); ?>
+                            <!-- End c-list02__item-->
+                        <?php endwhile; ?>
+                    </ul>
+                    <?php if (function_exists('wp_pagenavi')) : ?>
+                        <div class="c-pagenavi color2">
+                            <?php wp_pagenavi(array('query' => $the_query)); ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata(); ?>
+                <?php else : ?>
+                    <?php echo '<h3 class="u-center">投稿はありません</h3>'; ?>
+                <?php endif; ?>
+            </div>
+            <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/side.php'); ?>
+        </div>
+    </div>
+</main>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/footer.php'); ?>

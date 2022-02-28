@@ -1,0 +1,91 @@
+/*------------------------------------------------------------
+tayorou-hrnews
+------------------------------------------------------------*/
+.p-tayorou-hrnews {
+    padding: 120px 0 0;
+
+    @include sp {
+        padding: 0;
+    }
+
+    &1 {
+        padding: 40px 0 80px;
+
+        @include sp {
+            padding: 20px 0 40px;
+        }
+
+        .c-list46 {
+            margin-top: 40px;
+
+            @include sp {
+                margin-top: 20px;
+            }
+        }
+
+        .c-pagenavi2 {
+            margin-top: 38px;
+
+            @include sp {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .c-side01 {
+        &__inner2 {
+            .c-title25 {
+                margin: 40px 0 17px;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+tayorou-hr_news_detail
+------------------------------------------------------------*/
+.p-tayorou-hr_news_detail {
+    padding: 120px 0 0;
+
+    @include sp {
+        padding: 0;
+    }
+
+    &1 {
+        padding: 40px 0 76px;
+
+        @include sp {
+            padding: 20px 0 0;
+        }
+
+        .c-side01__inner2 {
+            @include sp {
+                display: none;
+            }
+        }
+    }
+
+    .c-side01 {
+        &__inner2 {
+            .c-title25 {
+                margin: 40px 0 17px;
+
+                &:first-child {
+                    margin-top: 0;
+
+                    @include sp {
+                        margin-top: 41px;
+                    }
+                }
+            }
+        }
+
+        &__inner1 {
+            margin-top: 40px;
+
+            @include sp {
+                margin-top: 0;
+            }
+        }
+    }
+}

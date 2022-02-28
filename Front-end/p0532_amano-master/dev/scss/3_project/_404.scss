@@ -1,0 +1,31 @@
+/*------------------------------------------------------------
+404
+------------------------------------------------------------*/
+.page-404 {
+    .c-header2 {
+        display: none;
+    }
+
+    .is-fixed {
+        height: 0;
+        position: static;
+    }
+}
+
+.p-404 {
+    &__wrap {
+        margin: 80px 0;
+
+        @include sp {
+            margin: 40px 0;
+        }
+    }
+
+    .c-btn01 {
+        margin-top: 40px;
+
+        @include sp {
+            margin-top: 20px;
+        }
+    }
+}

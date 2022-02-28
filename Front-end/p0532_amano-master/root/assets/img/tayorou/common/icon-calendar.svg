@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="icon-calendar" transform="translate(0)">
+    <path id="icon-calendar-2" data-name="icon-calendar" d="M14.4,0H1.6A1.6,1.6,0,0,0,0,1.6V14.4A1.6,1.6,0,0,0,1.6,16H14.4A1.6,1.6,0,0,0,16,14.4V1.6A1.6,1.6,0,0,0,14.4,0Zm0,7.6H11.8V5h2.6ZM11,7.6H8.4V5H11Zm-3.4,0H5V5H7.6Zm-3.4,0H1.6V5H4.2Zm-2.6.8H4.2V11H1.6ZM5,8.4H7.6V11H5Zm2.6,3.4v2.6H5V11.8Zm.8,0H11v2.6H8.4Zm0-.8V8.4H11V11Zm3.4-2.6h2.6V11H11.8ZM2,1.6H14a.4.4,0,0,1,.4.4V4.2H1.6V2A.4.4,0,0,1,2,1.6ZM1.6,14V11.8H4.2v2.6H2A.4.4,0,0,1,1.6,14Zm12.4.4H11.8V11.8h2.6V14A.4.4,0,0,1,14,14.4Z" fill="#333"/>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+/node_modules/
+/validate/
+/root/assets/css/style.min.css
+/root/assets/css/style.min.css.map
+/root/assets/css/style.css
+/root/assets/css/style.css.map
+/root/assets/js/bundle.js
+/root/assets/js/bundle.js.map
+/root/assets/js/bundle.min.js
+/root/assets/js/bundle.min.js.map
+/root/wp/wp-content/ai1wm-backups
+/.idea/
+bk_20211124style.min.css
+bk_index.html

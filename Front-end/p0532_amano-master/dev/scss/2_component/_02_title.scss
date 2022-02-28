@@ -1,0 +1,1485 @@
+/*------------------------------------------------------------
+title
+------------------------------------------------------------*/
+.c-title01 {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    text-align: center;
+    $root: &;
+
+    &__big {
+        font-size: 4rem;
+        color: $color1;
+        line-height: 1.5;
+
+        @include sp {
+            font-size: 2.6rem;
+            line-height: 40px;
+        }
+
+        +#{$root}__sm {
+            margin: 10px 0 0;
+
+            @include sp {
+                margin: 5px 0 0;
+            }
+        }
+    }
+
+    &__sm {
+        font-size: 2rem;
+        color: $color2;
+        line-height: 1.5;
+        text-transform: uppercase;
+
+        @include sp {
+            font-size: 1.6rem;
+        }
+
+        +#{$root}__big {
+            margin: 3px 0 0;
+        }
+    }
+
+    &__sub {
+        margin-top: 36px;
+        font-size: 1.6rem;
+        color: $color1;
+        font-weight: 400;
+        line-height: 1.75;
+
+        @include sp {
+            margin-top: 20px;
+            font-size: 1.4rem;
+        }
+    }
+
+    &--white {
+
+        #{$root}__big,
+        #{$root}__sm {
+            color: #fff;
+        }
+    }
+
+    &--blue {
+        #{$root}__sm {
+            color: $color4;
+        }
+    }
+
+    &--yellow {
+        #{$root}__sm {
+            color: #f39c13;
+        }
+    }
+
+    &--red {
+        #{$root}__sm {
+            color: #e60012;
+        }
+
+        #{$root}__sub {
+            font-size: 1.7rem;
+            margin-top: 43px;
+
+            @include sp {
+                font-size: 1.4rem;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &--size2 {
+        #{$root}__big {
+            +#{$root}__sm {
+                margin: 19px 0 0;
+
+                @include sp {
+                    margin: 8px 0 0;
+                }
+            }
+        }
+
+        #{$root}__sm {
+            font-size: 2.8rem;
+            font-weight: normal;
+            margin: 10px 0 0;
+
+            @include sp {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &--size3 {
+        #{$root}__big {
+            font-size: 3.4rem;
+            letter-spacing: 1.7px;
+
+            @include sp {
+                font-size: 2.4rem;
+            }
+
+            +#{$root}__sm {
+                margin: 10px 0 0;
+
+                @include sp {
+                    margin: 5px 0 0;
+                }
+            }
+        }
+
+        #{$root}__sm {
+            font-size: 1.6rem;
+            margin: 10px 0 0;
+
+            @include sp {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &--size4 {
+        #{$root}__big {
+            font-size: 5rem;
+            line-height: 1.3;
+
+            @include sp {
+                font-size: 3.4rem;
+            }
+        }
+
+        #{$root}__sm {
+            font-size: 2.4rem;
+
+            @include sp {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title02 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    $root: &;
+
+    &__icon {
+        margin-bottom: 26px;
+
+        @include sp {
+            width: 200px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    }
+
+    &__txt {
+        font-size: 2.4rem;
+        color: $color4;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: center;
+
+        @include sp {
+            font-size: 1.8rem;
+            line-height: 30px;
+        }
+    }
+
+    &--black {
+        #{$root}__txt {
+            color: $color3;
+        }
+    }
+
+    &--sm {
+        #{$root}__icon {
+            margin-left: -25px;
+
+            @include sp {
+                margin-left: 0;
+            }
+        }
+
+        #{$root}__txt {
+            font-size: 2rem;
+
+            @include sp {
+                margin-left: 0;
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title03 {
+    color: $color4;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    display: table;
+    margin: 0 auto;
+
+    &:after,
+    &:before {
+        position: absolute;
+        content: '';
+        bottom: 10px;
+        width: 36px;
+        height: 56px;
+        background: url(/assets/img/common/icon/icon_dot-blue.svg) no-repeat center;
+        background-size: 36px 56px;
+
+        @include sp {
+            bottom: -1px;
+            width: 26px;
+            height: 46px;
+            background-size: 26px 46px;
+        }
+    }
+
+    &::before {
+        left: -45px;
+
+        @include sp {
+            left: -35px;
+        }
+    }
+
+    &:after {
+        right: -48px;
+        transform: scaleX(-1);
+
+        @include sp {
+            right: -38px;
+        }
+    }
+
+    &__sm {
+        font-size: 1.8rem;
+        line-height: 1;
+        display: block;
+        margin-bottom: 5px;
+
+        @include sp {
+            line-height: 1.4rem;
+            line-height: 1.5;
+        }
+    }
+
+    &__big {
+        font-size: 4rem;
+        line-height: 60px;
+        display: block;
+        margin: 7px 0 0;
+
+        @include sp {
+            font-size: 3rem;
+            line-height: 40px;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title04 {
+    background: $color3;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    padding: 20px 10px 21px 40px;
+    display: flex;
+
+    @include pad {
+        font-size: 2.2rem;
+    }
+
+    @include sp {
+        font-size: 1.6rem;
+        padding: 8px 15px 9px 30px;
+    }
+
+    &::before {
+        content: '';
+        width: 20px;
+        height: 4px;
+        background: $color2;
+        position: absolute;
+        top: 37px;
+        left: 0;
+
+        @include sp {
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+        }
+    }
+
+    span {
+        font-size: 3rem;
+        line-height: 1;
+        color: #fff;
+        font-weight: 500;
+        margin: 2px 14px 0 0;
+
+        @include sp {
+            font-size: 2.4rem;
+            margin: 1px 8px 0 -8px;
+        }
+
+        &.icon {
+            margin: -1px 14px 0 0;
+
+            @include sp {
+                max-width: 20px;
+                width: 100%;
+                margin: -1px 9px 0 -8px;
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title05 {
+    font-size: 3.4rem;
+    line-height: 45px;
+    color: $color1;
+    font-weight: 700;
+
+    @include sp {
+        font-size: 2.8rem;
+        line-height: 40px;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title06 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.4;
+
+    @include sp {
+        font-size: 1.8rem;
+    }
+
+    &--bg {
+        background-color: #f4f4f4;
+        padding: 19px 25px 22px 25px;
+        box-sizing: border-box;
+
+        @include sp {
+            padding: 15px;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title07 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #333;
+    border-bottom: 1px solid $color1;
+    padding-bottom: 22px;
+
+    @include sp {
+        font-size: 2.4rem;
+        padding-bottom: 16px;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title08 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #333;
+    position: relative;
+    padding-left: 25px;
+
+    @include sp {
+        font-size: 1.6rem;
+        padding-left: 17px;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 5px;
+        height: 33px;
+        background-color: $color4;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 3px;
+
+        @include sp {
+            height: 25px;
+            width: 3px;
+            margin-top: 0;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title09 {
+    text-align: center;
+    $root: &;
+
+    &__main {
+        display: block;
+        font-size: 4rem;
+        font-weight: bold;
+        color: $color1;
+        line-height: 1.35;
+        position: relative;
+        padding-bottom: 41px;
+
+        @include sp {
+            font-size: 2rem;
+            padding-bottom: 20px;
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            width: 70px;
+            height: 8px;
+            background: rgb(14, 199, 222);
+            background: linear-gradient(90deg, rgba(14, 199, 222, 1) 0%, rgba(14, 60, 114, 1) 100%);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include sp {
+                height: 4px;
+                width: 40px;
+            }
+        }
+    }
+
+    &__small {
+        font-size: 3.4rem;
+        padding-bottom: 39px;
+
+        @include sp {
+            font-size: 2.5rem;
+            padding-bottom: 20px;
+        }
+
+        &:after {
+            width: 50px;
+            height: 6px;
+
+            @include sp {
+                height: 4px;
+                width: 40px;
+            }
+        }
+    }
+
+    &__left {
+        text-align: left;
+
+        #{$root}__main {
+            &::after {
+                left: 0;
+                transform: none;
+            }
+        }
+    }
+
+    &__sub {
+        display: block;
+        font-size: 3rem;
+        color: $color2;
+        font-weight: normal;
+        line-height: 2;
+        margin: 29px 0 0;
+
+        @include sp {
+            font-size: 1.9rem;
+            line-height: 1.5;
+            margin: 20px 0 0;
+        }
+    }
+
+    &__des {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1.75;
+        color: $color1;
+        text-align: left;
+        display: block;
+        margin-top: 31px;
+
+        @include sp {
+            font-size: 1.4rem;
+            margin-top: 15px;
+        }
+    }
+
+    &--white {
+        #{$root}__main {
+            color: #fff;
+
+            &::after {
+                background: none;
+                background-color: $color2;
+            }
+        }
+
+        #{$root}__sub {
+            color: #fff;
+        }
+    }
+
+    &--black {
+        #{$root}__main {
+            &::after {
+                background: none;
+                background-color: $color2;
+            }
+        }
+    }
+
+    &--red {
+        #{$root}__main {
+            &:after {
+                background: none;
+                background-color: #e60012;
+            }
+        }
+    }
+
+    &--large {
+        #{$root}__main {
+            font-size: 5rem;
+
+            @include sp {
+                font-size: 2.4rem;
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title10 {
+    font-size: 2rem;
+    line-height: 1.4;
+    color: $color2;
+    font-weight: bold;
+
+    @include sp {
+        font-size: 1.8rem;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title11 {
+    border: solid #1c5472;
+    border-width: 2px 2px 2px 10px;
+    background: #ffffff;
+    padding: 25px 43px 23px;
+    position: relative;
+
+    @include sp {
+        padding: 10px 15px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        right: -2px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 20px 20px 0 0;
+        border-color: #1c5472 #ffffff #ffffff #ffffff;
+    }
+
+    &__txt {
+        font-size: 3.4rem;
+        line-height: 45px;
+        display: block;
+        color: #1c5472;
+        letter-spacing: 2.5px;
+
+        @include sp {
+            letter-spacing: 0;
+            font-size: 2.5rem;
+            line-height: 30px;
+        }
+    }
+
+    &__sub {
+        font-size: 1.6rem;
+        line-height: 24px;
+        display: block;
+        color: #666666;
+        margin: 12px 0 0;
+        font-weight: normal;
+
+        @include sp {
+            font-size: 1.2rem;
+            line-height: 20px;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title12 {
+    display: flex;
+
+    &__alpha {
+        display: block;
+        width: 60px;
+        height: 60px;
+        background: $color4;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 2.6rem;
+        line-height: 60px;
+        color: #fff;
+        font-weight: bold;
+        margin: 0 20px 0 0;
+
+        @include sp {
+            width: 35px;
+            height: 35px;
+            font-size: 1.8rem;
+            line-height: 35px;
+            margin: 0 10px 0 0;
+        }
+    }
+
+    &__txt {
+        flex: 1;
+        display: block;
+        font-size: 2.6rem;
+        line-height: 1.5;
+        color: $color4;
+        font-weight: bold;
+        margin: 9px 0 0;
+        letter-spacing: 1.3px;
+
+        @include sp {
+            font-size: 1.8rem;
+            margin: 5px 0 0;
+            letter-spacing: 0.6px;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title13 {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    color: #111;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    padding: 0 0 27px 40px;
+    display: flex;
+
+    @include sp {
+        font-size: 1.8rem;
+        padding: 0 0 17px 30px;
+    }
+
+    &::before {
+        content: '';
+        width: 20px;
+        height: 1px;
+        background: $color2;
+        position: absolute;
+        top: 20px;
+        left: 0;
+
+        @include sp {
+            top: 15px;
+            width: 12px;
+        }
+    }
+
+    span {
+        font-size: 3.4rem;
+        line-height: 1;
+        color: $color2;
+        margin: 1px 20px 0 -10px;
+
+        @include sp {
+            font-size: 2.8rem;
+            margin: -1px 10px 0 -8px;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title14 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__icon {
+        margin-right: 11px;
+
+        @include sp {
+            width: 50%;
+        }
+    }
+
+    &__jp {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1.5;
+        color: $color1;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include sp {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__en {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $color2;
+        line-height: 1.5;
+    }
+
+    &__sub {
+        font-size: 1.6rem;
+        color: $color1;
+        line-height: 1.75;
+        font-weight: 400;
+        margin-top: 37px;
+        text-align: center;
+
+        @include sp {
+            font-size: 1.4rem;
+            margin-top: 20px;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title15 {
+    display: flex;
+    flex-direction: column;
+
+    &__main {
+        font-size: 4.2rem;
+        font-weight: 700;
+        color: $color1;
+        line-height: 1.65;
+
+        @include sp {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__sub {
+        margin-top: 32px;
+        font-size: 1.7rem;
+        font-weight: 400;
+        color: $color1;
+        line-height: 2.1;
+
+        @include sp {
+            margin-top: 15px;
+            font-size: 1.5rem;
+            line-height: 1.8;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title16 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__main {
+        font-size: 4.4rem;
+        color: $color2;
+        line-height: 1.4;
+        font-weight: 700;
+
+        @include pad {
+            font-size: 4rem;
+        }
+
+        @include sp {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__sub {
+        margin-top: 26px;
+        font-size: 2rem;
+        line-height: 1.5;
+        font-weight: 700;
+        color: $color4;
+        text-align: center;
+
+        @include sp {
+            font-size: 1.8rem;
+            margin-top: 10px;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title17 {
+    font-size: 2.8rem;
+    line-height: 1.5;
+    text-align: center;
+    color: #1c5472;
+    font-weight: bold;
+
+    @include sp {
+        font-size: 2rem;
+    }
+
+    span {
+        position: relative;
+        padding: 0 0 18px;
+        display: inline-block;
+
+        @include sp {
+            padding: 0 0 10px;
+        }
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(to right, #0ec7de, #0e3c72);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            @include sp {
+                height: 4px;
+            }
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title18 {
+    background-color: #f4f4f4;
+    padding: 22px 20px 22px 50px;
+    box-sizing: border-box;
+    font-size: 2.4rem;
+    line-height: 1.4;
+    color: $color1;
+    font-weight: 700;
+    position: relative;
+
+    @include sp {
+        padding: 15px 15px 15px 45px;
+        font-size: 2rem;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 10px;
+        background: url(/assets/img/common/icon/icon_square.svg) no-repeat center;
+        background-size: 30px 10px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title19 {
+    @include fcc;
+
+    &__inner {
+        font-size: 3.4rem;
+        position: relative;
+        padding: 0 66px;
+        text-align: center;
+
+        @include sp {
+            font-size: 1.8rem;
+            padding: 0 25px;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 36px;
+            height: 58px;
+            background-size: 36px 56px;
+            top: calc(50% - 20px);
+
+            @include sp {
+                width: 26px;
+                height: 46px;
+            }
+        }
+
+        &::before {
+            background: url(/assets/img/common/icon/icon_dot-blue.svg) no-repeat center;
+            left: 0;
+
+            @include sp {
+                background-size: 26px 46px;
+            }
+        }
+
+        &::after {
+            background: url(/assets/img/common/icon/icon_dot-blue2.svg) no-repeat center;
+            right: 0;
+
+            @include sp {
+                background-size: 26px 46px;
+            }
+        }
+
+        span {
+            color: #0082C5;
+        }
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.c-title20 {
+    &__tit {
+        font-size: 2.4rem;
+        color: #5FA826;
+        font-weight: bold;
+        text-align: center;
+        display: block;
+        line-height: 1;
+
+        @include sp {
+            font-size: 2rem;
+        }
+    }
+
+    &__txt {
+        font-size: 5rem;
+        font-weight: bold;
+        text-align: center;
+        display: block;
+        margin-top: 17px;
+        line-height: 1;
+
+        @include sp {
+            font-size: 3rem;
+        }
+    }
+}
+
+.c-title21 {
+    position: relative;
+
+    &::before {
+        content: '';
+        background: url(/assets/img/tayorou/common/h2.svg) no-repeat top left;
+        background-size: 57px 68px;
+        width: 57px;
+        height: 68px;
+        position: absolute;
+        top: -11px;
+        left: 0;
+
+        @include sp {
+            width: 50px;
+            height: 60px;
+            background-size: 50px 60px;
+        }
+    }
+
+    @include pc {
+        @include f;
+        align-items: flex-start;
+        padding-left: 67px;
+    }
+
+    @include sp {
+        background-size: 50px 60px;
+        padding-left: 61px;
+    }
+
+    &__jp {
+        font-size: 4rem;
+
+        @include sp {
+            @include fz(24, 30);
+        }
+    }
+
+    &__en {
+        font-size: 2rem;
+        @include roboto;
+        font-weight: bold;
+        color: #F79E39;
+        padding: 20px 0 0 10px;
+
+        @include sp {
+            font-size: 1.2rem;
+            padding: 4px 0 0 0;
+        }
+    }
+
+    &--icon2 {
+        padding-left: 59px;
+
+        @include sp {
+            padding-left: 53px;
+        }
+
+        &::before {
+            background: url(/assets/img/tayorou/common/h3.svg) no-repeat top left;
+            background-size: 49px 68px;
+            width: 49px;
+            height: 68px;
+            top: -8px;
+            left: 0;
+
+            @include sp {
+                background-size: 43px 60px;
+                width: 43px;
+                height: 60px;
+                top: -11px;
+            }
+        }
+    }
+
+    &--icon3 {
+        padding-left: 83px;
+
+        @include sp {
+            padding-left: 74px;
+        }
+
+        &::before {
+            background: url(/assets/img/tayorou/common/h4.svg) no-repeat top left;
+            background-size: 74px 52px;
+            width: 74px;
+            height: 52px;
+            top: 9px;
+            left: 0;
+
+            @include sp {
+                background-size: 65px 46px;
+                width: 65px;
+                height: 46px;
+                top: 4px;
+            }
+        }
+    }
+}
+
+.c-title22 {
+    display: flex;
+    white-space: nowrap;
+
+    img {
+        margin-top: 2px;
+
+        @include sp {
+            width: 132px;
+        }
+    }
+
+    &__txt {
+        @include fz(40, 60);
+        font-weight: bold;
+        margin-left: 21px;
+
+        @include sp {
+            @include fz(24, 36);
+            margin-left: 10px;
+        }
+    }
+}
+
+.c-title23 {
+    padding-bottom: 40px;
+    border-bottom: 8px solid #F79E39;
+    $root: &;
+
+    @include pc {
+        @include fsc;
+    }
+
+    @include sp {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 0 -20px;
+        padding: 0 20px 20px;
+    }
+
+    &__txt {
+        color: #F79E39;
+        @include fz(20, 30);
+        font-weight: bold;
+        margin-bottom: 20px;
+
+        @include sp {
+            @include fz2(24, 36);
+            margin-bottom: 9px;
+        }
+    }
+
+    &__tit {
+
+        @include ffc;
+
+        &__img {
+            @include sp {
+                width: 60px;
+            }
+
+            @include max-w(374px) {
+                width: 50px;
+            }
+        }
+
+        &__txt {
+            @include fz(36, 53);
+            margin-left: 10px;
+
+            @include sp {
+                @include fz2(44, 66);
+            }
+
+            @include max-w(374px) {
+                @include fz2(36, 56);
+                margin-left: 5px;
+            }
+        }
+    }
+
+    &__img {
+        @include sp {
+            width: 120px;
+        }
+
+        @include max-w(374px) {
+            width: 100px;
+        }
+    }
+
+    &.green {
+        border-color: #80C269;
+
+        #{$root}__txt {
+            color: #80C269;
+        }
+    }
+
+    &.green2 {
+        border-color: #13B5B1;
+
+        #{$root}__txt {
+            color: #13B5B1;
+        }
+    }
+
+
+    &.blue {
+        border-color: #22A0DB;
+
+        #{$root}__txt {
+            color: #22A0DB;
+        }
+    }
+
+    &.purple {
+        border-color: #8657A0;
+
+        #{$root}__txt {
+            color: #8657A0;
+        }
+    }
+
+    &.gray {
+        border-color: #595959;
+
+        #{$root}__txt {
+            color: #595959;
+        }
+    }
+}
+
+.c-title24 {
+    @include fz(24, 36);
+    padding: 15px;
+    padding-left: 45px;
+    border-bottom: 2px solid #333333;
+    background: url(/assets/img/tayorou/common/icon-pickup2.svg) no-repeat top 21px left 15px;
+
+    @include sp {
+        @include fz(16, 24);
+        color: #fff;
+        background: url(/assets/img/tayorou/common/icon-pickup.svg) no-repeat top 2px left;
+        background-size: 20px;
+        border: none;
+        padding: 0 0 0 26px;
+    }
+}
+
+.c-title25 {
+    @include sp {
+        position: relative;
+        padding: 12px 0 0 60px;
+
+        &::before {
+            content: '';
+            width: 50px;
+            height: 60px;
+            background: url(/assets/img/tayorou/common/h2.svg) no-repeat top left;
+            background-size: 50px 60px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__jp {
+        display: block;
+        @include fz(24, 36);
+
+        @include sp {
+            line-height: 1.25;
+        }
+    }
+
+    &__en {
+        color: #F79E39;
+        @include roboto;
+        font-weight: bold;
+        display: block;
+        margin-top: 2px;
+        @include fz(16, 24);
+
+        @include sp {
+            @include fz(12, 18);
+        }
+
+        &--color2 {
+            color: #80C269;
+        }
+
+        &--color3 {
+            color: #595959;
+        }
+        &--color4 {
+            color: #22A0DB;
+        }
+    }
+}
+
+.c-title26 {
+    font-size: 3.2rem;
+    line-height: 46px;
+    font-weight: bold;
+    background: #F4F4F4;
+    padding: 10px 12px;
+    overflow: hidden;
+    border-radius: 4px;
+    border-left: 8px;
+    border-style: solid;
+
+    @include sp {
+        font-size: 2.2rem;
+        line-height: 33px;
+        border-radius: 2px;
+    }
+
+    &.purple {
+        border-color: #8657A0;
+    }
+
+    &.orange {
+        border-color: #F79E39;
+    }
+
+    &.gray {
+        border-color: #595959;
+    }
+}
+
+.c-title27 {
+    font-size: 2.8rem;
+    line-height: 42px;
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include sp {
+        font-size: 2rem;
+        line-height: 30px;
+    }
+
+    &__tag {
+        width: 48px;
+        height: 48px;
+        background: #595959;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 2.8rem;
+        line-height: 1;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+
+        @include sp {
+            font-size: 2rem;
+        }
+    }
+}
+
+.c-title28 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    $root: &;
+    @include sp {
+        align-items: flex-end;
+    }
+
+    &__icon {
+        width: 48px;
+        height: 48px;
+        background: #F79E39;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        margin: 0 10px 0 0;
+    }
+
+    &__ttl {
+        flex: 1;
+        display: flex; 
+        align-items: center;
+        @include sp {
+            display: block;
+            padding: 0 0 20px;
+        }
+    }
+
+    &__ttlmain {
+        display: flex;
+        align-items: center;
+        font-size: 3.2rem;
+        line-height: 1.5;
+        color: #F79E39;
+        font-weight: bold;
+        @include sp {
+            font-size: 2rem;
+        }
+    }
+
+    &__ttlsub {
+        font-size: 1.8rem;
+        line-height: 1.5;
+        color: #333333;
+        font-weight: bold;
+        border-left: 1px solid #333333;
+        padding: 0 0 0 20px;
+        margin: 0 0 0 20px;
+        @include sp {
+            display: block;
+            font-size: 1.6rem;
+            border: none;
+            padding: 0;
+            margin: 19px 0 0;
+        }
+    }
+
+    &__img {
+        width: 120px;
+        margin: 8px 0 0 10px;
+    }
+
+    &.green {
+        #{$root}__icon {
+            background: #80C269;
+        }
+
+        #{$root}__ttlmain {
+            color: #80C269;
+        }
+    }
+
+    &.green2 {
+        #{$root}__icon {
+            background: #13B5B1;
+        }
+
+        #{$root}__ttlmain {
+            color: #13B5B1;
+        }
+    }
+
+    &.blue {
+        #{$root}__icon {
+            background: #22A0DB;
+        }
+
+        #{$root}__ttlmain {
+            color: #22A0DB;
+        }
+    }
+
+    &.gray {
+        #{$root}__icon {
+            background: #595959;
+        }
+
+        #{$root}__ttlmain {
+            color: #595959;
+        }
+    }
+}

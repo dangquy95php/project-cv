@@ -1,0 +1,26 @@
+/*------------------------------------------------------------
+c-text
+------------------------------------------------------------*/
+.c-text {
+
+}
+
+.c-address {
+	position: relative;
+	font-size: 1.4rem;
+	line-height: 1.6;
+	letter-spacing: 0.09em;
+	color: #333333;
+	padding-left: 20px;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		background: url(../img/common/icon-address.svg) no-repeat center center;
+		width: 12px;
+		height: 20px;
+	}
+}

@@ -1,0 +1,9 @@
+/.idea/
+/node_modules/
+/package-lock.json
+/root/wp-content/themes/No1_theme01/css/common.css
+/root/wp-content/themes/No1_theme01/css/page.css
+/root/wp-content/themes/No1_theme01/css/print.css
+/root/wp-content/themes/No1_theme01/js/common.min.js
+/root/wp-content/themes/No1_theme01/js/top.min.js
+/debug.log

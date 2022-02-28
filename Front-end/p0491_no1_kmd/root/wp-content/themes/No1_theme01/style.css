@@ -1,0 +1,76 @@
+/*
+Theme Name: No.1_theme01
+Description: 株式会社No.1
+Author: 株式会社No.1
+Author URI: www.number-1.co.jp
+Version: 3.0
+*/
+
+.site {
+	position: relative;
+}
+
+.page-404 {
+	position: relative;
+}
+
+.page-404 a {
+	color: #6d46ff;
+	text-decoration: underline;
+}
+
+.section-404 {
+	position: relative;
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+div.post img {
+	border: none;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+	margin: 5px 40px 0 0;
+}
+
+.alignright {
+	float: right;
+	margin: 5px 0 0 40px;
+}
+
+@media screen and (max-width: 767px) {
+	.alignleft, .alignright {
+		display: block;
+		float: none;
+		margin: 10px auto;
+	}
+}
+
+.wp-caption {
+	border: none;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+.grecaptcha-badge {
+	visibility: hidden;
+}
+
+.bx-wrapper {
+	box-shadow: none;
+	overflow: hidden;
+	margin-bottom: 0;
+	border: 0;
+	z-index: 0;
+}

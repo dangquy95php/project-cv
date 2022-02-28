@@ -1,0 +1,75 @@
+.p-tayorou-seminar {
+    padding: 120px 0 0;
+
+    @include sp {
+        padding: 0;
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        line-height: 27px;
+        color: #333;
+        margin: 40px 0;
+
+        @include sp {
+            font-size: 1.6rem;
+            line-height: 28px;
+            margin: 17px 0 18px;
+        }
+    }
+
+    &1 {
+        padding: 40px 0 80px;
+
+        @include sp {
+            padding: 18px 0 36px;
+        }
+
+        &__content {
+            &+.p-tayorou-seminar1__content {
+                margin-top: 80px;
+
+                @include sp {
+                    margin-top: 38px;
+                }
+            }
+        }
+    }
+}
+
+
+/*------------------------------------------------------------
+tayorou-seminar-detail
+------------------------------------------------------------*/
+.p-tayorou-seminar-detail {
+    padding: 120px 0 0;
+
+    @include sp {
+        padding: 0;
+    }
+
+    &1 {
+        padding: 40px 0 80px;
+
+        @include sp {
+            padding: 20px 0 40px;
+        }
+
+        .c-box27 {
+            &__txt {
+                @include pc {
+                    @include fz(40, 60)
+                }
+            }
+        }
+    }
+
+    .c-imgtext08 {
+        img {
+            max-width: 620px;
+            @include sp  {
+                max-width: 100%;
+            }
+        }
+    }
+}

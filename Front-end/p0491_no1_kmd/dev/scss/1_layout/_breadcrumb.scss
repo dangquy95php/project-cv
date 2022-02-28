@@ -1,0 +1,64 @@
+/*------------------------------------------------------------
+breadcrumb
+------------------------------------------------------------*/
+.breadcrumb {
+
+	&_list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&_item {
+		line-height: 1;
+		display: flex;
+		align-items: center;
+
+		a, span {
+			padding-top: 8px;
+			padding-bottom: 8px;
+		}
+
+		span {
+			font-size: 1.2rem;
+			color: $color2;
+		}
+
+		a {
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			text-decoration: none;
+
+			&:hover, &:focus {
+				color: inherit;
+				text-decoration: underline;
+				text-decoration-color: #fff!important;
+			}
+		}
+
+		&:before {
+			content: "｜";
+			margin: 0 15px;
+			font-size: 1.2rem;
+		}
+
+		&:first-child, &:nth-child(2) {
+			&:before {
+				display: none;
+			}
+		}
+
+		&:nth-child(2) {
+			margin-left: 19px;
+		}
+
+		&:first-child{
+			background-color: $color1;
+			padding: 1px 20px;
+			box-sizing: border-box;
+
+			span{
+				color: #fff;
+			}
+		}
+	}
+}

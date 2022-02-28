@@ -1,0 +1,124 @@
+/*------------------------------------------------------------
+layout
+------------------------------------------------------------*/
+body {
+    color: $color1;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.65;
+    position: relative;
+    min-width: 1300px;
+    counter-reset: section;
+
+    @include sp {
+        width: 100%;
+        min-width: 320px;
+
+        &.fixed {
+            position: fixed;
+        }
+    }
+}
+
+.sp-only {
+    display: none;
+
+    @include sp {
+        display: block;
+    }
+}
+
+.pc-only {
+    display: block;
+
+    @include sp {
+        display: none;
+    }
+}
+
+.is-clone2 {
+    @include sp {
+        display: block !important;
+        padding-bottom: 40px;
+    }
+}
+
+.l-container {
+    width: 1280px;
+    margin: 0 auto;
+    @include clear();
+    // *zoom: 1;
+
+    @include pad {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    @include sp {
+        width: auto;
+        padding: 0 15px;
+    }
+}
+
+.l-container2 {
+    width: 1280px;
+    margin: 0 auto;
+    @include clear();
+
+    @include pad {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    @include sp {
+        width: auto;
+        padding: 0 20px;
+    }
+}
+
+/*
+------------------------------------------------------------*/
+.l-content {
+    width: 960px;
+    margin: 0 auto;
+    float: left;
+
+    @include sp {
+        width: 100%;
+        float: none;
+    }
+
+    .c-breadcrumb {
+        padding: 0;
+        margin: -7px 0 0;
+
+        @include sp {
+            margin: 0;
+        }
+    }
+}
+
+#wrapper {
+    overflow: hidden;
+}
+
+.l-layout1 {
+    @include fs;
+
+    &__left {
+        width: 920px;
+
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    &__right {
+        width: 320px;
+
+        @include sp {
+            width: 100%;
+            margin: 40px 0 0;
+        }
+    }
+}

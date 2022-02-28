@@ -1,0 +1,60 @@
+<?php $category = "人事・労務なんでもQ＆A"; ?>
+
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/header.php'); ?>
+
+<main class="p-faqdetail">
+    <div class="c-heading">
+        <h1 class="c-heading__txt">
+            <span class="c-heading__sub">様々な課題を抱えるご担当者様に向けて</span>
+            <span class="c-heading__main">人事・労務なんでもQ＆A</span>
+        </h1>
+    </div>
+
+    <div class="p-faqdetail__wrap">
+        <div class="l-container">
+            <div class="l-content is-outlinkarea">
+                <?php ///////////////////////////////////////////////////////
+                // パンくず
+                ///////////////////////////////////////////////////////////// 
+                ?> <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/breadcrumb.php'); ?>
+
+                <section class="p-faqdetail1">
+                    <div class="c-text05">
+                        <?php if (get_field('faq_q_txt')) : ?>
+                            <h2 class="c-text05__txt"><?php the_field('faq_q_txt'); ?></h2>
+                            <?php if (get_field('faq_a_txt')) : ?>
+                                <p class="c-text05__text"><?php the_field('faq_a_txt'); ?></p>
+                            <?php endif; ?>
+                        <?php endif; ?>
+                    </div>
+                    <?php
+                    $tagname = "faq_column_tag";
+                    include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/single_tagtime.php'); ?>
+
+                    <p class="c-text08">詳しく解説</p>
+                    <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/checkExistsH2AndH3.php'); ?>
+                </section>
+
+                <section class="c-box4">
+                    <?php ///////////////////////////////////////////////////////
+                    // 柔軟コンテンツ
+                    ///////////////////////////////////////////////////////////// 
+                    ?>
+                    <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/single_flexible_content.php'); ?>
+                </section>
+            </div>
+            <div class="pc-only">
+                <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/side.php'); ?>
+            </div>
+        </div>
+    </div>
+
+    <?php $type = "faq_column";
+    include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/recommnded.php'); ?>
+    <div class="l-container sp-only">
+        <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/side.php'); ?>
+    </div>
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/download-blue.php'); ?>
+</main>
+
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/footer.php'); ?>

@@ -1,0 +1,40 @@
+/*------------------------------------------------------------
+Page Product biometrics_authentication
+------------------------------------------------------------*/
+.p-biometrics {
+    &1 {
+        padding: 120px 0 122px;
+        @include sp {
+            padding: 60px 0;
+        }
+
+        .c-title09 {
+            margin: 0 0 38px;
+            @include sp {
+                margin: 0 0 19px;
+            }
+        }
+
+        .c-banner {
+            margin: 120px auto 0;
+
+            @include sp {
+                margin: 60px auto 0;
+            }
+        }
+    }
+
+    &2 {
+        margin: 0 0 136px;
+        @include sp {
+            margin: 0 0 50px;
+        }
+
+        .c-list19 {
+            margin: 79px 0 0;
+            @include sp {
+                margin: 40px 0 0;
+            }
+        }
+    }
+}

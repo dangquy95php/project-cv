@@ -1,0 +1,69 @@
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/header.php'); ?>
+
+<main class="p-guideDetail">
+    <div class="c-heading">
+        <h1 class="c-heading__txt">
+            <span class="c-heading__sub">人事・労務の最前線をコラムでお届け</span>
+            <span class="c-heading__main">HR News</span>
+        </h1>
+    </div>
+
+    <div class="p-guideDetail__wrap">
+        <div class="l-container">
+            <div class="l-content is-outlinkarea">
+
+                <!-- パンくず -->
+                <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/breadcrumb.php'); ?>
+
+                <section class="p-guideDetail1">
+                    <?php ///////////////////////////////////////////////////////
+                    // タイトル
+                    ///////////////////////////////////////////////////////////// 
+                    ?>
+                    <h2 class="c-title05"><?php the_title(); ?></h2>
+
+                    <?php ///////////////////////////////////////////////////////
+                    // タグ・更新日時
+                    ///////////////////////////////////////////////////////////// 
+                    ?>
+                    <?php
+                    $tagname = "hr_news_tag";
+                    include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/single_tagtime.php'); ?>
+
+                    <?php ///////////////////////////////////////////////////////
+                    // サムネイルとリード文
+                    ///////////////////////////////////////////////////////////// 
+                    ?>
+                    <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/single_lead.php'); ?>
+
+                    <?php ///////////////////////////////////////////////////////
+                    // 目次
+                    ///////////////////////////////////////////////////////////// 
+                    ?>
+                    <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/checkExistsH2AndH3.php'); ?>
+                </section>
+
+                <section class="c-box4">
+                    <?php ///////////////////////////////////////////////////////
+                    // 柔軟コンテンツ
+                    ///////////////////////////////////////////////////////////// 
+                    ?>
+                    <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/single_flexible_content.php'); ?>
+                </section>
+            </div>
+
+            <div class="pc-only">
+                <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/side.php'); ?>
+            </div>
+        </div>
+    </div>
+    <?php $type = "hr_news";
+    include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/recommnded.php'); ?>
+    <div class="l-container sp-only">
+        <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/side.php'); ?>
+    </div>
+
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/download-blue.php'); ?>
+</main>
+
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/footer.php'); ?>

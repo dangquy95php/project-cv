@@ -1,0 +1,89 @@
+/*------------------------------------------------------------
+Page Product TimePro-VG
+------------------------------------------------------------*/
+
+.p-timeprovg {
+    .c-title01 {
+        margin: 0 0 86px;
+        @include sp {
+            margin: 0 0 43px;
+        }
+    }
+
+    .c-mv4 {
+        &__ttl {
+            text-align: center;
+        }
+
+        &__mainttl {
+            font-size: 3.6rem;
+
+            @include sp {
+                font-size: 3rem;
+            }
+        }
+    }
+    &1 {
+        padding: 140px 0 120px;
+        @include sp {
+            padding: 50px 0;
+        }
+        .c-title01__sm {
+            text-transform: none;
+        }
+    }
+    &2{
+       padding-top: 120px;
+        @include sp{
+            padding-top: 50px;
+        }
+    }
+    &3 {
+        padding: 160px 0 0;
+        @include sp {
+            padding: 50px 0 0;
+        }
+        .c-slide2 {
+            margin: 68px 0 0;
+            @include sp {
+                margin: 34px 0 0;
+            }
+        }
+        .c-slide2-noslide {
+            margin: 68px 0 0;
+            @include sp {
+                margin: 34px 0 0;
+            }
+        }
+    }
+    &4 {
+        padding: 160px 0 0;
+        @include sp {
+            padding: 50px 0 0;
+        }
+        .c-flow2 {
+            margin: 60px 0 0;
+            @include sp {
+                margin: 30px 0 0;
+            }
+        }
+    }
+    &5 {
+        padding: 147px 0 130px;
+        @include sp {
+            padding: 50px 0;
+        }
+        .c-title01 {
+            margin: 0 0 79px;
+            @include sp {
+                margin: 0 0 40px;
+            }
+        }
+        .c-list27 {
+            margin: 60px 0 0;
+            @include sp {
+                margin: 30px 0 0;
+            }
+        }
+    }
+}

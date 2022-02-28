@@ -1,0 +1,183 @@
+/*------------------------------------------------------------
+form
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-form1 {
+    background: #f6f6f6;
+    margin: 60px 0 123px;
+    padding: 44px 50px 36px;
+
+    @include sp {
+        margin: 30px 0 60px;
+        padding: 20px 25px;
+    }
+
+    &__box {
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        &:not(:last-child) {
+            @include sp {
+                margin: 0 0 20px;
+            }
+        }
+    }
+
+    &__heading {
+        width: 263px;
+        border-bottom: 1px dashed #000000;
+        padding: 25px 0 8px;
+        display: flex;
+        align-items: center;
+
+        @include sp {
+            width: 100%;
+            padding: 10px 0;
+        }
+    }
+
+    &__info {
+        width: calc(100% - 263px);
+        border-bottom: 1px dashed #000000;
+        padding: 26px 0 9px;
+
+        @include sp {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    &__tit {
+        font-size: 1.8rem;
+        color: #0181c0;
+        padding-left: 46px;
+        margin: 0 0 20px;
+        font-weight: bold;
+        @include sp {
+            margin: 0;
+        }
+
+        &.icon1 {
+            background: url(/assets/img/common/icon/icon40.svg) no-repeat center left 10px;
+            background-size: 25px 16px;
+        }
+
+        &.icon2 {
+            background: url(/assets/img/common/icon/icon41.svg) no-repeat center left 10px;
+            background-size: 20px 19px;
+        }
+
+        &.icon3 {
+            background: url(/assets/img/common/icon/icon42.svg) no-repeat center left 10px;
+            background-size: 24px 16px;
+        }
+    }
+
+    &__list {
+        @include f;
+
+        @include sp {
+            margin: 20px 0 0;
+        }
+
+        li {
+            padding: 0 34px 18px 0;
+
+            @include sp {
+                // width: 100%;
+                padding: 0 20px 20px 0;
+            }
+
+            input {
+                display: none;
+
+                &:checked + label {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            label {
+                font-size: 1.6rem;
+                font-weight: bold;
+                color: #666666;
+                display: block;
+                position: relative;
+                padding-left: 31px;
+                line-height: 22px;
+                cursor: pointer;
+
+                &::before,
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 2px;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                &::before {
+                    box-sizing: border-box;
+                    border: 1px solid #cccccc;
+                    display: block;
+                    background: #ffffff;
+                }
+
+                &::after {
+                    width: 13px;
+                    height: 10px;
+                    background: url(/assets/img/common/icon/icon17.svg) no-repeat center;
+                    background-size: 12px 10px;
+                    opacity: 0;
+                    top: 7px;
+                    left: 3.5px;
+                }
+            }
+        }
+    }
+
+    &__submit {
+        width: 269px;
+        margin: 35px auto 0;
+        padding: 0;
+        border: 1px solid #0181c0;
+        background: #0181c0;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        @include hover {
+            // background: #fff;
+            // span {
+            //     color: #0181c0;
+            // }
+            opacity: 0.7;
+        }
+
+        @include sp {
+            width: 100%;
+            max-width: 269px;
+            margin: 20px auto 0;
+        }
+
+        span {
+            font-size: 1.6rem;
+            height: 64px;
+            line-height: 64px;
+            display: inline-block;
+            font-weight: bold;
+            color: #ffffff;
+            background: url(/assets/img/common/icon/icon43.svg) no-repeat center left;
+            background-size: 15px 15px;
+            padding-left: 27px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}

@@ -1,0 +1,132 @@
+/*------------------------------------------------------------
+Page hr_news
+------------------------------------------------------------*/
+.p-hrnews {
+    &__wrap {
+        margin: 60px 0 177px;
+
+        @include sp {
+            margin: 20px 0 50px;
+        }
+    }
+
+    .c-list02 {
+        margin: 62px 0 101px;
+
+        @include sp {
+            margin: 30px 0 20px;
+        }
+
+        &__item {
+            margin: 0 0 19px 21px;
+            width: 306px;
+
+            @include sp {
+                width: 100%;
+                margin: 0 0 20px;
+                border-width: 1px;
+            }
+
+            @include pc {
+                &:nth-child(3n+1) {
+                    margin: 0 0 19px;
+                }
+            }
+        }
+
+        &__img {
+            height: 186px;
+
+            @include sp {
+                height: 55vw;
+            }
+        }
+
+        &__time {
+            top: -10px;
+            left: 13px;
+
+            span {
+                font-size: 9px;
+                line-height: 22px;
+                height: 22px;
+
+                &:first-child {
+                    padding: 0 16px 0 12px;
+                }
+
+                &:last-child {
+                    padding: 0 8px 0;
+                }
+            }
+        }
+
+        &__content {
+            padding: 28px 21px 20px;
+        }
+
+        &__ttl {
+            font-size: 1.6rem;
+            line-height: 26px;
+        }
+
+        .c-new {
+            &__txt {
+                font-size: 1rem;
+            }
+            .c-tag7 {
+                font-size: 1rem;
+            }
+        }
+
+    }
+}
+
+.p-hrnewsDetail {
+    .c-title05 {
+        @include pc {
+            font-size: 4rem;
+            line-height: 60px;
+        }
+    }
+
+    &__wrap {
+        padding: 60px 0 176px;
+
+        @include sp {
+            padding: 30px 0 47px;
+        }
+    }
+
+    &1 {
+        padding: 47px 0 0;
+
+        @include sp {
+            padding: 25px 0 50px;
+        }
+
+        .c-tagtime {
+            margin: 39px 0 0;
+
+            @include sp {
+                margin: 16px 0 0;
+            }
+        }
+
+        .c-imgSingle {
+            margin: 48px 0 40px;
+
+            @include sp {
+                margin: 20px 0 18px;
+            }
+        }
+
+        .c-box3 {
+            margin: 58px 0 0;
+
+            @include sp {
+                margin: 30px 0 0;
+            }
+        }
+    }
+}

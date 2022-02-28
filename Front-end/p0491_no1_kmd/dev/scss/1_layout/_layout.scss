@@ -1,0 +1,71 @@
+/*------------------------------------------------------------
+layout
+------------------------------------------------------------*/
+body {
+	font-family: $mainFont;
+	background-color: #fff;
+	color: #282828;
+	font-size: 1.4rem;
+	line-height: 1.7;
+	min-height: 100vh;
+	overflow-x: hidden;
+
+	@include sp {
+		min-width: 320px;
+	}
+}
+
+.l-cont {
+	width: 100%;
+	max-width: $baseWidth;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include pad {
+		width: 90%;
+	}
+}
+
+#wrapper{
+	margin-top: 100px;
+
+	@include max-w(1200px){
+		margin-top: 97px;
+	}
+
+	@include pad{
+		margin-top: 70px;
+	}
+
+	@include sp{
+		margin-top: 62px;
+	}
+}
+
+// -> 768px
+@media screen and (min-width: #{($breakpoint1 + 1px)}) {
+	.sp-only {
+		display: none !important;
+	}
+}
+
+// <- 1060px
+@include pad {
+	.pc-only {
+		display: none !important;
+	}
+}
+
+// -> 1061px
+@include pc {
+	.pad-sp-only {
+		display: none !important;
+	}
+
+	a:hover, a:hover img {
+		opacity: 0.80;
+		filter: alpha(opacity=80);
+		-ms-filter: "alpha(opacity=80)";
+		text-decoration: none;
+	}
+}

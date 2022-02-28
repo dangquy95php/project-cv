@@ -1,0 +1,31 @@
+/*------------------------------------------------------------
+slide
+------------------------------------------------------------*/
+.c-slider {
+	&_item {
+		height: 900px;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+
+		@include pad{
+			height: 600px;
+		}
+
+		@include sp {
+			height: 465px;
+		}
+
+		&:nth-child(1) {
+			background-image: url(../img/top/mv01.jpg);
+		}
+
+		&:nth-child(2) {
+			background-image: url(../img/top/mv02.jpg);
+		}
+
+		&:nth-child(3) {
+			background-image: url(../img/top/mv03.jpg);
+		}
+	}
+}

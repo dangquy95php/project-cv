@@ -1,0 +1,160 @@
+/*------------------------------------------------------------
+Page Product IC Card
+------------------------------------------------------------*/
+.p-iccard{
+
+    .c-mv5{
+        margin-bottom: 117px;
+
+        @include sp{
+            margin-bottom: 50px;
+        }
+
+        &__box{
+            padding-top: 34px;
+
+            @include sp{
+                padding-top: 0;
+            }
+        }
+
+        &__txt{
+            margin-top: 30px;
+
+            @include sp{
+                margin-top: 18px;
+            }
+        }
+    }
+
+    .c-singlenote2{
+        text-indent: -18px;
+        padding: 0 0 0 18px;
+        margin-top: 55px;
+        color: #444444;
+        @include sp{
+            margin-top: 30px;
+            text-indent: -13px;
+            padding: 0 0 0 13px;
+        }
+    }
+    .c-title09{
+        margin-bottom: 80px;
+        @include sp{
+            margin-bottom: 40px;
+        }
+    }
+
+    &1{
+        padding: 94px 0 97px;
+        box-sizing: border-box;
+
+        @include sp{
+            padding: 50px 0 50px;
+        }
+    }
+
+    &2{
+        padding: 101px 0 63px;
+        box-sizing: border-box;
+
+        @include sp{
+            padding: 50px 0 50px;
+        }
+
+        .c-imgSingle{
+            margin: 59px 0 0;
+
+            @include sp{
+                margin: 0;
+            }
+        }
+
+        .c-title09{
+            margin-bottom: 58px;
+
+            @include sp{
+                margin-bottom: 40px;
+            }
+        }
+
+        .c-singlelist{
+            margin: 59px 0 80px 30px;
+
+            @include sp{
+                margin: 20px 0 30px 0;
+            }
+        }
+
+        .c-list26{
+            margin-top: 50px;
+
+            @include sp{
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &3{
+        padding: 102px 0 101px;
+        box-sizing: border-box;
+
+        @include sp{
+            padding: 50px 0 50px;
+        }
+
+        .c-title09{
+
+            &__sub{
+                line-height: 1.7;
+                margin: 33px 0 0;
+                @include sp{
+                    line-height: 1.5;
+                    margin: 15px 0 0;
+                }
+            }
+        }
+    }
+
+    &4{
+        padding: 102px 0 100px;
+        box-sizing: border-box;
+
+        @include sp{
+            padding: 50px 0 50px;
+        }
+    }
+
+    &5{
+        padding: 102px 0 119px;
+        box-sizing: border-box;
+
+        @include sp{
+            padding: 50px 0 20px;
+        }
+
+        .c-imgtext02{
+            margin-top: 38px;
+
+            @include sp{
+                margin-top: 20px;
+            }
+        }
+
+        .c-singlenote2{
+            margin-top: 24px;
+
+            @include sp{
+                margin-top: 15px;
+            }
+        }
+    }
+
+    .c-contact{
+        padding-top: 122px;
+
+        @include sp{
+            padding-top: 50px;
+        }
+    }
+}

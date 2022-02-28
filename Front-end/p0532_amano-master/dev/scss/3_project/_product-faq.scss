@@ -1,0 +1,94 @@
+/*------------------------------------------------------------
+Page Product Faq
+------------------------------------------------------------*/
+.p-productFaq {
+    .c-mv6 {
+        margin-bottom: 80px;
+
+        @include sp {
+            margin-bottom: 40px;
+        }
+    }
+
+    .c-list09 {
+        margin: 0 0 82px;
+        @include sp {
+            margin: 0 0 40px;
+        }
+
+        &__item {
+            width: calc((100% - 38px) / 3);
+            margin: 0 0 20px 19px;
+            @include sp {
+                width: 100%;
+                margin: 0 0 10px;
+            }
+
+            &:nth-child(3n + 1) {
+                margin: 0 0 20px;
+                @include sp {
+                    margin: 0 0 10px;
+                }
+            }
+
+            @include hover {
+                .c-list09__txt {
+                    &:after {
+                        background: url(/assets/img/common/icon/icon9_white.svg) no-repeat center;
+                        background-size: 22px 12.5px;
+                        right: 34px;
+                    }
+                }
+            }
+        }
+
+        &__txt {
+            font-size: 1.5rem;
+            border-width: 1px;
+            padding: 17px 70px 18px 28px;
+            @include sp {
+                padding: 17px 45px 18px 15px;
+            }
+
+            &::after {
+                right: 34px;
+                width: 22px;
+                height: 12.5px;
+                background-size: 22px 12.5px;
+                @include sp {
+                    right: 16px;
+                }
+            }
+        }
+    }
+
+    &__box {
+        margin-bottom: 102px;
+
+        @include sp {
+            margin-bottom: 50px;
+        }
+
+        .c-title09 {
+            margin-bottom: 40px;
+
+            @include sp {
+                margin-bottom: 20px;
+            }
+
+            &__des {
+                text-align: center;
+                margin: 70px 0;
+                @include sp {
+                    margin: 35px 0;
+                }
+            }
+        }
+        .c-btn01{
+            margin-top: 40px;
+            @include sp{
+                margin-top: 20px;
+            }
+        }
+    }
+}

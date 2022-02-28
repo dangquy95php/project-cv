@@ -1,0 +1,247 @@
+.p-tayorou-top {
+    padding: 120px 0 0;
+
+    @include sp {
+        padding: 0;
+    }
+
+    &1 {
+        padding: 20px 0 80px;
+
+        @include sp {
+            padding: 20px 0 41px;
+        }
+
+        #pickup {
+            margin-top: 67px;
+
+            @include sp {
+                margin-top: 30px;
+            }
+        }
+
+        .c-box24 {
+            position: relative;
+            margin: 36px 0 87px;
+
+            @include sp {
+                margin: 16px 0 30px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 100%;
+                right: 10px;
+                width: 200px;
+                height: 133px;
+                background: url(/assets/img/tayorou/top/illust-pickup.svg) no-repeat center;
+                background-size: 200px 133px;
+
+                @include sp {
+                    display: none;
+                }
+            }
+        }
+
+        .c-list40 {
+            margin-top: 35px;
+
+            @include sp {
+                margin-top: 17px;
+            }
+        }
+    }
+
+    &2 {
+        background: #F4F4F4;
+        padding: 87px 0 80px;
+
+        @include sp {
+            padding: 51px 0 40px;
+        }
+
+        .c-list42 {
+            margin-top: 36px;
+
+            @include sp {
+                margin-top: 17px;
+            }
+        }
+
+        .c-btn12 {
+            max-width: 260px;
+            margin: 30px auto 0;
+
+            @include sp {
+                max-width: 180px;
+                margin: 9px auto 0;
+            }
+        }
+    }
+
+    &4 {
+        padding: 87px 0 80px;
+
+        @include sp {
+            padding: 52px 0 40px;
+        }
+
+        &__txt {
+            @include fz(20, 35);
+            color: #595959;
+            margin: 32px 0 37px;
+
+            @include sp {
+                @include fz(16, 24);
+                margin: 15px 0 20px;
+            }
+        }
+
+        .c-list43 {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -200px;
+                right: 17px;
+                background: url(/assets/img/tayorou/top/illust-business04.svg);
+                width: 253px;
+                height: 160px;
+                background-size: 253px 160px;
+
+                @include sp {
+                    display: none;
+                }
+            }
+
+            &+.c-btn12 {
+                max-width: 260px;
+                margin: 9px auto 0;
+
+                @include sp {
+                    max-width: 180px;
+                    margin: -1px auto 0;
+                }
+            }
+
+            &__item {
+                @include sp {
+                    &:nth-child(n+4) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &5 {
+        background: #F4F4F4;
+        padding: 76px 0 80px;
+
+        @include sp {
+            padding: 44px 0 40px;
+        }
+
+        &__txt {
+            @include fz(20, 35);
+            color: #595959;
+            margin: 33px 0 37px;
+
+            @include sp {
+                @include fz(16, 24);
+                margin: 15px 0 19px;
+            }
+        }
+
+        .c-list44 {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -200px;
+                right: 0;
+                background: url(/assets/img/tayorou/top/illust-business03.svg);
+                width: 288px;
+                height: 160px;
+                background-size: 288px 160px;
+
+                @include sp {
+                    display: none;
+                }
+            }
+        }
+
+        .c-btn12 {
+            max-width: 260px;
+            margin: 40px auto 0;
+
+            @include sp {
+                max-width: 180px;
+                margin: 19px auto 0;
+            }
+        }
+    }
+
+    &6 {
+        padding: 79px 0 80px;
+
+        @include sp {
+            padding: 42px 0 40px;
+        }
+
+        &__tit {
+            @include fz(24, 36);
+            margin-top: 39px;
+            color: #0181C0;
+
+            @include sp {
+                @include fz(18, 27);
+                margin-top: 19px;
+            }
+        }
+
+        &__txt {
+            @include fz(16, 28);
+            margin-top: 17px;
+
+            @include sp {
+                @include fz(16, 24);
+                margin-top: 8px;
+            }
+        }
+
+        &__note {
+            font-size: 1.4rem;
+            margin-top: 17px;
+            color: #595959;
+
+            @include sp {
+                @include fz(14, 21);
+                margin-top: 10px;
+                text-indent: -10px;
+                margin-left: 20px;
+            }
+
+            span {
+                display: inline-block;
+                margin-right: 7px;
+                color: #595959;
+
+                @include sp {
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .c-list45 {
+            margin-top: 38px;
+
+            @include sp {
+                margin-top: 19px;
+            }
+        }
+    }
+}

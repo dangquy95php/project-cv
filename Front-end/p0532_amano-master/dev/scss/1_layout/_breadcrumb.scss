@@ -1,0 +1,122 @@
+/*------------------------------------------------------------
+breadcrumb
+------------------------------------------------------------*/
+.c-breadcrumb {
+    padding: 10px 0 14px;
+    $root: &;
+
+    @include sp {
+        padding: 10px 15px;
+    }
+
+    //-------------------------------------------------------
+    &__inner {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+
+        @include sp {
+            max-width: 100%;
+        }
+    }
+
+    //-------------------------------------------------------
+    &__item {
+        display: inline;
+        margin: 0 16px 0 0;
+        position: relative;
+
+        @include sp {
+            margin: 0 5px 0 0;
+        }
+
+        &::after {
+            content: '';
+            width: 6px;
+            height: 9px;
+            background: url('/assets/img/common/icon/icon16.svg') no-repeat center;
+            background-size: contain;
+            display: inline-block;
+            margin: 0 0 0 15px;
+            position: relative;
+            top: 1px;
+
+            @include sp {
+                margin: 0 0 0 5px;
+            }
+        }
+
+        &:last-child {
+            margin: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        a {
+            font-size: 1.1rem;
+            line-height: 1.65;
+            color: $color2;
+        }
+
+        span {
+            font-size: 1.1rem;
+            line-height: 1.65;
+            color: #666;
+        }
+    }
+
+    &--blue {
+        #{$root}__item {
+            a {
+                color: $color4;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------
+breadcrumb 2
+------------------------------------------------------------*/
+
+.c-breadcrumb2 {
+    border-bottom: 1px solid #DDDDDD;
+
+    @include sp {
+        display: none;
+    }
+
+    &__inner {
+        @include f;
+        padding: 20px 0 19px;
+    }
+
+    &__item {
+        @include fz(14, 21);
+
+        a {
+            text-decoration: none;
+            color: #333333;
+            opacity: 1 !important;
+
+            @include hover {
+                text-decoration: underline;
+            }
+        }
+
+        span {
+            color: #999999;
+        }
+
+        &:not(:first-child) {
+            margin-left: 5px;
+
+            &::before {
+                content: '>';
+                color: #999999;
+                margin-right: 5px;
+            }
+        }
+    }
+}

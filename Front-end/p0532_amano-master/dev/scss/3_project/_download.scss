@@ -1,0 +1,113 @@
+/*------------------------------------------------------------
+Page download
+------------------------------------------------------------*/
+.p-download {
+    padding: 0 0 325px;
+    @include sp {
+        padding: 0 0 100px;
+    }
+
+    .c-breadcrumb {
+        margin: 43px 0;
+        @include sp {
+            margin: 20px 0;
+        }
+    }
+    .c-heading {
+        padding: 49px 0 54px;
+        @include sp {
+            padding: 20px 15px;
+        }
+    }
+
+    &Detail{
+        .c-heading{
+            padding: 48px 0 54px;
+            margin-bottom: 43px;
+
+            @include sp{
+                padding: 20px 15px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .c-title09{
+            margin-bottom: 50px;
+
+            @include sp{
+                margin-bottom: 30px;
+            }
+        }
+
+        .c-imgSingle{
+            margin-bottom: 40px;
+
+            @include sp{
+                margin-bottom: 30px;
+            }
+        }
+
+        .c-singlenote3__border{
+            margin-bottom: 60px;
+
+            @include sp{
+                margin-bottom: 30px;
+            }
+        }
+
+        .c-btn01{
+
+            &__link{
+                padding: 22px 101px 22px 101px;
+                border-width: 2px;
+
+                @include sp{
+                    padding: 15px 40px 15px 40px;
+                    border-width: 1px;
+                }
+
+                @include hover{
+                    .c-btn01__txt{
+                        &::after{
+                            right: -78px;
+                            width: 32px;
+                            height: 20px;
+                            background-size: 32px 20px;
+                        }
+                    }
+                }
+            }
+
+            &__txt{
+                font-size: 1.8rem;
+
+                @include sp{
+                    font-size: 1.5rem;
+                }
+
+                &::after{
+                    right: -73px;
+                    width: 32px;
+                    height: 20px;
+                    background-size: 32px 20px;
+
+                    @include sp{
+                        right: -10px;
+                        width: 20px;
+                        height: 13px;
+                        background-size: 20px 13px;
+                    }
+                }
+            }
+        }
+
+        &1{
+            padding: 45px 0 178px;
+            box-sizing: border-box;
+
+            @include sp{
+                padding: 30px 0 50px;
+            }
+        }
+    }
+}

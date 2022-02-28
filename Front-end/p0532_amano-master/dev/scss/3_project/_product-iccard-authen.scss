@@ -1,0 +1,234 @@
+/*------------------------------------------------------------
+Page Product IC Card Authentication
+------------------------------------------------------------*/
+.p-iccardAuthen {
+
+    .c-mv5 {
+        margin-bottom: 124px;
+
+        @include sp {
+            margin-bottom: 50px;
+        }
+    }
+
+    .c-box {
+        &__txt {
+            span {
+                min-width: auto;
+            }
+        }
+    }
+
+    &1 {
+        padding: 93px 0 42px;
+        box-sizing: border-box;
+
+        @include sp {
+            padding: 50px 0 30px;
+        }
+
+        .c-title09 {
+            margin-bottom: 80px;
+
+            @include sp {
+                margin-bottom: 40px;
+            }
+        }
+
+        .c-box2 {
+            &__wrap {
+                margin-bottom: 78px;
+
+                @include sp {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    &2 {
+        padding: 120px 0 96px;
+        box-sizing: border-box;
+
+        @include sp {
+            padding: 50px 0 50px;
+        }
+
+        .c-title09 {
+            margin-bottom: 80px;
+
+            @include sp {
+                margin-bottom: 40px;
+            }
+        }
+
+        .c-list15 {
+            margin-bottom: 80px;
+
+            &__item {
+                margin-bottom: 0;
+
+                @include sp {
+                    &:not(:last-child) {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+            @include sp {
+                margin-bottom: 40px;
+            }
+        }
+
+        .c-box6 {
+            &>.c-imgtext02 {
+                margin: 40px 0 0;
+
+                @include sp {
+                    margin: 30px 0 0;
+                }
+            }
+
+            .c-list20 {
+                margin: 0 0 20px;
+
+                @include sp {
+                    &__item {
+                        &:nth-child(2n+1) {
+                            margin: 0 0 10px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    &3 {
+        padding: 100px 0 15px;
+        box-sizing: border-box;
+
+        @include sp {
+            padding: 50px 0 0;
+        }
+
+        .c-title09 {
+            margin-bottom: 80px;
+
+            @include sp {
+                margin-bottom: 40px;
+            }
+        }
+
+        .c-list15 {
+            margin-bottom: 80px;
+
+            &__item {
+                margin-bottom: 0;
+
+                @include sp {
+                    &:not(:last-child) {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+            @include sp {
+                margin-bottom: 40px;
+            }
+        }
+
+        &__tit2 {
+            margin: 121px 0 80px !important;
+
+            @include sp {
+                margin: 50px 0 40px !important;
+            }
+        }
+    }
+
+    &4 {
+        padding: 124px 0 16px;
+        box-sizing: border-box;
+
+        @include sp {
+            padding: 50px 0 30px;
+        }
+
+        .c-title09 {
+            margin-bottom: 80px;
+
+            @include sp {
+                margin-bottom: 40px;
+            }
+        }
+
+        .c-imgtext02 {
+            margin: 39px 0 78px;
+
+            @include sp {
+                margin: 17px 0 25px;
+            }
+
+            &__img {
+                margin-top: 5px;
+
+                @include sp {
+                    margin-top: 20px;
+                }
+            }
+
+            &__ttl {
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+        }
+
+        .c-imgSingle {
+            margin: -24px 0 80px;
+
+            @include sp {
+                margin: 0 0 30px;
+            }
+        }
+
+        .c-list15 {
+            &__item {
+                margin-bottom: 0;
+
+                @include sp {
+                    &:not(:last-child) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &5 {
+        margin: 136px 0 0;
+        @include sp {
+            margin: 50px 0 0;
+        }
+
+        .c-banner {
+            padding: 120px 0;
+            box-sizing: border-box;
+
+            @include sp {
+                padding: 50px 0 50px;
+            }
+        }
+
+    }
+
+    .c-download2 {
+        .c-btn01 {
+            margin-top: 24px;
+
+            @include sp {
+                margin-top: 30px;
+            }
+        }
+    }
+}

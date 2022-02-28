@@ -1,0 +1,53 @@
+/*------------------------------------------------------------
+Page maintenance
+------------------------------------------------------------*/
+.p-maintenance {
+    &1 {
+        background: rgba(1, 129, 192, 0.1);
+        padding: 0 0 30px;
+        @include sp {
+            padding: 0 0 30px;
+        }
+
+        .c-title09 {
+            margin-bottom: 40px;
+
+            @include sp {
+                margin-bottom: 20px;
+            }
+        }
+
+        .c-text01 {
+            margin: 23px 0 21px;
+            @include sp {
+                margin: 20px 0;
+            }
+        }
+
+        .c-btn10 {
+            margin: 16px 0 0;
+            @include sp {
+                margin: 15px 0 0;
+            }
+        }
+    }
+
+    &2 {
+        padding: 35px 0 160px;
+        @include sp {
+            padding: 30px 0 90px;
+        }
+
+        &__ttl {
+            text-align: center;
+            font-size: 1.6rem;
+            line-height: 1.75;
+            color: #0181c0;
+            font-weight: normal;
+            margin: 0 0 18px;
+            @include sp {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

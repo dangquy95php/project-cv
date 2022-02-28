@@ -1,0 +1,37 @@
+/*------------------------------------------------------------
+Page Guide Detail
+------------------------------------------------------------*/
+.p-guideDetail {
+    &__wrap {
+        margin: 60px 0 95px;
+        @include sp {
+            margin: 30px 0 47px;
+        }
+    }
+    &1 {
+        margin: 50px 0 100px;
+        @include sp {
+            margin: 25px 0 50px;
+        }
+
+        .c-tagtime {
+            margin: 36px 0 0;
+            @include sp {
+                margin: 16px 0 0;
+            }
+        }
+        .c-imgSingle {
+            margin: 45px 0 36px;
+            @include sp {
+                margin: 20px 0 18px;
+            }
+        }
+
+        .c-box3 {
+            margin: 58px 0 0;
+            @include sp {
+                margin: 30px 0 0;
+            }
+        }
+    }
+}

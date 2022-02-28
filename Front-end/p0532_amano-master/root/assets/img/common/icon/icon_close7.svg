@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="Group_24237" data-name="Group 24237" transform="translate(-674 -895)">
+    <g id="Ellipse_886" data-name="Ellipse 886" transform="translate(674 895)" fill="#fff" stroke="#21587e" stroke-width="2">
+      <circle cx="25" cy="25" r="25" stroke="none"/>
+      <circle cx="25" cy="25" r="24" fill="none"/>
+    </g>
+    <g id="Group_24226" data-name="Group 24226" transform="translate(699.177 902.501) rotate(45)">
+      <rect id="Rectangle_14232" data-name="Rectangle 14232" width="25" height="2.5" transform="translate(0 11.466)" fill="#21587e"/>
+      <rect id="Rectangle_14233" data-name="Rectangle 14233" width="25" height="2.5" transform="translate(13.125) rotate(90)" fill="#21587e"/>
+    </g>
+  </g>
+</svg>

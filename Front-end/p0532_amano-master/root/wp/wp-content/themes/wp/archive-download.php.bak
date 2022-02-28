@@ -1,0 +1,38 @@
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/header.php'); ?>
+
+<main class="p-download">
+
+    <div class="c-heading">
+        <h1 class="c-heading__txt">
+            <span class="c-heading__main">お役立ちダウンロードコンテンツ</span>
+        </h1>
+    </div>
+
+    <?php ///////////////////////////////////////////////////////
+    // パンくず
+    ///////////////////////////////////////////////////////////// 
+    ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/breadcrumb.php'); ?>
+
+    <?php ///////////////////////////////////////////////////////
+    // 本文
+    ///////////////////////////////////////////////////////////// 
+    ?>
+    <div class="p-download__wrap">
+        <div class="l-container">
+            <ul class="c-list07 c-list07--border noneslider">
+
+                <?php $the_query = new WP_Query($query_string . '&posts_per_page=-1&paged=' . get_query_var('paged')); ?>
+                <?php if ($the_query->have_posts()) : ?>
+                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                        <?php component_loop_5(); ?>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+
+            </ul>
+        </div>
+    </div>
+
+</main>
+
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/footer.php'); ?>

@@ -1,0 +1,205 @@
+/*------------------------------------------------------------
+Page Product Top
+------------------------------------------------------------*/
+.p-productTop {
+    .c-slide3 {
+        margin: 0 auto 40px;
+
+        @include sp {
+            margin: 0 0 50px;
+        }
+    }
+
+    .c-mv6 {
+        margin-bottom: 80px;
+
+        @include sp {
+            margin-bottom: 40px;
+        }
+    }
+
+    .c-tab {
+        &__content {
+            padding: 107px 0 98px;
+
+            @include sp {
+                padding: 20px;
+            }
+        }
+    }
+
+    &1 {
+        margin: 100px 0 120px;
+
+        @include sp {
+            margin: 40px 0;
+        }
+
+        .c-title01 {
+            margin-bottom: 58px;
+
+            @include sp {
+                margin-bottom: 40px;
+            }
+        }
+
+        .c-block02 {
+            padding-bottom: 100px;
+
+            @include sp {
+                padding-bottom: 50px;
+            }
+
+            &:after {
+                height: 70%;
+                top: 96px;
+            }
+        }
+    }
+
+    &2 {
+        padding: 57px 0 50px;
+        box-sizing: border-box;
+
+        @include sp {
+            padding: 50px 0 50px;
+        }
+
+        .c-title01 {
+            margin-bottom: 77px;
+
+            &__big {
+                span {
+                    display: block;
+                    font-size: 2rem;
+                }
+            }
+
+            @include sp {
+                margin-bottom: 40px;
+            }
+        }
+
+        .c-block02 {
+            .c-title16__sub {
+                margin-top: 13px;
+            }
+        }
+    }
+
+    &3 {
+        padding: 59px 0 22px;
+        box-sizing: border-box;
+
+        @include sp {
+            padding: 50px 0 50px;
+        }
+
+        .c-title01 {
+            margin-bottom: 77px;
+
+            @include sp {
+                margin-bottom: 40px;
+            }
+        }
+
+        .c-block02 {
+            &:after {
+                height: 65%;
+                top: 96px;
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+
+    &4 {
+        padding: 60px 0 80px;
+        box-sizing: border-box;
+
+        @include sp {
+            padding: 50px 0 50px;
+        }
+
+        .c-title01 {
+            margin-bottom: 77px;
+
+            @include sp {
+                margin-bottom: 40px;
+            }
+        }
+
+        .c-tab__content {
+            display: block;
+        }
+    }
+
+    &5 {
+        padding: 120px 0 122px;
+        box-sizing: border-box;
+
+        @include sp {
+            padding: 50px 0 50px;
+        }
+
+        .c-title01 {
+            margin-bottom: 77px;
+
+            @include sp {
+                margin-bottom: 40px;
+            }
+        }
+
+        .c-block02 {
+            &:after {
+                height: 65%;
+                top: 96px;
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+
+    &6 {
+        padding: 100px 0 100px;
+        box-sizing: border-box;
+
+        @include sp {
+            padding: 50px 0 50px;
+        }
+
+        .c-title01 {
+            margin-bottom: 77px;
+
+            @include sp {
+                margin-bottom: 40px;
+            }
+        }
+
+        .c-tab__content {
+            display: block;
+        }
+    }
+
+    &7 {
+        padding: 79px 0 120px;
+        box-sizing: border-box;
+
+        @include sp {
+            padding: 50px 0 50px;
+        }
+
+        .c-title01 {
+            margin-bottom: 59px;
+
+            @include sp {
+                margin-bottom: 40px;
+            }
+        }
+
+        .c-tab__content {
+            display: block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+    }
+}

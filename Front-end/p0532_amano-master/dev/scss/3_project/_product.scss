@@ -1,0 +1,193 @@
+/*------------------------------------------------------------
+Page Product 
+------------------------------------------------------------*/
+.p-product {
+    padding: 40px 0 0;
+
+    @include sp {
+        padding: 0 0 60px;
+    }
+
+    &1 {
+        margin: 169px 0 99px;
+
+        @include sp {
+            margin: 75px 0 45px;
+        }
+
+        .c-text01 {
+            margin: 37px 0 78px;
+
+            @include sp {
+                margin: 20px 0 40px;
+            }
+        }
+
+        .c-block02 {
+            @include sp {
+                padding: 0 0 40px;
+            }
+        }
+
+        .c-list09 {
+            margin: 30px 0 0;
+
+            @include sp {
+                margin: 15px 0 0;
+            }
+        }
+    }
+
+    &2 {
+        position: relative;
+        padding: 98px 0 40px;
+        @include sp {
+            padding: 50px 0;
+        }
+        
+        &::after {
+            content: '';
+            width: calc(100% - ((100% - 1280px) / 2) + 100px);
+            height: 100%;
+            background: #f4f4f4 url('/assets/img/common/bg_dotted.png');
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            @include sp {
+                width: 100%;
+            }
+        }
+        &__ttl {
+            text-align: center;
+            font-size: 2.8rem;
+            line-height: 1.5;
+            color: #111111;
+            font-weight: bold;
+            margin: 75px 0 39px;
+            letter-spacing: 2.8px;
+            @include sp {
+                font-size: 2.4rem;
+                margin: 30px 0 20px;
+            }
+        }
+
+        .l-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .c-list11 {
+            margin: 20px 0 30px;
+        }
+
+        .c-btn01__link {
+            padding: 19px 58px 19px 58px;
+
+            @include sp {
+                padding: 13px 30px 13px 30px;
+            }
+        }
+    }
+
+    &3 {
+        margin: 118px 0 100px;
+
+        @include sp {
+            margin: 50px 0;
+        }
+
+        .c-text01 {
+            margin: 37px 0;
+        }
+
+        &__txt {
+            font-size: 2rem;
+            line-height: 1.5;
+            color: #111;
+            font-weight: bold;
+            text-align: center;
+
+            @include sp {
+                font-size: 1.6rem;
+                margin: 40px 0 0;
+            }
+        }
+
+        .c-list12 {
+            margin: 78px 0 20px;
+
+            @include sp {
+                margin: 30px 0 20px;
+            }
+
+            &__img {
+                @include pc {
+                    height: 280px;
+                }
+            }
+
+            &__ttl {
+                color: #1C5472;
+
+                @include pc {
+                    font-size: 2rem;
+                    line-height: 30px;
+                }
+            }
+
+            &__detail {
+                @include pc {
+                    margin: 35px 0 0;
+                }
+            }
+
+            &__name {
+                @include pc {
+                    font-size: 1.8rem;
+                }
+            }
+
+            .c-taglist .c-tag2 {
+                border: 1px solid #1C5472;
+                background: #ffffff;
+                color: #1C5472;
+            }
+        }
+
+        .c-price {
+            margin: 87px 0 0 22px;
+
+            @include sp {
+                margin: 24px 0 0;
+            }
+        }
+
+        .c-brand {
+            margin: 38px -30px 50px;
+
+            @include sp {
+                margin: 19px -10px 27px;
+            }
+        }
+
+        .c-btn01__link {
+            padding: 19px 59px 19px 59px;
+
+            @include sp {
+                padding: 13px 30px 13px 30px;
+            }
+        }
+    }
+
+    &4 {
+        &__box {
+            background: #f4f4f4;
+            padding: 100px 0;
+
+            @include sp {
+                padding: 50px 0;
+            }
+        }
+    }
+}

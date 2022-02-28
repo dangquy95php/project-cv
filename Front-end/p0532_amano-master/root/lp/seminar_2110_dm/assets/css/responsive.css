@@ -1,0 +1,466 @@
+@charset "UTF-8";
+/* CSS Document */
+@media screen and (min-width:769px){
+	.pad-sp-only,
+	.pad-only,
+	.sp-only { display: none; }
+}
+
+
+@media screen and (max-width:768px){
+
+/*==========================
+　　　　　  Common
+==========================*/
+.w10,.w20,.w30,.w40,.w50,.w60,.w70,.w80,.w90 {width: 100%;}
+.left_clm  {float: left;}
+.right_clm {float: right;}
+.pc-only { display: none; }
+
+
+
+
+/*==========================
+　　　　　　Main
+==========================*/
+/*　Common
+￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣*/
+#topMv {
+	height: auto;
+}
+.mv_content {
+	display: block;
+}
+.mv_content_left {
+    width: 100%;
+    max-width: 560px;
+    margin:0 auto 50px;
+}
+.mv_catch_sub {
+    width: 300px;
+    right: 0;
+    bottom: auto;
+    top: 100%;
+    transform: translateY(50px);
+}
+.mv_content_right {
+    width: 100%;
+    margin-left: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.mv_profile {
+	position: relative;
+	bottom: auto;
+	right: auto;
+	margin: 0 0 100px 20px;
+}
+.seminar_info {
+	display: block;
+}
+.seminar_info_left,
+.seminar_info_right {
+	width: 100%;
+}
+.seminar_info_left {
+	justify-content: center;
+}
+.seminar_info_left .date_wrap {
+	width: 325px;
+}
+.seminar_info_left .date_wrap .date {
+	max-width: 300px;
+}
+.seminar_info_right {
+	margin-top: 20px;
+}
+.problem_list {
+	display: block;
+	margin-top: 100px;
+	padding-bottom: 180px;
+}
+.problem_list:after {
+    top: -90px;
+    right: 0;
+}
+.problem_list li,
+.problem_list li:first-child,
+.problem_list li:nth-child(2),
+.problem_list li:last-child {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 400px;
+}
+.problem_list li:nth-child(2),
+.problem_list li:last-child {
+	margin-top: 25px;
+}
+.sc {
+	padding-top: 80px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.white_box {
+	padding: 40px;
+}
+.soudan_info {
+	padding: 60px 20px;
+}
+.soudan_list {
+	justify-content: center;
+}
+.soudan_list li {
+	width: 40%;
+}
+.soudan_list li:not(:nth-child(-n+2)) {
+	margin-top: 30px;
+}
+.teian_catch span:before {
+	bottom: -8px;
+}
+#subHowto,
+#mainDownload {
+	padding-top: 80px;
+}
+#mainSoudan {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+
+
+/*==========================
+　　　　　　Footer
+==========================*/
+.footer_inner {
+	display: block;
+}
+.footer_right {
+	margin-top: 50px;
+}
+.copyright {
+	text-align: left;
+}
+
+}
+
+
+
+@media screen and (max-width:560px){
+.pad-only {
+	display: none;
+}
+#topMv {
+	padding-top: 40px;
+	background: url(../img/mv_sp.png) no-repeat center bottom / cover;
+}
+.mv_head {
+	font-size: 1.6rem;
+}
+.mv_head span {
+	margin:0;
+	font-size: 1.4rem;
+	margin-top: 10px;
+}
+.mv_content {
+	margin-top: 30px;
+}
+.mv_catch_sub {
+	width: calc(100% - 110px);
+	transform: translateY(20px);
+	right: 10px;
+}
+.mv_content_right {
+	margin-left: 0;
+}
+.mv_image {
+    width: 110px;
+}
+.mv_profile {
+    margin: 0 0 50px 15px;
+}
+.mv_profile .name {
+	font-size: 1.3rem;
+}
+.mv_profile .name span {
+	font-size: 1.8rem;
+}
+.mv_profile .description {
+	font-size: 1rem;
+}
+
+.seminar_info_left .sanka {
+	font-size: 2.2rem;
+	width: 90px;
+	height: 90px;
+}
+.seminar_info_left .date_wrap {
+	width: calc(100% - 90px);
+	padding-left: 15px;
+}
+.mv_foot {
+	padding: 30px 20px;
+}
+.seminar_info_right a {
+	font-size: 2rem;
+	padding: 25px 40px;
+}
+.seminar_info_right a:before {
+	right: 20px;
+}
+.c-title01 {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+.c-title01 .main {
+	font-size: 2.4rem;
+	letter-spacing: 1px;
+}
+.c-title01.small .main {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.c-title01 .sub {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+.problem_list li {
+	font-size: 1.8rem;
+	padding: 30px;
+}
+.problem_list:before {
+	left: 0;
+}
+.problem_list:after {
+    right: -60px;
+}
+.white_box {
+    padding: 20px;
+}
+.seminar_list li {
+	padding: 20px 0;
+	padding-left: 45px;
+}
+.seminar_list li:before {
+	top: 20px;
+}
+.seminar_list li .title {
+	font-size: 1.8rem;
+	line-height: 1.5;
+	margin-bottom: 15px;
+}
+.seminar_list + .attent {
+	font-size: 1rem;
+	margin-top: 20px;
+}
+.teachec_prof {
+	display: block;
+}
+.teachec_prof .image {
+	margin:0 auto;
+}
+.teachec_prof .content {
+	width: 100%;
+	padding: 0;
+	margin-top: 20px;
+}
+#seminarInfo {
+    padding-top: 60px;
+}
+.seminar_info_inner {
+    padding: 50px 20px;
+}
+.seminar_info_catch {
+    margin-bottom: 30px;
+}
+.seminar_info_catch .sub {
+    font-size: 2rem;
+    letter-spacing: 0;
+    margin-bottom: 20px;
+}
+.seminar_info_catch .sub span {
+    padding: 0 20px;
+}
+.seminar_info_catch .main {
+	font-size: 2.7rem;
+}
+.howto_list li {
+	font-size: 1.5rem;
+}
+.howto_list li:before {
+	top: -4px;
+}
+.sc,
+#subHowto, #mainDownload {
+	padding-top: 50px;
+}
+#subFaq .white_box {
+    padding: 20px;
+}
+.faq_list li {
+    padding: 15px 30px;
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+.faq_list li:before {
+	font-size: 2rem;
+}
+.faq_list li:after {
+	width: 15px;
+	height: 15px;
+}
+.seminar_contact {
+	padding: 20px;
+}
+.seminar_contact .title {
+	font-size: 2.2rem;
+	line-height: 1.5;
+}
+.seminar_contact .txt {
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+.contact_box {
+	display: block;
+	margin-top: 20px;
+}
+.contact_box .label {
+	margin-right: 0;
+	text-align: center;
+}
+.contact_box .content {
+	margin-top: 15px;
+	text-align: center;
+}
+.contact_box .content .mail {
+    font-size: 1.6rem;
+    margin-top: 10px;
+}
+.contact_box .content .mail span {
+    font-size: 2rem;
+    padding-left: 10px;
+}
+#subContact {
+    padding-bottom: 50px;
+}
+.soudan_list li {
+	width: 100%;
+}
+.soudan_list li:nth-child(2) {
+	margin-top: 30px;
+}
+.soudan_list li .caption {
+    font-size: 1.6rem;
+    margin-top: 15px;
+}
+.teian_catch {
+	font-size: 2.2rem;
+	margin-top: 40px;
+}
+.teian_catch span:before {
+    bottom: -4px;
+}
+.soudan_info {
+	margin-top: 50px;
+	padding: 30px 20px;
+}
+.soudan_info .catch {
+	font-size: 2rem;
+}
+.soudan_info .soudan_btn {
+	margin-top: 20px;
+}
+.soudan_info .soudan_btn a {
+	font-size: 2rem;
+    padding: 25px 40px;
+}
+.soudan_info .soudan_btn a:before {
+	right: 20px;
+}
+.soudan_info .contact_link {
+	margin-top: 15px;
+	font-size: 1.2rem;
+}
+.c-title02 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.title_txt {
+	margin-bottom: 20px;
+}
+.download_list li {
+	padding: 20px;
+	display: block;
+}
+.download_list li .image,
+.download_list li .content {
+	width: 100%;
+	padding: 0;
+}
+.download_list li .content {
+	margin-top: 20px;
+}
+.download_list li .content .txt {
+    margin-top: 15px;
+}
+.dl_btn a {
+	text-align: left;
+	position: relative;
+}
+.dl_btn a span {
+	padding: 0;
+	background:none;
+	position: initial;
+}
+.dl_btn a span:before, .dl_btn a span:after {
+	right: 20px;
+}
+.dl_banner a {
+	padding: 20px;
+	text-align: left;
+	font-size: 1.8rem;
+}
+.dl_banner a:before, .dl_banner a:after {
+	right: 30px;
+}
+#mainDownload {
+    padding-bottom: 60px;
+}
+.footer_left {
+	display: block;
+	text-align: center;
+}
+.footer_logo {
+	margin:0 auto 15px;
+}
+.amano_link {
+    display: inline-block;
+}
+#footer {
+	padding: 50px 20px;
+}
+.footer_nav {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+.footer_nav li + li {
+	margin: 20px 0 0;
+}
+.footer_nav li a {
+	display: block;
+}
+.amano_link a {
+	opacity: 1;
+}
+.copyright {
+	text-align: center;
+}
+}
+
+
+
+
+
+

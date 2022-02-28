@@ -1,0 +1,100 @@
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/header.php'); ?>
+<main class="p-seminar">
+    <?php ///////////////////////////////////////////////////////
+    // パンくず
+    ///////////////////////////////////////////////////////////// 
+    ?> <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/breadcrumb.php'); ?>
+    <div class="c-heading">
+        <h2 class="c-heading__txt">
+            <span class="c-heading__main">セミナー</span>
+        </h2>
+    </div>
+    <div class="p-seminar__wrap">
+        <div class="l-container">
+            <?php
+            $today_time = current_time("g:i a");
+            $today_date = current_time("Y/m/d");
+            if (!get_query_var('paged')) : ?>
+                <?php
+
+
+                $seminar_recruiting = new WP_Query(array(
+                    'posts_per_page' => -1,
+                    'post_type' => 'seminar',
+                    'meta_query' => array(
+                        'relation' => 'AND',
+                        array(
+                            'key'       => 'seminar_date',
+                            'value'     =>  $today_date,
+                            'type'      => 'DATE',
+                            'compare'   => '>='
+                        ),
+                        array(
+                            'key'       => 'seminar_deadline',
+                            'value'     =>  $today_date,
+                            'type'      => 'DATE',
+                            'compare'   => '>='
+                        )
+                    ),
+                ));
+
+                if ($seminar_recruiting->have_posts()) : ?>
+                    <section class="p-seminar__recruiting">
+                        <p class="c-text01 c-text01--center">「毎月の勤怠処理を効率化したい」「ツール導入が不安」そんなお悩みを解決するセミナーを開催中です。<br>お気軽にご参加ください。</p>
+                        <h2 class="c-title09 p-seminar__tit1">
+                            <span class="c-title09__main c-title09__small">開催予定のセミナー・イベント情報</span>
+                        </h2>
+                        <div class="p-seminar__list1">
+                            <ul class="c-list06 c-list06--border<?php if ($seminar_recruiting->post_count < 2) { echo ' center'; } ?>">
+                                <?php while ($seminar_recruiting->have_posts()) : $seminar_recruiting->the_post(); ?>
+                                    <?php component_loop_4(); ?>
+                                <?php endwhile; ?>
+                                <!-- End c-list06__item-->
+                            </ul><!-- End c-list06-->
+                        </div>
+                    </section>
+                <?php endif; ?>
+            <?php endif; ?>
+
+            <?php
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $seminar_recruited = new WP_Query(array(
+                'posts_per_page' => 12,
+                'post_type' => 'seminar',
+                'paged'          => $paged,
+                'meta_query' => array(
+                    array(
+                        'key'       => 'seminar_deadline',
+                        'value'     =>  $today_date,
+                        'type'      => 'DATE',
+                        'compare'   => '<'
+                    )
+                ),
+            ));
+
+            if ($seminar_recruited->have_posts()) : ?>
+                <section class="p-seminar__recruited">
+                    <h2 class="c-title09 p-seminar__tit2">
+                        <span class="c-title09__main c-title09__small">募集が終了したセミナー</span>
+                    </h2>
+                    <div class="p-seminar__list2">
+                        <ul class="c-list06 c-list06--border<?php if ($seminar_recruited->post_count < 2) { echo ' center'; } ?>">
+                            <?php while ($seminar_recruited->have_posts()) : $seminar_recruited->the_post(); ?>
+                                <?php component_loop_4("end"); ?>
+                            <?php endwhile; ?>
+                            <!-- End c-list06__item-->
+                        </ul>
+                    </div>
+                    <?php if (function_exists('wp_pagenavi')) : ?>
+                        <div class="c-pagenavi">
+                            <?php wp_pagenavi(array('query' => $seminar_recruited)); ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata(); ?>
+                </section>
+            <?php endif; ?>
+        </div>
+    </div>
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/contact.php'); ?>
+</main>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/footer.php'); ?>
